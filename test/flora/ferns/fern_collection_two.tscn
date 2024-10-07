@@ -1,0 +1,300 @@
+[gd_scene load_steps=10 format=3 uid="uid://dk36j2m4w8f7k"]
+
+[ext_resource type="Texture2D" uid="uid://c5ux857cdhjth" path="res://Where_bugs_gather/flora/ferns/fern3.png" id="1_xhc8y"]
+[ext_resource type="Texture2D" uid="uid://bh3wy24p7ingp" path="res://Where_bugs_gather/flora/ferns/fern2_in_grass.png" id="3_aaodx"]
+[ext_resource type="PackedScene" uid="uid://b6xq7ifwvwsic" path="res://Where_bugs_gather/flora/ferns/fern.tscn" id="5_tntdr"]
+[ext_resource type="Texture2D" uid="uid://iy2g5mroiuly" path="res://Where_bugs_gather/flora/ferns/fern_4.png" id="6_ey362"]
+[ext_resource type="Texture2D" uid="uid://bnjltl4a3t43q" path="res://Where_bugs_gather/flora/grass/tall_grass.png" id="6_jbc4w"]
+[ext_resource type="Texture2D" uid="uid://2lw6lrljahg4" path="res://Where_bugs_gather/earth/leaves_2.png" id="7_6g5ii"]
+[ext_resource type="PackedScene" uid="uid://dw1inq3f555mg" path="res://Where_bugs_gather/flora/ferns/fern_3.tscn" id="7_gouia"]
+[ext_resource type="Texture2D" uid="uid://cgyyuha61jy8i" path="res://Where_bugs_gather/flora/grass/tall_grass_one.png" id="8_b76kl"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_q1cr3"]
+polygon = PackedVector2Array(-52, 27, -48, 24, -45, 23, -39, 23, -34, 23, -36, 27, -37, 31, -39, 33, -39, 35, -33, 34, -33, 39, -38, 42, -38, 46, -30, 40, -24, 40, -23, 43, -22, 49, -21, 47, -22, 42, -22, 39, -20, 36, -18, 36, -14, 34, -15, 38, -16, 41, -12, 38, -10, 37, -7, 36, -6, 38, -6, 42, -6, 44, -5, 45, -5, 42, -4, 38, -1, 38, 0, 42, 1, 43, 3, 38, 5, 36, 8, 37, 9, 39, 10, 42, 9, 44, 11, 44, 11, 40, 10, 37, 9, 35, 10, 33, 13, 35, 13, 41, 14, 41, 15, 31, 19, 31, 22, 29, 26, 25, 28, 23, 30, 24, 29, 26, 29, 28, 28, 29, 28, 34, 29, 34, 30, 29, 31, 27, 34, 28, 36, 31, 39, 29, 41, 30, 43, 32, 46, 32, 50, 35, 39, 35, 42, 38, 40, 42, 37, 45, 38, 49, 41, 46, 44, 47, 46, 43, 50, 43, 53, 45, 53, 51, 54, 51, 54, 44, 57, 43, 60, 44, 59, 48, 58, 53, 58, 55, 59, 54, 60, 47, 63, 47, 66, 48, 70, 50, 72, 52, 72, 48, 74, 51, 74, 53, 75, 51, 74, 47, 72, 44, 69, 44, 66, 44, 70, 43, 73, 41, 74, 40, 69, 40, 66, 41, 63, 41, 60, 42, 60, 40, 58, 37, 60, 37, 60, 35, 62, 33, 64, 31, 61, 31, 58, 32, 55, 33, 53, 35, 51, 35, 48, 32, 48, 29, 48, 27, 51, 26, 55, 28, 57, 28, 59, 29, 63, 30, 63, 25, 59, 23, 58, 22, 59, 20, 62, 18, 57, 17, 60, 16, 61, 11, 57, 11, 55, 11, 59, 9, 55, 6, 52, 6, 57, 4, 59, 3, 65, 0, 70, 3, 70, 5, 69, 7, 69, 13, 70, 14, 70, 7, 72, 6, 79, 8, 84, 10, 85, 6, 81, 4, 78, 3, 84, -1, 84, -3, 77, -2, 72, 0, 69, -2, 66, -5, 66, -8, 69, -8, 72, -5, 73, -7, 73, -11, 70, -14, 68, -14, 68, -16, 72, -18, 72, -19, 65, -19, 61, -18, 59, -17, 58, -20, 60, -21, 59, -22, 56, -22, 53, -22, 50, -23, 47, -23, 48, -21, 51, -19, 49, -18, 48, -16, 45, -16, 42, -19, 40, -18, 36, -18, 33, -17, 30, -16, 31, -18, 35, -22, 37, -23, 40, -25, 33, -25, 29, -24, 26, -24, 29, -27, 26, -28, 24, -28, 22, -29, 21, -32, 19, -31, 17, -32, 17, -28, 15, -26, 14, -25, 12, -27, 12, -29, 8, -30, 5, -31, 4, -33, 1, -31, -1, -32, -4, -32, -6, -30, -8, -30, -7, -27, -10, -25, -13, -28, -14, -30, -11, -31, -17, -32, -20, -31, -22, -30, -24, -32, -22, -34, -28, -34, -31, -32, -31, -29, -30, -26, -31, -24, -35, -25, -38, -29, -41, -30, -37, -25, -33, -23, -30, -21, -30, -18, -31, -17, -33, -15, -38, -14, -42, -11, -43, -15, -45, -16, -48, -15, -45, -10, -48, -6, -50, -9, -54, -12, -52, -9, -50, -5, -47, -5, -49, -3, -53, -3, -49, 0, -48, 1, -50, 2, -52, 2, -54, 4, -55, 8, -57, 12, -59, 14, -60, 16, -59, 17, -60, 19, -52, 16, -49, 16, -51, 22, -53, 25, -47, 22, -35, 18, -27, 14, -20, 13, -16, 8, -14, 7, -17, 6, -14, 3, -15, 1, -15, -3, -11, -4, -6, -3, -5, -4, -2, -9, 3, -9, 7, -8, 10, -6, 17, -10, 21, -9, 26, -5, 27, -2, 26, 2, 25, 6, 21, 8, 19, 11, 12, 4, 15, 3, 8, 3, 4, 5, -1, 0, -1, 0, -4, 0, -1, 4, 3, 6, 7, 8, 4, 11, 2, 14, 3, 17, 4, 15, 4, 12, 7, 10, 10, 12, 13, 13, 16, 16, 15, 19, 10, 22, 8, 25, 1, 25, -4, 29, -10, 30, -13, 30, -17, 31, -24, 35, -28, 33, -24, 26, -19, 25, -14, 20, -21, 21, -27, 19, -28, 18, -34, 20, -39, 21, -44, 22, -48, 23, -52, 26)
+
+[node name="fern_collection_two" type="StaticBody2D"]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(0, -2)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_q1cr3")
+
+[node name="Fern26" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(10, 42)
+texture = ExtResource("1_xhc8y")
+offset = Vector2(-2.33331, -9)
+
+[node name="Fern34" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(60, -6)
+texture = ExtResource("1_xhc8y")
+offset = Vector2(-2.33331, -9)
+flip_h = true
+
+[node name="Fern35" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(37, -1)
+texture = ExtResource("1_xhc8y")
+offset = Vector2(-2.33331, -9)
+flip_h = true
+
+[node name="Fern36" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(8, 14)
+texture = ExtResource("1_xhc8y")
+offset = Vector2(-2.33331, -9)
+flip_h = true
+
+[node name="Fern39" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(16.0003, 23)
+texture = ExtResource("1_xhc8y")
+offset = Vector2(-2.33331, -9)
+flip_h = true
+
+[node name="Fern40" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(1.00031, -3.33301)
+texture = ExtResource("1_xhc8y")
+offset = Vector2(-2.33331, -9)
+flip_h = true
+
+[node name="Fern41" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(25.6663, 3.66699)
+texture = ExtResource("1_xhc8y")
+offset = Vector2(-2.33331, -9)
+flip_h = true
+
+[node name="Fern42" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(73.3333, 10.667)
+texture = ExtResource("1_xhc8y")
+offset = Vector2(-2.33331, -9)
+flip_h = true
+
+[node name="Fern43" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(43, 22)
+texture = ExtResource("1_xhc8y")
+offset = Vector2(-2.33331, -9)
+flip_h = true
+
+[node name="Fern29" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(63.0033, 52.334)
+texture = ExtResource("1_xhc8y")
+offset = Vector2(-2.33331, -9)
+flip_h = true
+
+[node name="Fern30" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(49.6663, -5)
+texture = ExtResource("1_xhc8y")
+offset = Vector2(-2.33331, -9)
+
+[node name="Fern31" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(53.6663, 48.334)
+texture = ExtResource("1_xhc8y")
+offset = Vector2(-2.33331, -9)
+
+[node name="Fern32" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-20.3337, 23.334)
+texture = ExtResource("1_xhc8y")
+offset = Vector2(-2.33331, -9)
+
+[node name="Fern33" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-21.6667, 46)
+texture = ExtResource("1_xhc8y")
+offset = Vector2(-2.33331, -9)
+
+[node name="Fern3" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-20, -16)
+texture = ExtResource("1_xhc8y")
+offset = Vector2(-2, -9)
+
+[node name="Fern4" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(54.5, 11.667)
+texture = ExtResource("1_xhc8y")
+offset = Vector2(-2, -9)
+
+[node name="Fern5" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-24, 6)
+texture = ExtResource("1_xhc8y")
+offset = Vector2(-2, -9)
+
+[node name="Fern7" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(32.5, 31.667)
+texture = ExtResource("1_xhc8y")
+offset = Vector2(-2, -9)
+flip_h = true
+
+[node name="Fern8" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-54, 42)
+texture = ExtResource("1_xhc8y")
+offset = Vector2(-2, -9)
+flip_h = true
+
+[node name="Fern9" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-45, 24)
+texture = ExtResource("1_xhc8y")
+offset = Vector2(-2, -9)
+
+[node name="Fern2InGrass2" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(16.5, -16.333)
+texture = ExtResource("3_aaodx")
+offset = Vector2(-4, -9)
+
+[node name="TallGrass" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(10, 43)
+texture = ExtResource("6_jbc4w")
+offset = Vector2(1, -8)
+
+[node name="TallGrass2" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(35, 34)
+texture = ExtResource("6_jbc4w")
+offset = Vector2(1, -8)
+
+[node name="TallGrass3" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(84, 3)
+texture = ExtResource("6_jbc4w")
+offset = Vector2(1, -8)
+flip_h = true
+
+[node name="TallGrass4" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-80, -9)
+texture = ExtResource("6_jbc4w")
+offset = Vector2(1, -8)
+flip_h = true
+
+[node name="TallGrass5" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-47, 27)
+texture = ExtResource("6_jbc4w")
+offset = Vector2(1, -8)
+
+[node name="TallGrass6" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-7, 22)
+texture = ExtResource("6_jbc4w")
+offset = Vector2(1, -8)
+
+[node name="TallGrass7" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-40, -36)
+texture = ExtResource("6_jbc4w")
+offset = Vector2(1, -8)
+
+[node name="Fern10" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(75, 19)
+texture = ExtResource("6_ey362")
+offset = Vector2(2, -7)
+
+[node name="Fern11" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-36, -21)
+texture = ExtResource("6_ey362")
+offset = Vector2(2, -7)
+
+[node name="fern" parent="." instance=ExtResource("5_tntdr")]
+z_as_relative = false
+position = Vector2(-65, 45)
+scale = Vector2(1.08, 1.12)
+
+[node name="fern4" parent="." instance=ExtResource("5_tntdr")]
+z_as_relative = false
+position = Vector2(66, 31)
+rotation = 0.84242
+scale = Vector2(1.08, 1.12)
+
+[node name="fern5" parent="." instance=ExtResource("5_tntdr")]
+z_as_relative = false
+position = Vector2(26, 54)
+rotation = 0.455118
+
+[node name="fern6" parent="." instance=ExtResource("5_tntdr")]
+z_as_relative = false
+position = Vector2(-2, 28)
+rotation = 0.455118
+
+[node name="fern3" parent="." instance=ExtResource("5_tntdr")]
+z_as_relative = false
+position = Vector2(-7, -30)
+rotation = 0.22767
+
+[node name="fern_7" parent="." instance=ExtResource("7_gouia")]
+position = Vector2(-60, 4)
+rotation = -0.26642
+
+[node name="fern_8" parent="." instance=ExtResource("7_gouia")]
+position = Vector2(36, -25)
+rotation = 0.555045
+
+[node name="fern_9" parent="." instance=ExtResource("7_gouia")]
+position = Vector2(-39, -8)
+rotation = -0.161827
+
+[node name="fern_10" parent="." instance=ExtResource("7_gouia")]
+position = Vector2(-25, 48)
+rotation = -0.161827
+
+[node name="Leaves2" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(0, 3)
+texture = ExtResource("7_6g5ii")
+offset = Vector2(-3, 8)
+
+[node name="TallGrassOne" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(1, -15)
+texture = ExtResource("8_b76kl")
+offset = Vector2(9, 36)

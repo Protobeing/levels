@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbj7y1epoot08"]
+
+[ext_resource type="PackedScene" uid="uid://n7j6bn7p2wil" path="res://levels/test/flora/trees/oaks/baby_oak.tscn" id="1_onh5i"]
+[ext_resource type="Texture2D" uid="uid://cgsuci3vw7gfc" path="res://levels/test/flora/trees/oaks/mediumpinetree.png" id="2_lk1p2"]
+
+[node name="baby_oak_collection_1" type="Node2D"]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(0, 4)
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+z_index = -2
+z_as_relative = false
+position = Vector2(-6, -3.5)
+scale = Vector2(7.2, 6.05)
+
+[node name="baby_oak4" parent="." instance=ExtResource("1_onh5i")]
+position = Vector2(28, 36)
+
+[node name="baby_oak5" parent="." instance=ExtResource("1_onh5i")]
+position = Vector2(-15, 44)
+
+[node name="baby_oak6" parent="." instance=ExtResource("1_onh5i")]
+position = Vector2(-26, -20)
+
+[node name="baby_oak7" parent="." instance=ExtResource("1_onh5i")]
+position = Vector2(24, -19)
+
+[node name="baby_oak8" parent="." instance=ExtResource("1_onh5i")]
+position = Vector2(-46, 7)
+
+[node name="baby_oak9" parent="." instance=ExtResource("1_onh5i")]
+position = Vector2(12, 15)
+
+[node name="Mediumpinetree" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-23, -7)
+texture = ExtResource("2_lk1p2")
+offset = Vector2(2, -23)
