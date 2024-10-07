@@ -1,0 +1,5205 @@
+[gd_scene load_steps=22 format=3 uid="uid://d2vf7ge747vun"]
+
+[ext_resource type="Script" path="res://levels/southern_oak_forest/sof_level_9/southern_oak_forest_level_nine.gd" id="1_h3jxq"]
+[ext_resource type="PackedScene" uid="uid://bqx7ywwfn6evp" path="res://gateways/small_opening_east.tscn" id="2_p06pa"]
+[ext_resource type="PackedScene" uid="uid://dk7g834rkrfwy" path="res://jed_main/Jed.tscn" id="3_khqs5"]
+[ext_resource type="PackedScene" uid="uid://xxibel38wjai" path="res://ghost_babies_and_blue_flowers/blue_flowers/blue_flowers.tscn" id="4_qm4u2"]
+[ext_resource type="PackedScene" uid="uid://ck6pxou1tro63" path="res://levels/test/flora/ferns/fern_bunch.tscn" id="5_7i4d8"]
+[ext_resource type="PackedScene" uid="uid://c8vq0oo7t2awb" path="res://flora/flowers/night_orchids/night_orchid_2.tscn" id="5_8u1w2"]
+[ext_resource type="PackedScene" uid="uid://dk36j2m4w8f7k" path="res://levels/test/flora/ferns/fern_collection_two.tscn" id="5_60b34"]
+[ext_resource type="Texture2D" uid="uid://sgnjhia7h864" path="res://earth/earth_6.png" id="5_d0gmm"]
+[ext_resource type="Texture2D" uid="uid://bwpi8qgki4ync" path="res://earth/small_earth_plot.png" id="5_m76uj"]
+[ext_resource type="PackedScene" uid="uid://cml5xnunmu047" path="res://flora/flowers/night_orchids/night_orchid.tscn" id="7_66oc8"]
+[ext_resource type="PackedScene" uid="uid://bc5yoiyioi3cr" path="res://earth/purple_night_grass.tscn" id="8_wq0cb"]
+[ext_resource type="Texture2D" uid="uid://bqqkuf376qauv" path="res://sky/cloud_2.png" id="11_qaneu"]
+[ext_resource type="Texture2D" uid="uid://k1tqe0b7w057" path="res://sky/cloud_1.png" id="12_ecyko"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i17ws"]
+radius = 88.5664
+
+[sub_resource type="Animation" id="Animation_hxiic"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_vv20k"]
+resource_name = "poison"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.114396, 0.194208, 0.313925, 0.478869, 0.649133, 0.827378, 0.994982),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.111701, -0.125664, 0.111701, -0.125664, 0.111701, -0.125664, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yryc4"]
+_data = {
+"RESET": SubResource("Animation_hxiic"),
+"poison": SubResource("Animation_vv20k")
+}
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_1fq63"]
+vertices = PackedVector2Array(807.469, -401.25, 845.68, -314.156, 753.891, -243.906, 644.117, -467.367, 424.453, -453.008, 520.961, -491.617, 669.32, -178.008, 280.703, -368.398, 1067.23, -39.3984, 1181.31, 140.82, 1134.78, 342.133, 955.172, 369.469, 750.563, -63.3828, 119.883, -403.227, 711.656, 541.109, 334.75, 554.93, -37.0703, 406, -36.2188, -433.828, -257.492, 406, -409.047, 324.383, -511.07, 171.352, -476.563, 55.6172, -637.211, -585.82, -535.188, -649.578, -417.289, -674.922, -302.281, -666.219, -164.563, -577.328, -753.148, -180.578, -816.961, -416.469, -749.008, -494.797)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 3, 2, 6, 7), PackedInt32Array(8, 9, 10, 11, 12), PackedInt32Array(13, 7, 6, 12, 11, 14, 15, 16, 17), PackedInt32Array(17, 16, 18, 19, 20, 21), PackedInt32Array(22, 23, 24, 25, 26, 17, 21, 27, 28, 29)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-539, -659, -643, -594, -756, -502, -828, -419, -762, -175, -488, 59, -522, 173, -416, 332, -260, 416, -39, 416, 333, 565, 715, 551, 959, 379, 1143, 351, 1192, 139, 1073, -49, 756, -73, 683, -176, 760, -236, 858, -311, 815, -409, 647, -477, 520, -502, 420, -462, 279, -379, 122, -413, -31, -443, -158, -585, -299, -676, -418, -685)])
+
+[sub_resource type="Animation" id="Animation_4il5g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:transform")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Transform2D(1, 0, 0, 1, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_b2oij"]
+resource_name = "undulating_fog"
+length = 30.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:transform")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 15.3333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1.1, 0, 0, 1.1, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_d3xpb"]
+_data = {
+"RESET": SubResource("Animation_4il5g"),
+"undulating_fog": SubResource("Animation_b2oij")
+}
+
+[node name="southern_oak_forest_level_nine" type="Node2D"]
+z_as_relative = false
+y_sort_enabled = true
+script = ExtResource("1_h3jxq")
+
+[node name="Blue_flowers" parent="." instance=ExtResource("4_qm4u2")]
+position = Vector2(529, -190)
+
+[node name="small_opening_east" parent="." instance=ExtResource("2_p06pa")]
+position = Vector2(593, -318)
+metadata/_edit_lock_ = true
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(665, -334)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_i17ws")
+
+[node name="ferns" type="Node2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+
+[node name="fern_collection_two" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(-223, -55)
+
+[node name="fern_collection_two2" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(-207, -162)
+
+[node name="fern_collection_two3" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(-300, -151)
+
+[node name="fern_collection_two4" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(-370, -171)
+
+[node name="fern_collection_two5" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(-494, -173)
+
+[node name="fern_collection_two6" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(-530, -127)
+
+[node name="fern_collection_two7" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(-503, -46)
+
+[node name="fern_collection_two8" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(-382, -10)
+
+[node name="fern_collection_two9" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(-372, 39)
+
+[node name="fern_collection_two10" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(-318, 49)
+
+[node name="fern_collection_two11" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(-104, 138)
+
+[node name="fern_collection_two12" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(59, 98)
+
+[node name="fern_collection_two13" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(92, 39)
+
+[node name="fern_collection_two14" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(173, -89)
+
+[node name="fern_collection_two15" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(91, -141)
+
+[node name="fern_collection_two16" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(111, -98)
+
+[node name="fern_collection_two17" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(95, -210)
+
+[node name="fern_collection_two18" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(-18, -303)
+
+[node name="fern_collection_two19" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(-166, -331)
+
+[node name="fern_collection_two20" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(-291, -341)
+
+[node name="fern_collection_two21" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(-323, -364)
+
+[node name="fern_collection_two22" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(-196, -392)
+
+[node name="fern_collection_two23" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(-97, -356)
+
+[node name="fern_collection_two24" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(32, -346)
+
+[node name="fern_collection_two25" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(87, -266)
+
+[node name="fern_collection_two26" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(228, -146)
+
+[node name="fern_collection_two27" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(278, -95)
+
+[node name="fern_collection_two28" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(291, 86)
+
+[node name="fern_collection_two29" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(308, 54)
+
+[node name="fern_collection_two30" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(285, 157)
+
+[node name="fern_collection_two31" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(29, 231)
+
+[node name="fern_collection_two32" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(105, 290)
+
+[node name="fern_collection_two33" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(-26, 296)
+
+[node name="fern_collection_two34" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(4, 369)
+
+[node name="fern_collection_two35" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(135, 368)
+
+[node name="fern_collection_two36" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(414, 166)
+
+[node name="fern_collection_two37" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(439, 88)
+
+[node name="fern_collection_two38" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(501, 183)
+
+[node name="fern_collection_two39" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(252, 423)
+
+[node name="fern_collection_two40" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(145, 455)
+
+[node name="fern_collection_two41" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(245, 493)
+
+[node name="fern_collection_two42" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(360, 481)
+
+[node name="fern_collection_two43" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(476, 519)
+
+[node name="fern_collection_two44" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(627, 445)
+
+[node name="fern_collection_two45" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(717, 327)
+
+[node name="fern_collection_two46" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(691, 386)
+
+[node name="fern_collection_two47" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(612, 516)
+
+[node name="fern_collection_two48" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(770, 464)
+
+[node name="fern_collection_two49" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(851, 384)
+
+[node name="fern_collection_two50" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(770, 244)
+
+[node name="fern_collection_two51" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(850, 319)
+
+[node name="fern_collection_two52" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(890, 286)
+
+[node name="fern_collection_two53" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(433, 236)
+
+[node name="fern_collection_two54" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(429, 302)
+
+[node name="fern_collection_two55" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(751, 106)
+
+[node name="fern_collection_two56" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(606, 124)
+
+[node name="fern_collection_two57" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(620, -57)
+
+[node name="fern_collection_two58" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(725, -89)
+
+[node name="fern_collection_two68" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(851, -75)
+
+[node name="fern_collection_two69" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(989, -65)
+
+[node name="fern_collection_two70" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(1076, -34)
+
+[node name="fern_collection_two71" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(1112, 26)
+
+[node name="fern_collection_two72" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(1157, 111)
+
+[node name="fern_collection_two73" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(1176, 181)
+
+[node name="fern_collection_two74" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(1154, 263)
+
+[node name="fern_collection_two75" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(1105, 362)
+
+[node name="fern_collection_two76" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(964, 373)
+
+[node name="fern_collection_two77" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(864, 425)
+
+[node name="fern_collection_two78" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(1157, 315)
+
+[node name="fern_collection_two79" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(885, 125)
+
+[node name="fern_collection_two80" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(944, 141)
+
+[node name="fern_collection_two81" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(808, -42)
+
+[node name="fern_collection_two82" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(-449, 86)
+
+[node name="fern_collection_two83" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(-545, 155)
+
+[node name="fern_collection_two84" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(-502, 218)
+
+[node name="fern_collection_two85" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(-428, 304)
+
+[node name="fern_collection_two86" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(-422, 370)
+
+[node name="fern_collection_two87" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(-453, 248)
+
+[node name="fern_collection_two88" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(-317, 384)
+
+[node name="fern_collection_two89" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(-171, 395)
+
+[node name="fern_collection_two90" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(-89, 382)
+
+[node name="fern_collection_two91" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(-89, 382)
+
+[node name="fern_collection_two59" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(643, -139)
+
+[node name="fern_collection_two60" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(570, -135)
+
+[node name="fern_collection_two61" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(325, 12)
+
+[node name="fern_collection_two62" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(365, -40)
+
+[node name="fern_collection_two63" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(376, -367)
+
+[node name="fern_collection_two64" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(330, -303)
+
+[node name="fern_collection_two65" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(183, -295)
+
+[node name="fern_collection_two66" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(131, -268)
+
+[node name="fern_bunch" parent="ferns" instance=ExtResource("5_7i4d8")]
+position = Vector2(-316, 49)
+
+[node name="fern_collection_two67" parent="ferns" instance=ExtResource("5_60b34")]
+position = Vector2(131, -268)
+
+[node name="fern_bunch2" parent="ferns" instance=ExtResource("5_7i4d8")]
+position = Vector2(-352, -160)
+
+[node name="fern_bunch3" parent="ferns" instance=ExtResource("5_7i4d8")]
+position = Vector2(87, 293)
+
+[node name="fern_bunch4" parent="ferns" instance=ExtResource("5_7i4d8")]
+position = Vector2(478, 288)
+
+[node name="fern_bunch5" parent="ferns" instance=ExtResource("5_7i4d8")]
+position = Vector2(449, 149)
+
+[node name="fern_bunch6" parent="ferns" instance=ExtResource("5_7i4d8")]
+position = Vector2(871, 90)
+
+[node name="fern_bunch7" parent="ferns" instance=ExtResource("5_7i4d8")]
+position = Vector2(882, 260)
+
+[node name="orchids" type="Node2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+
+[node name="night_orchid" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-129, -64)
+
+[node name="night_orchid2" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-140, -71)
+rotation = -0.149652
+
+[node name="night_orchid3" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-122, -46)
+rotation = 0.030633
+
+[node name="night_orchid4" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-151, -49)
+rotation = -0.148193
+
+[node name="night_orchid5" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-137, -41)
+rotation = 0.0597995
+
+[node name="night_orchid73" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(104, 216)
+
+[node name="night_orchid74" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(93, 209)
+rotation = -0.149652
+
+[node name="night_orchid75" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(111, 234)
+rotation = 0.030633
+
+[node name="night_orchid76" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(82, 231)
+rotation = -0.148193
+
+[node name="night_orchid77" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(96, 239)
+rotation = 0.0597995
+
+[node name="night_orchid78" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(181, 283)
+
+[node name="night_orchid79" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(170, 276)
+rotation = -0.149652
+
+[node name="night_orchid80" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(188, 301)
+rotation = 0.030633
+
+[node name="night_orchid81" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(159, 298)
+rotation = -0.148193
+
+[node name="night_orchid82" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(173, 306)
+rotation = 0.0597995
+
+[node name="night_orchid83" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(505, 312)
+
+[node name="night_orchid84" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(494, 305)
+rotation = -0.149652
+
+[node name="night_orchid85" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(512, 330)
+rotation = 0.030633
+
+[node name="night_orchid86" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(483, 327)
+rotation = -0.148193
+
+[node name="night_orchid87" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(497, 335)
+rotation = 0.0597995
+
+[node name="night_orchid88" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(959, 277)
+
+[node name="night_orchid89" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(948, 270)
+rotation = -0.149652
+
+[node name="night_orchid90" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(966, 295)
+rotation = 0.030633
+
+[node name="night_orchid91" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(937, 292)
+rotation = -0.148193
+
+[node name="night_orchid92" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(951, 300)
+rotation = 0.0597995
+
+[node name="night_orchid93" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-384, 248)
+
+[node name="night_orchid94" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-395, 241)
+rotation = -0.149652
+
+[node name="night_orchid95" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-377, 266)
+rotation = 0.030633
+
+[node name="night_orchid96" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-406, 263)
+rotation = -0.148193
+
+[node name="night_orchid97" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-392, 271)
+rotation = 0.0597995
+
+[node name="night_orchid98" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(131, 98)
+
+[node name="night_orchid99" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(120, 91)
+rotation = -0.149652
+
+[node name="night_orchid100" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(138, 116)
+rotation = 0.030633
+
+[node name="night_orchid101" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(109, 113)
+rotation = -0.148193
+
+[node name="night_orchid102" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(123, 121)
+rotation = 0.0597995
+
+[node name="night_orchid103" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(422, 61)
+
+[node name="night_orchid104" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(411, 54)
+rotation = -0.149652
+
+[node name="night_orchid105" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(429, 79)
+rotation = 0.030633
+
+[node name="night_orchid106" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(400, 76)
+rotation = -0.148193
+
+[node name="night_orchid107" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(414, 84)
+rotation = 0.0597995
+
+[node name="night_orchid108" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(295, -148)
+
+[node name="night_orchid109" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(284, -155)
+rotation = -0.149652
+
+[node name="night_orchid110" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(302, -130)
+rotation = 0.030633
+
+[node name="night_orchid111" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(273, -133)
+rotation = -0.148193
+
+[node name="night_orchid112" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(287, -125)
+rotation = 0.0597995
+
+[node name="night_orchid6" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-142, -58)
+rotation = 0.0597995
+
+[node name="night_orchid7" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-117, -150)
+
+[node name="night_orchid8" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-128, -157)
+rotation = -0.149652
+
+[node name="night_orchid9" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-110, -132)
+rotation = 0.030633
+
+[node name="night_orchid10" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-139, -135)
+rotation = -0.148193
+
+[node name="night_orchid11" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-126, -129)
+rotation = 0.0597995
+
+[node name="night_orchid12" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-130, -144)
+rotation = 0.0597995
+
+[node name="night_orchid13" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-147, -168)
+
+[node name="night_orchid14" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-158, -175)
+rotation = -0.149652
+
+[node name="night_orchid15" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-140, -150)
+rotation = 0.030633
+
+[node name="night_orchid16" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-169, -153)
+rotation = -0.148193
+
+[node name="night_orchid17" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-156, -147)
+rotation = 0.0597995
+
+[node name="night_orchid18" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-160, -162)
+rotation = 0.0597995
+
+[node name="night_orchid19" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-180, -180)
+
+[node name="night_orchid20" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-191, -187)
+rotation = -0.149652
+
+[node name="night_orchid21" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-173, -162)
+rotation = 0.030633
+
+[node name="night_orchid22" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-202, -165)
+rotation = -0.148193
+
+[node name="night_orchid23" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-189, -159)
+rotation = 0.0597995
+
+[node name="night_orchid24" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-193, -174)
+rotation = 0.0597995
+
+[node name="night_orchid25" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-225, -170)
+
+[node name="night_orchid26" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-236, -177)
+rotation = -0.149652
+
+[node name="night_orchid27" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-218, -152)
+rotation = 0.030633
+
+[node name="night_orchid28" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-247, -155)
+rotation = -0.148193
+
+[node name="night_orchid29" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-234, -149)
+rotation = 0.0597995
+
+[node name="night_orchid30" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-238, -164)
+rotation = 0.0597995
+
+[node name="night_orchid31" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-323, -194)
+
+[node name="night_orchid32" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-334, -201)
+rotation = -0.149652
+
+[node name="night_orchid33" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-316, -176)
+rotation = 0.030633
+
+[node name="night_orchid34" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-345, -179)
+rotation = -0.148193
+
+[node name="night_orchid35" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-332, -173)
+rotation = 0.0597995
+
+[node name="night_orchid36" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-336, -188)
+rotation = 0.0597995
+
+[node name="night_orchid37" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-485, -213)
+
+[node name="night_orchid38" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-496, -220)
+rotation = -0.149652
+
+[node name="night_orchid39" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-478, -195)
+rotation = 0.030633
+
+[node name="night_orchid40" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-507, -198)
+rotation = -0.148193
+
+[node name="night_orchid41" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-494, -192)
+rotation = 0.0597995
+
+[node name="night_orchid42" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-498, -207)
+rotation = 0.0597995
+
+[node name="night_orchid43" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-552, -127)
+
+[node name="night_orchid44" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-563, -134)
+rotation = -0.149652
+
+[node name="night_orchid45" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-545, -109)
+rotation = 0.030633
+
+[node name="night_orchid46" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-574, -112)
+rotation = -0.148193
+
+[node name="night_orchid47" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-561, -106)
+rotation = 0.0597995
+
+[node name="night_orchid48" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-565, -121)
+rotation = 0.0597995
+
+[node name="night_orchid49" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-520, -115)
+
+[node name="night_orchid50" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-531, -122)
+rotation = -0.149652
+
+[node name="night_orchid51" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-513, -97)
+rotation = 0.030633
+
+[node name="night_orchid52" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-542, -100)
+rotation = -0.148193
+
+[node name="night_orchid53" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-529, -94)
+rotation = 0.0597995
+
+[node name="night_orchid54" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-533, -109)
+rotation = 0.0597995
+
+[node name="night_orchid55" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-537, -93)
+
+[node name="night_orchid56" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-548, -100)
+rotation = -0.149652
+
+[node name="night_orchid57" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-530, -75)
+rotation = 0.030633
+
+[node name="night_orchid58" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-559, -78)
+rotation = -0.148193
+
+[node name="night_orchid59" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-546, -72)
+rotation = 0.0597995
+
+[node name="night_orchid60" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-550, -87)
+rotation = 0.0597995
+
+[node name="night_orchid61" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-479, -82)
+
+[node name="night_orchid62" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-490, -89)
+rotation = -0.149652
+
+[node name="night_orchid63" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-472, -64)
+rotation = 0.030633
+
+[node name="night_orchid64" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-501, -67)
+rotation = -0.148193
+
+[node name="night_orchid65" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-488, -61)
+rotation = 0.0597995
+
+[node name="night_orchid66" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-492, -76)
+rotation = 0.0597995
+
+[node name="night_orchid67" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-479, -82)
+
+[node name="night_orchid68" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-490, -89)
+rotation = -0.149652
+
+[node name="night_orchid69" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-472, -64)
+rotation = 0.030633
+
+[node name="night_orchid70" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-501, -67)
+rotation = -0.148193
+
+[node name="night_orchid71" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-488, -61)
+rotation = 0.0597995
+
+[node name="night_orchid72" parent="orchids" instance=ExtResource("7_66oc8")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-492, -76)
+rotation = 0.0597995
+
+[node name="night_orchid_2" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-2, -137)
+
+[node name="night_orchid_3" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-7, -127)
+
+[node name="night_orchid_4" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(14, -125)
+rotation = 0.130277
+
+[node name="night_orchid_5" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-2, -114)
+rotation = 0.130277
+
+[node name="night_orchid_6" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(10, -134)
+rotation = 0.130277
+
+[node name="night_orchid_7" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(30, -155)
+
+[node name="night_orchid_8" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(25, -145)
+
+[node name="night_orchid_9" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(46, -143)
+rotation = 0.130277
+
+[node name="night_orchid_10" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(34, -131)
+
+[node name="night_orchid_11" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(29, -121)
+
+[node name="night_orchid_12" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(50, -119)
+rotation = 0.130277
+
+[node name="night_orchid_13" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(34, -108)
+rotation = 0.130277
+
+[node name="night_orchid_14" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(46, -128)
+rotation = 0.130277
+
+[node name="night_orchid_15" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(66, -149)
+
+[node name="night_orchid_16" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(61, -139)
+
+[node name="night_orchid_17" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(82, -137)
+rotation = 0.130277
+
+[node name="night_orchid_18" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(24, -86)
+
+[node name="night_orchid_19" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(19, -76)
+
+[node name="night_orchid_20" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(40, -74)
+rotation = 0.130277
+
+[node name="night_orchid_21" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(24, -63)
+rotation = 0.130277
+
+[node name="night_orchid_22" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(36, -83)
+rotation = 0.130277
+
+[node name="night_orchid_274" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(555, -96)
+
+[node name="night_orchid_275" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(550, -86)
+
+[node name="night_orchid_276" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(571, -84)
+rotation = 0.130277
+
+[node name="night_orchid_277" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(555, -73)
+rotation = 0.130277
+
+[node name="night_orchid_278" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(567, -93)
+rotation = 0.130277
+
+[node name="night_orchid_279" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(722, -44)
+
+[node name="night_orchid_280" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(717, -34)
+
+[node name="night_orchid_281" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(738, -32)
+rotation = 0.130277
+
+[node name="night_orchid_282" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(722, -21)
+rotation = 0.130277
+
+[node name="night_orchid_283" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(734, -41)
+rotation = 0.130277
+
+[node name="night_orchid_284" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(1094, 75)
+
+[node name="night_orchid_285" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(1089, 85)
+
+[node name="night_orchid_286" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(1110, 87)
+rotation = 0.130277
+
+[node name="night_orchid_287" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(1094, 98)
+rotation = 0.130277
+
+[node name="night_orchid_288" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(1106, 78)
+rotation = 0.130277
+
+[node name="night_orchid_289" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(696, 85)
+
+[node name="night_orchid_290" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(691, 95)
+
+[node name="night_orchid_291" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(712, 97)
+rotation = 0.130277
+
+[node name="night_orchid_292" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(696, 108)
+rotation = 0.130277
+
+[node name="night_orchid_293" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(708, 88)
+rotation = 0.130277
+
+[node name="night_orchid_294" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(498, -144)
+
+[node name="night_orchid_295" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(493, -134)
+
+[node name="night_orchid_296" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(514, -132)
+rotation = 0.130277
+
+[node name="night_orchid_297" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(498, -121)
+rotation = 0.130277
+
+[node name="night_orchid_298" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(510, -141)
+rotation = 0.130277
+
+[node name="night_orchid_23" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(56, -104)
+
+[node name="night_orchid_24" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(51, -94)
+
+[node name="night_orchid_25" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(72, -92)
+rotation = 0.130277
+
+[node name="night_orchid_26" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(60, -80)
+
+[node name="night_orchid_27" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(55, -70)
+
+[node name="night_orchid_28" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(76, -68)
+rotation = 0.130277
+
+[node name="night_orchid_29" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(60, -57)
+rotation = 0.130277
+
+[node name="night_orchid_30" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(72, -77)
+rotation = 0.130277
+
+[node name="night_orchid_31" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(92, -98)
+
+[node name="night_orchid_32" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(87, -88)
+
+[node name="night_orchid_33" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(108, -86)
+rotation = 0.130277
+
+[node name="night_orchid_34" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(15, -188)
+
+[node name="night_orchid_35" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(10, -178)
+
+[node name="night_orchid_36" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(31, -176)
+rotation = 0.130277
+
+[node name="night_orchid_37" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(15, -165)
+rotation = 0.130277
+
+[node name="night_orchid_38" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(27, -185)
+rotation = 0.130277
+
+[node name="night_orchid_39" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(47, -206)
+
+[node name="night_orchid_40" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(42, -196)
+
+[node name="night_orchid_41" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(63, -194)
+rotation = 0.130277
+
+[node name="night_orchid_42" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(51, -182)
+
+[node name="night_orchid_43" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(46, -172)
+
+[node name="night_orchid_44" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(67, -170)
+rotation = 0.130277
+
+[node name="night_orchid_45" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(51, -159)
+rotation = 0.130277
+
+[node name="night_orchid_46" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(63, -179)
+rotation = 0.130277
+
+[node name="night_orchid_47" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(83, -200)
+
+[node name="night_orchid_48" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(78, -190)
+
+[node name="night_orchid_49" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(99, -188)
+rotation = 0.130277
+
+[node name="night_orchid_50" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-23, -230)
+
+[node name="night_orchid_51" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-28, -220)
+
+[node name="night_orchid_52" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-7, -218)
+rotation = 0.130277
+
+[node name="night_orchid_53" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-23, -207)
+rotation = 0.130277
+
+[node name="night_orchid_54" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-11, -227)
+rotation = 0.130277
+
+[node name="night_orchid_55" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(9, -248)
+
+[node name="night_orchid_56" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(4, -238)
+
+[node name="night_orchid_57" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(25, -236)
+rotation = 0.130277
+
+[node name="night_orchid_58" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(13, -224)
+
+[node name="night_orchid_59" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(8, -214)
+
+[node name="night_orchid_60" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(29, -212)
+rotation = 0.130277
+
+[node name="night_orchid_61" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(13, -201)
+rotation = 0.130277
+
+[node name="night_orchid_62" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(25, -221)
+rotation = 0.130277
+
+[node name="night_orchid_63" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(45, -242)
+
+[node name="night_orchid_64" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(40, -232)
+
+[node name="night_orchid_65" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(61, -230)
+rotation = 0.130277
+
+[node name="night_orchid_66" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-78, -259)
+
+[node name="night_orchid_67" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-83, -249)
+
+[node name="night_orchid_68" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-62, -247)
+rotation = 0.130277
+
+[node name="night_orchid_69" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-78, -236)
+rotation = 0.130277
+
+[node name="night_orchid_70" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-66, -256)
+rotation = 0.130277
+
+[node name="night_orchid_71" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-46, -277)
+
+[node name="night_orchid_72" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-51, -267)
+
+[node name="night_orchid_73" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-30, -265)
+rotation = 0.130277
+
+[node name="night_orchid_74" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-42, -253)
+
+[node name="night_orchid_75" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-47, -243)
+
+[node name="night_orchid_76" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-26, -241)
+rotation = 0.130277
+
+[node name="night_orchid_77" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-42, -230)
+rotation = 0.130277
+
+[node name="night_orchid_78" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-30, -250)
+rotation = 0.130277
+
+[node name="night_orchid_79" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-10, -271)
+
+[node name="night_orchid_80" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-15, -261)
+
+[node name="night_orchid_81" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(6, -259)
+rotation = 0.130277
+
+[node name="night_orchid_82" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-146, -286)
+
+[node name="night_orchid_83" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-151, -276)
+
+[node name="night_orchid_84" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-130, -274)
+rotation = 0.130277
+
+[node name="night_orchid_85" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-146, -263)
+rotation = 0.130277
+
+[node name="night_orchid_86" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-134, -283)
+rotation = 0.130277
+
+[node name="night_orchid_87" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-114, -304)
+
+[node name="night_orchid_88" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-119, -294)
+
+[node name="night_orchid_89" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-98, -292)
+rotation = 0.130277
+
+[node name="night_orchid_90" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-110, -280)
+
+[node name="night_orchid_91" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-115, -270)
+
+[node name="night_orchid_92" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-94, -268)
+rotation = 0.130277
+
+[node name="night_orchid_93" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-110, -257)
+rotation = 0.130277
+
+[node name="night_orchid_94" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-98, -277)
+rotation = 0.130277
+
+[node name="night_orchid_95" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-78, -298)
+
+[node name="night_orchid_96" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-83, -288)
+
+[node name="night_orchid_97" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-62, -286)
+rotation = 0.130277
+
+[node name="night_orchid_98" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-224, -297)
+
+[node name="night_orchid_99" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-229, -287)
+
+[node name="night_orchid_100" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-208, -285)
+rotation = 0.130277
+
+[node name="night_orchid_101" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-224, -274)
+rotation = 0.130277
+
+[node name="night_orchid_102" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-212, -294)
+rotation = 0.130277
+
+[node name="night_orchid_103" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-192, -315)
+
+[node name="night_orchid_104" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-197, -305)
+
+[node name="night_orchid_105" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-176, -303)
+rotation = 0.130277
+
+[node name="night_orchid_106" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-188, -291)
+
+[node name="night_orchid_107" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-193, -281)
+
+[node name="night_orchid_108" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-172, -279)
+rotation = 0.130277
+
+[node name="night_orchid_109" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-188, -268)
+rotation = 0.130277
+
+[node name="night_orchid_110" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-176, -288)
+rotation = 0.130277
+
+[node name="night_orchid_111" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-156, -309)
+
+[node name="night_orchid_112" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-161, -299)
+
+[node name="night_orchid_113" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-140, -297)
+rotation = 0.130277
+
+[node name="night_orchid_114" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(92, -64)
+
+[node name="night_orchid_115" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(87, -54)
+
+[node name="night_orchid_116" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(108, -52)
+rotation = 0.130277
+
+[node name="night_orchid_117" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(92, -41)
+rotation = 0.130277
+
+[node name="night_orchid_118" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(104, -61)
+rotation = 0.130277
+
+[node name="night_orchid_119" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(124, -82)
+
+[node name="night_orchid_120" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(119, -72)
+
+[node name="night_orchid_121" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(140, -70)
+rotation = 0.130277
+
+[node name="night_orchid_122" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(128, -58)
+
+[node name="night_orchid_123" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(123, -48)
+
+[node name="night_orchid_124" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(144, -46)
+rotation = 0.130277
+
+[node name="night_orchid_125" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(128, -35)
+rotation = 0.130277
+
+[node name="night_orchid_126" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(140, -55)
+rotation = 0.130277
+
+[node name="night_orchid_127" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(160, -76)
+
+[node name="night_orchid_128" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(155, -66)
+
+[node name="night_orchid_129" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(176, -64)
+rotation = 0.130277
+
+[node name="night_orchid_130" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(35, 24)
+
+[node name="night_orchid_131" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(30, 34)
+
+[node name="night_orchid_132" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(51, 36)
+rotation = 0.130277
+
+[node name="night_orchid_133" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(35, 47)
+rotation = 0.130277
+
+[node name="night_orchid_134" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(47, 27)
+rotation = 0.130277
+
+[node name="night_orchid_135" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(67, 6)
+
+[node name="night_orchid_136" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(62, 16)
+
+[node name="night_orchid_137" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(83, 18)
+rotation = 0.130277
+
+[node name="night_orchid_138" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(71, 30)
+
+[node name="night_orchid_139" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(66, 40)
+
+[node name="night_orchid_140" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(87, 42)
+rotation = 0.130277
+
+[node name="night_orchid_141" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(71, 53)
+rotation = 0.130277
+
+[node name="night_orchid_142" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(83, 33)
+rotation = 0.130277
+
+[node name="night_orchid_143" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(103, 12)
+
+[node name="night_orchid_144" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(98, 22)
+
+[node name="night_orchid_145" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(119, 24)
+rotation = 0.130277
+
+[node name="night_orchid_146" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-5, 72)
+
+[node name="night_orchid_147" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-10, 82)
+
+[node name="night_orchid_148" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(11, 84)
+rotation = 0.130277
+
+[node name="night_orchid_149" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-5, 95)
+rotation = 0.130277
+
+[node name="night_orchid_150" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(7, 75)
+rotation = 0.130277
+
+[node name="night_orchid_151" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(27, 54)
+
+[node name="night_orchid_152" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(22, 64)
+
+[node name="night_orchid_153" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(43, 66)
+rotation = 0.130277
+
+[node name="night_orchid_154" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(31, 78)
+
+[node name="night_orchid_155" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(26, 88)
+
+[node name="night_orchid_156" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(47, 90)
+rotation = 0.130277
+
+[node name="night_orchid_157" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(31, 101)
+rotation = 0.130277
+
+[node name="night_orchid_158" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(43, 81)
+rotation = 0.130277
+
+[node name="night_orchid_159" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(63, 60)
+
+[node name="night_orchid_160" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(58, 70)
+
+[node name="night_orchid_161" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(79, 72)
+rotation = 0.130277
+
+[node name="night_orchid_162" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-83, 118)
+
+[node name="night_orchid_163" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-88, 128)
+
+[node name="night_orchid_164" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-67, 130)
+rotation = 0.130277
+
+[node name="night_orchid_165" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-83, 141)
+rotation = 0.130277
+
+[node name="night_orchid_166" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-71, 121)
+rotation = 0.130277
+
+[node name="night_orchid_167" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-51, 100)
+
+[node name="night_orchid_168" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-56, 110)
+
+[node name="night_orchid_169" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-35, 112)
+rotation = 0.130277
+
+[node name="night_orchid_170" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-47, 124)
+
+[node name="night_orchid_171" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-52, 134)
+
+[node name="night_orchid_172" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-31, 136)
+rotation = 0.130277
+
+[node name="night_orchid_173" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-47, 147)
+rotation = 0.130277
+
+[node name="night_orchid_174" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-35, 127)
+rotation = 0.130277
+
+[node name="night_orchid_175" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-15, 106)
+
+[node name="night_orchid_176" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-20, 116)
+
+[node name="night_orchid_177" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(1, 118)
+rotation = 0.130277
+
+[node name="night_orchid_178" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-238, -32)
+
+[node name="night_orchid_179" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-243, -22)
+
+[node name="night_orchid_180" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-222, -20)
+rotation = 0.130277
+
+[node name="night_orchid_181" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-238, -9)
+rotation = 0.130277
+
+[node name="night_orchid_182" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-226, -29)
+rotation = 0.130277
+
+[node name="night_orchid_183" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-206, -50)
+
+[node name="night_orchid_184" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-211, -40)
+
+[node name="night_orchid_185" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-190, -38)
+rotation = 0.130277
+
+[node name="night_orchid_186" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-202, -26)
+
+[node name="night_orchid_187" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-207, -16)
+
+[node name="night_orchid_188" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-186, -14)
+rotation = 0.130277
+
+[node name="night_orchid_189" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-202, -3)
+rotation = 0.130277
+
+[node name="night_orchid_190" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-190, -23)
+rotation = 0.130277
+
+[node name="night_orchid_191" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-170, -44)
+
+[node name="night_orchid_192" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-175, -34)
+
+[node name="night_orchid_193" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-154, -32)
+rotation = 0.130277
+
+[node name="night_orchid_194" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-315, 12)
+
+[node name="night_orchid_195" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-320, 22)
+
+[node name="night_orchid_196" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-299, 24)
+rotation = 0.130277
+
+[node name="night_orchid_197" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-315, 35)
+rotation = 0.130277
+
+[node name="night_orchid_198" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-303, 15)
+rotation = 0.130277
+
+[node name="night_orchid_199" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-283, -6)
+
+[node name="night_orchid_200" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-288, 4)
+
+[node name="night_orchid_201" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-267, 6)
+rotation = 0.130277
+
+[node name="night_orchid_202" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-279, 18)
+
+[node name="night_orchid_203" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-284, 28)
+
+[node name="night_orchid_204" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-263, 30)
+rotation = 0.130277
+
+[node name="night_orchid_205" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-279, 41)
+rotation = 0.130277
+
+[node name="night_orchid_206" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-267, 21)
+rotation = 0.130277
+
+[node name="night_orchid_207" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-247, 0)
+
+[node name="night_orchid_208" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-252, 10)
+
+[node name="night_orchid_209" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-231, 12)
+rotation = 0.130277
+
+[node name="night_orchid_210" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-303, -317)
+
+[node name="night_orchid_211" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-308, -307)
+
+[node name="night_orchid_212" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-287, -305)
+rotation = 0.130277
+
+[node name="night_orchid_213" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-303, -294)
+rotation = 0.130277
+
+[node name="night_orchid_214" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-291, -314)
+rotation = 0.130277
+
+[node name="night_orchid_215" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-271, -335)
+
+[node name="night_orchid_216" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-276, -325)
+
+[node name="night_orchid_217" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-255, -323)
+rotation = 0.130277
+
+[node name="night_orchid_218" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-267, -311)
+
+[node name="night_orchid_219" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-272, -301)
+
+[node name="night_orchid_220" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-251, -299)
+rotation = 0.130277
+
+[node name="night_orchid_221" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-267, -288)
+rotation = 0.130277
+
+[node name="night_orchid_222" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-255, -308)
+rotation = 0.130277
+
+[node name="night_orchid_223" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-235, -329)
+
+[node name="night_orchid_224" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-240, -319)
+
+[node name="night_orchid_225" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-219, -317)
+rotation = 0.130277
+
+[node name="night_orchid_226" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-353, -342)
+
+[node name="night_orchid_227" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-358, -332)
+
+[node name="night_orchid_228" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-337, -330)
+rotation = 0.130277
+
+[node name="night_orchid_229" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-353, -319)
+rotation = 0.130277
+
+[node name="night_orchid_230" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-341, -339)
+rotation = 0.130277
+
+[node name="night_orchid_231" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-321, -360)
+
+[node name="night_orchid_232" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-326, -350)
+
+[node name="night_orchid_233" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-305, -348)
+rotation = 0.130277
+
+[node name="night_orchid_234" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-317, -336)
+
+[node name="night_orchid_235" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-322, -326)
+
+[node name="night_orchid_236" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-301, -324)
+rotation = 0.130277
+
+[node name="night_orchid_237" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-317, -313)
+rotation = 0.130277
+
+[node name="night_orchid_238" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-305, -333)
+rotation = 0.130277
+
+[node name="night_orchid_239" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-285, -354)
+
+[node name="night_orchid_240" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-290, -344)
+
+[node name="night_orchid_241" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-269, -342)
+rotation = 0.130277
+
+[node name="night_orchid_242" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-397, -354)
+
+[node name="night_orchid_243" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-402, -344)
+
+[node name="night_orchid_244" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-381, -342)
+rotation = 0.130277
+
+[node name="night_orchid_245" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-397, -331)
+rotation = 0.130277
+
+[node name="night_orchid_246" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-385, -351)
+rotation = 0.130277
+
+[node name="night_orchid_247" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-365, -372)
+
+[node name="night_orchid_248" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-370, -362)
+
+[node name="night_orchid_249" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-349, -360)
+rotation = 0.130277
+
+[node name="night_orchid_250" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-361, -348)
+
+[node name="night_orchid_251" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-366, -338)
+
+[node name="night_orchid_252" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-345, -336)
+rotation = 0.130277
+
+[node name="night_orchid_253" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-361, -325)
+rotation = 0.130277
+
+[node name="night_orchid_254" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-349, -345)
+rotation = 0.130277
+
+[node name="night_orchid_255" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-329, -366)
+
+[node name="night_orchid_256" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-334, -356)
+
+[node name="night_orchid_257" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-313, -354)
+rotation = 0.130277
+
+[node name="night_orchid_258" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-397, -354)
+
+[node name="night_orchid_259" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-402, -344)
+
+[node name="night_orchid_260" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-381, -342)
+rotation = 0.130277
+
+[node name="night_orchid_261" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-397, -331)
+rotation = 0.130277
+
+[node name="night_orchid_262" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-385, -351)
+rotation = 0.130277
+
+[node name="night_orchid_263" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-365, -372)
+
+[node name="night_orchid_264" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-370, -362)
+
+[node name="night_orchid_265" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-349, -360)
+rotation = 0.130277
+
+[node name="night_orchid_266" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-361, -348)
+
+[node name="night_orchid_267" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-366, -338)
+
+[node name="night_orchid_268" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-345, -336)
+rotation = 0.130277
+
+[node name="night_orchid_269" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-361, -325)
+rotation = 0.130277
+
+[node name="night_orchid_270" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-349, -345)
+rotation = 0.130277
+
+[node name="night_orchid_271" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-329, -366)
+
+[node name="night_orchid_272" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-334, -356)
+
+[node name="night_orchid_273" parent="orchids" instance=ExtResource("5_8u1w2")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-313, -354)
+rotation = 0.130277
+
+[node name="earth" type="Node2D" parent="."]
+z_index = -1
+metadata/_edit_lock_ = true
+
+[node name="Earth6" type="Sprite2D" parent="earth"]
+position = Vector2(111, 5)
+texture = ExtResource("5_d0gmm")
+metadata/_edit_lock_ = true
+
+[node name="SmallEarthPlot" type="Sprite2D" parent="earth"]
+position = Vector2(-683, -484)
+texture = ExtResource("5_m76uj")
+
+[node name="SmallEarthPlot2" type="Sprite2D" parent="earth"]
+position = Vector2(-765, -371)
+texture = ExtResource("5_m76uj")
+
+[node name="SmallEarthPlot3" type="Sprite2D" parent="earth"]
+position = Vector2(-202, 270)
+texture = ExtResource("5_m76uj")
+
+[node name="SmallEarthPlot4" type="Sprite2D" parent="earth"]
+position = Vector2(-294, 166)
+texture = ExtResource("5_m76uj")
+
+[node name="SmallEarthPlot5" type="Sprite2D" parent="earth"]
+position = Vector2(-350, 239)
+texture = ExtResource("5_m76uj")
+
+[node name="SmallEarthPlot6" type="Sprite2D" parent="earth"]
+position = Vector2(-452, 169)
+texture = ExtResource("5_m76uj")
+
+[node name="SmallEarthPlot7" type="Sprite2D" parent="earth"]
+position = Vector2(-351, 336)
+texture = ExtResource("5_m76uj")
+
+[node name="SmallEarthPlot8" type="Sprite2D" parent="earth"]
+position = Vector2(-401, 51)
+texture = ExtResource("5_m76uj")
+
+[node name="SmallEarthPlot9" type="Sprite2D" parent="earth"]
+position = Vector2(-140, 333)
+texture = ExtResource("5_m76uj")
+
+[node name="SmallEarthPlot10" type="Sprite2D" parent="earth"]
+position = Vector2(941, 200)
+texture = ExtResource("5_m76uj")
+
+[node name="SmallEarthPlot11" type="Sprite2D" parent="earth"]
+position = Vector2(922, 95)
+texture = ExtResource("5_m76uj")
+
+[node name="SmallEarthPlot12" type="Sprite2D" parent="earth"]
+position = Vector2(1042, 103)
+texture = ExtResource("5_m76uj")
+
+[node name="SmallEarthPlot13" type="Sprite2D" parent="earth"]
+position = Vector2(996, 310)
+texture = ExtResource("5_m76uj")
+
+[node name="SmallEarthPlot14" type="Sprite2D" parent="earth"]
+position = Vector2(1058, 206)
+texture = ExtResource("5_m76uj")
+
+[node name="SmallEarthPlot15" type="Sprite2D" parent="earth"]
+position = Vector2(849, -28)
+texture = ExtResource("5_m76uj")
+
+[node name="SmallEarthPlot16" type="Sprite2D" parent="earth"]
+position = Vector2(959, -7)
+texture = ExtResource("5_m76uj")
+
+[node name="SmallEarthPlot17" type="Sprite2D" parent="earth"]
+position = Vector2(959, -7)
+texture = ExtResource("5_m76uj")
+
+[node name="flora" type="Node2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+
+[node name="purple_night_grass" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-263, -80)
+
+[node name="purple_night_grass2" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-235, -55)
+
+[node name="purple_night_grass3" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-229, -91)
+
+[node name="purple_night_grass4" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-265, -49)
+
+[node name="purple_night_grass5" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-303, -75)
+
+[node name="purple_night_grass6" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-271, -110)
+
+[node name="purple_night_grass7" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-250, -101)
+
+[node name="purple_night_grass8" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-216, -64)
+
+[node name="purple_night_grass9" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-216, -64)
+
+[node name="purple_night_grass10" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-171, -139)
+
+[node name="purple_night_grass11" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-143, -114)
+
+[node name="purple_night_grass12" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-137, -150)
+
+[node name="purple_night_grass13" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-173, -108)
+
+[node name="purple_night_grass14" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-211, -134)
+
+[node name="purple_night_grass15" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-179, -169)
+
+[node name="purple_night_grass16" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-158, -160)
+
+[node name="purple_night_grass17" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-187, -61)
+
+[node name="purple_night_grass18" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-124, -123)
+
+[node name="purple_night_grass19" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-153, -38)
+
+[node name="purple_night_grass20" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-125, -13)
+
+[node name="purple_night_grass21" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-119, -49)
+
+[node name="purple_night_grass22" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-155, -7)
+
+[node name="purple_night_grass23" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-193, -33)
+
+[node name="purple_night_grass24" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-161, -68)
+
+[node name="purple_night_grass25" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-140, -59)
+
+[node name="purple_night_grass26" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-106, -22)
+
+[node name="purple_night_grass27" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-106, -22)
+
+[node name="purple_night_grass28" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-61, -97)
+
+[node name="purple_night_grass29" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-33, -72)
+
+[node name="purple_night_grass30" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-27, -108)
+
+[node name="purple_night_grass31" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-63, -66)
+
+[node name="purple_night_grass32" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-101, -92)
+
+[node name="purple_night_grass33" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-69, -127)
+
+[node name="purple_night_grass34" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-48, -118)
+
+[node name="purple_night_grass35" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-77, -19)
+
+[node name="purple_night_grass36" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-14, -81)
+
+[node name="purple_night_grass37" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-44, -151)
+
+[node name="purple_night_grass38" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-16, -126)
+
+[node name="purple_night_grass39" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-10, -162)
+
+[node name="purple_night_grass40" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-46, -120)
+
+[node name="purple_night_grass41" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-84, -146)
+
+[node name="purple_night_grass42" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-52, -181)
+
+[node name="purple_night_grass43" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-31, -172)
+
+[node name="purple_night_grass44" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(3, -135)
+
+[node name="purple_night_grass45" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(3, -135)
+
+[node name="purple_night_grass46" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(48, -210)
+
+[node name="purple_night_grass47" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(76, -185)
+
+[node name="purple_night_grass48" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(82, -221)
+
+[node name="purple_night_grass49" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(46, -179)
+
+[node name="purple_night_grass50" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(8, -205)
+
+[node name="purple_night_grass51" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(40, -240)
+
+[node name="purple_night_grass52" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(61, -231)
+
+[node name="purple_night_grass53" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(32, -132)
+
+[node name="purple_night_grass54" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(95, -194)
+
+[node name="purple_night_grass55" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-145, -190)
+
+[node name="purple_night_grass56" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-117, -165)
+
+[node name="purple_night_grass57" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-111, -201)
+
+[node name="purple_night_grass58" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-147, -159)
+
+[node name="purple_night_grass59" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-185, -185)
+
+[node name="purple_night_grass60" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-153, -220)
+
+[node name="purple_night_grass61" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-132, -211)
+
+[node name="purple_night_grass62" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-98, -174)
+
+[node name="purple_night_grass63" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-98, -174)
+
+[node name="purple_night_grass64" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-53, -249)
+
+[node name="purple_night_grass65" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-25, -224)
+
+[node name="purple_night_grass66" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-19, -260)
+
+[node name="purple_night_grass67" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-55, -218)
+
+[node name="purple_night_grass68" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-93, -244)
+
+[node name="purple_night_grass69" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-61, -279)
+
+[node name="purple_night_grass70" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-40, -270)
+
+[node name="purple_night_grass71" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-69, -171)
+
+[node name="purple_night_grass72" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-6, -233)
+
+[node name="purple_night_grass73" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-251, -183)
+
+[node name="purple_night_grass74" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-223, -158)
+
+[node name="purple_night_grass75" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-217, -194)
+
+[node name="purple_night_grass76" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-253, -152)
+
+[node name="purple_night_grass77" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-291, -178)
+
+[node name="purple_night_grass78" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-259, -213)
+
+[node name="purple_night_grass79" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-238, -204)
+
+[node name="purple_night_grass80" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-204, -167)
+
+[node name="purple_night_grass81" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-204, -167)
+
+[node name="purple_night_grass82" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-159, -242)
+
+[node name="purple_night_grass83" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-131, -217)
+
+[node name="purple_night_grass84" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-125, -253)
+
+[node name="purple_night_grass85" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-161, -211)
+
+[node name="purple_night_grass86" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-199, -237)
+
+[node name="purple_night_grass87" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-167, -272)
+
+[node name="purple_night_grass88" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-146, -263)
+
+[node name="purple_night_grass89" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-175, -164)
+
+[node name="purple_night_grass90" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-112, -226)
+
+[node name="purple_night_grass91" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-347, -152)
+
+[node name="purple_night_grass92" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-319, -127)
+
+[node name="purple_night_grass93" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-313, -163)
+
+[node name="purple_night_grass94" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-349, -121)
+
+[node name="purple_night_grass95" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-387, -147)
+
+[node name="purple_night_grass96" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-355, -182)
+
+[node name="purple_night_grass97" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-334, -173)
+
+[node name="purple_night_grass98" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-300, -136)
+
+[node name="purple_night_grass99" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-300, -136)
+
+[node name="purple_night_grass100" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-255, -211)
+
+[node name="purple_night_grass101" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-227, -186)
+
+[node name="purple_night_grass102" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-221, -222)
+
+[node name="purple_night_grass103" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-257, -180)
+
+[node name="purple_night_grass104" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-295, -206)
+
+[node name="purple_night_grass105" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-263, -241)
+
+[node name="purple_night_grass106" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-242, -232)
+
+[node name="purple_night_grass107" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-271, -133)
+
+[node name="purple_night_grass108" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-208, -195)
+
+[node name="purple_night_grass109" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-408, -214)
+
+[node name="purple_night_grass110" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-380, -189)
+
+[node name="purple_night_grass111" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-374, -225)
+
+[node name="purple_night_grass112" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-410, -183)
+
+[node name="purple_night_grass113" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-448, -209)
+
+[node name="purple_night_grass114" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-416, -244)
+
+[node name="purple_night_grass115" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-395, -235)
+
+[node name="purple_night_grass116" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-361, -198)
+
+[node name="purple_night_grass117" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-361, -198)
+
+[node name="purple_night_grass118" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-316, -273)
+
+[node name="purple_night_grass119" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-288, -248)
+
+[node name="purple_night_grass120" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-282, -284)
+
+[node name="purple_night_grass121" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-318, -242)
+
+[node name="purple_night_grass122" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-356, -268)
+
+[node name="purple_night_grass123" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-324, -303)
+
+[node name="purple_night_grass124" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-303, -294)
+
+[node name="purple_night_grass125" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-332, -195)
+
+[node name="purple_night_grass126" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-269, -257)
+
+[node name="purple_night_grass127" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-473, -252)
+
+[node name="purple_night_grass128" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-445, -227)
+
+[node name="purple_night_grass129" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-439, -263)
+
+[node name="purple_night_grass130" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-475, -221)
+
+[node name="purple_night_grass131" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-513, -247)
+
+[node name="purple_night_grass132" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-481, -282)
+
+[node name="purple_night_grass133" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-460, -273)
+
+[node name="purple_night_grass134" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-426, -236)
+
+[node name="purple_night_grass135" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-426, -236)
+
+[node name="purple_night_grass136" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-381, -311)
+
+[node name="purple_night_grass137" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-353, -286)
+
+[node name="purple_night_grass138" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-347, -322)
+
+[node name="purple_night_grass139" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-383, -280)
+
+[node name="purple_night_grass140" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-421, -306)
+
+[node name="purple_night_grass141" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-389, -341)
+
+[node name="purple_night_grass142" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-368, -332)
+
+[node name="purple_night_grass143" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-397, -233)
+
+[node name="purple_night_grass144" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-334, -295)
+
+[node name="purple_night_grass145" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-548, -293)
+
+[node name="purple_night_grass146" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-520, -268)
+
+[node name="purple_night_grass147" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-514, -304)
+
+[node name="purple_night_grass148" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-550, -262)
+
+[node name="purple_night_grass149" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-588, -288)
+
+[node name="purple_night_grass150" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-556, -323)
+
+[node name="purple_night_grass151" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-535, -314)
+
+[node name="purple_night_grass152" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-501, -277)
+
+[node name="purple_night_grass153" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-501, -277)
+
+[node name="purple_night_grass154" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-456, -352)
+
+[node name="purple_night_grass155" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-428, -327)
+
+[node name="purple_night_grass156" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-422, -363)
+
+[node name="purple_night_grass157" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-458, -321)
+
+[node name="purple_night_grass158" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-496, -347)
+
+[node name="purple_night_grass159" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-464, -382)
+
+[node name="purple_night_grass160" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-443, -373)
+
+[node name="purple_night_grass161" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-472, -274)
+
+[node name="purple_night_grass162" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-409, -336)
+
+[node name="purple_night_grass163" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-583, -332)
+
+[node name="purple_night_grass164" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-555, -307)
+
+[node name="purple_night_grass165" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-549, -343)
+
+[node name="purple_night_grass166" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-585, -301)
+
+[node name="purple_night_grass167" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-623, -327)
+
+[node name="purple_night_grass168" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-591, -362)
+
+[node name="purple_night_grass169" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-570, -353)
+
+[node name="purple_night_grass170" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-536, -316)
+
+[node name="purple_night_grass171" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-536, -316)
+
+[node name="purple_night_grass172" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-491, -391)
+
+[node name="purple_night_grass173" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-463, -366)
+
+[node name="purple_night_grass174" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-457, -402)
+
+[node name="purple_night_grass175" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-493, -360)
+
+[node name="purple_night_grass176" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-531, -386)
+
+[node name="purple_night_grass177" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-499, -421)
+
+[node name="purple_night_grass178" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-478, -412)
+
+[node name="purple_night_grass179" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-507, -313)
+
+[node name="purple_night_grass180" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-444, -375)
+
+[node name="purple_night_grass181" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-747, -349)
+
+[node name="purple_night_grass182" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-719, -324)
+
+[node name="purple_night_grass183" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-713, -360)
+
+[node name="purple_night_grass184" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-749, -318)
+
+[node name="purple_night_grass185" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-787, -344)
+
+[node name="purple_night_grass186" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-755, -379)
+
+[node name="purple_night_grass187" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-734, -370)
+
+[node name="purple_night_grass188" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-700, -333)
+
+[node name="purple_night_grass189" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-700, -333)
+
+[node name="purple_night_grass190" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-655, -408)
+
+[node name="purple_night_grass191" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-627, -383)
+
+[node name="purple_night_grass192" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-621, -419)
+
+[node name="purple_night_grass193" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-657, -377)
+
+[node name="purple_night_grass194" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-695, -403)
+
+[node name="purple_night_grass195" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-663, -438)
+
+[node name="purple_night_grass196" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-642, -429)
+
+[node name="purple_night_grass197" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-671, -330)
+
+[node name="purple_night_grass198" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-608, -392)
+
+[node name="purple_night_grass199" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-782, -418)
+
+[node name="purple_night_grass200" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-754, -393)
+
+[node name="purple_night_grass201" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-748, -429)
+
+[node name="purple_night_grass202" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-784, -387)
+
+[node name="purple_night_grass203" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-822, -413)
+
+[node name="purple_night_grass204" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-790, -448)
+
+[node name="purple_night_grass205" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-769, -439)
+
+[node name="purple_night_grass206" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-735, -402)
+
+[node name="purple_night_grass207" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-735, -402)
+
+[node name="purple_night_grass208" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-690, -477)
+
+[node name="purple_night_grass209" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-662, -452)
+
+[node name="purple_night_grass210" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-656, -488)
+
+[node name="purple_night_grass211" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-692, -446)
+
+[node name="purple_night_grass212" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-730, -472)
+
+[node name="purple_night_grass213" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-698, -507)
+
+[node name="purple_night_grass214" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-677, -498)
+
+[node name="purple_night_grass215" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-706, -399)
+
+[node name="purple_night_grass216" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-643, -461)
+
+[node name="purple_night_grass217" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-752, -466)
+
+[node name="purple_night_grass218" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-724, -441)
+
+[node name="purple_night_grass219" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-718, -477)
+
+[node name="purple_night_grass220" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-754, -435)
+
+[node name="purple_night_grass221" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-792, -461)
+
+[node name="purple_night_grass222" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-760, -496)
+
+[node name="purple_night_grass223" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-739, -487)
+
+[node name="purple_night_grass224" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-705, -450)
+
+[node name="purple_night_grass225" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-705, -450)
+
+[node name="purple_night_grass226" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-660, -525)
+
+[node name="purple_night_grass227" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-632, -500)
+
+[node name="purple_night_grass228" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-626, -536)
+
+[node name="purple_night_grass229" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-662, -494)
+
+[node name="purple_night_grass230" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-700, -520)
+
+[node name="purple_night_grass231" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-668, -555)
+
+[node name="purple_night_grass232" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-647, -546)
+
+[node name="purple_night_grass233" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-676, -447)
+
+[node name="purple_night_grass234" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-613, -509)
+
+[node name="purple_night_grass235" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-744, -271)
+
+[node name="purple_night_grass236" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-716, -246)
+
+[node name="purple_night_grass237" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-710, -282)
+
+[node name="purple_night_grass238" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-746, -240)
+
+[node name="purple_night_grass239" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-784, -266)
+
+[node name="purple_night_grass240" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-752, -301)
+
+[node name="purple_night_grass241" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-731, -292)
+
+[node name="purple_night_grass242" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-697, -255)
+
+[node name="purple_night_grass243" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-697, -255)
+
+[node name="purple_night_grass244" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-652, -330)
+
+[node name="purple_night_grass245" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-624, -305)
+
+[node name="purple_night_grass246" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-618, -341)
+
+[node name="purple_night_grass247" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-654, -299)
+
+[node name="purple_night_grass248" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-692, -325)
+
+[node name="purple_night_grass249" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-660, -360)
+
+[node name="purple_night_grass250" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-639, -351)
+
+[node name="purple_night_grass251" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-668, -252)
+
+[node name="purple_night_grass252" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-605, -314)
+
+[node name="purple_night_grass253" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-735, -194)
+
+[node name="purple_night_grass254" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-707, -169)
+
+[node name="purple_night_grass255" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-701, -205)
+
+[node name="purple_night_grass256" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-737, -163)
+
+[node name="purple_night_grass257" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-775, -189)
+
+[node name="purple_night_grass258" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-743, -224)
+
+[node name="purple_night_grass259" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-722, -215)
+
+[node name="purple_night_grass260" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-688, -178)
+
+[node name="purple_night_grass261" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-688, -178)
+
+[node name="purple_night_grass262" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-643, -253)
+
+[node name="purple_night_grass263" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-615, -228)
+
+[node name="purple_night_grass264" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-609, -264)
+
+[node name="purple_night_grass265" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-645, -222)
+
+[node name="purple_night_grass266" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-683, -248)
+
+[node name="purple_night_grass267" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-651, -283)
+
+[node name="purple_night_grass268" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-630, -274)
+
+[node name="purple_night_grass269" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-659, -175)
+
+[node name="purple_night_grass270" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-596, -237)
+
+[node name="purple_night_grass271" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-590, -119)
+
+[node name="purple_night_grass272" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-562, -94)
+
+[node name="purple_night_grass273" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-556, -130)
+
+[node name="purple_night_grass274" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-592, -88)
+
+[node name="purple_night_grass275" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-630, -114)
+
+[node name="purple_night_grass276" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-598, -149)
+
+[node name="purple_night_grass277" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-577, -140)
+
+[node name="purple_night_grass278" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-543, -103)
+
+[node name="purple_night_grass279" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-543, -103)
+
+[node name="purple_night_grass280" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-498, -178)
+
+[node name="purple_night_grass281" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-470, -153)
+
+[node name="purple_night_grass282" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-464, -189)
+
+[node name="purple_night_grass283" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-500, -147)
+
+[node name="purple_night_grass284" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-538, -173)
+
+[node name="purple_night_grass285" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-506, -208)
+
+[node name="purple_night_grass286" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-485, -199)
+
+[node name="purple_night_grass287" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-514, -100)
+
+[node name="purple_night_grass288" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-451, -162)
+
+[node name="purple_night_grass289" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-662, -148)
+
+[node name="purple_night_grass290" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-634, -123)
+
+[node name="purple_night_grass291" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-628, -159)
+
+[node name="purple_night_grass292" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-664, -117)
+
+[node name="purple_night_grass293" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-702, -143)
+
+[node name="purple_night_grass294" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-670, -178)
+
+[node name="purple_night_grass295" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-649, -169)
+
+[node name="purple_night_grass296" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-615, -132)
+
+[node name="purple_night_grass297" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-615, -132)
+
+[node name="purple_night_grass298" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-570, -207)
+
+[node name="purple_night_grass299" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-542, -182)
+
+[node name="purple_night_grass300" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-536, -218)
+
+[node name="purple_night_grass301" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-572, -176)
+
+[node name="purple_night_grass302" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-610, -202)
+
+[node name="purple_night_grass303" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-578, -237)
+
+[node name="purple_night_grass304" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-557, -228)
+
+[node name="purple_night_grass305" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-586, -129)
+
+[node name="purple_night_grass306" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-523, -191)
+
+[node name="purple_night_grass307" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-619, -79)
+
+[node name="purple_night_grass308" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-591, -54)
+
+[node name="purple_night_grass309" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-585, -90)
+
+[node name="purple_night_grass310" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-621, -48)
+
+[node name="purple_night_grass311" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-659, -74)
+
+[node name="purple_night_grass312" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-627, -109)
+
+[node name="purple_night_grass313" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-606, -100)
+
+[node name="purple_night_grass314" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-572, -63)
+
+[node name="purple_night_grass315" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-572, -63)
+
+[node name="purple_night_grass316" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-527, -138)
+
+[node name="purple_night_grass317" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-499, -113)
+
+[node name="purple_night_grass318" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-493, -149)
+
+[node name="purple_night_grass319" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-529, -107)
+
+[node name="purple_night_grass320" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-567, -133)
+
+[node name="purple_night_grass321" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-535, -168)
+
+[node name="purple_night_grass322" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-514, -159)
+
+[node name="purple_night_grass323" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-543, -60)
+
+[node name="purple_night_grass324" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-480, -122)
+
+[node name="purple_night_grass325" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-581, -8)
+
+[node name="purple_night_grass326" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-553, 17)
+
+[node name="purple_night_grass327" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-547, -19)
+
+[node name="purple_night_grass328" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-583, 23)
+
+[node name="purple_night_grass329" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-621, -3)
+
+[node name="purple_night_grass330" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-589, -38)
+
+[node name="purple_night_grass331" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-568, -29)
+
+[node name="purple_night_grass332" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-534, 8)
+
+[node name="purple_night_grass333" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-534, 8)
+
+[node name="purple_night_grass334" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-489, -67)
+
+[node name="purple_night_grass335" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-461, -42)
+
+[node name="purple_night_grass336" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-455, -78)
+
+[node name="purple_night_grass337" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-491, -36)
+
+[node name="purple_night_grass338" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-529, -62)
+
+[node name="purple_night_grass339" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-497, -97)
+
+[node name="purple_night_grass340" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-476, -88)
+
+[node name="purple_night_grass341" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-505, 11)
+
+[node name="purple_night_grass342" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-442, -51)
+
+[node name="purple_night_grass343" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-446, -52)
+
+[node name="purple_night_grass344" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-418, -27)
+
+[node name="purple_night_grass345" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-412, -63)
+
+[node name="purple_night_grass346" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-448, -21)
+
+[node name="purple_night_grass347" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-486, -47)
+
+[node name="purple_night_grass348" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-454, -82)
+
+[node name="purple_night_grass349" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-433, -73)
+
+[node name="purple_night_grass350" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-399, -36)
+
+[node name="purple_night_grass351" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-399, -36)
+
+[node name="purple_night_grass352" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-354, -111)
+
+[node name="purple_night_grass353" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-326, -86)
+
+[node name="purple_night_grass354" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-320, -122)
+
+[node name="purple_night_grass355" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-356, -80)
+
+[node name="purple_night_grass356" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-394, -106)
+
+[node name="purple_night_grass357" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-362, -141)
+
+[node name="purple_night_grass358" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-341, -132)
+
+[node name="purple_night_grass359" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-370, -33)
+
+[node name="purple_night_grass360" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-307, -95)
+
+[node name="purple_night_grass361" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-322, 37)
+
+[node name="purple_night_grass362" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-294, 62)
+
+[node name="purple_night_grass363" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-288, 26)
+
+[node name="purple_night_grass364" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-324, 68)
+
+[node name="purple_night_grass365" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-362, 42)
+
+[node name="purple_night_grass366" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-330, 7)
+
+[node name="purple_night_grass367" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-309, 16)
+
+[node name="purple_night_grass368" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-275, 53)
+
+[node name="purple_night_grass369" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-275, 53)
+
+[node name="purple_night_grass370" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-230, -22)
+
+[node name="purple_night_grass371" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-202, 3)
+
+[node name="purple_night_grass372" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-196, -33)
+
+[node name="purple_night_grass373" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-232, 9)
+
+[node name="purple_night_grass374" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-270, -17)
+
+[node name="purple_night_grass375" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-238, -52)
+
+[node name="purple_night_grass376" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-217, -43)
+
+[node name="purple_night_grass377" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-246, 56)
+
+[node name="purple_night_grass378" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-183, -6)
+
+[node name="purple_night_grass379" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-154, 23)
+
+[node name="purple_night_grass380" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-126, 48)
+
+[node name="purple_night_grass381" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-120, 12)
+
+[node name="purple_night_grass382" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-156, 54)
+
+[node name="purple_night_grass383" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-194, 28)
+
+[node name="purple_night_grass384" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-162, -7)
+
+[node name="purple_night_grass385" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-141, 2)
+
+[node name="purple_night_grass386" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-107, 39)
+
+[node name="purple_night_grass387" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-107, 39)
+
+[node name="purple_night_grass388" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-62, -36)
+
+[node name="purple_night_grass389" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-34, -11)
+
+[node name="purple_night_grass390" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-28, -47)
+
+[node name="purple_night_grass391" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-64, -5)
+
+[node name="purple_night_grass392" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-102, -31)
+
+[node name="purple_night_grass393" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-70, -66)
+
+[node name="purple_night_grass394" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-49, -57)
+
+[node name="purple_night_grass395" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-78, 42)
+
+[node name="purple_night_grass396" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-15, -20)
+
+[node name="purple_night_grass397" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-54, 111)
+
+[node name="purple_night_grass398" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-26, 136)
+
+[node name="purple_night_grass399" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-20, 100)
+
+[node name="purple_night_grass400" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-56, 142)
+
+[node name="purple_night_grass401" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-94, 116)
+
+[node name="purple_night_grass402" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-62, 81)
+
+[node name="purple_night_grass403" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-41, 90)
+
+[node name="purple_night_grass404" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-7, 127)
+
+[node name="purple_night_grass405" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-7, 127)
+
+[node name="purple_night_grass406" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(38, 52)
+
+[node name="purple_night_grass407" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(66, 77)
+
+[node name="purple_night_grass408" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(72, 41)
+
+[node name="purple_night_grass409" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(36, 83)
+
+[node name="purple_night_grass410" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-2, 57)
+
+[node name="purple_night_grass411" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(30, 22)
+
+[node name="purple_night_grass412" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(51, 31)
+
+[node name="purple_night_grass413" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(22, 130)
+
+[node name="purple_night_grass414" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(85, 68)
+
+[node name="purple_night_grass415" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(75, 42)
+
+[node name="purple_night_grass416" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(103, 67)
+
+[node name="purple_night_grass417" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(109, 31)
+
+[node name="purple_night_grass418" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(73, 73)
+
+[node name="purple_night_grass419" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(35, 47)
+
+[node name="purple_night_grass420" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(67, 12)
+
+[node name="purple_night_grass421" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(88, 21)
+
+[node name="purple_night_grass422" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(122, 58)
+
+[node name="purple_night_grass423" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(122, 58)
+
+[node name="purple_night_grass424" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(167, -17)
+
+[node name="purple_night_grass425" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(195, 8)
+
+[node name="purple_night_grass426" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(201, -28)
+
+[node name="purple_night_grass427" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(165, 14)
+
+[node name="purple_night_grass428" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(127, -12)
+
+[node name="purple_night_grass429" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(159, -47)
+
+[node name="purple_night_grass430" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(180, -38)
+
+[node name="purple_night_grass431" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(151, 61)
+
+[node name="purple_night_grass432" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(214, -1)
+
+[node name="purple_night_grass433" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(68, -91)
+
+[node name="purple_night_grass434" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(96, -66)
+
+[node name="purple_night_grass435" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(102, -102)
+
+[node name="purple_night_grass436" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(66, -60)
+
+[node name="purple_night_grass437" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(28, -86)
+
+[node name="purple_night_grass438" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(60, -121)
+
+[node name="purple_night_grass439" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(81, -112)
+
+[node name="purple_night_grass440" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(115, -75)
+
+[node name="purple_night_grass441" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(115, -75)
+
+[node name="purple_night_grass442" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(160, -150)
+
+[node name="purple_night_grass443" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(188, -125)
+
+[node name="purple_night_grass444" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(194, -161)
+
+[node name="purple_night_grass445" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(158, -119)
+
+[node name="purple_night_grass446" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(120, -145)
+
+[node name="purple_night_grass447" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(152, -180)
+
+[node name="purple_night_grass448" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(173, -171)
+
+[node name="purple_night_grass449" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(144, -72)
+
+[node name="purple_night_grass450" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(207, -134)
+
+[node name="purple_night_grass451" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(181, -146)
+
+[node name="purple_night_grass452" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(209, -121)
+
+[node name="purple_night_grass453" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(215, -157)
+
+[node name="purple_night_grass454" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(179, -115)
+
+[node name="purple_night_grass455" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(141, -141)
+
+[node name="purple_night_grass456" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(173, -176)
+
+[node name="purple_night_grass457" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(194, -167)
+
+[node name="purple_night_grass458" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(228, -130)
+
+[node name="purple_night_grass459" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(228, -130)
+
+[node name="purple_night_grass460" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(273, -205)
+
+[node name="purple_night_grass461" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(301, -180)
+
+[node name="purple_night_grass462" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(307, -216)
+
+[node name="purple_night_grass463" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(271, -174)
+
+[node name="purple_night_grass464" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(233, -200)
+
+[node name="purple_night_grass465" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(265, -235)
+
+[node name="purple_night_grass466" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(286, -226)
+
+[node name="purple_night_grass467" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(257, -127)
+
+[node name="purple_night_grass468" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(320, -189)
+
+[node name="purple_night_grass469" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(202, -67)
+
+[node name="purple_night_grass470" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(230, -42)
+
+[node name="purple_night_grass471" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(236, -78)
+
+[node name="purple_night_grass472" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(200, -36)
+
+[node name="purple_night_grass473" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(162, -62)
+
+[node name="purple_night_grass474" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(194, -97)
+
+[node name="purple_night_grass475" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(215, -88)
+
+[node name="purple_night_grass476" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(249, -51)
+
+[node name="purple_night_grass477" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(249, -51)
+
+[node name="purple_night_grass478" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(294, -126)
+
+[node name="purple_night_grass479" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(322, -101)
+
+[node name="purple_night_grass480" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(328, -137)
+
+[node name="purple_night_grass481" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(292, -95)
+
+[node name="purple_night_grass482" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(254, -121)
+
+[node name="purple_night_grass483" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(286, -156)
+
+[node name="purple_night_grass484" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(307, -147)
+
+[node name="purple_night_grass485" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(278, -48)
+
+[node name="purple_night_grass486" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(341, -110)
+
+[node name="purple_night_grass487" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(233, 44)
+
+[node name="purple_night_grass488" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(261, 69)
+
+[node name="purple_night_grass489" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(267, 33)
+
+[node name="purple_night_grass490" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(231, 75)
+
+[node name="purple_night_grass491" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(193, 49)
+
+[node name="purple_night_grass492" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(225, 14)
+
+[node name="purple_night_grass493" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(246, 23)
+
+[node name="purple_night_grass494" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(280, 60)
+
+[node name="purple_night_grass495" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(280, 60)
+
+[node name="purple_night_grass496" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(325, -15)
+
+[node name="purple_night_grass497" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(353, 10)
+
+[node name="purple_night_grass498" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(359, -26)
+
+[node name="purple_night_grass499" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(323, 16)
+
+[node name="purple_night_grass500" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(285, -10)
+
+[node name="purple_night_grass501" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(317, -45)
+
+[node name="purple_night_grass502" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(338, -36)
+
+[node name="purple_night_grass503" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(309, 63)
+
+[node name="purple_night_grass504" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(372, 1)
+
+[node name="purple_night_grass505" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(105, 134)
+
+[node name="purple_night_grass506" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(133, 159)
+
+[node name="purple_night_grass507" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(139, 123)
+
+[node name="purple_night_grass508" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(103, 165)
+
+[node name="purple_night_grass509" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(65, 139)
+
+[node name="purple_night_grass510" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(97, 104)
+
+[node name="purple_night_grass511" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(118, 113)
+
+[node name="purple_night_grass512" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(152, 150)
+
+[node name="purple_night_grass513" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(152, 150)
+
+[node name="purple_night_grass514" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(197, 75)
+
+[node name="purple_night_grass515" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(225, 100)
+
+[node name="purple_night_grass516" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(231, 64)
+
+[node name="purple_night_grass517" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(195, 106)
+
+[node name="purple_night_grass518" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(157, 80)
+
+[node name="purple_night_grass519" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(189, 45)
+
+[node name="purple_night_grass520" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(210, 54)
+
+[node name="purple_night_grass521" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(181, 153)
+
+[node name="purple_night_grass522" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(244, 91)
+
+[node name="purple_night_grass523" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-52, 199)
+
+[node name="purple_night_grass524" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-24, 224)
+
+[node name="purple_night_grass525" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-18, 188)
+
+[node name="purple_night_grass526" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-54, 230)
+
+[node name="purple_night_grass527" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-92, 204)
+
+[node name="purple_night_grass528" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-60, 169)
+
+[node name="purple_night_grass529" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-39, 178)
+
+[node name="purple_night_grass530" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-5, 215)
+
+[node name="purple_night_grass531" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-5, 215)
+
+[node name="purple_night_grass532" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(40, 140)
+
+[node name="purple_night_grass533" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(68, 165)
+
+[node name="purple_night_grass534" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(74, 129)
+
+[node name="purple_night_grass535" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(38, 171)
+
+[node name="purple_night_grass536" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(0, 145)
+
+[node name="purple_night_grass537" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(32, 110)
+
+[node name="purple_night_grass538" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(53, 119)
+
+[node name="purple_night_grass539" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(24, 218)
+
+[node name="purple_night_grass540" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(87, 156)
+
+[node name="purple_night_grass541" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-244, 132)
+
+[node name="purple_night_grass542" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-216, 157)
+
+[node name="purple_night_grass543" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-210, 121)
+
+[node name="purple_night_grass544" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-246, 163)
+
+[node name="purple_night_grass545" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-284, 137)
+
+[node name="purple_night_grass546" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-252, 102)
+
+[node name="purple_night_grass547" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-231, 111)
+
+[node name="purple_night_grass548" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-197, 148)
+
+[node name="purple_night_grass549" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-197, 148)
+
+[node name="purple_night_grass550" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-152, 73)
+
+[node name="purple_night_grass551" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-124, 98)
+
+[node name="purple_night_grass552" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-118, 62)
+
+[node name="purple_night_grass553" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-154, 104)
+
+[node name="purple_night_grass554" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-192, 78)
+
+[node name="purple_night_grass555" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-160, 43)
+
+[node name="purple_night_grass556" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-139, 52)
+
+[node name="purple_night_grass557" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-168, 151)
+
+[node name="purple_night_grass558" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-105, 89)
+
+[node name="purple_night_grass559" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-235, 211)
+
+[node name="purple_night_grass560" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-207, 236)
+
+[node name="purple_night_grass561" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-201, 200)
+
+[node name="purple_night_grass562" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-237, 242)
+
+[node name="purple_night_grass563" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-275, 216)
+
+[node name="purple_night_grass564" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-243, 181)
+
+[node name="purple_night_grass565" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-222, 190)
+
+[node name="purple_night_grass566" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-188, 227)
+
+[node name="purple_night_grass567" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-188, 227)
+
+[node name="purple_night_grass568" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-143, 152)
+
+[node name="purple_night_grass569" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-115, 177)
+
+[node name="purple_night_grass570" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-109, 141)
+
+[node name="purple_night_grass571" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-145, 183)
+
+[node name="purple_night_grass572" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-183, 157)
+
+[node name="purple_night_grass573" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-151, 122)
+
+[node name="purple_night_grass574" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-130, 131)
+
+[node name="purple_night_grass575" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-159, 230)
+
+[node name="purple_night_grass576" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-96, 168)
+
+[node name="purple_night_grass577" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-25, 293)
+
+[node name="purple_night_grass578" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(3, 318)
+
+[node name="purple_night_grass579" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(9, 282)
+
+[node name="purple_night_grass580" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-27, 324)
+
+[node name="purple_night_grass581" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-65, 298)
+
+[node name="purple_night_grass582" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-33, 263)
+
+[node name="purple_night_grass583" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-12, 272)
+
+[node name="purple_night_grass584" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(22, 309)
+
+[node name="purple_night_grass585" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(22, 309)
+
+[node name="purple_night_grass586" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(67, 234)
+
+[node name="purple_night_grass587" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(95, 259)
+
+[node name="purple_night_grass588" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(101, 223)
+
+[node name="purple_night_grass589" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(65, 265)
+
+[node name="purple_night_grass590" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(27, 239)
+
+[node name="purple_night_grass591" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(59, 204)
+
+[node name="purple_night_grass592" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(80, 213)
+
+[node name="purple_night_grass593" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(51, 312)
+
+[node name="purple_night_grass594" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(114, 250)
+
+[node name="purple_night_grass595" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(226, 234)
+
+[node name="purple_night_grass596" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(254, 259)
+
+[node name="purple_night_grass597" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(260, 223)
+
+[node name="purple_night_grass598" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(224, 265)
+
+[node name="purple_night_grass599" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(186, 239)
+
+[node name="purple_night_grass600" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(218, 204)
+
+[node name="purple_night_grass601" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(239, 213)
+
+[node name="purple_night_grass602" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(273, 250)
+
+[node name="purple_night_grass603" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(273, 250)
+
+[node name="purple_night_grass604" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(318, 175)
+
+[node name="purple_night_grass605" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(346, 200)
+
+[node name="purple_night_grass606" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(352, 164)
+
+[node name="purple_night_grass607" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(316, 206)
+
+[node name="purple_night_grass608" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(278, 180)
+
+[node name="purple_night_grass609" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(310, 145)
+
+[node name="purple_night_grass610" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(331, 154)
+
+[node name="purple_night_grass611" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(302, 253)
+
+[node name="purple_night_grass612" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(365, 191)
+
+[node name="purple_night_grass613" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(465, 216)
+
+[node name="purple_night_grass614" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(493, 241)
+
+[node name="purple_night_grass615" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(499, 205)
+
+[node name="purple_night_grass616" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(463, 247)
+
+[node name="purple_night_grass617" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(425, 221)
+
+[node name="purple_night_grass618" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(457, 186)
+
+[node name="purple_night_grass619" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(478, 195)
+
+[node name="purple_night_grass620" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(512, 232)
+
+[node name="purple_night_grass621" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(512, 232)
+
+[node name="purple_night_grass622" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(557, 157)
+
+[node name="purple_night_grass623" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(585, 182)
+
+[node name="purple_night_grass624" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(591, 146)
+
+[node name="purple_night_grass625" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(555, 188)
+
+[node name="purple_night_grass626" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(517, 162)
+
+[node name="purple_night_grass627" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(549, 127)
+
+[node name="purple_night_grass628" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(570, 136)
+
+[node name="purple_night_grass629" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(541, 235)
+
+[node name="purple_night_grass630" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(604, 173)
+
+[node name="purple_night_grass631" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(468, 57)
+
+[node name="purple_night_grass632" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(496, 82)
+
+[node name="purple_night_grass633" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(502, 46)
+
+[node name="purple_night_grass634" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(466, 88)
+
+[node name="purple_night_grass635" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(428, 62)
+
+[node name="purple_night_grass636" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(460, 27)
+
+[node name="purple_night_grass637" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(481, 36)
+
+[node name="purple_night_grass638" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(515, 73)
+
+[node name="purple_night_grass639" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(515, 73)
+
+[node name="purple_night_grass640" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(560, -2)
+
+[node name="purple_night_grass641" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(588, 23)
+
+[node name="purple_night_grass642" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(594, -13)
+
+[node name="purple_night_grass643" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(558, 29)
+
+[node name="purple_night_grass644" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(520, 3)
+
+[node name="purple_night_grass645" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(552, -32)
+
+[node name="purple_night_grass646" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(573, -23)
+
+[node name="purple_night_grass647" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(544, 76)
+
+[node name="purple_night_grass648" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(607, 14)
+
+[node name="purple_night_grass649" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(373, -81)
+
+[node name="purple_night_grass650" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(401, -56)
+
+[node name="purple_night_grass651" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(407, -92)
+
+[node name="purple_night_grass652" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(371, -50)
+
+[node name="purple_night_grass653" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(333, -76)
+
+[node name="purple_night_grass654" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(365, -111)
+
+[node name="purple_night_grass655" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(386, -102)
+
+[node name="purple_night_grass656" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(420, -65)
+
+[node name="purple_night_grass657" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(420, -65)
+
+[node name="purple_night_grass658" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(465, -140)
+
+[node name="purple_night_grass659" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(493, -115)
+
+[node name="purple_night_grass660" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(499, -151)
+
+[node name="purple_night_grass661" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(463, -109)
+
+[node name="purple_night_grass662" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(425, -135)
+
+[node name="purple_night_grass663" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(457, -170)
+
+[node name="purple_night_grass664" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(478, -161)
+
+[node name="purple_night_grass665" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(449, -62)
+
+[node name="purple_night_grass666" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(512, -124)
+
+[node name="purple_night_grass667" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(325, -184)
+
+[node name="purple_night_grass668" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(353, -159)
+
+[node name="purple_night_grass669" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(359, -195)
+
+[node name="purple_night_grass670" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(323, -153)
+
+[node name="purple_night_grass671" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(285, -179)
+
+[node name="purple_night_grass672" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(317, -214)
+
+[node name="purple_night_grass673" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(338, -205)
+
+[node name="purple_night_grass674" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(372, -168)
+
+[node name="purple_night_grass675" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(372, -168)
+
+[node name="purple_night_grass676" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(417, -243)
+
+[node name="purple_night_grass677" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(445, -218)
+
+[node name="purple_night_grass678" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(451, -254)
+
+[node name="purple_night_grass679" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(415, -212)
+
+[node name="purple_night_grass680" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(377, -238)
+
+[node name="purple_night_grass681" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(409, -273)
+
+[node name="purple_night_grass682" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(430, -264)
+
+[node name="purple_night_grass683" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(401, -165)
+
+[node name="purple_night_grass684" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(464, -227)
+
+[node name="purple_night_grass685" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(90, -308)
+
+[node name="purple_night_grass686" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(118, -283)
+
+[node name="purple_night_grass687" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(124, -319)
+
+[node name="purple_night_grass688" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(88, -277)
+
+[node name="purple_night_grass689" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(50, -303)
+
+[node name="purple_night_grass690" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(82, -338)
+
+[node name="purple_night_grass691" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(103, -329)
+
+[node name="purple_night_grass692" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(137, -292)
+
+[node name="purple_night_grass693" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(137, -292)
+
+[node name="purple_night_grass694" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(182, -367)
+
+[node name="purple_night_grass695" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(210, -342)
+
+[node name="purple_night_grass696" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(216, -378)
+
+[node name="purple_night_grass697" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(180, -336)
+
+[node name="purple_night_grass698" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(142, -362)
+
+[node name="purple_night_grass699" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(174, -397)
+
+[node name="purple_night_grass700" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(195, -388)
+
+[node name="purple_night_grass701" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(166, -289)
+
+[node name="purple_night_grass702" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(229, -351)
+
+[node name="purple_night_grass703" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(166, -218)
+
+[node name="purple_night_grass704" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(194, -193)
+
+[node name="purple_night_grass705" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(200, -229)
+
+[node name="purple_night_grass706" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(164, -187)
+
+[node name="purple_night_grass707" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(126, -213)
+
+[node name="purple_night_grass708" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(158, -248)
+
+[node name="purple_night_grass709" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(179, -239)
+
+[node name="purple_night_grass710" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(213, -202)
+
+[node name="purple_night_grass711" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(213, -202)
+
+[node name="purple_night_grass712" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(258, -277)
+
+[node name="purple_night_grass713" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(286, -252)
+
+[node name="purple_night_grass714" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(292, -288)
+
+[node name="purple_night_grass715" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(256, -246)
+
+[node name="purple_night_grass716" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(218, -272)
+
+[node name="purple_night_grass717" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(250, -307)
+
+[node name="purple_night_grass718" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(271, -298)
+
+[node name="purple_night_grass719" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(242, -199)
+
+[node name="purple_night_grass720" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(305, -261)
+
+[node name="purple_night_grass721" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-68, -356)
+
+[node name="purple_night_grass722" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-40, -331)
+
+[node name="purple_night_grass723" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-34, -367)
+
+[node name="purple_night_grass724" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-70, -325)
+
+[node name="purple_night_grass725" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-108, -351)
+
+[node name="purple_night_grass726" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-76, -386)
+
+[node name="purple_night_grass727" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-55, -377)
+
+[node name="purple_night_grass728" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-21, -340)
+
+[node name="purple_night_grass729" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-21, -340)
+
+[node name="purple_night_grass730" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(24, -415)
+
+[node name="purple_night_grass731" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(52, -390)
+
+[node name="purple_night_grass732" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(58, -426)
+
+[node name="purple_night_grass733" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(22, -384)
+
+[node name="purple_night_grass734" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-16, -410)
+
+[node name="purple_night_grass735" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(16, -445)
+
+[node name="purple_night_grass736" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(37, -436)
+
+[node name="purple_night_grass737" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(8, -337)
+
+[node name="purple_night_grass738" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(71, -399)
+
+[node name="purple_night_grass739" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-68, -356)
+
+[node name="purple_night_grass740" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-40, -331)
+
+[node name="purple_night_grass741" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-34, -367)
+
+[node name="purple_night_grass742" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-70, -325)
+
+[node name="purple_night_grass743" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-108, -351)
+
+[node name="purple_night_grass744" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-76, -386)
+
+[node name="purple_night_grass745" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-55, -377)
+
+[node name="purple_night_grass746" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-21, -340)
+
+[node name="purple_night_grass747" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-21, -340)
+
+[node name="purple_night_grass748" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(24, -415)
+
+[node name="purple_night_grass749" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(52, -390)
+
+[node name="purple_night_grass750" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(58, -426)
+
+[node name="purple_night_grass751" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(22, -384)
+
+[node name="purple_night_grass752" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(-16, -410)
+
+[node name="purple_night_grass753" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(16, -445)
+
+[node name="purple_night_grass754" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(37, -436)
+
+[node name="purple_night_grass755" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(8, -337)
+
+[node name="purple_night_grass756" parent="flora" instance=ExtResource("8_wq0cb")]
+position = Vector2(71, -399)
+
+[node name="fauna" type="Node2D" parent="."]
+
+[node name="Jed" parent="." instance=ExtResource("3_khqs5")]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.188235, 0.184314, 0.631373, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_yryc4")
+}
+
+[node name="chick_spwns" type="Node2D" parent="."]
+position = Vector2(-420, -493)
+
+[node name="chick_spawn_1" type="Marker2D" parent="chick_spwns"]
+position = Vector2(-1, -30)
+
+[node name="chick_spawn_2" type="Marker2D" parent="chick_spwns"]
+position = Vector2(16, -17)
+
+[node name="chick_spawn_3" type="Marker2D" parent="chick_spwns"]
+position = Vector2(36, -3)
+
+[node name="chick_spawn_4" type="Marker2D" parent="chick_spwns"]
+position = Vector2(19, 9)
+
+[node name="chick_spawn_5" type="Marker2D" parent="chick_spwns"]
+
+[node name="small_opening_east2" parent="." instance=ExtResource("2_p06pa")]
+position = Vector2(-438, -503)
+metadata/_edit_lock_ = true
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_1fq63")
+metadata/_edit_lock_ = true
+
+[node name="sky" type="CanvasLayer" parent="."]
+layer = 2
+follow_viewport_enabled = true
+follow_viewport_scale = 1.1
+
+[node name="CanvasModulate" type="CanvasModulate" parent="sky"]
+color = Color(0.666667, 0.662745, 0.478431, 1)
+
+[node name="Cloud2" type="Sprite2D" parent="sky"]
+position = Vector2(-943, -240)
+texture = ExtResource("11_qaneu")
+
+[node name="Cloud3" type="Sprite2D" parent="sky"]
+position = Vector2(-753, 7)
+texture = ExtResource("11_qaneu")
+
+[node name="Cloud4" type="Sprite2D" parent="sky"]
+position = Vector2(-808, -825)
+texture = ExtResource("11_qaneu")
+
+[node name="Cloud5" type="Sprite2D" parent="sky"]
+position = Vector2(-257, -829)
+texture = ExtResource("11_qaneu")
+
+[node name="Cloud6" type="Sprite2D" parent="sky"]
+position = Vector2(83, -574)
+texture = ExtResource("11_qaneu")
+
+[node name="Cloud7" type="Sprite2D" parent="sky"]
+position = Vector2(254, -657)
+texture = ExtResource("11_qaneu")
+
+[node name="Cloud1" type="Sprite2D" parent="sky"]
+position = Vector2(690, -529)
+texture = ExtResource("12_ecyko")
+
+[node name="Cloud8" type="Sprite2D" parent="sky"]
+position = Vector2(842, -521)
+texture = ExtResource("12_ecyko")
+
+[node name="Cloud9" type="Sprite2D" parent="sky"]
+position = Vector2(823, -722)
+texture = ExtResource("11_qaneu")
+
+[node name="Cloud10" type="Sprite2D" parent="sky"]
+position = Vector2(1059, -285)
+texture = ExtResource("11_qaneu")
+
+[node name="Cloud11" type="Sprite2D" parent="sky"]
+position = Vector2(1005, -399)
+texture = ExtResource("12_ecyko")
+
+[node name="Cloud12" type="Sprite2D" parent="sky"]
+position = Vector2(1405, 136)
+rotation = -0.303902
+texture = ExtResource("11_qaneu")
+
+[node name="Cloud13" type="Sprite2D" parent="sky"]
+position = Vector2(762.727, 662.727)
+texture = ExtResource("11_qaneu")
+
+[node name="Cloud14" type="Sprite2D" parent="sky"]
+position = Vector2(1243, 639)
+texture = ExtResource("11_qaneu")
+
+[node name="Cloud15" type="Sprite2D" parent="sky"]
+position = Vector2(322, 824)
+texture = ExtResource("11_qaneu")
+
+[node name="Cloud16" type="Sprite2D" parent="sky"]
+position = Vector2(4, 721)
+texture = ExtResource("11_qaneu")
+
+[node name="Cloud17" type="Sprite2D" parent="sky"]
+position = Vector2(-633, 568)
+texture = ExtResource("11_qaneu")
+
+[node name="Cloud18" type="Sprite2D" parent="sky"]
+position = Vector2(-334, 733)
+texture = ExtResource("11_qaneu")
+
+[node name="fog" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="fog"]
+color = Color(0.772549, 1, 1, 0.172549)
+
+[node name="Cloud2" type="Sprite2D" parent="fog"]
+position = Vector2(-404, 26)
+texture = ExtResource("11_qaneu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="fog"]
+libraries = {
+"": SubResource("AnimationLibrary_d3xpb")
+}
+autoplay = "undulating_fog"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-517, -302, -511, -250, -519, -186, -483, -126, -459, -74, -429, -4, -491, 40, -501, 102, -513, 174, -497, 226, -407, 250, -407, 324, -385, 376, -295, 406, -127, 432, -31, 428, -7, 388, 53, 386, 71, 410, 131, 398, 165, 392, 221, 424, 225, 462, 253, 486, 295, 478, 355, 478, 375, 496, 431, 498, 459, 484, 507, 486, 553, 476, 559, 418, 585, 386, 647, 392, 699, 408, 711, 344, 755, 316, 805, 340, 837, 356, 889, 334, 931, 350, 969, 376, 1039, 384, 1075, 344, 1149, 332, 1143, 268, 1143, 2, 1083, -2, 1065, -10, 1043, -60, 949, -56, 845, -66, 801, -104, 769, -132, 723, -158, 751, -192, 769, -232, 771, -288, 773, -344, 715, -346, 691, -368, 681, -404, 655, -422, 607, -422, 505, -436, 469, -430, 425, -414, 331, -394, 285, -372, 241, -346, 205, -334, 121, -316, 61, -348, -9, -346, -71, -354, -165, -370, -205, -398, -237, -422, -253, -456, -245, -500, -243, -528, -271, -554, -289, -588, -343, -592, -399, -600, -461, -608, -529, -634, -537, -668, -603, -646, -627, -592, -725, -536, -719, -464, -729, -392, -637, -334, -569, -342, -533, -316, -669, -146, -793, -272, -835, -626, -609, -754, -241, -794, 355, -664, 817, -604, 1367, -20, 1443, 240, 1321, 600, 849, 750, 331, 806, -507, 612, -877, 332, -879, -68, -655, -116)
+
+[connection signal="chick" from="Blue_flowers" to="." method="_on_blue_flowers_chick"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="died" from="Jed" to="." method="_on_jed_died"]
+[connection signal="flame" from="Jed" to="." method="_on_jed_flame"]
+[connection signal="ghosted" from="Jed" to="." method="_on_jed_ghosted"]
+[connection signal="ghosting" from="Jed" to="." method="_on_jed_ghosting"]
+[connection signal="orchid_poison" from="Jed" to="." method="_on_jed_orchid_poison"]
+[connection signal="rocks_E" from="Jed" to="." method="_on_jed_rocks_e"]
+[connection signal="special_attack" from="Jed" to="." method="_on_jed_special_attack"]
+[connection signal="step" from="Jed" to="." method="_on_jed_step"]
+[connection signal="stomp" from="Jed" to="." method="_on_jed_stomp"]

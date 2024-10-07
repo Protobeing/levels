@@ -1,0 +1,1032 @@
+[gd_scene load_steps=34 format=3 uid="uid://62bk1lo3ftbj"]
+
+[ext_resource type="Script" path="res://levels/southern_oak_forest/sof_level_2/southern_oak_forest_level_two.gd" id="1_oln3l"]
+[ext_resource type="PackedScene" uid="uid://dk7g834rkrfwy" path="res://jed_main/Jed.tscn" id="1_p5d4j"]
+[ext_resource type="Texture2D" uid="uid://cpv1khm8fjn0y" path="res://earth/earth_4.png" id="2_7mvak"]
+[ext_resource type="PackedScene" uid="uid://b8rtfj3pqeb04" path="res://gateways/small_opening_north.tscn" id="2_45voa"]
+[ext_resource type="Script" path="res://ghost_babies_and_blue_flowers/blue_flowers/blue_flowers_ver_2.gd" id="5_50j55"]
+[ext_resource type="Texture2D" uid="uid://qbh5g5cullhp" path="res://ghost_babies_and_blue_flowers/blue_flowers/blue_flowers.png" id="6_njncc"]
+[ext_resource type="Texture2D" uid="uid://c8p62oeyoa4gw" path="res://ghost_babies_and_blue_flowers/blue_flowers/light_2.png" id="7_ugplu"]
+[ext_resource type="Texture2D" uid="uid://5i68cp3m88y7" path="res://ghost_babies_and_blue_flowers/blue_flowers/blue_flowers_reset.png" id="8_dtker"]
+[ext_resource type="AudioStream" uid="uid://blxvnidn5ljnt" path="res://ghost_babies_and_blue_flowers/blue_flowers/ghost_chick_1.mp3" id="9_8kng7"]
+[ext_resource type="PackedScene" uid="uid://dk36j2m4w8f7k" path="res://levels/test/flora/ferns/fern_collection_two.tscn" id="10_84v5w"]
+[ext_resource type="PackedScene" uid="uid://ck6pxou1tro63" path="res://levels/test/flora/ferns/fern_bunch.tscn" id="11_vppkf"]
+[ext_resource type="PackedScene" uid="uid://cx7hltn13m4xn" path="res://trees/birch_trees/small_birch_in_darkness.tscn" id="12_ufc2m"]
+[ext_resource type="PackedScene" uid="uid://dkxqdx5o1qt58" path="res://trees/logs/rolling_log_one/rolling_log_one.tscn" id="13_ibvg6"]
+[ext_resource type="Texture2D" uid="uid://c580bckkwgikn" path="res://light/light_2.png" id="14_c6nn6"]
+[ext_resource type="Texture2D" uid="uid://bqqkuf376qauv" path="res://sky/cloud_2.png" id="15_lc0r1"]
+[ext_resource type="Texture2D" uid="uid://k1tqe0b7w057" path="res://sky/cloud_1.png" id="16_wrci7"]
+[ext_resource type="PackedScene" uid="uid://7qiu8l2nl068" path="res://drops/grub/grub.tscn" id="17_kewt4"]
+[ext_resource type="PackedScene" uid="uid://dvlb3f38eus4v" path="res://jed_main/rocks/rocks.tscn" id="19_oafor"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4qd3"]
+radius = 49.4975
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_og51r"]
+vertices = PackedVector2Array(-203.867, 418.82, -280.531, 285.398, -336.211, 17.9609, -392.773, -263.867, -362.508, -399.117, -136.859, -467.578, 4.10938, -428.688, 196.344, -317.297, 370.492, -99.6172, 429.453, 21.2031, 357.273, 331.68, 310.672, 526.969, 53.1172, 615.094, -22.9922, 619.906, -74.4297, 606.133, -182.18, 480.906, 161.852, 580.188, 244.094, 570.148, 290.711, 557.352)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11), PackedInt32Array(12, 13, 14, 15, 0, 11, 16), PackedInt32Array(17, 16, 11, 18)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-403, -264, -346, 20, -290, 289, -213, 423, -191, 486, -80, 615, -24, 630, 55, 625, 164, 590, 246, 580, 297, 566, 320, 531, 367, 334, 440, 20, 379, -105, 203, -325, 8, -438, -137, -478, -371, -407)])
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ppplg"]
+resource_local_to_scene = true
+radius = 5.0
+
+[sub_resource type="Animation" id="Animation_gb80l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_njncc")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:monitoring")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".:monitorable")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("PointLight2D:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -12)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("PointLight2D:enabled")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("PointLight2D:energy")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.4]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("PointLight2D:texture")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("7_ugplu")]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-10.0]
+}
+
+[sub_resource type="Animation" id="Animation_stndb"]
+resource_name = "no_heal"
+length = 5.0
+loop_mode = 1
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("8_dtker"), ExtResource("8_dtker")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [145, 145]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [31, 32, 33, 34, 35, 36, 37, 38, 39, 40]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:monitoring")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".:monitorable")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("PointLight2D:enabled")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
+}
+
+[sub_resource type="Animation" id="Animation_1hahq"]
+resource_name = "normal"
+length = 4.0
+loop_mode = 1
+step = 0.75
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("6_njncc"), ExtResource("6_njncc")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [6, 6]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.75, 1.5, 2.25, 3, 3.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:monitoring")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".:monitorable")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("PointLight2D:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.83, 1.7, 2.5, 3.47, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -12), Vector2(0, -13), Vector2(-1, -13), Vector2(-0.652174, -12.6522), Vector2(-1, -11), Vector2(0, -11)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("PointLight2D:enabled")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("PointLight2D:energy")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.4]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("PointLight2D:texture")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("7_ugplu")]
+}
+
+[sub_resource type="Animation" id="Animation_vc88l"]
+resource_name = "reset"
+length = 0.8
+step = 0.75
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0875346, 0.172622, 0.259817, 0.347144, 0.433466, 0.521696, 0.595585, 0.670252, 0.747736),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [145, 145]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("8_dtker"), ExtResource("8_dtker")]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/5/type = "audio"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AudioStreamPlayer")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"clips": [{
+"end_offset": 1.13265,
+"start_offset": 0.44,
+"stream": ExtResource("9_8kng7")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/5/use_blend = true
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("PointLight2D:enabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-10.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qj2i0"]
+_data = {
+"RESET": SubResource("Animation_gb80l"),
+"no_heal": SubResource("Animation_stndb"),
+"normal": SubResource("Animation_1hahq"),
+"reset": SubResource("Animation_vc88l")
+}
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jjh0r"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_p05rw"]
+polygon = PackedVector2Array(-6, 6, -2, 5, 2, 6, -1, 3, -3, 3)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8ufjr"]
+polygon = PackedVector2Array(-7, 3, -9, 3, -5, 0, -2, 2, -6, 2, -7, 2)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_dnumn"]
+polygon = PackedVector2Array(9, 2, 8, 2, 5, 0, 4, 2, 2, 2, 5, -1, 6, -1)
+
+[sub_resource type="Animation" id="Animation_p4yix"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:transform")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Transform2D(1, 0, 0, 1, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_mp7ll"]
+resource_name = "undulating_fog"
+length = 30.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:transform")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1.1, 0, 0, 1.1, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kma4e"]
+_data = {
+"RESET": SubResource("Animation_p4yix"),
+"undulating_fog": SubResource("Animation_mp7ll")
+}
+
+[node name="southern_oak_forest_level_two" type="Node2D"]
+z_as_relative = false
+y_sort_enabled = true
+script = ExtResource("1_oln3l")
+
+[node name="earth" type="Node2D" parent="."]
+z_index = -1
+
+[node name="Earth4" type="Sprite2D" parent="earth"]
+z_index = -1
+position = Vector2(9, 112)
+texture = ExtResource("2_7mvak")
+
+[node name="trees" type="Node2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+
+[node name="flora" type="Node2D" parent="."]
+
+[node name="Jed" parent="." instance=ExtResource("1_p5d4j")]
+
+[node name="small_opening_north" parent="." instance=ExtResource("2_45voa")]
+position = Vector2(-163, -378)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-147, -385)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_g4qd3")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_og51r")
+
+[node name="Blue_flowers" type="Area2D" parent="."]
+y_sort_enabled = true
+position = Vector2(-138, -52)
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("5_50j55")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue_flowers"]
+shape = SubResource("CircleShape2D_ppplg")
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Blue_flowers"]
+libraries = {
+"": SubResource("AnimationLibrary_qj2i0")
+}
+autoplay = "normal"
+
+[node name="Sprite2D" type="Sprite2D" parent="Blue_flowers"]
+y_sort_enabled = true
+position = Vector2(0, -4)
+texture = ExtResource("6_njncc")
+offset = Vector2(0, -4)
+hframes = 6
+
+[node name="normal" type="Timer" parent="Blue_flowers"]
+wait_time = 0.8
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Blue_flowers"]
+volume_db = -10.0
+pitch_scale = 0.16
+
+[node name="PointLight2D" type="PointLight2D" parent="Blue_flowers"]
+material = SubResource("CanvasItemMaterial_jjh0r")
+position = Vector2(0, -12)
+scale = Vector2(0.0722446, -0.0762361)
+enabled = false
+color = Color(0.2, 1, 1, 1)
+energy = 0.4
+texture = ExtResource("7_ugplu")
+texture_scale = 1.75
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Blue_flowers"]
+position = Vector2(-2, 3)
+scale = Vector2(0.25, 0.25)
+occluder = SubResource("OccluderPolygon2D_p05rw")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Blue_flowers"]
+position = Vector2(0.5, -4.5)
+scale = Vector2(1.15, 1.45)
+
+[node name="chicky" type="Timer" parent="Blue_flowers"]
+one_shot = true
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="Blue_flowers"]
+position = Vector2(-3, 1)
+scale = Vector2(0.25, 0.25)
+occluder = SubResource("OccluderPolygon2D_8ufjr")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="Blue_flowers"]
+position = Vector2(4, 0)
+scale = Vector2(0.25, 0.25)
+occluder = SubResource("OccluderPolygon2D_dnumn")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.188235, 0.184314, 0.631373, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="chick_spwns" type="Node2D" parent="."]
+
+[node name="chick_spawn_1" type="Marker2D" parent="chick_spwns"]
+position = Vector2(-36, 581)
+
+[node name="chick_spawn_2" type="Marker2D" parent="chick_spwns"]
+position = Vector2(-2, 572)
+
+[node name="chick_spawn_3" type="Marker2D" parent="chick_spwns"]
+position = Vector2(23, 576)
+
+[node name="chick_spawn_4" type="Marker2D" parent="chick_spwns"]
+position = Vector2(44, 585)
+
+[node name="chick_spawn_5" type="Marker2D" parent="chick_spwns"]
+position = Vector2(-19, 576)
+
+[node name="fern_collection_two" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(-347, 116)
+
+[node name="fern_collection_two2" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(-249, 160)
+
+[node name="fern_collection_two3" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(-301, 219)
+
+[node name="fern_collection_two4" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(-289, 283)
+
+[node name="fern_collection_two5" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(-191, 331)
+
+[node name="fern_collection_two6" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(-251, 385)
+
+[node name="fern_collection_two7" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(-175, 415)
+
+[node name="fern_collection_two8" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(-146, 490)
+
+[node name="fern_collection_two9" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(-144, 543)
+
+[node name="fern_collection_two10" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(-103, 620)
+
+[node name="fern_collection_two11" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(9, 655)
+
+[node name="fern_collection_two12" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(119, 625)
+
+[node name="fern_collection_two13" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(194, 590)
+
+[node name="fern_collection_two14" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(268, 529)
+
+[node name="fern_collection_two15" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(355, 470)
+
+[node name="fern_collection_two16" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(347, 386)
+
+[node name="fern_collection_two17" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(377, 292)
+
+[node name="fern_collection_two18" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(409, 194)
+
+[node name="fern_collection_two19" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(393, 239)
+
+[node name="fern_collection_two20" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(386, 332)
+
+[node name="fern_collection_two21" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(416, 129)
+
+[node name="fern_collection_two22" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(416, 58)
+
+[node name="fern_collection_two23" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(416, -19)
+
+[node name="fern_collection_two24" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(375, -90)
+
+[node name="fern_collection_two25" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(322, -161)
+
+[node name="fern_collection_two26" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(269, -222)
+
+[node name="fern_collection_two27" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(208, -302)
+
+[node name="fern_collection_two28" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(228, -250)
+
+[node name="fern_collection_two29" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(157, -248)
+
+[node name="fern_collection_two30" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(207, -180)
+
+[node name="fern_collection_two31" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(346, -123)
+
+[node name="fern_collection_two32" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(289, -102)
+
+[node name="fern_collection_two33" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(316, -25)
+
+[node name="fern_collection_two34" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(403, 53)
+
+[node name="fern_collection_two35" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(376, 108)
+
+[node name="fern_collection_two36" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(367, 147)
+
+[node name="fern_collection_two37" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(-387, 37)
+
+[node name="fern_collection_two38" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(-371, -41)
+
+[node name="fern_collection_two39" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(-378, -112)
+
+[node name="fern_collection_two40" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(-423, -123)
+
+[node name="fern_collection_two41" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(-427, -227)
+
+[node name="fern_collection_two42" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(-382, -288)
+
+[node name="fern_collection_two43" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(-353, -357)
+
+[node name="fern_collection_two44" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(-406, -156)
+
+[node name="fern_collection_two45" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(-297, -124)
+
+[node name="fern_collection_two46" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(-295, -38)
+
+[node name="fern_collection_two47" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(-247, -75)
+
+[node name="fern_collection_two48" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(-338, 43)
+
+[node name="fern_collection_two49" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(-183, 205)
+
+[node name="fern_collection_two50" parent="." instance=ExtResource("10_84v5w")]
+position = Vector2(288, -60)
+
+[node name="fern_bunch" parent="." instance=ExtResource("11_vppkf")]
+position = Vector2(-201, -42)
+
+[node name="fern_bunch2" parent="." instance=ExtResource("11_vppkf")]
+position = Vector2(382, 215)
+
+[node name="small_birch_in_darkness" parent="." instance=ExtResource("12_ufc2m")]
+position = Vector2(-235, 164)
+
+[node name="small_birch_in_darkness2" parent="." instance=ExtResource("12_ufc2m")]
+position = Vector2(307, 421)
+rotation = -0.200614
+
+[node name="rolling_log_one" parent="." instance=ExtResource("13_ibvg6")]
+position = Vector2(38, -266)
+
+[node name="rolling_log_one2" parent="." instance=ExtResource("13_ibvg6")]
+position = Vector2(-111, -287)
+
+[node name="rolling_log_one3" parent="." instance=ExtResource("13_ibvg6")]
+position = Vector2(-48, -196)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, 591)
+color = Color(1, 0, 1, 1)
+energy = 0.71
+shadow_enabled = true
+texture = ExtResource("14_c6nn6")
+texture_scale = 1.46
+
+[node name="sky" type="CanvasLayer" parent="."]
+layer = 2
+follow_viewport_enabled = true
+follow_viewport_scale = 1.05
+
+[node name="CanvasModulate" type="CanvasModulate" parent="sky"]
+position = Vector2(-7.23807, -32.7143)
+color = Color(0.666667, 0.662745, 0.478431, 1)
+
+[node name="Cloud2" type="Sprite2D" parent="sky"]
+position = Vector2(-450.238, 526.286)
+texture = ExtResource("15_lc0r1")
+
+[node name="Cloud3" type="Sprite2D" parent="sky"]
+position = Vector2(-605.238, 158.286)
+texture = ExtResource("15_lc0r1")
+
+[node name="Cloud1" type="Sprite2D" parent="sky"]
+position = Vector2(-145.238, -537.714)
+texture = ExtResource("16_wrci7")
+
+[node name="Cloud4" type="Sprite2D" parent="sky"]
+position = Vector2(-10.2381, -548.714)
+texture = ExtResource("16_wrci7")
+
+[node name="Cloud5" type="Sprite2D" parent="sky"]
+position = Vector2(-635.238, -380.714)
+texture = ExtResource("15_lc0r1")
+
+[node name="Cloud6" type="Sprite2D" parent="sky"]
+position = Vector2(442.762, -445.714)
+texture = ExtResource("15_lc0r1")
+
+[node name="Cloud7" type="Sprite2D" parent="sky"]
+position = Vector2(592.762, -148.714)
+rotation = 0.731234
+texture = ExtResource("15_lc0r1")
+
+[node name="Cloud8" type="Sprite2D" parent="sky"]
+position = Vector2(684.762, 199.286)
+rotation = 0.731234
+texture = ExtResource("15_lc0r1")
+
+[node name="Cloud9" type="Sprite2D" parent="sky"]
+position = Vector2(621.762, 433.286)
+rotation = 2.78621
+texture = ExtResource("15_lc0r1")
+
+[node name="Cloud10" type="Sprite2D" parent="sky"]
+position = Vector2(419.762, 736.286)
+rotation = 2.78621
+texture = ExtResource("15_lc0r1")
+
+[node name="Cloud11" type="Sprite2D" parent="sky"]
+position = Vector2(64.7619, 911.286)
+rotation = 0.149294
+texture = ExtResource("15_lc0r1")
+
+[node name="Cloud12" type="Sprite2D" parent="sky"]
+position = Vector2(-321.238, 832.286)
+rotation = 0.149294
+texture = ExtResource("15_lc0r1")
+
+[node name="fog" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="fog"]
+color = Color(0.772549, 1, 1, 0.172549)
+
+[node name="Cloud2" type="Sprite2D" parent="fog"]
+position = Vector2(-417, 271)
+texture = ExtResource("15_lc0r1")
+
+[node name="Cloud3" type="Sprite2D" parent="fog"]
+position = Vector2(461, -303)
+texture = ExtResource("15_lc0r1")
+
+[node name="Cloud4" type="Sprite2D" parent="fog"]
+position = Vector2(411, 678)
+texture = ExtResource("15_lc0r1")
+
+[node name="Cloud1" type="Sprite2D" parent="fog"]
+position = Vector2(-14, -361)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("16_wrci7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="fog"]
+libraries = {
+"": SubResource("AnimationLibrary_kma4e")
+}
+autoplay = "undulating_fog"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-802, 160, -322, 69, -282, 124, -272, 186, -260, 233, -215, 240, -210, 288, -205, 352, -224, 393, -179, 431, -153, 464, -110, 547, -84, 571, -13, 612, 9, 657, 42, 654, 61, 614, 75, 592, 118, 578, 163, 600, 213, 592, 218, 550, 237, 524, 268, 545, 299, 526, 313, 512, 363, 502, 365, 469, 365, 407, 370, 381, 382, 333, 380, 288, 370, 255, 370, 200, 363, 133, 365, 98, 413, 72, 423, 36, 382, -12, 346, -31, 327, -73, 301, -102, 292, -131, 285, -178, 258, -185, 223, -195, 197, -240, 173, -273, 142, -269, 125, -280, 113, -333, 97, -376, 44, -387, 11, -368, -10, -387, -34, -418, -82, -428, -86, -425, -165, -425, -246, -416, -262, -406, -317, -392, -324, -354, -367, -316, -384, -302, -398, -223, -405, -169, -384, -95, -381, -76, -372, -47, -372, 24, -336, 55, -736, 129, -757, -373, -474, -582, 204, -563, 634, -249, 798, 288, 546, 685, 208, 885, -158, 899, -645, 592)
+
+[node name="grub" parent="." instance=ExtResource("17_kewt4")]
+position = Vector2(288, 323)
+
+[node name="grub2" parent="." instance=ExtResource("17_kewt4")]
+position = Vector2(-258, 105)
+
+[node name="grub3" parent="." instance=ExtResource("17_kewt4")]
+position = Vector2(-201, 95)
+
+[node name="grub4" parent="." instance=ExtResource("17_kewt4")]
+position = Vector2(262, 342)
+
+[node name="grub5" parent="." instance=ExtResource("17_kewt4")]
+position = Vector2(300, 55)
+
+[node name="grub6" parent="." instance=ExtResource("17_kewt4")]
+position = Vector2(47, 46)
+
+[node name="grub7" parent="." instance=ExtResource("17_kewt4")]
+position = Vector2(-176, -70)
+
+[node name="grub8" parent="." instance=ExtResource("17_kewt4")]
+position = Vector2(-176, -70)
+
+[node name="rocks" parent="." instance=ExtResource("19_oafor")]
+position = Vector2(155, 9)
+
+[node name="rocks2" parent="." instance=ExtResource("19_oafor")]
+position = Vector2(-157, 40)
+
+[node name="rocks3" parent="." instance=ExtResource("19_oafor")]
+position = Vector2(20, 337)
+
+[node name="rocks4" parent="." instance=ExtResource("19_oafor")]
+position = Vector2(-132, 103)
+
+[node name="rocks5" parent="." instance=ExtResource("19_oafor")]
+position = Vector2(-37, -89)
+
+[node name="rocks6" parent="." instance=ExtResource("19_oafor")]
+position = Vector2(-37, -89)
+
+[connection signal="died" from="Jed" to="." method="_on_jed_died"]
+[connection signal="flame" from="Jed" to="." method="_on_jed_flame"]
+[connection signal="ghosted" from="Jed" to="." method="_on_jed_ghosted"]
+[connection signal="ghosting" from="Jed" to="." method="_on_jed_ghosting"]
+[connection signal="orchid_poison" from="Jed" to="." method="_on_jed_orchid_poison"]
+[connection signal="rocks_E" from="Jed" to="." method="_on_jed_rocks_e"]
+[connection signal="special_attack" from="Jed" to="." method="_on_jed_special_attack"]
+[connection signal="step" from="Jed" to="." method="_on_jed_step"]
+[connection signal="stomp" from="Jed" to="." method="_on_jed_stomp"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Blue_flowers" to="Blue_flowers" method="_on_body_entered"]
+[connection signal="chick" from="Blue_flowers" to="." method="_on_blue_flowers_chick"]
+[connection signal="timeout" from="Blue_flowers/normal" to="Blue_flowers" method="_on_normal_timeout"]
+[connection signal="timeout" from="Blue_flowers/chicky" to="Blue_flowers" method="_on_chicky_timeout"]
