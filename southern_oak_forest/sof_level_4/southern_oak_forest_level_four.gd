@@ -6,6 +6,7 @@ var enemies_below_three_four: PackedScene = preload('res://enemies/groupings/gro
 
 @onready var Jed = $Jed
 @onready var blue_flower_anim = $Blue_flowers/AnimationPlayer
+var ground_flame: PackedScene = preload('res://jed_main/rocks/ground_flame.tscn')
 
 var rocks: PackedScene = preload("res://jed_main/rocks/throwing_rock.tscn")
 var pickup_rocks: PackedScene = preload("res://jed_main/rocks/rocks.tscn")
@@ -64,6 +65,10 @@ func _on_jed_rocks_e(pos, direction):
 	pickup_rock.global_position = rock.position
 	add_child(pickup_rock)
 	rock.queue_free()
+	var flames = ground_flame.instantiate()
+	flames.position = pickup_rock.position
+	flames.rotation = direction
+	add_child(flames)
 func _on_jed_special_attack(pos_sa,direction_sa):
 	var sweet = sweet_pea.instantiate() as RigidBody2D
 	sweet.position = pos_sa

@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://cqx4n6nnd6iu8"]
+[gd_scene load_steps=47 format=3 uid="uid://cqx4n6nnd6iu8"]
 
 [ext_resource type="Script" path="res://levels/southern_oak_forest/sof_level_3/southern_oak_forest_level_three.gd" id="1_fkepd"]
 [ext_resource type="PackedScene" uid="uid://bqx7ywwfn6evp" path="res://gateways/small_opening_east.tscn" id="2_4twle"]
@@ -28,6 +28,9 @@
 [ext_resource type="Texture2D" uid="uid://5i68cp3m88y7" path="res://ghost_babies_and_blue_flowers/blue_flowers/blue_flowers_reset.png" id="23_70oty"]
 [ext_resource type="AudioStream" uid="uid://blxvnidn5ljnt" path="res://ghost_babies_and_blue_flowers/blue_flowers/ghost_chick_1.mp3" id="24_48xvc"]
 [ext_resource type="PackedScene" uid="uid://bvkfk6gofkaim" path="res://flora/flowers/golden_rod_one.tscn" id="25_dj3li"]
+[ext_resource type="PackedScene" uid="uid://dgjv1dn81bnaf" path="res://enemies/zombie_rat/zombie_rat.tscn" id="29_ceqos"]
+[ext_resource type="PackedScene" uid="uid://dvlb3f38eus4v" path="res://jed_main/rocks/rocks.tscn" id="30_npl4x"]
+[ext_resource type="PackedScene" uid="uid://7qiu8l2nl068" path="res://drops/grub/grub.tscn" id="31_hqkku"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qhxrw"]
 radius = 67.2681
@@ -1391,6 +1394,45 @@ rotation = -0.574737
 [node name="golden_rod_one23" parent="." instance=ExtResource("25_dj3li")]
 position = Vector2(106, 55)
 rotation = -0.574737
+
+[node name="zombie_rat" parent="." instance=ExtResource("29_ceqos")]
+position = Vector2(-225, 349)
+
+[node name="zombie_rat2" parent="." instance=ExtResource("29_ceqos")]
+position = Vector2(305, 161)
+
+[node name="zombie_rat3" parent="." instance=ExtResource("29_ceqos")]
+position = Vector2(151, -39)
+
+[node name="zombie_rat4" parent="." instance=ExtResource("29_ceqos")]
+position = Vector2(-181, -161)
+
+[node name="zombie_rat5" parent="." instance=ExtResource("29_ceqos")]
+position = Vector2(239, 403)
+
+[node name="rocks" parent="." instance=ExtResource("30_npl4x")]
+position = Vector2(-743, 21)
+
+[node name="rocks2" parent="." instance=ExtResource("30_npl4x")]
+position = Vector2(-730, -119)
+
+[node name="grub" parent="." instance=ExtResource("31_hqkku")]
+position = Vector2(-688, -65)
+
+[node name="grub2" parent="." instance=ExtResource("31_hqkku")]
+position = Vector2(-692, -62)
+
+[node name="grub3" parent="." instance=ExtResource("31_hqkku")]
+position = Vector2(-685, -58)
+
+[node name="grub4" parent="." instance=ExtResource("31_hqkku")]
+position = Vector2(-73, -258)
+
+[node name="grub5" parent="." instance=ExtResource("31_hqkku")]
+position = Vector2(-135, -254)
+
+[node name="grub6" parent="." instance=ExtResource("31_hqkku")]
+position = Vector2(-111, -139)
 
 [connection signal="body_entered" from="small_opening_south_exit" to="." method="_on_small_opening_south_exit_body_entered"]
 [connection signal="died" from="Jed" to="." method="_on_jed_died"]

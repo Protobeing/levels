@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cwasrk4p0qia7"]
+[gd_scene load_steps=31 format=3 uid="uid://cwasrk4p0qia7"]
 
 [ext_resource type="Texture2D" uid="uid://bwpi8qgki4ync" path="res://earth/small_earth_plot.png" id="1_r8k1o"]
 [ext_resource type="Script" path="res://levels/southern_oak_forest/sof_level_8/southern_oak_forest_level_eight.gd" id="1_suyu2"]
@@ -16,8 +16,15 @@
 [ext_resource type="PackedScene" uid="uid://crkc3ae77hf6h" path="res://trees/pine_trees/pine_tree.tscn" id="12_sn6jq"]
 [ext_resource type="PackedScene" uid="uid://dxq73m7npidcj" path="res://trees/pine_trees/large_pine_in_darkness.tscn" id="13_wj63j"]
 [ext_resource type="AudioStream" uid="uid://ckk1pm1qkst3q" path="res://level_music/forest_sounds.mp3" id="14_p5pkk"]
+[ext_resource type="PackedScene" uid="uid://b5sal165esulc" path="res://trees/oaks/thicket_trees/thicket.tscn" id="14_rfjvu"]
+[ext_resource type="PackedScene" uid="uid://toqsdxc1ookg" path="res://trees/oaks/baby_oak_collection_1.tscn" id="15_yt3fv"]
+[ext_resource type="PackedScene" uid="uid://bvkfk6gofkaim" path="res://flora/flowers/golden_rod_one.tscn" id="16_o1rsb"]
 [ext_resource type="Texture2D" uid="uid://bqqkuf376qauv" path="res://sky/cloud_2.png" id="17_ssc8f"]
+[ext_resource type="PackedScene" uid="uid://cx7hltn13m4xn" path="res://trees/birch_trees/small_birch_in_darkness.tscn" id="17_yqish"]
+[ext_resource type="PackedScene" uid="uid://bl2p3j8ekcctv" path="res://trees/oaks/brush_trees_one.tscn" id="18_00gie"]
 [ext_resource type="Texture2D" uid="uid://k1tqe0b7w057" path="res://sky/cloud_1.png" id="18_7crou"]
+[ext_resource type="PackedScene" uid="uid://dgjv1dn81bnaf" path="res://enemies/zombie_rat/zombie_rat.tscn" id="19_fu5ra"]
+[ext_resource type="PackedScene" uid="uid://b3yigva0cskfh" path="res://obstacles/rocks/big_rock.tscn" id="25_feqsc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xdhh2"]
 radius = 58.0086
@@ -76,7 +83,7 @@ collision_layer = 8
 collision_mask = 8
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-681, 216, -627, 214, -572, 192, -525, 194, -496, 158, -476, 137, -454, 120, -427, 106, -385, 128, -365, 157, -357, 204, -350, 259, -333, 273, -293, 261, -271, 237, -241, 226, -216, 214, -157, 180, -142, 160, -130, 146, -120, 130, -107, 120, -86, 108, -64, 97, -43, 96, -18, 94, 8, 91, 35, 87, 61, 87, 100, 81, 124, 87, 169, 118, 177, 150, 169, 179, 151, 218, 92, 221, 54, 231, 20, 254, -9, 276, -39, 280, -68, 257, -103, 244, -155, 239, -205, 244, -237, 269, -251, 320, -249, 364, -214, 401, -190, 411, -177, 426, -184, 444, -190, 467, -213, 495, -250, 513, -313, 511, -391, 512, -435, 537, -450, 571, -456, 602, -457, 630, -435, 641, -399, 645, -365, 645, -333, 638, -299, 636, -244, 627, -207, 612, -149, 598, -132, 579, -118, 549, -107, 512, -94, 488, -70, 469, -44, 462, -13, 463, 26, 463, 41, 444, 56, 437, 84, 434, 108, 442, 129, 449, 142, 462, 145, 487, 143, 515, 176, 513, 192, 533, 239, 530, 272, 508, 316, 473, 355, 457, 421, 458, 550, 479, 606, 479, 633, 469, 831, 421, 795, 363, 770, 307, 801, 222, 840, 24, 844, -38, 815, -58, 781, -65, 706, -65, 648, -86, 533, -106, 455, -131, 405, -147, 346, -172, 277, -193, 162, -229, 73, -243, 3, -232, -60, -195, -101, -146, -175, -70, -234, -1, -250, 23, -271, 38, -295, 68, -307, 129, -335, 78, -358, 17, -402, -5, -437, 7, -458, 31, -479, 69, -495, 88, -537, 108, -553, 111, -617, 93, -654, 61, -698, 66, -730, 103, -745, 169, -705, 214, -699, 264, -747, 286, -838, 298, -934, 280, -949, 190, -927, 52, -870, -18, -771, -43, -685, -47, -609, -59, -525, -65, -396, -99, -349, -227, -297, -309, -169, -351, 55, -383, 418, -301, 674, -240, 858, -138, 943, -63, 975, 172, 901, 437, 795, 530, 475, 586, 386, 649, 277, 655, 95, 665, -64, 639, -172, 619, -528, 722, -582, 611, -565, 456, -478, 357, -556, 348, -660, 318, -687, 268)
+polygon = PackedVector2Array(-681, 216, -627, 214, -572, 192, -525, 194, -496, 158, -476, 137, -454, 120, -427, 106, -385, 128, -365, 157, -357, 204, -350, 259, -333, 273, -293, 261, -271, 237, -241, 226, -216, 214, -157, 180, -142, 160, -130, 146, -120, 130, -107, 120, -86, 108, -64, 97, -43, 96, -18, 94, 8, 91, 35, 87, 61, 87, 100, 81, 124, 87, 169, 118, 177, 150, 169, 179, 151, 218, 92, 221, 54, 231, 20, 254, -9, 276, -39, 280, -72, 267, -105, 254, -148, 256, -203, 269, -229, 296, -251, 320, -249, 364, -214, 401, -190, 411, -177, 426, -184, 444, -190, 467, -213, 495, -250, 513, -313, 511, -391, 512, -435, 537, -450, 571, -456, 602, -457, 630, -435, 641, -399, 645, -365, 645, -333, 638, -299, 636, -244, 627, -207, 612, -149, 598, -132, 579, -118, 549, -107, 512, -94, 488, -70, 469, -44, 462, -13, 463, 26, 463, 41, 444, 56, 437, 84, 434, 108, 442, 129, 449, 142, 462, 145, 487, 143, 515, 176, 513, 192, 533, 239, 530, 272, 508, 316, 473, 355, 457, 421, 458, 550, 479, 606, 479, 633, 469, 831, 421, 795, 363, 770, 307, 801, 222, 840, 24, 844, -38, 815, -58, 781, -65, 706, -65, 648, -86, 533, -106, 455, -131, 405, -147, 346, -172, 277, -193, 162, -229, 73, -243, 3, -232, -60, -195, -101, -146, -175, -70, -234, -1, -250, 23, -271, 38, -295, 68, -307, 129, -335, 78, -358, 17, -402, -5, -437, 7, -458, 31, -479, 69, -495, 88, -537, 108, -553, 111, -617, 93, -654, 61, -698, 66, -730, 103, -745, 169, -705, 214, -699, 264, -747, 286, -838, 298, -934, 280, -949, 190, -927, 52, -870, -18, -771, -43, -685, -47, -609, -59, -525, -65, -396, -99, -349, -227, -297, -309, -169, -351, 55, -383, 418, -301, 674, -240, 858, -138, 943, -63, 975, 172, 901, 437, 795, 530, 475, 586, 386, 649, 277, 655, 95, 665, -64, 639, -172, 619, -528, 722, -582, 611, -565, 456, -478, 357, -556, 348, -660, 318, -687, 268)
 
 [node name="Blue_flowers" parent="." instance=ExtResource("5_phucs")]
 position = Vector2(-312, 178)
@@ -128,6 +135,10 @@ texture = ExtResource("1_r8k1o")
 
 [node name="SmallEarthPlot3" type="Sprite2D" parent="earth"]
 position = Vector2(-282, 472)
+texture = ExtResource("1_r8k1o")
+
+[node name="SmallEarthPlot14" type="Sprite2D" parent="earth"]
+position = Vector2(-165, 513)
 texture = ExtResource("1_r8k1o")
 
 [node name="SmallEarthPlot4" type="Sprite2D" parent="earth"]
@@ -494,6 +505,67 @@ position = Vector2(190, 291)
 position = Vector2(418, 584)
 rotation = -0.164949
 
+[node name="thicket" parent="flora/trees" instance=ExtResource("14_rfjvu")]
+position = Vector2(-192, 215)
+
+[node name="thicket2" parent="flora/trees" instance=ExtResource("14_rfjvu")]
+position = Vector2(-287, 248)
+
+[node name="baby_oak2" parent="flora/trees" instance=ExtResource("10_8e8tp")]
+position = Vector2(-193, 278)
+
+[node name="baby_oak3" parent="flora/trees" instance=ExtResource("10_8e8tp")]
+position = Vector2(-110, 255)
+
+[node name="baby_oak4" parent="flora/trees" instance=ExtResource("10_8e8tp")]
+position = Vector2(-147, 292)
+
+[node name="baby_oak_collection_1" parent="flora/trees" instance=ExtResource("15_yt3fv")]
+position = Vector2(-206, 323)
+
+[node name="golden_rod_one" parent="flora" instance=ExtResource("16_o1rsb")]
+position = Vector2(447, 325)
+
+[node name="golden_rod_one2" parent="flora" instance=ExtResource("16_o1rsb")]
+position = Vector2(338, 351)
+
+[node name="golden_rod_one3" parent="flora" instance=ExtResource("16_o1rsb")]
+position = Vector2(384, 281)
+rotation = 0.24
+
+[node name="golden_rod_one4" parent="flora" instance=ExtResource("16_o1rsb")]
+position = Vector2(268, 295)
+rotation = -0.136576
+
+[node name="golden_rod_one5" parent="flora" instance=ExtResource("16_o1rsb")]
+position = Vector2(258, 180)
+rotation = -0.136576
+
+[node name="golden_rod_one6" parent="flora" instance=ExtResource("16_o1rsb")]
+position = Vector2(325, 296)
+rotation = -0.0502672
+
+[node name="golden_rod_one7" parent="flora" instance=ExtResource("16_o1rsb")]
+position = Vector2(94, 261)
+rotation = -0.0502672
+
+[node name="small_birch_in_darkness" parent="flora" instance=ExtResource("17_yqish")]
+position = Vector2(-280, 384)
+
+[node name="small_birch_in_darkness2" parent="flora" instance=ExtResource("17_yqish")]
+position = Vector2(-285, 98)
+rotation = 0.394967
+
+[node name="brush_trees_one" parent="flora" instance=ExtResource("18_00gie")]
+position = Vector2(-89, 256)
+
+[node name="brush_trees_one2" parent="flora" instance=ExtResource("18_00gie")]
+position = Vector2(233, 334)
+
+[node name="brush_trees_one3" parent="flora" instance=ExtResource("18_00gie")]
+position = Vector2(83, 267)
+rotation = 0.2057
+
 [node name="fauna" type="Node2D" parent="."]
 
 [node name="small_opening_west" parent="." instance=ExtResource("4_4lb72")]
@@ -535,6 +607,7 @@ volume_db = 15.0
 autoplay = true
 
 [node name="sky" type="CanvasLayer" parent="."]
+layer = 2
 follow_viewport_enabled = true
 follow_viewport_scale = 1.1
 
@@ -630,6 +703,42 @@ texture = ExtResource("18_7crou")
 [node name="Cloud3" type="Sprite2D" parent="fog"]
 position = Vector2(251, 477)
 texture = ExtResource("18_7crou")
+
+[node name="zombie_rat" parent="." instance=ExtResource("19_fu5ra")]
+position = Vector2(59, 525)
+
+[node name="zombie_rat2" parent="." instance=ExtResource("19_fu5ra")]
+position = Vector2(795, 341)
+
+[node name="zombie_rat3" parent="." instance=ExtResource("19_fu5ra")]
+position = Vector2(-247, -51)
+
+[node name="zombie_rat4" parent="." instance=ExtResource("19_fu5ra")]
+position = Vector2(-425, 253)
+
+[node name="zombie_rat5" parent="." instance=ExtResource("19_fu5ra")]
+position = Vector2(-511, 33)
+
+[node name="zombie_rat6" parent="." instance=ExtResource("19_fu5ra")]
+position = Vector2(737, -77)
+
+[node name="thicket" parent="." instance=ExtResource("14_rfjvu")]
+position = Vector2(391, 305)
+
+[node name="Big_rock" parent="." instance=ExtResource("25_feqsc")]
+position = Vector2(-120, 261)
+
+[node name="Big_rock2" parent="." instance=ExtResource("25_feqsc")]
+position = Vector2(-155, 263)
+
+[node name="Big_rock3" parent="." instance=ExtResource("25_feqsc")]
+position = Vector2(-203, 307)
+
+[node name="Big_rock5" parent="." instance=ExtResource("25_feqsc")]
+position = Vector2(-269, 246)
+
+[node name="Big_rock4" parent="." instance=ExtResource("25_feqsc")]
+position = Vector2(255, 250)
 
 [connection signal="chick" from="Blue_flowers" to="." method="_on_blue_flowers_chick"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

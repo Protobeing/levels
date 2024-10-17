@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://yrquolbxk4eb"]
+[gd_scene load_steps=32 format=3 uid="uid://yrquolbxk4eb"]
 
 [ext_resource type="Script" path="res://levels/southern_oak_forest/sof_level_6/southern_oak_forest_level_six.gd" id="1_oh438"]
 [ext_resource type="Texture2D" uid="uid://dwoqqdqex5u36" path="res://earth/home_plot.png" id="2_vdb0a"]
@@ -16,6 +16,191 @@
 [ext_resource type="PackedScene" uid="uid://bvkfk6gofkaim" path="res://flora/flowers/golden_rod_one.tscn" id="10_oo5yc"]
 [ext_resource type="Texture2D" uid="uid://bqqkuf376qauv" path="res://sky/cloud_2.png" id="14_2appi"]
 [ext_resource type="Texture2D" uid="uid://k1tqe0b7w057" path="res://sky/cloud_1.png" id="15_x0078"]
+[ext_resource type="PackedScene" uid="uid://dgjv1dn81bnaf" path="res://enemies/zombie_rat/zombie_rat.tscn" id="17_skvjk"]
+[ext_resource type="PackedScene" uid="uid://7qiu8l2nl068" path="res://drops/grub/grub.tscn" id="18_dotg1"]
+[ext_resource type="PackedScene" uid="uid://bqx7ywwfn6evp" path="res://gateways/small_opening_east.tscn" id="19_sbujt"]
+[ext_resource type="PackedScene" uid="uid://bqsjlb6eag65c" path="res://gateways/young_oak.tscn" id="20_kkflu"]
+
+[sub_resource type="Animation" id="Animation_oish5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Jed:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Jed:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasModulate:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.188235, 0.184314, 0.631373, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("small_opening_east:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("small_opening_east:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("small_opening_east/PointLight2D:color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.227451, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Jed:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(415, -122)]
+}
+
+[sub_resource type="Animation" id="Animation_y78sc"]
+resource_name = "enter"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Jed:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.533333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Jed:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.06667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasModulate:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.06667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0.188235, 0.184314, 0.631373, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("small_opening_east:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.933333, 2.06667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.451613), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("small_opening_east:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.133333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("small_opening_east/PointLight2D:color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 2.06667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0.227451, 1, 0), Color(1, 0.227451, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Jed:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(415, -122)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uhik0"]
+_data = {
+"RESET": SubResource("Animation_oish5"),
+"enter": SubResource("Animation_y78sc")
+}
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v2sf5"]
 radius = 35.5106
@@ -108,16 +293,22 @@ y_sort_enabled = true
 script = ExtResource("1_oh438")
 metadata/_edit_horizontal_guides_ = [-360.0]
 
+[node name="level_anims" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_uhik0")
+}
+
 [node name="Area2D" type="Area2D" parent="."]
 z_as_relative = false
 y_sort_enabled = true
-position = Vector2(-786, -136)
+position = Vector2(-542.1, 28.0002)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_v2sf5")
 
 [node name="earth" type="Node2D" parent="."]
 z_index = -1
+position = Vector2(243.9, 164)
 
 [node name="HomePlot" type="Sprite2D" parent="earth"]
 position = Vector2(-111, -146)
@@ -201,6 +392,7 @@ texture = ExtResource("4_4oup1")
 [node name="flora" type="Node2D" parent="."]
 z_as_relative = false
 y_sort_enabled = true
+position = Vector2(243.9, 164)
 
 [node name="Blue_flowers" parent="flora" instance=ExtResource("3_585hc")]
 position = Vector2(-509, -87)
@@ -284,10 +476,10 @@ position = Vector2(332, -156)
 position = Vector2(315, -228)
 
 [node name="fern_collection_two24" parent="flora/ferns" instance=ExtResource("8_4e7m6")]
-position = Vector2(277, -290)
+position = Vector2(311.1, -282)
 
 [node name="fern_collection_two25" parent="flora/ferns" instance=ExtResource("8_4e7m6")]
-position = Vector2(240, -352)
+position = Vector2(201.1, -415)
 
 [node name="fern_collection_two26" parent="flora/ferns" instance=ExtResource("8_4e7m6")]
 position = Vector2(145, -388)
@@ -338,17 +530,19 @@ position = Vector2(-514, -1)
 position = Vector2(-538, -149)
 
 [node name="fauna" type="Node2D" parent="."]
+position = Vector2(243.9, 164)
 
 [node name="gateway_west" parent="." instance=ExtResource("3_gk8yu")]
-position = Vector2(-772, -152)
+position = Vector2(-528.1, 12.0002)
 
 [node name="Jed" parent="." instance=ExtResource("4_qgo2w")]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+position = Vector2(243.9, 164)
 color = Color(0.188235, 0.184314, 0.631373, 1)
 
 [node name="chick_spwns" type="Node2D" parent="."]
-position = Vector2(109, -208)
+position = Vector2(380, -110)
 
 [node name="chick_spawn_1" type="Marker2D" parent="chick_spwns"]
 position = Vector2(6, -12)
@@ -366,12 +560,13 @@ position = Vector2(10, 10)
 position = Vector2(-2, -5)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+position = Vector2(243.9, 164)
 navigation_polygon = SubResource("NavigationPolygon_rpgao")
 
 [node name="PinkRiverSheet" type="Sprite2D" parent="."]
 self_modulate = Color(1, 1, 1, 0.47451)
 z_index = -2
-position = Vector2(-576, -80)
+position = Vector2(-332.1, 84.0003)
 rotation = 0.420151
 scale = Vector2(1, 0.440515)
 skew = -0.106465
@@ -390,85 +585,87 @@ follow_viewport_enabled = true
 follow_viewport_scale = 1.1
 
 [node name="CanvasModulate" type="CanvasModulate" parent="sky"]
+position = Vector2(221.727, 149.091)
 color = Color(0.666667, 0.662745, 0.478431, 1)
 
 [node name="Cloud4" type="Sprite2D" parent="sky"]
-position = Vector2(-374.545, 450.909)
+position = Vector2(-152.818, 600)
 texture = ExtResource("14_2appi")
 
 [node name="Cloud16" type="Sprite2D" parent="sky"]
-position = Vector2(384.545, 238.182)
+position = Vector2(606.272, 387.273)
 texture = ExtResource("14_2appi")
 
 [node name="Cloud17" type="Sprite2D" parent="sky"]
-position = Vector2(554.545, -242.727)
+position = Vector2(776.272, -93.6359)
 rotation = -0.457917
 texture = ExtResource("14_2appi")
 
 [node name="Cloud5" type="Sprite2D" parent="sky"]
-position = Vector2(91.8182, 380.909)
+position = Vector2(313.545, 530)
 texture = ExtResource("14_2appi")
 
 [node name="Cloud6" type="Sprite2D" parent="sky"]
-position = Vector2(-635.455, -507.273)
+position = Vector2(-413.728, -358.182)
 texture = ExtResource("14_2appi")
 
 [node name="Cloud7" type="Sprite2D" parent="sky"]
-position = Vector2(-1055.45, -316.364)
+position = Vector2(-833.723, -167.273)
 texture = ExtResource("14_2appi")
 
 [node name="Cloud8" type="Sprite2D" parent="sky"]
-position = Vector2(380, -594)
+position = Vector2(601.727, -444.909)
 texture = ExtResource("14_2appi")
 
 [node name="Cloud1" type="Sprite2D" parent="sky"]
-position = Vector2(196, -622)
+position = Vector2(417.727, -472.909)
 texture = ExtResource("15_x0078")
 
 [node name="Cloud9" type="Sprite2D" parent="sky"]
-position = Vector2(-2, -748)
+position = Vector2(219.727, -598.909)
 texture = ExtResource("15_x0078")
 
 [node name="Cloud10" type="Sprite2D" parent="sky"]
-position = Vector2(28.1818, -551.818)
+position = Vector2(249.909, -402.727)
 texture = ExtResource("15_x0078")
 
 [node name="Cloud11" type="Sprite2D" parent="sky"]
-position = Vector2(-570, -494.545)
+position = Vector2(-348.273, -345.454)
 texture = ExtResource("15_x0078")
 
 [node name="Cloud12" type="Sprite2D" parent="sky"]
-position = Vector2(-246.364, -708.182)
+position = Vector2(-24.6367, -559.091)
 texture = ExtResource("14_2appi")
 
 [node name="Cloud13" type="Sprite2D" parent="sky"]
-position = Vector2(-1249, -115)
+position = Vector2(-1027.27, 34.0911)
 texture = ExtResource("14_2appi")
 
 [node name="Cloud14" type="Sprite2D" parent="sky"]
-position = Vector2(-979.091, 267.273)
+position = Vector2(-757.364, 416.364)
 texture = ExtResource("14_2appi")
 
 [node name="Cloud15" type="Sprite2D" parent="sky"]
-position = Vector2(-707.273, 351.818)
+position = Vector2(-485.546, 500.909)
 texture = ExtResource("14_2appi")
 
 [node name="fog" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="fog"]
+position = Vector2(243.9, 164)
 color = Color(0.772549, 1, 1, 0.172549)
 
 [node name="Cloud1" type="Sprite2D" parent="fog"]
-position = Vector2(284, -353)
+position = Vector2(527.9, -189)
 texture = ExtResource("15_x0078")
 
 [node name="Cloud2" type="Sprite2D" parent="fog"]
-position = Vector2(-492, -421)
+position = Vector2(-248.1, -257)
 texture = ExtResource("14_2appi")
 
 [node name="Cloud3" type="Sprite2D" parent="fog"]
-position = Vector2(-236, 91)
+position = Vector2(7.90002, 255)
 texture = ExtResource("15_x0078")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="fog"]
@@ -476,6 +673,43 @@ libraries = {
 "": SubResource("AnimationLibrary_kv8t0")
 }
 autoplay = "undulating_fog"
+
+[node name="zombie_rat" parent="." instance=ExtResource("17_skvjk")]
+position = Vector2(-456, 173)
+
+[node name="zombie_rat2" parent="." instance=ExtResource("17_skvjk")]
+position = Vector2(-156, 259)
+
+[node name="zombie_rat3" parent="." instance=ExtResource("17_skvjk")]
+position = Vector2(528, -18)
+
+[node name="zombie_rat4" parent="." instance=ExtResource("17_skvjk")]
+position = Vector2(-70, -224)
+
+[node name="zombie_rat5" parent="." instance=ExtResource("17_skvjk")]
+position = Vector2(-313, -86)
+
+[node name="zombie_rat6" parent="." instance=ExtResource("17_skvjk")]
+position = Vector2(-388, -96)
+
+[node name="grub" parent="." instance=ExtResource("18_dotg1")]
+position = Vector2(-79, -84)
+
+[node name="grub2" parent="." instance=ExtResource("18_dotg1")]
+position = Vector2(9, -214)
+
+[node name="grub3" parent="." instance=ExtResource("18_dotg1")]
+position = Vector2(470, 49)
+
+[node name="small_opening_east" parent="." instance=ExtResource("19_sbujt")]
+visible = false
+position = Vector2(404, -131)
+
+[node name="young_oak" parent="." instance=ExtResource("20_kkflu")]
+position = Vector2(316, -123)
+
+[node name="fern_collection_two" parent="." instance=ExtResource("8_4e7m6")]
+position = Vector2(232, -145)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="chick" from="flora/Blue_flowers" to="." method="_on_blue_flowers_chick"]
@@ -488,3 +722,5 @@ autoplay = "undulating_fog"
 [connection signal="special_attack" from="Jed" to="." method="_on_jed_special_attack"]
 [connection signal="step" from="Jed" to="." method="_on_jed_step"]
 [connection signal="stomp" from="Jed" to="." method="_on_jed_stomp"]
+
+[editable path="small_opening_east"]

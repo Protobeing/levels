@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://d2vf7ge747vun"]
+[gd_scene load_steps=27 format=3 uid="uid://d2vf7ge747vun"]
 
 [ext_resource type="Script" path="res://levels/southern_oak_forest/sof_level_9/southern_oak_forest_level_nine.gd" id="1_h3jxq"]
 [ext_resource type="PackedScene" uid="uid://bqx7ywwfn6evp" path="res://gateways/small_opening_east.tscn" id="2_p06pa"]
@@ -12,7 +12,12 @@
 [ext_resource type="PackedScene" uid="uid://cml5xnunmu047" path="res://flora/flowers/night_orchids/night_orchid.tscn" id="7_66oc8"]
 [ext_resource type="PackedScene" uid="uid://bc5yoiyioi3cr" path="res://earth/purple_night_grass.tscn" id="8_wq0cb"]
 [ext_resource type="Texture2D" uid="uid://bqqkuf376qauv" path="res://sky/cloud_2.png" id="11_qaneu"]
+[ext_resource type="PackedScene" uid="uid://bl2p3j8ekcctv" path="res://trees/oaks/brush_trees_one.tscn" id="11_t2w8v"]
 [ext_resource type="Texture2D" uid="uid://k1tqe0b7w057" path="res://sky/cloud_1.png" id="12_ecyko"]
+[ext_resource type="PackedScene" uid="uid://7qiu8l2nl068" path="res://drops/grub/grub.tscn" id="12_tdl8b"]
+[ext_resource type="PackedScene" uid="uid://dvlb3f38eus4v" path="res://jed_main/rocks/rocks.tscn" id="13_skt4c"]
+[ext_resource type="PackedScene" uid="uid://dgjv1dn81bnaf" path="res://enemies/zombie_rat/zombie_rat.tscn" id="14_5cfu1"]
+[ext_resource type="PackedScene" uid="uid://b3yigva0cskfh" path="res://obstacles/rocks/big_rock.tscn" id="18_w1df8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i17ws"]
 radius = 88.5664
@@ -5053,6 +5058,117 @@ position = Vector2(8, -337)
 [node name="purple_night_grass756" parent="flora" instance=ExtResource("8_wq0cb")]
 position = Vector2(71, -399)
 
+[node name="brush_trees_one" parent="flora" instance=ExtResource("11_t2w8v")]
+position = Vector2(310, 175)
+
+[node name="brush_trees_one3" parent="flora" instance=ExtResource("11_t2w8v")]
+position = Vector2(118, -69)
+
+[node name="brush_trees_one4" parent="flora" instance=ExtResource("11_t2w8v")]
+position = Vector2(210, -45)
+
+[node name="brush_trees_one5" parent="flora" instance=ExtResource("11_t2w8v")]
+position = Vector2(187, -140)
+
+[node name="brush_trees_one6" parent="flora" instance=ExtResource("11_t2w8v")]
+position = Vector2(54, -233)
+
+[node name="brush_trees_one7" parent="flora" instance=ExtResource("11_t2w8v")]
+position = Vector2(-292, -385)
+
+[node name="brush_trees_one8" parent="flora" instance=ExtResource("11_t2w8v")]
+position = Vector2(663, -26)
+
+[node name="brush_trees_one9" parent="flora" instance=ExtResource("11_t2w8v")]
+position = Vector2(630, -77)
+
+[node name="brush_trees_one10" parent="flora" instance=ExtResource("11_t2w8v")]
+position = Vector2(858, 146)
+
+[node name="brush_trees_one11" parent="flora" instance=ExtResource("11_t2w8v")]
+position = Vector2(870, 422)
+
+[node name="brush_trees_one12" parent="flora" instance=ExtResource("11_t2w8v")]
+position = Vector2(729, 387)
+rotation = -0.125228
+
+[node name="brush_trees_one13" parent="flora" instance=ExtResource("11_t2w8v")]
+position = Vector2(-29, 427)
+rotation = -0.125228
+
+[node name="brush_trees_one14" parent="flora" instance=ExtResource("11_t2w8v")]
+position = Vector2(47, 383)
+rotation = -0.125228
+
+[node name="brush_trees_one15" parent="flora" instance=ExtResource("11_t2w8v")]
+position = Vector2(112, 396)
+rotation = 0.108326
+
+[node name="brush_trees_one16" parent="flora" instance=ExtResource("11_t2w8v")]
+position = Vector2(-435, 88.0001)
+rotation = 0.108326
+
+[node name="brush_trees_one17" parent="flora" instance=ExtResource("11_t2w8v")]
+position = Vector2(-275, 43)
+rotation = 0.108326
+
+[node name="brush_trees_one2" parent="flora" instance=ExtResource("11_t2w8v")]
+position = Vector2(408, 259)
+
+[node name="grub" parent="flora" instance=ExtResource("12_tdl8b")]
+position = Vector2(-465, 144)
+
+[node name="grub2" parent="flora" instance=ExtResource("12_tdl8b")]
+position = Vector2(-462, 162)
+
+[node name="grub3" parent="flora" instance=ExtResource("12_tdl8b")]
+position = Vector2(255, 383)
+
+[node name="grub4" parent="flora" instance=ExtResource("12_tdl8b")]
+position = Vector2(255, -7)
+
+[node name="grub5" parent="flora" instance=ExtResource("12_tdl8b")]
+position = Vector2(42, -20)
+
+[node name="grub6" parent="flora" instance=ExtResource("12_tdl8b")]
+position = Vector2(-232, -256)
+
+[node name="grub7" parent="flora" instance=ExtResource("12_tdl8b")]
+position = Vector2(-342, -221)
+
+[node name="grub8" parent="flora" instance=ExtResource("12_tdl8b")]
+position = Vector2(341, -240)
+
+[node name="grub9" parent="flora" instance=ExtResource("12_tdl8b")]
+position = Vector2(351, -236)
+
+[node name="grub10" parent="flora" instance=ExtResource("12_tdl8b")]
+position = Vector2(946, 94)
+
+[node name="rocks" parent="flora" instance=ExtResource("13_skt4c")]
+position = Vector2(190, 333)
+
+[node name="rocks2" parent="flora" instance=ExtResource("13_skt4c")]
+position = Vector2(794, 58)
+
+[node name="rocks3" parent="flora" instance=ExtResource("13_skt4c")]
+position = Vector2(519, -181)
+
+[node name="rocks4" parent="flora" instance=ExtResource("13_skt4c")]
+position = Vector2(-96, 24)
+
+[node name="rocks5" parent="flora" instance=ExtResource("13_skt4c")]
+position = Vector2(137, -23)
+
+[node name="rocks6" parent="flora" instance=ExtResource("13_skt4c")]
+position = Vector2(-399, -252)
+
+[node name="rocks7" parent="flora" instance=ExtResource("13_skt4c")]
+position = Vector2(-158, 346)
+
+[node name="rocks8" parent="flora" instance=ExtResource("13_skt4c")]
+position = Vector2(-172, 337)
+
 [node name="fauna" type="Node2D" parent="."]
 
 [node name="Jed" parent="." instance=ExtResource("3_khqs5")]
@@ -5087,6 +5203,7 @@ position = Vector2(-438, -503)
 metadata/_edit_lock_ = true
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+visible = false
 navigation_polygon = SubResource("NavigationPolygon_1fq63")
 metadata/_edit_lock_ = true
 
@@ -5190,7 +5307,118 @@ autoplay = "undulating_fog"
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-517, -302, -511, -250, -519, -186, -483, -126, -459, -74, -429, -4, -491, 40, -501, 102, -513, 174, -497, 226, -407, 250, -407, 324, -385, 376, -295, 406, -127, 432, -31, 428, -7, 388, 53, 386, 71, 410, 131, 398, 165, 392, 221, 424, 225, 462, 253, 486, 295, 478, 355, 478, 375, 496, 431, 498, 459, 484, 507, 486, 553, 476, 559, 418, 585, 386, 647, 392, 699, 408, 711, 344, 755, 316, 805, 340, 837, 356, 889, 334, 931, 350, 969, 376, 1039, 384, 1075, 344, 1149, 332, 1143, 268, 1143, 2, 1083, -2, 1065, -10, 1043, -60, 949, -56, 845, -66, 801, -104, 769, -132, 723, -158, 751, -192, 769, -232, 771, -288, 773, -344, 715, -346, 691, -368, 681, -404, 655, -422, 607, -422, 505, -436, 469, -430, 425, -414, 331, -394, 285, -372, 241, -346, 205, -334, 121, -316, 61, -348, -9, -346, -71, -354, -165, -370, -205, -398, -237, -422, -253, -456, -245, -500, -243, -528, -271, -554, -289, -588, -343, -592, -399, -600, -461, -608, -529, -634, -537, -668, -603, -646, -627, -592, -725, -536, -719, -464, -729, -392, -637, -334, -569, -342, -533, -316, -669, -146, -793, -272, -835, -626, -609, -754, -241, -794, 355, -664, 817, -604, 1367, -20, 1443, 240, 1321, 600, 849, 750, 331, 806, -507, 612, -877, 332, -879, -68, -655, -116)
+polygon = PackedVector2Array(-517, -302, -509, -271, -511, -250, -502, -200, -519, -186, -529, -162, -511, -146, -488, -142, -476, -124, -460, -100, -453, -75, -443, -60, -429, -51, -426, -28, -422, -1, -433, 32, -460, 28, -473, 36, -488, 48, -487, 67, -498, 85, -501, 102, -502, 117, -516, 131, -514, 144, -504, 158, -503, 174, -517, 193, -514, 204, -507, 211, -498, 211, -485, 203, -470, 210, -453, 217, -441, 235, -415, 237, -407, 250, -392, 299, -388, 331, -385, 357, -371, 367, -347, 364, -324, 360, -305, 368, -292, 381, -278, 394, -267, 411, -242, 409, -218, 381, -184, 373, -154, 384, -127, 403, -108, 409, -87, 441, -70.7452, 437.227, -67, 405, -54, 381, -28, 354, 27, 349, 52, 373, 75, 399, 100, 398, 124, 370, 163, 362, 197, 388, 229, 389, 234, 417, 243, 457, 256, 475, 282, 476, 301, 456, 328, 454, 352, 459, 375, 496, 401, 508, 430, 488, 456, 469, 483, 474, 520, 491, 539, 479, 550, 445, 546, 403, 569, 368, 617, 352, 657, 372, 691, 417, 701, 394, 695, 341, 710, 315, 763, 290, 802, 309, 843, 333, 899, 308, 940, 311, 989, 343, 997, 381, 1032, 370, 1061, 333, 1094, 325, 1123, 308, 1134, 262, 1115, 232, 1117, 214, 1129, 203, 1121, 187, 1118, 165, 1130, 144, 1142, 131, 1118, 103, 1103, 85, 1113, 52, 1124, 27, 1127, -3, 1110, -3, 1098, 16, 1078, 17, 1056, 9, 1044, -21, 1026, -54, 977, -38, 940, -43, 904.335, -51.6346, 868, -43, 812, -46, 796, -90, 801, -104, 771, -112, 731, -121, 711, -162, 725, -194, 748, -218, 769, -232, 754, -273, 771, -310, 773, -344, 741, -340, 715, -346, 691, -368, 681, -404, 655, -422, 607, -422, 552, -425, 505, -436, 469, -430, 425, -414, 402, -414, 384, -409, 369, -399, 378, -386, 391, -372, 391, -355, 376, -352, 352, -363, 341, -385, 331, -394, 311, -389, 299, -367, 281, -340, 259, -310, 226, -301, 223, -291, 227, -282, 219, -270, 202, -271, 188, -278, 177, -303, 165, -306, 136, -299, 119, -279, 97, -275, 58, -329, 45, -338, 11, -323, -21, -326, -52, -330, -69, -344, -101, -338, -145, -340, -166, -352, -188, -399, -212, -398, -233, -407, -243, -419, -266, -444, -263, -470, -245, -500, -230, -523, -250, -529, -271, -554, -289, -588, -320, -586, -361, -582, -385, -586, -399, -600, -421, -596, -444, -594, -470, -593, -495, -597, -510, -608, -521, -634, -536, -657, -563, -649, -586, -631, -603, -619, -608, -582, -618, -562, -645, -565, -661, -553, -664, -526, -672, -518, -695, -509, -696, -488, -701, -455, -698, -439, -714, -403, -690, -386, -673, -384, -657, -359, -637, -347, -601, -355, -569, -342, -552, -325, -538, -326, -523, -324, -515, -314, -521, -304, -669, -146, -793, -272, -835, -626, -609, -754, -241, -794, 355, -664, 817, -604, 1367, -20, 1443, 240, 1321, 600, 849, 750, 331, 806, -507, 612, -877, 332, -879, -68, -655, -116)
+
+[node name="zombie_rat" parent="." instance=ExtResource("14_5cfu1")]
+position = Vector2(-140, 308)
+
+[node name="zombie_rat2" parent="." instance=ExtResource("14_5cfu1")]
+position = Vector2(675, -57)
+
+[node name="zombie_rat3" parent="." instance=ExtResource("14_5cfu1")]
+position = Vector2(-63, -333)
+
+[node name="zombie_rat4" parent="." instance=ExtResource("14_5cfu1")]
+position = Vector2(-517, -52)
+
+[node name="zombie_rat5" parent="." instance=ExtResource("14_5cfu1")]
+position = Vector2(601, 370)
+
+[node name="zombie_rat6" parent="." instance=ExtResource("14_5cfu1")]
+position = Vector2(645, 116)
+
+[node name="Big_rock" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(397, 110)
+
+[node name="Big_rock2" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(348, 135)
+
+[node name="Big_rock3" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(359, 107)
+
+[node name="Big_rock4" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(281, 152)
+
+[node name="Big_rock5" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(646, 130)
+
+[node name="Big_rock6" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(691, 132)
+
+[node name="Big_rock7" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(745, 104)
+
+[node name="Big_rock8" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(737, 131)
+
+[node name="Big_rock9" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(376, -28)
+
+[node name="Big_rock10" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(326, -9)
+
+[node name="Big_rock11" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(343, 22)
+
+[node name="Big_rock12" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(310, 42)
+
+[node name="Big_rock13" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(346, 67)
+
+[node name="Big_rock14" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(152, -133)
+
+[node name="Big_rock15" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(135, -192)
+
+[node name="Big_rock16" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(87, -191)
+
+[node name="Big_rock17" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(95, -237)
+
+[node name="Big_rock18" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(142, -227)
+
+[node name="Big_rock19" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(113, -215)
+
+[node name="Big_rock20" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(554, -119)
+
+[node name="Big_rock21" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(598, -38)
+
+[node name="Big_rock22" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(46, 109)
+
+[node name="Big_rock23" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(70, 124)
+
+[node name="Big_rock24" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(72, 71)
+
+[node name="Big_rock25" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(143, 54)
+
+[node name="Big_rock26" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(-32, -284)
+
+[node name="Big_rock27" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(14, -277)
+
+[node name="Big_rock28" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(322, -296)
+
+[node name="Big_rock29" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(351, -313)
+
+[node name="Big_rock30" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(355, -286)
+
+[node name="Big_rock31" parent="." instance=ExtResource("18_w1df8")]
+position = Vector2(626, -193)
 
 [connection signal="chick" from="Blue_flowers" to="." method="_on_blue_flowers_chick"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

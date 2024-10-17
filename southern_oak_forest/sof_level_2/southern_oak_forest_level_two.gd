@@ -2,6 +2,7 @@ extends Node2D
 #@onready var level_anim = $level_animations
 @onready var Jed = $Jed
 @onready var blue_flower_anim = $Blue_flowers/AnimationPlayer
+var ground_flame: PackedScene = preload('res://jed_main/rocks/ground_flame.tscn')
 # groups of enemies that sare instantiated according to how many chicks jed has with her
 
 #pink orb's "legs"
@@ -75,6 +76,10 @@ func _on_jed_rocks_e(pos, direction):
 	pickup_rock.global_position = rock.position
 	add_child(pickup_rock)
 	rock.queue_free()
+	var flames = ground_flame.instantiate()
+	flames.position = pickup_rock.position
+	flames.rotation = direction
+	add_child(flames)
 func _on_jed_special_attack(pos_sa,direction_sa):
 	var sweet = sweet_pea.instantiate() as RigidBody2D
 	sweet.position = pos_sa

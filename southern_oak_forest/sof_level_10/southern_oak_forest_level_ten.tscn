@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dv4kodqkny5ay"]
+[gd_scene load_steps=33 format=3 uid="uid://dv4kodqkny5ay"]
 
 [ext_resource type="Script" path="res://levels/southern_oak_forest/sof_level_10/southern_oak_forest_level_ten.gd" id="1_157hd"]
 [ext_resource type="Texture2D" uid="uid://cpv1khm8fjn0y" path="res://earth/earth_4.png" id="2_5ndbo"]
@@ -21,14 +21,18 @@
 [ext_resource type="PackedScene" uid="uid://bc5yoiyioi3cr" path="res://earth/purple_night_grass.tscn" id="13_y0d3i"]
 [ext_resource type="Texture2D" uid="uid://bqqkuf376qauv" path="res://sky/cloud_2.png" id="20_2v10n"]
 [ext_resource type="Texture2D" uid="uid://k1tqe0b7w057" path="res://sky/cloud_1.png" id="21_vlctq"]
+[ext_resource type="PackedScene" uid="uid://dgjv1dn81bnaf" path="res://enemies/zombie_rat/zombie_rat.tscn" id="22_qo123"]
+[ext_resource type="PackedScene" uid="uid://bl2p3j8ekcctv" path="res://trees/oaks/brush_trees_one.tscn" id="23_y4qa8"]
+[ext_resource type="PackedScene" uid="uid://dvlb3f38eus4v" path="res://jed_main/rocks/rocks.tscn" id="24_tve15"]
+[ext_resource type="PackedScene" uid="uid://7qiu8l2nl068" path="res://drops/grub/grub.tscn" id="25_ilci1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2h3v4"]
 radius = 51.2445
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_eslq8"]
-vertices = PackedVector2Array(-442.398, 373.977, -504.461, 353.922, -535.141, 277.227, -496.461, 191.156, -295.039, 432.656, -348.57, 442.391, -461.828, 34.3203, -171.523, -534.938, 34.4219, -528.109, 330.078, -299.25, 402.617, 5.60938, 269.672, 421.211, 77.3594, 529.453, -183.172, 475.367, -506.602, -255.211, -397.047, -459.773)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 0, 3, 6), PackedInt32Array(7, 8, 9, 10, 11, 12, 13, 4, 6, 14, 15)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-447, 383, -351, 453, -296, 443, -186, 485, 79, 540, 278, 428, 413, 6, 339, -305, 38, -538, -173, -545, -404, -468, -517, -257, -472, 34, -506, 188, -546, 277, -512, 362)])
+vertices = PackedVector2Array(-764, 271.656, -1597.72, 79.1094, -1590.08, -145.563, -1472.02, -393.391, -724.258, -573.133, -470.523, -604.109, -446.031, 371.328, -523, 409.82, -651.953, 345.344, -145.188, -661.633, 110.594, -552.422, 398.07, -299.406, 402.969, 4.53125, 269.672, 421.211, 77.3594, 529.453, -183.172, 475.367, -295.039, 432.656, -348.57, 442.391)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 8, 0, 5, 9, 10, 11), PackedInt32Array(6, 11, 12, 13, 14, 15, 16), PackedInt32Array(6, 16, 17)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-447, 383, -351, 453, -296, 443, -186, 485, 79, 540, 278, 428, 413, 6, 408, -304, 116, -561, -144, -672, -472, -614, -726, -583, -1479, -402, -1600, -148, -1608, 87, -768, 281, -657, 354, -523, 421)])
 
 [sub_resource type="Curve2D" id="Curve2D_vtv1x"]
 _data = {
@@ -710,6 +714,26 @@ texture = ExtResource("3_4j1f6")
 position = Vector2(-716, -12)
 texture = ExtResource("4_mig3r")
 
+[node name="SmallEarthPlot17" type="Sprite2D" parent="earth"]
+position = Vector2(-178, -540)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot18" type="Sprite2D" parent="earth"]
+position = Vector2(-282, -533)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot19" type="Sprite2D" parent="earth"]
+position = Vector2(-14, -508)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot20" type="Sprite2D" parent="earth"]
+position = Vector2(-465, -494)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot21" type="Sprite2D" parent="earth"]
+position = Vector2(-907, 42)
+texture = ExtResource("4_mig3r")
+
 [node name="SmallEarthPlot2" type="Sprite2D" parent="earth"]
 position = Vector2(-911, -9)
 texture = ExtResource("4_mig3r")
@@ -1096,7 +1120,7 @@ position = Vector2(-969, -139)
 [node name="fauna" type="Node2D" parent="."]
 
 [node name="small_opening_north" parent="." instance=ExtResource("3_hui3q")]
-position = Vector2(-307, -357)
+position = Vector2(-316, -364)
 
 [node name="Jed" parent="." instance=ExtResource("4_s2sdk")]
 
@@ -1384,6 +1408,72 @@ color = Color(0.772549, 1, 1, 0.172549)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 z_index = 4
 polygon = PackedVector2Array(-1356, 53, -1260, 43, -1130, 28, -1005, 24, -899, 13, -847, 5, -694, 11, -650, 60, -599, 62, -563, 45, -531, 34, -465, 36, -337, 45, -309, 51, -269, 79, -273, 171, -312, 205, -339, 234, -426, 305, -465, 394, -475, 470, -465, 513, -401, 551, -363, 528, -343, 472, -311, 479, -284, 504, -239, 504, -224, 483, -176, 473, -41, 511, -31, 532, 35, 453, 110, 458, 141, 468, 180, 462, 188, 413, 203, 379, 227, 355, 224, 317, 226, 260, 252, 217, 280, 173, 299, 137, 309, 85, 318, 24, 337, -25, 362, -61, 382, -138, 301, -204, 263, -216, 244, -251, 241, -300, 261, -327, 203, -333, 146, -336, 129, -365, 82, -384, 37, -416, 22, -461, -3, -463, -10, -495, -48, -502, -84, -523, -109, -544, -116, -578, -171, -599, -248, -599, -286, -569, -320, -553, -346, -527, -371, -487, -388, -459, -361, -404, -369, -389, -392, -367, -435, -363, -446, -291, -452, -274, -477, -225, -484, -187, -526, -136, -546, -115, -592, -112, -637, -110, -675, -110, -711, -106, -760, -95, -796, -115, -835, -121, -867, -119, -896, -140, -960, -157, -1007, -155, -1111, -182, -1164, -251, -1220, -334, -1271, -355, -1320, -353, -1356, -351, -1449, -334, -1500, -295, -1521, -227, -1536, -174, -1560, -114, -1570, -87, -1583, -31, -1507, 30, -1513, 75, -1534, 139, -1502, 238, -1417, 283, -1345, 285, -1115, 294, -1115, 451, -1320, 440, -1556, 409, -1664, 262, -1783, 45, -1743, -227, -1662, -444, -1360, -601, -971, -576, -603, -606, -471, -661, -80, -723, 316, -502, 445, -404, 643, 30, 601, 270, 282, 738, -229, 840, -664, 660, -1093, 456, -1095, 293, -938, 359, -754, 393, -650, 361, -603, 312, -571, 249, -579, 175, -611, 132, -688, 98, -860, 66, -1058, 88, -1127, 136, -1245, 160, -1296, 164, -1362, 149, -1383, 102)
+
+[node name="zombie_rat" parent="." instance=ExtResource("22_qo123")]
+position = Vector2(-317, 102)
+
+[node name="zombie_rat2" parent="." instance=ExtResource("22_qo123")]
+position = Vector2(241, -201)
+
+[node name="zombie_rat3" parent="." instance=ExtResource("22_qo123")]
+position = Vector2(-408, -262)
+
+[node name="zombie_rat4" parent="." instance=ExtResource("22_qo123")]
+position = Vector2(-348, -205)
+
+[node name="zombie_rat5" parent="." instance=ExtResource("22_qo123")]
+position = Vector2(245, 272)
+
+[node name="young_oak" parent="." instance=ExtResource("6_drdqj")]
+position = Vector2(-161, -330)
+
+[node name="brush_trees_one" parent="." instance=ExtResource("23_y4qa8")]
+position = Vector2(-255, -452)
+
+[node name="brush_trees_one2" parent="." instance=ExtResource("23_y4qa8")]
+position = Vector2(-1126, 173)
+
+[node name="brush_trees_one3" parent="." instance=ExtResource("23_y4qa8")]
+position = Vector2(-623, 178)
+
+[node name="brush_trees_one4" parent="." instance=ExtResource("23_y4qa8")]
+position = Vector2(-521, 159)
+
+[node name="rocks" parent="." instance=ExtResource("24_tve15")]
+position = Vector2(-1321, -125)
+
+[node name="rocks2" parent="." instance=ExtResource("24_tve15")]
+position = Vector2(-1404, -250)
+
+[node name="rocks3" parent="." instance=ExtResource("24_tve15")]
+position = Vector2(177, -6)
+
+[node name="rocks4" parent="." instance=ExtResource("24_tve15")]
+position = Vector2(-127, 108)
+
+[node name="grub" parent="." instance=ExtResource("25_ilci1")]
+position = Vector2(195, 102)
+
+[node name="grub2" parent="." instance=ExtResource("25_ilci1")]
+position = Vector2(-150, 4)
+
+[node name="grub3" parent="." instance=ExtResource("25_ilci1")]
+position = Vector2(-143, -278)
+
+[node name="grub4" parent="." instance=ExtResource("25_ilci1")]
+position = Vector2(-996, -104)
+
+[node name="grub5" parent="." instance=ExtResource("25_ilci1")]
+position = Vector2(-982, -102)
+
+[node name="grub6" parent="." instance=ExtResource("25_ilci1")]
+position = Vector2(-1290, -124)
+
+[node name="grub7" parent="." instance=ExtResource("25_ilci1")]
+position = Vector2(-1316, -149)
+
+[node name="grub8" parent="." instance=ExtResource("25_ilci1")]
+position = Vector2(-1393, -112)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="died" from="Jed" to="." method="_on_jed_died"]

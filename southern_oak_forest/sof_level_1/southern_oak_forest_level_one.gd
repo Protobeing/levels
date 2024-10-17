@@ -2,6 +2,8 @@ extends Node2D
 #@onready var level_anim = $level_animations
 @onready var Jed = $Jed
 @onready var blue_flower_anim = $Blue_flowers/AnimationPlayer
+@onready var enter_exit = $enter_exit
+var ground_flame: PackedScene = preload('res://jed_main/rocks/ground_flame.tscn')
 # groups of enemies that sare instantiated according to how many chicks jed has with her
 
 #group_one
@@ -24,6 +26,8 @@ var ghost_jimmy_2 = preload("res://spirit_jimmys/ghost_jimmy_ver_two.tscn")
 var bullets = preload("res://spirit_jimmys/ghost_bullets.tscn")
 
 func _ready() -> void:
+	PlayerData.entering_from_s = true
+	enter_exit.play("enter_from_s")
 	if Global.chick_counter <=6:
 		if AudioPlayer.oak_forest_chill_vibes == false:
 			AudioPlayer.oak_forest_chill_vibes = true
@@ -65,6 +69,10 @@ func _on_jed_rocks_e(pos, direction):
 	pickup_rock.global_position = rock.position
 	add_child(pickup_rock)
 	rock.queue_free()
+	var flames = ground_flame.instantiate()
+	flames.position = pickup_rock.position
+	flames.rotation = direction
+	add_child(flames)
 func _on_jed_special_attack(pos_sa,direction_sa):
 	var sweet = sweet_pea.instantiate() as RigidBody2D
 	sweet.position = pos_sa
@@ -122,13 +130,13 @@ func enemies_one():
 			enemies.position = $".".position
 			call_deferred('add_child', enemies)
 		
-	elif Global.chick_counter <= 6:
+	elif Global.chick_counter <= 5:
 		if Global.chick_counter > 3:
 			var enemies = enemies_plus_four_one.instantiate()
 			enemies.position = $".".position
 			call_deferred('add_child', enemies)
 		
-	if Global.chick_counter >= 7:
+	if Global.chick_counter >= 6:
 			if AudioPlayer.deep_and_dark_it_is == false:
 				AudioPlayer.deep_and_dark_it_is = true
 				AudioPlayer.deep_and_dark_time.play('deep_and_dark')

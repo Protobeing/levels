@@ -1,12 +1,14 @@
 extends Node2D
 
+@onready var Jed = $Jed
 @onready var blue_flower_anim = $Blue_flowers/AnimationPlayer
+var ground_flame: PackedScene = preload('res://jed_main/rocks/ground_flame.tscn')
 #group_three
 var enemies_plus_six_three: PackedScene = preload('res://enemies/groupings/group_three/enmies_plus_six_three.tscn')
 var enemies_plus_four_three: PackedScene = preload('res://enemies/groupings/group_three/enemies_plus_four_three.tscn')
 var enemies_below_three_three: PackedScene = preload('res://enemies/groupings/group_three/enemies_below_three_three.tscn')
 
-@onready var Jed = $Jed
+
 var rocks: PackedScene = preload("res://jed_main/rocks/throwing_rock.tscn")
 var pickup_rocks: PackedScene = preload("res://jed_main/rocks/rocks.tscn")
 var chick: PackedScene = preload("res://ghost_babies_and_blue_flowers/ghost_babies.tscn")
@@ -29,7 +31,7 @@ func _ready() -> void:
 	PlayerData.death_in_sof_3 = false
 	enemies_three()
 	Global.blue_flower_heal = true
-	$Jed.position = Vector2(-400,705)
+	$Jed.position = Vector2(26,626)
 	if Global.chick_counter >= 1:
 			var chick_1 = chick.instantiate()
 			chick_1.global_position = $chick_spwns/chick_spawn_1.global_position
@@ -67,6 +69,10 @@ func _on_jed_rocks_e(pos, direction):
 	pickup_rock.global_position = rock.position
 	add_child(pickup_rock)
 	rock.queue_free()
+	var flames = ground_flame.instantiate()
+	flames.position = pickup_rock.position
+	flames.rotation = direction
+	add_child(flames)
 func _on_jed_special_attack(pos_sa,direction_sa):
 	var sweet = sweet_pea.instantiate() as RigidBody2D
 	sweet.position = pos_sa

@@ -1,11 +1,14 @@
 extends Node2D
 
+@onready var Jed = $Jed
+@onready var blue_flower_anim = $Blue_flowers/AnimationPlayer
+var ground_flame: PackedScene = preload('res://jed_main/rocks/ground_flame.tscn')
 #group_eight
 var enemies_plus_six_eight: PackedScene = preload('res://enemies/groupings/group_eight/enemies_plus_six_eight.tscn')
 var enemies_plus_four_eight: PackedScene = preload('res://enemies/groupings/group_eight/enemies_plus_four_eight.tscn')
 var enemies_below_three_eight: PackedScene = preload('res://enemies/groupings/group_eight/enemies_below_three_eight.tscn')
 
-@onready var Jed = $Jed
+
 var rocks: PackedScene = preload("res://jed_main/rocks/throwing_rock.tscn")
 var pickup_rocks: PackedScene = preload("res://jed_main/rocks/rocks.tscn")
 var chick: PackedScene = preload("res://ghost_babies_and_blue_flowers/ghost_babies.tscn")
@@ -75,6 +78,10 @@ func _on_jed_rocks_e(pos, direction):
 	pickup_rock.global_position = rock.position
 	add_child(pickup_rock)
 	rock.queue_free()
+	var flames = ground_flame.instantiate()
+	flames.position = pickup_rock.position
+	flames.rotation = direction
+	add_child(flames)
 func _on_jed_special_attack(pos_sa,direction_sa):
 	var sweet = sweet_pea.instantiate() as RigidBody2D
 	sweet.position = pos_sa

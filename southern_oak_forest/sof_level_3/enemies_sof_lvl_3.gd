@@ -1,11 +1,12 @@
 extends Node2D
 var grubby: PackedScene = preload('res://drops/grub/grub.tscn')
-var spell: PackedScene = preload('res://enemies/Wiz_rats/prayer_orb.tscn')
-var skull: PackedScene = preload("res://enemies/Wiz_rats/death_cloud.tscn")
 var fart: PackedScene = preload('res://enemies/Rolly_boy/fart_ring.tscn')
 var puddle: PackedScene = preload('res://enemies/Rolly_boy/puddle_of_pink_ooze.tscn')
+var spell: PackedScene = preload('res://enemies/Wiz_rats/prayer_orb.tscn')
+var skull: PackedScene = preload("res://enemies/Wiz_rats/death_cloud.tscn")
 var boss_1: PackedScene = preload('res://enemies/groupings/boss_one/boss_one.tscn')
 var boss_2: PackedScene = preload('res://enemies/groupings/boss_two/boss_two.tscn')
+var boss_3: PackedScene = preload('res://enemies/groupings/boss_three/boss_three.tscn')
 
 
 func _ready() -> void:
@@ -74,19 +75,19 @@ func random_bosses():
 		var rand_value = randi() % 5 # Generate a random number between 0 and 4
 		match rand_value:
 			0:
-				boss_two()
+				boss_three()
 
 			1:
 				boss_two()
 		
 
 			2:
-				boss_two()
+				boss_one()
 
 			3:
 				boss_two()
 			4:
-				boss_two()
+				boss_three()
 			#5:
 #
 			#6:
@@ -105,7 +106,9 @@ func boss_two():
 	boss.position = $boss_marker.global_position
 	call_deferred('add_child',boss)
 func boss_three():
-	pass
+	var boss = boss_3.instantiate()
+	boss.position = $boss_marker.global_position
+	call_deferred('add_child',boss)
 func boss_four():
 	pass
 func boss_five():

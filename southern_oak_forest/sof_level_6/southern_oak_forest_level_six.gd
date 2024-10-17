@@ -1,11 +1,15 @@
 extends Node2D
 
+@onready var Level_anims = $level_anims
+@onready var Jed = $Jed
+@onready var blue_flower_anim = $Blue_flowers/AnimationPlayer
+var ground_flame: PackedScene = preload('res://jed_main/rocks/ground_flame.tscn')
 #group_six
 var enemies_plus_six_six: PackedScene = preload('res://enemies/groupings/group_six/enemies_plus_six_six.tscn')
 var enemies_plus_four_six: PackedScene = preload('res://enemies/groupings/group_six/enemies_plus_four_six.tscn')
 var enemies_below_three_six: PackedScene = preload('res://enemies/groupings/group_six/enemies_below_three_six.tscn')
 
-@onready var Jed = $Jed
+
 var rocks: PackedScene = preload("res://jed_main/rocks/throwing_rock.tscn")
 var pickup_rocks: PackedScene = preload("res://jed_main/rocks/rocks.tscn")
 var chick: PackedScene = preload("res://ghost_babies_and_blue_flowers/ghost_babies.tscn")
@@ -20,6 +24,7 @@ var ghost_jimmy_2 = preload("res://spirit_jimmys/ghost_jimmy_ver_two.tscn")
 var bullets = preload("res://spirit_jimmys/ghost_bullets.tscn")
 
 func _ready():
+	Level_anims.play("enter")
 	if Global.chick_counter <=6:
 		if AudioPlayer.oak_forest_chill_vibes == false:
 			AudioPlayer.oak_forest_chill_vibes = true
@@ -27,7 +32,7 @@ func _ready():
 	PlayerData.death_in_sof_6 = false
 	enemies_six()
 	Global.blue_flower_heal = true
-	$Jed.position = Vector2(151,-214)
+	$Jed.position = Vector2(415,-122)
 	if Global.chick_counter >= 1:
 			var chick_1 = chick.instantiate()
 			chick_1.position = $chick_spwns/chick_spawn_1.global_position
@@ -63,6 +68,10 @@ func _on_jed_rocks_e(pos, direction):
 	pickup_rock.global_position = rock.position
 	add_child(pickup_rock)
 	rock.queue_free()
+	var flames = ground_flame.instantiate()
+	flames.position = pickup_rock.position
+	flames.rotation = direction
+	add_child(flames)
 func _on_jed_special_attack(pos_sa,direction_sa):
 	var sweet = sweet_pea.instantiate() as RigidBody2D
 	sweet.position = pos_sa
