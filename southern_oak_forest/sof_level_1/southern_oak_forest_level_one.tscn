@@ -25,7 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://bl2p3j8ekcctv" path="res://trees/oaks/brush_trees_one.tscn" id="16_4rn44"]
 [ext_resource type="PackedScene" uid="uid://bvkfk6gofkaim" path="res://flora/flowers/golden_rod_one.tscn" id="16_kh4ao"]
 [ext_resource type="Texture2D" uid="uid://bey1uwmh4tuws" path="res://trees/sapling.png" id="16_vepx0"]
-[ext_resource type="AudioStream" uid="uid://ckk1pm1qkst3q" path="res://level_music/forest_sounds.mp3" id="17_ro5ro"]
+[ext_resource type="AudioStream" uid="uid://cyk3f4hlbpuc6" path="res://level_music/forest_sounds.mp3" id="17_ro5ro"]
 [ext_resource type="PackedScene" uid="uid://7qiu8l2nl068" path="res://drops/grub/grub.tscn" id="18_awfxd"]
 [ext_resource type="Script" path="res://ghost_babies_and_blue_flowers/blue_flowers/blue_flowers_ver_2.gd" id="18_eup4n"]
 [ext_resource type="Texture2D" uid="uid://qbh5g5cullhp" path="res://ghost_babies_and_blue_flowers/blue_flowers/blue_flowers.png" id="19_a5fuu"]
@@ -1025,7 +1025,7 @@ position = Vector2(-19, 576)
 [node name="Jed" parent="." instance=ExtResource("4_v06ky")]
 
 [node name="exit_sof" type="Area2D" parent="."]
-position = Vector2(-594, -93)
+position = Vector2(-670, -81)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="exit_sof"]
 shape = SubResource("CircleShape2D_uxlgc")
@@ -2148,11 +2148,129 @@ autoplay = "fog_undulates"
 z_index = 1
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(339, 24, 304, 52, 297, 92, 312, 118, 353, 140, 366, 139, 392, 166, 404, 204, 420, 232, 394, 281, 389, 292, 382, 319, 371, 334, 376, 373, 353, 396, 324, 425, 321, 451, 321, 452, 339, 487, 323, 510, 305, 517, 306, 558, 307, 587, 339, 619, 346, 674, 339, 703, 321, 747, 312, 789, 304, 837, 294, 867, 292, 880, 283, 892, 271, 901, 255, 899, 243, 889, 235, 874, 234, 854, 242, 827, 261, 801, 265, 779, 258, 763, 238, 749, 208, 744, 172, 757, 135, 779, 103, 767, 65, 776, 24, 804, -1, 779, -26, 762, -72, 803, -136, 851, -164, 833, -208, 834, -225, 799, -237, 759, -273, 725, -313, 712, -347, 733, -384, 748, -407, 723, -396, 692, -383, 672, -396, 631, -403, 604, -421, 578, -428, 571, -450, 544, -494, 525, -523, 538, -553, 567, -595, 547, -606, 522, -617, 503, -636, 454, -639, 424, -670, 363, -690, 335, -731, 305, -713, 271, -710, 234, -716, 181, -731, 158, -762, 144, -808, 122, -844, 133, -856, 140, -905, 144, -925, 116, -957, 86, -956, 67, -933, 32, -918, 11, -885, 15, -785, 2, -748, 25, -686, 16, -638, -37, -628, -88, -925, -143, -944, -162, -973, -180, -1086, -182, -1352, -249, -1584, -220, -1613, 104, -1073, 783, -149, 1434, 302, 1405, 660, 1180, 870, 789, 927, 453, 959, 161, 965, 5, 952, -49)
+polygon = PackedVector2Array(339, 24, 304, 52, 297, 92, 312, 118, 353, 140, 366, 139, 392, 166, 404, 204, 420, 232, 394, 281, 389, 292, 382, 319, 371, 334, 376, 373, 353, 396, 324, 425, 321, 451, 321, 452, 339, 487, 323, 510, 305, 517, 306, 558, 307, 587, 339, 619, 346, 674, 339, 703, 321, 747, 312, 789, 304, 837, 294, 867, 292, 880, 283, 892, 271, 901, 255, 899, 243, 889, 235, 874, 234, 854, 242, 827, 261, 801, 265, 779, 258, 763, 238, 749, 208, 744, 172, 757, 135, 779, 103, 767, 65, 776, 24, 804, -1, 779, -26, 762, -72, 803, -136, 851, -164, 833, -208, 834, -225, 799, -237, 759, -273, 725, -313, 712, -347, 733, -384, 748, -407, 723, -396, 692, -383, 672, -396, 631, -403, 604, -421, 578, -428, 571, -450, 544, -494, 525, -523, 538, -553, 567, -595, 547, -606, 522, -617, 503, -636, 454, -639, 424, -670, 363, -690, 335, -731, 305, -713, 271, -710, 234, -716, 181, -731, 158, -762, 144, -808, 122, -844, 133, -856, 140, -905, 144, -925, 116, -957, 86, -956, 67, -933, 32, -918, 11, -885, 15, -785, 2, -748, 25, -686, 16, -601, 1, -585, -9, -575, -13, -572, -18, -575, -23, -581, -25, -602, -28, -616, -42, -631, -61, -628, -88, -925, -143, -944, -162, -973, -180, -1086, -182, -1352, -249, -1584, -220, -1613, 104, -1073, 783, -149, 1434, 302, 1405, 660, 1180, 870, 789, 927, 453, 959, 161, 965, 5, 952, -49)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
 z_as_relative = false
-polygon = PackedVector2Array(-1577, -227, -1350, -259, -1083, -190, -961, -184, -926, -157, -642, -97, -624, -153, -574, -136, -554, -173, -568, -248, -594, -292, -556, -342, -513, -344, -494, -382, -499, -425, -482, -470, -448, -516, -437, -536, -407, -565, -362, -580, -322, -595, -271, -582, -229, -584, -207, -587, -114, -584, -92, -555, -63, -533, -18, -523, 25, -501, 25, -499, 54, -495, 109, -455, 141, -436, 197, -431, 275, -399, 290, -350, 261, -295, 265, -236, 244, -195, 273, -161, 322, -114, 316, -66, 354, -17, 344, 15, 947, -56, 741, -521, 231, -946, -190, -1012, -616, -963, -1213, -822)
+polygon = PackedVector2Array(-1577, -227, -1350, -259, -1083, -190, -961, -184, -926, -157, -633, -93, -629, -108, -626, -122, -616, -135, -606, -140, -592, -143, -579, -145, -569, -142, -560, -136, -554, -136, -550, -138, -548, -142, -548, -146, -554, -173, -568, -248, -594, -292, -556, -342, -513, -344, -494, -382, -499, -425, -482, -470, -448, -516, -437, -536, -407, -565, -362, -580, -322, -595, -271, -582, -229, -584, -207, -587, -114, -584, -92, -555, -63, -533, -18, -523, 25, -501, 25, -499, 54, -495, 109, -455, 141, -436, 197, -431, 275, -399, 290, -350, 261, -295, 265, -236, 244, -195, 273, -161, 322, -114, 316, -66, 354, -17, 344, 15, 947, -56, 741, -521, 231, -946, -190, -1012, -616, -963, -1213, -822)
+
+[node name="blue_fog" type="Node2D" parent="."]
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="blue_fog"]
+occluder = SubResource("OccluderPolygon2D_oeap0")
+occluder_light_mask = 2
+
+[node name="the_horde" type="Node2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+
+[node name="zombie_rat" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(-176, 1188)
+
+[node name="zombie_rat2" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(15, 1128)
+
+[node name="zombie_rat3" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(171, 1092)
+
+[node name="zombie_rat4" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(291, 1002)
+
+[node name="zombie_rat5" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(399, 900)
+
+[node name="zombie_rat6" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(513, 780)
+
+[node name="zombie_rat7" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(549, 600)
+
+[node name="zombie_rat8" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(567, 439)
+
+[node name="zombie_rat9" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(573, 241)
+
+[node name="zombie_rat10" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(537, 43)
+
+[node name="zombie_rat11" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(507, -167)
+
+[node name="zombie_rat12" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(435, -346)
+
+[node name="zombie_rat13" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(291, -562)
+
+[node name="zombie_rat14" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(285, -544)
+
+[node name="zombie_rat15" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(135, -664)
+
+[node name="zombie_rat16" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(-27, -688)
+
+[node name="zombie_rat17" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(-206, -700)
+
+[node name="zombie_rat18" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(-404, -694)
+
+[node name="zombie_rat19" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(-554, -592)
+
+[node name="zombie_rat20" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(-698, -508)
+
+[node name="zombie_rat21" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(-818, -442)
+
+[node name="zombie_rat22" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(-890, -311)
+
+[node name="zombie_rat23" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(-956, -119)
+
+[node name="zombie_rat24" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(-997, 13)
+
+[node name="zombie_rat25" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(-979, 139)
+
+[node name="zombie_rat26" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(-920, 283)
+
+[node name="zombie_rat27" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(-854, 415)
+
+[node name="zombie_rat28" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(-788, 535)
+
+[node name="zombie_rat29" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(-698, 642)
+
+[node name="zombie_rat30" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(-614, 774)
+
+[node name="zombie_rat31" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(-524, 870)
+
+[node name="zombie_rat32" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(-476, 978)
+
+[node name="zombie_rat33" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(-416, 1062)
+
+[node name="zombie_rat34" parent="the_horde" instance=ExtResource("34_vpasf")]
+position = Vector2(-296, 1134)
+
+[node name="grub" parent="." instance=ExtResource("18_awfxd")]
+position = Vector2(-204, 397)
+
+[node name="grub2" parent="." instance=ExtResource("18_awfxd")]
+position = Vector2(-383, 270)
 
 [node name="rocks" parent="." instance=ExtResource("26_xh4i7")]
 position = Vector2(-34, -83)
@@ -2165,122 +2283,6 @@ position = Vector2(-398, -143)
 
 [node name="rocks4" parent="." instance=ExtResource("26_xh4i7")]
 position = Vector2(180, 11)
-
-[node name="blue_fog" type="Node2D" parent="."]
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="blue_fog"]
-occluder = SubResource("OccluderPolygon2D_oeap0")
-occluder_light_mask = 2
-
-[node name="the_horde" type="Node2D" parent="."]
-
-[node name="zombie_rat" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(-176, 1188)
-
-[node name="zombie_rat2" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(15, 1128)
-
-[node name="zombie_rat3" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(171, 1092)
-
-[node name="zombie_rat4" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(291, 1002)
-
-[node name="zombie_rat5" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(399, 900)
-
-[node name="zombie_rat6" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(513, 780)
-
-[node name="zombie_rat7" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(549, 600)
-
-[node name="zombie_rat8" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(567, 439)
-
-[node name="zombie_rat9" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(573, 241)
-
-[node name="zombie_rat10" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(537, 43)
-
-[node name="zombie_rat11" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(507, -167)
-
-[node name="zombie_rat12" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(435, -346)
-
-[node name="zombie_rat13" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(291, -562)
-
-[node name="zombie_rat14" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(285, -544)
-
-[node name="zombie_rat15" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(135, -664)
-
-[node name="zombie_rat16" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(-27, -688)
-
-[node name="zombie_rat17" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(-206, -700)
-
-[node name="zombie_rat18" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(-404, -694)
-
-[node name="zombie_rat19" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(-554, -592)
-
-[node name="zombie_rat20" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(-698, -508)
-
-[node name="zombie_rat21" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(-818, -442)
-
-[node name="zombie_rat22" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(-890, -311)
-
-[node name="zombie_rat23" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(-956, -119)
-
-[node name="zombie_rat24" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(-997, 13)
-
-[node name="zombie_rat25" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(-979, 139)
-
-[node name="zombie_rat26" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(-920, 283)
-
-[node name="zombie_rat27" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(-854, 415)
-
-[node name="zombie_rat28" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(-788, 535)
-
-[node name="zombie_rat29" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(-698, 642)
-
-[node name="zombie_rat30" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(-614, 774)
-
-[node name="zombie_rat31" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(-524, 870)
-
-[node name="zombie_rat32" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(-476, 978)
-
-[node name="zombie_rat33" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(-416, 1062)
-
-[node name="zombie_rat34" parent="." instance=ExtResource("34_vpasf")]
-position = Vector2(-296, 1134)
-
-[node name="grub" parent="." instance=ExtResource("18_awfxd")]
-position = Vector2(-204, 397)
-
-[node name="grub2" parent="." instance=ExtResource("18_awfxd")]
-position = Vector2(-383, 270)
 
 [node name="rocks5" parent="." instance=ExtResource("26_xh4i7")]
 position = Vector2(-96, 517)

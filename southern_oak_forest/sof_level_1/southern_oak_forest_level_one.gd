@@ -26,6 +26,8 @@ var ghost_jimmy_2 = preload("res://spirit_jimmys/ghost_jimmy_ver_two.tscn")
 var bullets = preload("res://spirit_jimmys/ghost_bullets.tscn")
 
 func _ready() -> void:
+	print(Levels.escape,'= levels escape')
+	Levels.escape = false
 	PlayerData.entering_from_s = true
 	enter_exit.play("enter_from_s")
 	if Global.chick_counter <=6:
@@ -33,8 +35,8 @@ func _ready() -> void:
 			AudioPlayer.oak_forest_chill_vibes = true
 			AudioPlayer.play_song()
 		
-	if BlueFlowerCount.blue_flower_1:
-		blue_flower_anim.play("no_heal")
+	#if BlueFlowerCount.blue_flower_1:
+		#blue_flower_anim.play("no_heal")
 	PlayerData.death_in_sof_1 = false
 	enemies_one()
 	Global.blue_flower_heal = true
@@ -113,10 +115,10 @@ func _on_exit_sof_body_entered(body: Node2D) -> void:
 
 
 func _on_blue_flowers_chick() -> void:
-	if BlueFlowerCount.blue_flower_1 == false:
-		Global.chick_counter = Global.chick_counter + 1
-		print(Global.chick_counter, "= Global chick counter")
-		BlueFlowerCount.blue_flower_1 = true
+	#if BlueFlowerCount.blue_flower_1 == false:
+	Global.chick_counter = Global.chick_counter + 1
+	print(Global.chick_counter, "= Global chick counter")
+		#BlueFlowerCount.blue_flower_1 = true
 	if Global.chick_counter <= 5:
 			var chicky = chick.instantiate()
 			chicky.global_position = $Blue_flowers.position
