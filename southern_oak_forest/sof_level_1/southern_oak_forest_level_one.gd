@@ -1,8 +1,9 @@
 extends Node2D
-#@onready var level_anim = $level_animations
+@onready var effects = $screen_effects
 @onready var Jed = $Jed
-@onready var blue_flower_anim = $Blue_flowers/AnimationPlayer
+#@onready var blue_flower_anim = $Blue_flowers/AnimationPlayer
 @onready var enter_exit = $enter_exit
+var counter = 0
 var ground_flame: PackedScene = preload('res://jed_main/rocks/ground_flame.tscn')
 # groups of enemies that sare instantiated according to how many chicks jed has with her
 
@@ -114,15 +115,15 @@ func _on_exit_sof_body_entered(body: Node2D) -> void:
 		Levels._ready()
 
 
-func _on_blue_flowers_chick() -> void:
-	#if BlueFlowerCount.blue_flower_1 == false:
-	Global.chick_counter = Global.chick_counter + 1
-	print(Global.chick_counter, "= Global chick counter")
-		#BlueFlowerCount.blue_flower_1 = true
-	if Global.chick_counter <= 5:
-			var chicky = chick.instantiate()
-			chicky.global_position = $Blue_flowers.position
-			add_child(chicky)
+#func _on_blue_flowers_chick() -> void:
+	##if BlueFlowerCount.blue_flower_1 == false:
+	#Global.chick_counter = Global.chick_counter + 1
+	#print(Global.chick_counter, "= Global chick counter")
+		##BlueFlowerCount.blue_flower_1 = true
+	#if Global.chick_counter <= 5:
+			#var chicky = chick.instantiate()
+			#chicky.global_position = $Blue_flowers.position
+			#add_child(chicky)
 		
 # enemy groups logic
 

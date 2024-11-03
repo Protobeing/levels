@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://dfp2boi4avkih"]
+[gd_scene load_steps=45 format=3 uid="uid://dfp2boi4avkih"]
 
 [ext_resource type="Script" path="res://levels/southern_oak_forest/sof_level_1/southern_oak_forest_level_one.gd" id="1_8i6vq"]
 [ext_resource type="Texture2D" uid="uid://cpv1khm8fjn0y" path="res://earth/earth_4.png" id="1_8xmhb"]
@@ -27,16 +27,48 @@
 [ext_resource type="Texture2D" uid="uid://bey1uwmh4tuws" path="res://trees/sapling.png" id="16_vepx0"]
 [ext_resource type="AudioStream" uid="uid://cyk3f4hlbpuc6" path="res://level_music/forest_sounds.mp3" id="17_ro5ro"]
 [ext_resource type="PackedScene" uid="uid://7qiu8l2nl068" path="res://drops/grub/grub.tscn" id="18_awfxd"]
-[ext_resource type="Script" path="res://ghost_babies_and_blue_flowers/blue_flowers/blue_flowers_ver_2.gd" id="18_eup4n"]
-[ext_resource type="Texture2D" uid="uid://qbh5g5cullhp" path="res://ghost_babies_and_blue_flowers/blue_flowers/blue_flowers.png" id="19_a5fuu"]
-[ext_resource type="Texture2D" uid="uid://c8p62oeyoa4gw" path="res://ghost_babies_and_blue_flowers/blue_flowers/light_2.png" id="20_fosev"]
-[ext_resource type="Texture2D" uid="uid://5i68cp3m88y7" path="res://ghost_babies_and_blue_flowers/blue_flowers/blue_flowers_reset.png" id="21_m3asy"]
-[ext_resource type="AudioStream" uid="uid://blxvnidn5ljnt" path="res://ghost_babies_and_blue_flowers/blue_flowers/ghost_chick_1.mp3" id="22_0q67i"]
 [ext_resource type="PackedScene" uid="uid://dcsyxvhwvga3s" path="res://trees/pine_trees/pine_2.tscn" id="24_m0tim"]
 [ext_resource type="PackedScene" uid="uid://byv8pyrnteu4b" path="res://trees/oaks/baby_oak.tscn" id="25_7v4eu"]
 [ext_resource type="PackedScene" uid="uid://dkxqdx5o1qt58" path="res://trees/logs/rolling_log_one/rolling_log_one.tscn" id="26_6s42c"]
 [ext_resource type="PackedScene" uid="uid://dvlb3f38eus4v" path="res://jed_main/rocks/rocks.tscn" id="26_xh4i7"]
 [ext_resource type="PackedScene" uid="uid://dgjv1dn81bnaf" path="res://enemies/zombie_rat/zombie_rat.tscn" id="34_vpasf"]
+
+[sub_resource type="Animation" id="Animation_dxjli"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.188235, 0.184314, 0.631373, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ts5v8"]
+resource_name = "shake"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.266667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.188235, 0.184314, 0.631373, 1), Color(0.188235, 0.184314, 0.917647, 1), Color(0.188235, 0.184314, 0.631373, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bt2m8"]
+_data = {
+"RESET": SubResource("Animation_dxjli"),
+"shake": SubResource("Animation_ts5v8")
+}
 
 [sub_resource type="Animation" id="Animation_k5tsm"]
 length = 0.001
@@ -421,520 +453,6 @@ vertices = PackedVector2Array(-210.117, -115.523, -208.852, -139.57, 102.688, -9
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7), PackedInt32Array(2, 1, 8, 9), PackedInt32Array(9, 8, 10), PackedInt32Array(9, 10, 11), PackedInt32Array(5, 12, 13, 14, 15), PackedInt32Array(9, 11, 16, 17), PackedInt32Array(17, 16, 18, 19), PackedInt32Array(20, 14, 13), PackedInt32Array(21, 20, 13), PackedInt32Array(22, 21, 13, 23), PackedInt32Array(24, 22, 23, 25), PackedInt32Array(26, 24, 25, 27), PackedInt32Array(28, 26, 27, 29), PackedInt32Array(30, 28, 29, 31), PackedInt32Array(32, 30, 31, 33), PackedInt32Array(34, 19, 18, 35, 36), PackedInt32Array(37, 38, 39, 32, 33, 40, 41), PackedInt32Array(5, 15, 6), PackedInt32Array(0, 7, 42, 43), PackedInt32Array(44, 43, 42, 45), PackedInt32Array(46, 44, 45, 47), PackedInt32Array(41, 36, 35, 37), PackedInt32Array(48, 39, 38, 49), PackedInt32Array(50, 48, 49, 51), PackedInt32Array(47, 51, 49, 52, 53, 46)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-578, -916, -1117, -538, -1195, -370, -1297, -161, -1177, 73, -1105, 235, -1039, 373, -950, 493, -860, 714, -692, 960, -422, 1152, -21, 1278, 339, 1278, 687, 918, 848, 523, 812, 13, 723, -442, 507, -730, 105, -946), PackedVector2Array(-351, -158, -338, -171, -287, -176, -253, -172, -230, -155, -219, -137, -220, -118, -228, -101, -238, -92, -257, -87, -281, -90, -303, -92, -324, -93, -343, -100, -354, -111, -358, -144), PackedVector2Array(-146, 265, -123, 244, -92, 235, -48, 250, -17, 278, -5, 306, -5, 337, -8, 365, -12, 400, -25, 439, -43, 469, -102, 498, -142, 497, -193, 480, -216, 436, -219, 400, -200, 345, -170, 310, -157, 285)])
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_bncko"]
-resource_local_to_scene = true
-radius = 5.0
-
-[sub_resource type="Animation" id="Animation_gb80l"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("19_a5fuu")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [6]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:vframes")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:frame")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("CollisionShape2D:disabled")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath(".:monitoring")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath(".:monitorable")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("PointLight2D:position")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -12)]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("PointLight2D:enabled")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("PointLight2D:energy")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.4]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("PointLight2D:texture")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("20_fosev")]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("AudioStreamPlayer:volume_db")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [-10.0]
-}
-
-[sub_resource type="Animation" id="Animation_stndb"]
-resource_name = "no_heal"
-length = 5.0
-loop_mode = 1
-step = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("21_m3asy"), ExtResource("21_m3asy")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [145, 145]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:vframes")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [1, 1]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:frame")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [31, 32, 33, 34, 35, 36, 37, 38, 39, 40]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("CollisionShape2D:disabled")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, true]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath(".:monitoring")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, false]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath(".:monitorable")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, false]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("PointLight2D:enabled")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, false]
-}
-
-[sub_resource type="Animation" id="Animation_1hahq"]
-resource_name = "normal"
-length = 4.0
-loop_mode = 1
-step = 0.75
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("19_a5fuu"), ExtResource("19_a5fuu")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [6, 6]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:vframes")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [1, 1]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:frame")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.75, 1.5, 2.25, 3, 3.75),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("CollisionShape2D:disabled")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, false]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath(".:monitoring")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, true]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath(".:monitorable")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, true]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("PointLight2D:position")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 0.83, 1.7, 2.5, 3.47, 4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(0, -12), Vector2(0, -13), Vector2(-1, -13), Vector2(-0.652174, -12.6522), Vector2(-1, -11), Vector2(0, -11)]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("PointLight2D:enabled")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, true]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("PointLight2D:energy")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.4]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("PointLight2D:texture")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("20_fosev")]
-}
-
-[sub_resource type="Animation" id="Animation_vc88l"]
-resource_name = "reset"
-length = 0.8
-step = 0.75
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.0875346, 0.172622, 0.259817, 0.347144, 0.433466, 0.521696, 0.595585, 0.670252, 0.747736),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [145, 145]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:vframes")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [1, 1]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:texture")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("21_m3asy"), ExtResource("21_m3asy")]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("CollisionShape2D:disabled")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, true]
-}
-tracks/5/type = "audio"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("AudioStreamPlayer")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"clips": [{
-"end_offset": 1.13265,
-"start_offset": 0.44,
-"stream": ExtResource("22_0q67i")
-}],
-"times": PackedFloat32Array(0)
-}
-tracks/5/use_blend = true
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("PointLight2D:enabled")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 0.8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("AudioStreamPlayer:volume_db")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [-10.0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_qj2i0"]
-_data = {
-"RESET": SubResource("Animation_gb80l"),
-"no_heal": SubResource("Animation_stndb"),
-"normal": SubResource("Animation_1hahq"),
-"reset": SubResource("Animation_vc88l")
-}
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jjh0r"]
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_p05rw"]
-polygon = PackedVector2Array(-6, 6, -2, 5, 2, 6, -1, 3, -3, 3)
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8ufjr"]
-polygon = PackedVector2Array(-7, 3, -9, 3, -5, 0, -2, 2, -6, 2, -7, 2)
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_dnumn"]
-polygon = PackedVector2Array(9, 2, 8, 2, 5, 0, 4, 2, 2, 2, 5, -1, 6, -1)
-
 [sub_resource type="Animation" id="Animation_vwosg"]
 length = 0.001
 tracks/0/type = "value"
@@ -980,6 +498,11 @@ polygon = PackedVector2Array(-734, 247, -698, 347, -626, 487, -546, 603, -494, 5
 z_as_relative = false
 y_sort_enabled = true
 script = ExtResource("1_8i6vq")
+
+[node name="screen_effects" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_bt2m8")
+}
 
 [node name="enter_exit" type="AnimationPlayer" parent="."]
 libraries = {
@@ -1877,69 +1400,6 @@ position = Vector2(-395, -417)
 visible = false
 navigation_polygon = SubResource("NavigationPolygon_5h8xm")
 
-[node name="Blue_flowers" type="Area2D" parent="."]
-y_sort_enabled = true
-position = Vector2(-176, -72)
-collision_layer = 8
-collision_mask = 8
-script = ExtResource("18_eup4n")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue_flowers"]
-shape = SubResource("CircleShape2D_bncko")
-disabled = true
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Blue_flowers"]
-libraries = {
-"": SubResource("AnimationLibrary_qj2i0")
-}
-autoplay = "normal"
-
-[node name="Sprite2D" type="Sprite2D" parent="Blue_flowers"]
-y_sort_enabled = true
-position = Vector2(0, -4)
-texture = ExtResource("19_a5fuu")
-offset = Vector2(0, -4)
-hframes = 6
-
-[node name="normal" type="Timer" parent="Blue_flowers"]
-wait_time = 0.8
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Blue_flowers"]
-volume_db = -10.0
-pitch_scale = 0.16
-
-[node name="PointLight2D" type="PointLight2D" parent="Blue_flowers"]
-material = SubResource("CanvasItemMaterial_jjh0r")
-position = Vector2(0, -12)
-scale = Vector2(0.0722446, -0.0762361)
-enabled = false
-color = Color(0.2, 1, 1, 1)
-energy = 0.4
-texture = ExtResource("20_fosev")
-texture_scale = 1.75
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="Blue_flowers"]
-position = Vector2(-2, 3)
-scale = Vector2(0.25, 0.25)
-occluder = SubResource("OccluderPolygon2D_p05rw")
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Blue_flowers"]
-position = Vector2(0.5, -4.5)
-scale = Vector2(1.15, 1.45)
-
-[node name="chicky" type="Timer" parent="Blue_flowers"]
-one_shot = true
-
-[node name="LightOccluder2D2" type="LightOccluder2D" parent="Blue_flowers"]
-position = Vector2(-3, 1)
-scale = Vector2(0.25, 0.25)
-occluder = SubResource("OccluderPolygon2D_8ufjr")
-
-[node name="LightOccluder2D3" type="LightOccluder2D" parent="Blue_flowers"]
-position = Vector2(4, 0)
-scale = Vector2(0.25, 0.25)
-occluder = SubResource("OccluderPolygon2D_dnumn")
-
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.188235, 0.184314, 0.631373, 1)
 
@@ -2308,14 +1768,9 @@ position = Vector2(-365, -145)
 [connection signal="died" from="Jed" to="." method="_on_jed_died"]
 [connection signal="flame" from="Jed" to="." method="_on_jed_flame"]
 [connection signal="ghosted" from="Jed" to="." method="_on_jed_ghosted"]
-[connection signal="ghosting" from="Jed" to="." method="_on_jed_ghosting"]
 [connection signal="orchid_poison" from="Jed" to="." method="_on_jed_orchid_poison"]
 [connection signal="rocks_E" from="Jed" to="." method="_on_jed_rocks_e"]
 [connection signal="special_attack" from="Jed" to="." method="_on_jed_special_attack"]
 [connection signal="step" from="Jed" to="." method="_on_jed_step"]
 [connection signal="stomp" from="Jed" to="." method="_on_jed_stomp"]
 [connection signal="body_entered" from="exit_sof" to="." method="_on_exit_sof_body_entered"]
-[connection signal="body_entered" from="Blue_flowers" to="Blue_flowers" method="_on_body_entered"]
-[connection signal="chick" from="Blue_flowers" to="." method="_on_blue_flowers_chick"]
-[connection signal="timeout" from="Blue_flowers/normal" to="Blue_flowers" method="_on_normal_timeout"]
-[connection signal="timeout" from="Blue_flowers/chicky" to="Blue_flowers" method="_on_chicky_timeout"]

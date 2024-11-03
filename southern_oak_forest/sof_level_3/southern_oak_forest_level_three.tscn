@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://cqx4n6nnd6iu8"]
+[gd_scene load_steps=32 format=3 uid="uid://cqx4n6nnd6iu8"]
 
 [ext_resource type="Script" path="res://levels/southern_oak_forest/sof_level_3/southern_oak_forest_level_three.gd" id="1_fkepd"]
 [ext_resource type="PackedScene" uid="uid://bqx7ywwfn6evp" path="res://gateways/small_opening_east.tscn" id="2_4twle"]
@@ -21,12 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://k1tqe0b7w057" path="res://sky/cloud_1.png" id="13_d1qqp"]
 [ext_resource type="Texture2D" uid="uid://bqqkuf376qauv" path="res://sky/cloud_2.png" id="13_ocd4w"]
 [ext_resource type="PackedScene" uid="uid://d4mbffj4rhf7m" path="res://sky/night_sky/doom_star.tscn" id="14_6agof"]
-[ext_resource type="AudioStream" uid="uid://ckk1pm1qkst3q" path="res://level_music/forest_sounds.mp3" id="14_pteg2"]
-[ext_resource type="Script" path="res://ghost_babies_and_blue_flowers/blue_flowers/blue_flowers_ver_2.gd" id="20_6c4ky"]
-[ext_resource type="Texture2D" uid="uid://qbh5g5cullhp" path="res://ghost_babies_and_blue_flowers/blue_flowers/blue_flowers.png" id="21_lcli5"]
-[ext_resource type="Texture2D" uid="uid://c8p62oeyoa4gw" path="res://ghost_babies_and_blue_flowers/blue_flowers/light_2.png" id="22_jnj4d"]
-[ext_resource type="Texture2D" uid="uid://5i68cp3m88y7" path="res://ghost_babies_and_blue_flowers/blue_flowers/blue_flowers_reset.png" id="23_70oty"]
-[ext_resource type="AudioStream" uid="uid://blxvnidn5ljnt" path="res://ghost_babies_and_blue_flowers/blue_flowers/ghost_chick_1.mp3" id="24_48xvc"]
+[ext_resource type="AudioStream" uid="uid://cyk3f4hlbpuc6" path="res://level_music/forest_sounds.mp3" id="14_pteg2"]
 [ext_resource type="PackedScene" uid="uid://bvkfk6gofkaim" path="res://flora/flowers/golden_rod_one.tscn" id="25_dj3li"]
 [ext_resource type="PackedScene" uid="uid://dgjv1dn81bnaf" path="res://enemies/zombie_rat/zombie_rat.tscn" id="29_ceqos"]
 [ext_resource type="PackedScene" uid="uid://dvlb3f38eus4v" path="res://jed_main/rocks/rocks.tscn" id="30_npl4x"]
@@ -39,520 +34,6 @@ radius = 67.2681
 vertices = PackedVector2Array(-128.633, 674.281, -159.461, 767.719, -237.859, 822.789, -447.891, 809.039, -559.344, 790.953, -571.273, 767.094, -588.102, 628.547, -43.8984, 302.43, -609.281, 504.492, -66.1563, 79.2031, -29.25, 138.453, -661.422, 355.094, -731.281, 99.5781, -476.578, -263.063, -348.18, -266.977, -222.938, -256.383, -140.93, -160.07, -535.102, -234.781, -659.188, -189.383, -759.883, -37.4609, -747.5, -146.953, -711.391, -177.781)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7), PackedInt32Array(7, 6, 8), PackedInt32Array(9, 10, 7, 8, 11, 12), PackedInt32Array(13, 14, 15, 16, 9, 12, 17), PackedInt32Array(18, 17, 12, 19, 20), PackedInt32Array(18, 20, 21)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-539, -244, -662, -199, -716, -187, -757, -152, -770, -37, -741, 102, -671, 358, -619, 507, -598, 630, -581, 770, -566, 800, -449, 819, -235, 833, -151, 774, -119, 677, -34, 304, -19, 136, -57, 75, -132, -165, -218, -266, -348, -277, -479, -273)])
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_e8tft"]
-resource_local_to_scene = true
-radius = 5.0
-
-[sub_resource type="Animation" id="Animation_gb80l"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("21_lcli5")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [6]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:vframes")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:frame")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("CollisionShape2D:disabled")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath(".:monitoring")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath(".:monitorable")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("PointLight2D:position")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -12)]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("PointLight2D:enabled")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("PointLight2D:energy")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.4]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("PointLight2D:texture")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("22_jnj4d")]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("AudioStreamPlayer:volume_db")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [-10.0]
-}
-
-[sub_resource type="Animation" id="Animation_stndb"]
-resource_name = "no_heal"
-length = 5.0
-loop_mode = 1
-step = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("23_70oty"), ExtResource("23_70oty")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [145, 145]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:vframes")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [1, 1]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:frame")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [31, 32, 33, 34, 35, 36, 37, 38, 39, 40]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("CollisionShape2D:disabled")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, true]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath(".:monitoring")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, false]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath(".:monitorable")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, false]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("PointLight2D:enabled")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, false]
-}
-
-[sub_resource type="Animation" id="Animation_1hahq"]
-resource_name = "normal"
-length = 4.0
-loop_mode = 1
-step = 0.75
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("21_lcli5"), ExtResource("21_lcli5")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [6, 6]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:vframes")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [1, 1]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:frame")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.75, 1.5, 2.25, 3, 3.75),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("CollisionShape2D:disabled")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, false]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath(".:monitoring")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, true]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath(".:monitorable")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, true]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("PointLight2D:position")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 0.83, 1.7, 2.5, 3.47, 4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(0, -12), Vector2(0, -13), Vector2(-1, -13), Vector2(-0.652174, -12.6522), Vector2(-1, -11), Vector2(0, -11)]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("PointLight2D:enabled")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, true]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("PointLight2D:energy")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.4]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("PointLight2D:texture")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("22_jnj4d")]
-}
-
-[sub_resource type="Animation" id="Animation_vc88l"]
-resource_name = "reset"
-length = 0.8
-step = 0.75
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.0875346, 0.172622, 0.259817, 0.347144, 0.433466, 0.521696, 0.595585, 0.670252, 0.747736),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [145, 145]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:vframes")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [1, 1]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:texture")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("23_70oty"), ExtResource("23_70oty")]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("CollisionShape2D:disabled")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, true]
-}
-tracks/5/type = "audio"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("AudioStreamPlayer")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"clips": [{
-"end_offset": 1.13265,
-"start_offset": 0.44,
-"stream": ExtResource("24_48xvc")
-}],
-"times": PackedFloat32Array(0)
-}
-tracks/5/use_blend = true
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("PointLight2D:enabled")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 0.8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("AudioStreamPlayer:volume_db")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [-10.0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_qj2i0"]
-_data = {
-"RESET": SubResource("Animation_gb80l"),
-"no_heal": SubResource("Animation_stndb"),
-"normal": SubResource("Animation_1hahq"),
-"reset": SubResource("Animation_vc88l")
-}
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jjh0r"]
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_p05rw"]
-polygon = PackedVector2Array(-6, 6, -2, 5, 2, 6, -1, 3, -3, 3)
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8ufjr"]
-polygon = PackedVector2Array(-7, 3, -9, 3, -5, 0, -2, 2, -6, 2, -7, 2)
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_dnumn"]
-polygon = PackedVector2Array(9, 2, 8, 2, 5, 0, 4, 2, 2, 2, 5, -1, 6, -1)
 
 [sub_resource type="Animation" id="Animation_qcmgg"]
 length = 0.001
@@ -598,7 +79,7 @@ y_sort_enabled = true
 script = ExtResource("1_fkepd")
 
 [node name="small_opening_south_exit" type="Area2D" parent="."]
-position = Vector2(134, -208)
+position = Vector2(240, -269)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="small_opening_south_exit"]
 shape = SubResource("CircleShape2D_qhxrw")
@@ -619,6 +100,50 @@ texture = ExtResource("5_e7afw")
 
 [node name="SmallEarthPlot" type="Sprite2D" parent="earth"]
 position = Vector2(-867, 15)
+texture = ExtResource("5_m1vfv")
+
+[node name="SmallEarthPlot45" type="Sprite2D" parent="earth"]
+position = Vector2(-536, -316)
+texture = ExtResource("5_m1vfv")
+
+[node name="SmallEarthPlot46" type="Sprite2D" parent="earth"]
+position = Vector2(-561, -408)
+texture = ExtResource("5_m1vfv")
+
+[node name="SmallEarthPlot47" type="Sprite2D" parent="earth"]
+position = Vector2(-557, -496)
+texture = ExtResource("5_m1vfv")
+
+[node name="SmallEarthPlot48" type="Sprite2D" parent="earth"]
+position = Vector2(-573, -560)
+texture = ExtResource("5_m1vfv")
+
+[node name="SmallEarthPlot49" type="Sprite2D" parent="earth"]
+position = Vector2(-619, -622)
+texture = ExtResource("5_m1vfv")
+
+[node name="SmallEarthPlot50" type="Sprite2D" parent="earth"]
+position = Vector2(-701, -653)
+texture = ExtResource("5_m1vfv")
+
+[node name="SmallEarthPlot51" type="Sprite2D" parent="earth"]
+position = Vector2(-600, -721)
+texture = ExtResource("5_m1vfv")
+
+[node name="SmallEarthPlot52" type="Sprite2D" parent="earth"]
+position = Vector2(-501, -672)
+texture = ExtResource("5_m1vfv")
+
+[node name="SmallEarthPlot53" type="Sprite2D" parent="earth"]
+position = Vector2(-753, -757)
+texture = ExtResource("5_m1vfv")
+
+[node name="SmallEarthPlot54" type="Sprite2D" parent="earth"]
+position = Vector2(-812, -677)
+texture = ExtResource("5_m1vfv")
+
+[node name="SmallEarthPlot55" type="Sprite2D" parent="earth"]
+position = Vector2(149, 240)
 texture = ExtResource("5_m1vfv")
 
 [node name="SmallEarthPlot2" type="Sprite2D" parent="earth"]
@@ -1092,7 +617,7 @@ position = Vector2(439, -47)
 polygon = PackedVector2Array(-77, 349, -93, 383, -120, 399, -139, 426, -139, 462, -147, 481, -151, 518, -182, 548, -209, 556, -245, 587, -280, 635, -286, 662, -312, 684, -320, 700, -329, 764, -329, 791, -351, 816, -399, 824, -430, 834, -449, 780, -500, 765, -522, 778, -564, 765, -608, 756, -651, 759, -686, 735, -691, 710, -718, 700, -729, 665, -708, 646, -700, 619, -686, 599, -683, 568, -673, 535, -653, 486, -645, 449, -611, 451, -594, 448, -588, 416, -591, 376, -607, 341, -622, 319, -646, 297, -661, 287, -675, 264, -688, 246, -665, 214, -667, 167, -680, 138, -692, 95, -740, 78, -775, 57, -813, 79, -859, 89, -886, 59, -902, 51, -972, 65, -988, 108, -991, 132, -1010, 151, -1049, 105, -1102, 116, -1130, 143, -1145, 175, -1145, 211, -1143, 216, -1173, 253, -1186, 343, -1040, 507, -800, 907, -469, 1029, -392, 1000, -403, 957, -372, 946, -338, 994, -289, 1011, -281, 1038, -183, 991, -132, 965, 84, 946, 165, 884, 309, 795, 398, 611, 449, 541, 449, 502, 393, 446, 327, 395, 246, 376, 154, 362, 117, 345, 92, 316, 25, 326, 0, 313, -48, 338)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-1159, -127, -1116, -105, -1096, -54, -1053, -46, -997, -52, -978, -49, -946, -41, -903, -49, -862, -11, -842, 18, -799, 3, -775, -24, -740, 22, -703, 6, -683, -27, -646, -60, -626, -113, -602, -144, -600, -189, -576, -233, -543, -281, -511, -322, -437, -317, -386, -311, -268, -290, -221, -246, -202, -192, -188, -159, -189, -106, -211, -35, -229, 13, -180, 56, -135, 91, -161, 138, -156, 170, -127, 194, -40, 243, 8, 259, 112, 278, 149, 265, 201, 306, 286, 289, 298, 278, 387, 251, 424, 175, 417, 83, 344, -221, -113, -487, -759, -605, -1161, -333)
+polygon = PackedVector2Array(-1159, -127, -1116, -105, -1096, -54, -1053, -46, -997, -52, -978, -49, -946, -41, -903, -49, -862, -11, -842, 18, -799, 3, -775, -24, -740, 22, -703, 6, -683, -27, -646, -60, -626, -113, -602, -144, -619, -188, -601, -239, -574, -284, -517, -339, -437, -317, -386, -311, -268, -290, -221, -246, -202, -192, -188, -159, -189, -106, -211, -35, -229, 13, -180, 56, -135, 91, -161, 138, -156, 170, -127, 194, -40, 243, 8, 259, 112, 278, 149, 265, 201, 306, 286, 289, 298, 278, 387, 251, 424, 175, 417, 83, 344, -221, -113, -487, -759, -605, -1161, -333)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_vkumn")
@@ -1110,69 +635,6 @@ TargetPropertyPath = &"drum"
 stream = ExtResource("14_pteg2")
 volume_db = 5.0
 autoplay = true
-
-[node name="Blue_flowers" type="Area2D" parent="."]
-y_sort_enabled = true
-position = Vector2(40, 107)
-collision_layer = 8
-collision_mask = 8
-script = ExtResource("20_6c4ky")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue_flowers"]
-shape = SubResource("CircleShape2D_e8tft")
-disabled = true
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Blue_flowers"]
-libraries = {
-"": SubResource("AnimationLibrary_qj2i0")
-}
-autoplay = "normal"
-
-[node name="Sprite2D" type="Sprite2D" parent="Blue_flowers"]
-y_sort_enabled = true
-position = Vector2(0, -4)
-texture = ExtResource("21_lcli5")
-offset = Vector2(0, -4)
-hframes = 6
-
-[node name="normal" type="Timer" parent="Blue_flowers"]
-wait_time = 0.8
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Blue_flowers"]
-volume_db = -10.0
-pitch_scale = 0.16
-
-[node name="PointLight2D" type="PointLight2D" parent="Blue_flowers"]
-material = SubResource("CanvasItemMaterial_jjh0r")
-position = Vector2(0, -12)
-scale = Vector2(0.0722446, -0.0762361)
-enabled = false
-color = Color(0.2, 1, 1, 1)
-energy = 0.4
-texture = ExtResource("22_jnj4d")
-texture_scale = 1.75
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="Blue_flowers"]
-position = Vector2(-2, 3)
-scale = Vector2(0.25, 0.25)
-occluder = SubResource("OccluderPolygon2D_p05rw")
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Blue_flowers"]
-position = Vector2(0.5, -4.5)
-scale = Vector2(1.15, 1.45)
-
-[node name="chicky" type="Timer" parent="Blue_flowers"]
-one_shot = true
-
-[node name="LightOccluder2D2" type="LightOccluder2D" parent="Blue_flowers"]
-position = Vector2(-3, 1)
-scale = Vector2(0.25, 0.25)
-occluder = SubResource("OccluderPolygon2D_8ufjr")
-
-[node name="LightOccluder2D3" type="LightOccluder2D" parent="Blue_flowers"]
-position = Vector2(4, 0)
-scale = Vector2(0.25, 0.25)
-occluder = SubResource("OccluderPolygon2D_dnumn")
 
 [node name="chick_spwns" type="Node2D" parent="."]
 z_as_relative = false
@@ -1438,13 +900,8 @@ position = Vector2(-111, -139)
 [connection signal="died" from="Jed" to="." method="_on_jed_died"]
 [connection signal="flame" from="Jed" to="." method="_on_jed_flame"]
 [connection signal="ghosted" from="Jed" to="." method="_on_jed_ghosted"]
-[connection signal="ghosting" from="Jed" to="." method="_on_jed_ghosting"]
 [connection signal="orchid_poison" from="Jed" to="." method="_on_jed_orchid_poison"]
 [connection signal="rocks_E" from="Jed" to="." method="_on_jed_rocks_e"]
 [connection signal="special_attack" from="Jed" to="." method="_on_jed_special_attack"]
 [connection signal="step" from="Jed" to="." method="_on_jed_step"]
 [connection signal="stomp" from="Jed" to="." method="_on_jed_stomp"]
-[connection signal="body_entered" from="Blue_flowers" to="Blue_flowers" method="_on_body_entered"]
-[connection signal="chick" from="Blue_flowers" to="." method="_on_blue_flowers_chick"]
-[connection signal="timeout" from="Blue_flowers/normal" to="Blue_flowers" method="_on_normal_timeout"]
-[connection signal="timeout" from="Blue_flowers/chicky" to="Blue_flowers" method="_on_chicky_timeout"]

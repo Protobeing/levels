@@ -28,10 +28,10 @@ func _on_mage_skull() -> void:
 	call_deferred('add_child', skulls)
 
 
-#func _on_rolly_boy_fart() -> void:
-	#var farty = fart.instantiate()
-	#farty.position = $rolly_boy.global_position
-	#call_deferred('add_child', farty)
+func _on_rolly_boy_fart() -> void:
+	var farty = fart.instantiate()
+	farty.position = $rolly_boy.global_position
+	call_deferred('add_child', farty)
 #func _on_rolly_boy_2_fart() -> void:
 	#var farty = fart.instantiate()
 	#farty.position = $rolly_boy2.global_position
@@ -49,10 +49,10 @@ func _on_mage_skull() -> void:
 	#farty.position = $rolly_boy5.global_position
 	#call_deferred('add_child', farty)
 #
-#func _on_rolly_boy_puddle() -> void:
-	#var puddles = puddle.instantiate()
-	#puddles.position = $rolly_boy.global_position
-	#call_deferred('add_child', puddles)
+func _on_rolly_boy_puddle() -> void:
+	var puddles = puddle.instantiate()
+	puddles.position = $rolly_boy.global_position
+	call_deferred('add_child', puddles)
 #func _on_rolly_boy_2_puddle() -> void:
 	#var puddles = puddle.instantiate()
 	#puddles.position = $rolly_boy2.global_position

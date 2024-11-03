@@ -2,7 +2,6 @@ extends Node2D
 
 @onready var Level_anims = $level_anims
 @onready var Jed = $Jed
-@onready var blue_flower_anim = $Blue_flowers/AnimationPlayer
 var ground_flame: PackedScene = preload('res://jed_main/rocks/ground_flame.tscn')
 #group_six
 var enemies_plus_six_six: PackedScene = preload('res://enemies/groupings/group_six/enemies_plus_six_six.tscn')
@@ -24,6 +23,8 @@ var ghost_jimmy_2 = preload("res://spirit_jimmys/ghost_jimmy_ver_two.tscn")
 var bullets = preload("res://spirit_jimmys/ghost_bullets.tscn")
 
 func _ready():
+	print(Levels.escape,'= levels escape')
+	Levels.escape = false
 	Level_anims.play("enter")
 	if Global.chick_counter <=6:
 		if AudioPlayer.oak_forest_chill_vibes == false:
@@ -104,15 +105,7 @@ func _on_jed_ghosted() -> void:
 func _on_jed_orchid_poison() -> void:
 	pass # Replace with function body.
 
-func _on_blue_flowers_chick() -> void:
-	if BlueFlowerCount.blue_flower_6 == false:
-		Global.chick_counter = Global.chick_counter + 1
-		print(Global.chick_counter, "= Global chick counter")
-		BlueFlowerCount.blue_flower_6 = true
-	if Global.chick_counter <= 5:
-		var chicky = chick.instantiate()
-		chicky.global_position = $flora/Blue_flowers.position
-		add_child(chicky)
+
 
 func enemies_six():
 	if Global.chick_counter <= 3:

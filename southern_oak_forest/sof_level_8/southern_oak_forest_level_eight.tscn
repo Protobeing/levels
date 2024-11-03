@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://sgnjhia7h864" path="res://earth/earth_6.png" id="3_v47vg"]
 [ext_resource type="PackedScene" uid="uid://0sxh0cfn4hg" path="res://gateways/small_opening_west.tscn" id="4_4lb72"]
 [ext_resource type="PackedScene" uid="uid://dk7g834rkrfwy" path="res://jed_main/Jed.tscn" id="5_l3l2p"]
-[ext_resource type="PackedScene" uid="uid://xxibel38wjai" path="res://ghost_babies_and_blue_flowers/blue_flowers/blue_flowers.tscn" id="5_phucs"]
 [ext_resource type="Texture2D" uid="uid://baukrcelr5ax0" path="res://earth/earth_plot_one.png" id="7_ey1a6"]
 [ext_resource type="PackedScene" uid="uid://dk36j2m4w8f7k" path="res://levels/test/flora/ferns/fern_collection_two.tscn" id="8_c3k2p"]
 [ext_resource type="PackedScene" uid="uid://b3yu1pd5kplmc" path="res://trees/oaks/ancient_oak/ancient_oak.tscn" id="9_yg7xy"]
@@ -15,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://uqn003f1nucx" path="res://trees/oaks/young_oak.tscn" id="11_k3ayp"]
 [ext_resource type="PackedScene" uid="uid://crkc3ae77hf6h" path="res://trees/pine_trees/pine_tree.tscn" id="12_sn6jq"]
 [ext_resource type="PackedScene" uid="uid://dxq73m7npidcj" path="res://trees/pine_trees/large_pine_in_darkness.tscn" id="13_wj63j"]
-[ext_resource type="AudioStream" uid="uid://ckk1pm1qkst3q" path="res://level_music/forest_sounds.mp3" id="14_p5pkk"]
+[ext_resource type="AudioStream" uid="uid://cyk3f4hlbpuc6" path="res://level_music/forest_sounds.mp3" id="14_p5pkk"]
 [ext_resource type="PackedScene" uid="uid://b5sal165esulc" path="res://trees/oaks/thicket_trees/thicket.tscn" id="14_rfjvu"]
 [ext_resource type="PackedScene" uid="uid://toqsdxc1ookg" path="res://trees/oaks/baby_oak_collection_1.tscn" id="15_yt3fv"]
 [ext_resource type="PackedScene" uid="uid://bvkfk6gofkaim" path="res://flora/flowers/golden_rod_one.tscn" id="16_o1rsb"]
@@ -25,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://k1tqe0b7w057" path="res://sky/cloud_1.png" id="18_7crou"]
 [ext_resource type="PackedScene" uid="uid://dgjv1dn81bnaf" path="res://enemies/zombie_rat/zombie_rat.tscn" id="19_fu5ra"]
 [ext_resource type="PackedScene" uid="uid://b3yigva0cskfh" path="res://obstacles/rocks/big_rock.tscn" id="25_feqsc"]
+[ext_resource type="PackedScene" uid="uid://c1nrp2h7xsv6q" path="res://enemies/entity/escape_path.tscn" id="26_uw0dh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xdhh2"]
 radius = 58.0086
@@ -84,9 +84,6 @@ collision_mask = 8
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(-681, 216, -627, 214, -572, 192, -525, 194, -496, 158, -476, 137, -454, 120, -427, 106, -385, 128, -365, 157, -357, 204, -350, 259, -333, 273, -293, 261, -271, 237, -241, 226, -216, 214, -157, 180, -142, 160, -130, 146, -120, 130, -107, 120, -86, 108, -64, 97, -43, 96, -18, 94, 8, 91, 35, 87, 61, 87, 100, 81, 124, 87, 169, 118, 177, 150, 169, 179, 151, 218, 92, 221, 54, 231, 20, 254, -9, 276, -39, 280, -72, 267, -105, 254, -148, 256, -203, 269, -229, 296, -251, 320, -249, 364, -214, 401, -190, 411, -177, 426, -184, 444, -190, 467, -213, 495, -250, 513, -313, 511, -391, 512, -435, 537, -450, 571, -456, 602, -457, 630, -435, 641, -399, 645, -365, 645, -333, 638, -299, 636, -244, 627, -207, 612, -149, 598, -132, 579, -118, 549, -107, 512, -94, 488, -70, 469, -44, 462, -13, 463, 26, 463, 41, 444, 56, 437, 84, 434, 108, 442, 129, 449, 142, 462, 145, 487, 143, 515, 176, 513, 192, 533, 239, 530, 272, 508, 316, 473, 355, 457, 421, 458, 550, 479, 606, 479, 633, 469, 831, 421, 795, 363, 770, 307, 801, 222, 840, 24, 844, -38, 815, -58, 781, -65, 706, -65, 648, -86, 533, -106, 455, -131, 405, -147, 346, -172, 277, -193, 162, -229, 73, -243, 3, -232, -60, -195, -101, -146, -175, -70, -234, -1, -250, 23, -271, 38, -295, 68, -307, 129, -335, 78, -358, 17, -402, -5, -437, 7, -458, 31, -479, 69, -495, 88, -537, 108, -553, 111, -617, 93, -654, 61, -698, 66, -730, 103, -745, 169, -705, 214, -699, 264, -747, 286, -838, 298, -934, 280, -949, 190, -927, 52, -870, -18, -771, -43, -685, -47, -609, -59, -525, -65, -396, -99, -349, -227, -297, -309, -169, -351, 55, -383, 418, -301, 674, -240, 858, -138, 943, -63, 975, 172, 901, 437, 795, 530, 475, 586, 386, 649, 277, 655, 95, 665, -64, 639, -172, 619, -528, 722, -582, 611, -565, 456, -478, 357, -556, 348, -660, 318, -687, 268)
-
-[node name="Blue_flowers" parent="." instance=ExtResource("5_phucs")]
-position = Vector2(-312, 178)
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-671, 148)
@@ -740,12 +737,13 @@ position = Vector2(-269, 246)
 [node name="Big_rock4" parent="." instance=ExtResource("25_feqsc")]
 position = Vector2(255, 250)
 
-[connection signal="chick" from="Blue_flowers" to="." method="_on_blue_flowers_chick"]
+[node name="escape_path" parent="." instance=ExtResource("26_uw0dh")]
+position = Vector2(-782, 100)
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="died" from="Jed" to="." method="_on_jed_died"]
 [connection signal="flame" from="Jed" to="." method="_on_jed_flame"]
 [connection signal="ghosted" from="Jed" to="." method="_on_jed_ghosted"]
-[connection signal="ghosting" from="Jed" to="." method="_on_jed_ghosting"]
 [connection signal="orchid_poison" from="Jed" to="." method="_on_jed_orchid_poison"]
 [connection signal="rocks_E" from="Jed" to="." method="_on_jed_rocks_e"]
 [connection signal="special_attack" from="Jed" to="." method="_on_jed_special_attack"]

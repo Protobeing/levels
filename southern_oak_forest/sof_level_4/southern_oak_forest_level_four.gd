@@ -5,7 +5,6 @@ var enemies_plus_four_four: PackedScene = preload('res://enemies/groupings/group
 var enemies_below_three_four: PackedScene = preload('res://enemies/groupings/group_four/enemies_below_three_four.tscn')
 
 @onready var Jed = $Jed
-@onready var blue_flower_anim = $Blue_flowers/AnimationPlayer
 var ground_flame: PackedScene = preload('res://jed_main/rocks/ground_flame.tscn')
 
 var rocks: PackedScene = preload("res://jed_main/rocks/throwing_rock.tscn")
@@ -20,12 +19,14 @@ var ghost_jimmy_2 = preload("res://spirit_jimmys/ghost_jimmy_ver_two.tscn")
 var bullets = preload("res://spirit_jimmys/ghost_bullets.tscn")
 
 func _ready():
+	print(Levels.escape,'= levels escape')
+	Levels.escape = false
 	if Global.chick_counter <=6:
 		if AudioPlayer.oak_forest_chill_vibes == false:
 			AudioPlayer.oak_forest_chill_vibes = true
 			AudioPlayer.play_song()
-	if BlueFlowerCount.blue_flower_4:
-		blue_flower_anim.play("no_heal")
+	#if BlueFlowerCount.blue_flower_4:
+		#blue_flower_anim.play("no_heal")
 	PlayerData.death_in_sof_4 = false
 	enemies_four()
 	Global.blue_flower_heal = true
@@ -101,16 +102,7 @@ func _on_jed_ghosted() -> void:
 func _on_jed_orchid_poison() -> void:
 	pass # Replace with function body.
 
-func _on_blue_flowers_chick() -> void:
-	if BlueFlowerCount.blue_flower_4 == false:
-		Global.chick_counter = Global.chick_counter + 1
-		print(Global.chick_counter, "= Global chick counter")
-		BlueFlowerCount.blue_flower_4 = true
-	if Global.chick_counter <= 5:
-		var chicky = chick.instantiate()
-		chicky.global_position = $Blue_flowers.position
-		add_child(chicky)
-		print("chick")
+
 
 
 

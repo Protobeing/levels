@@ -1,7 +1,6 @@
 extends Node2D
 @onready var anim = $AnimationPlayer
 @onready var Jed = $Jed
-@onready var blue_flower_anim = $Blue_flowers/AnimationPlayer
 var ground_flame: PackedScene = preload('res://jed_main/rocks/ground_flame.tscn')
 
 
@@ -23,6 +22,8 @@ var ghost_jimmy = preload("res://spirit_jimmys/ghost_jimmy.tscn")
 var ghost_jimmy_2 = preload("res://spirit_jimmys/ghost_jimmy_ver_two.tscn")
 var bullets = preload("res://spirit_jimmys/ghost_bullets.tscn")
 func _ready():
+	print(Levels.escape,'= levels escape')
+	Levels.escape = false
 	if Global.chick_counter <=6:
 		if AudioPlayer.oak_forest_chill_vibes == false:
 			AudioPlayer.oak_forest_chill_vibes = true
@@ -56,15 +57,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		Levels.in_sof = true
 		Levels._ready()
 
-func _on_blue_flowers_chick() -> void:
-	if BlueFlowerCount.blue_flower_9 == false:
-		Global.chick_counter = Global.chick_counter + 1
-		print(Global.chick_counter, "= Global chick counter")
-		BlueFlowerCount.blue_flower_9 = true
-	if Global.chick_counter <= 5:
-		var chicky = chick.instantiate()
-		chicky.global_position = $Blue_flowers.position
-		add_child(chicky)
+
 
 func _on_jed_rocks_e(pos, direction):
 	var rock = rocks.instantiate() as RigidBody2D

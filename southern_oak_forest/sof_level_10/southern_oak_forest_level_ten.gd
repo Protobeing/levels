@@ -11,7 +11,6 @@ extends Node2D
 #var enemies_below_two_two: PackedScene = preload('res://enemies/groupings/group_two/enemies_below_two_two.tscn')
 #var enemies_plux_six_two: PackedScene = preload('res://enemies/groupings/group_two/enemies_plus_six_two.tscn')
 @onready var Jed = $Jed
-@onready var blue_flower_anim = $Blue_flowers/AnimationPlayer
 var ground_flame: PackedScene = preload('res://jed_main/rocks/ground_flame.tscn')
 #group ten
 var enemies_plus_four_ten: PackedScene = preload('res://enemies/groupings/group_ten/enemies_plus_four_ten.tscn')
@@ -32,6 +31,8 @@ var bullets = preload("res://spirit_jimmys/ghost_bullets.tscn")
 
 
 func _ready():
+	print(Levels.escape,'= levels escape')
+	Levels.escape = false
 	if Global.chick_counter <=6:
 		if AudioPlayer.oak_forest_chill_vibes == false:
 			AudioPlayer.oak_forest_chill_vibes = true
@@ -65,15 +66,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		Levels.in_sof = true
 		Levels._ready()
 		
-func _on_blue_flowers_chick() -> void:
-	if BlueFlowerCount.blue_flower_10 == false:
-		Global.chick_counter = Global.chick_counter + 1
-		print(Global.chick_counter, "= Global chick counter")
-		BlueFlowerCount.blue_flower_10 = true
-	if Global.chick_counter <= 5:
-		var chicky = chick.instantiate()
-		chicky.global_position = $flora/Blue_flowers.position
-		add_child(chicky)
+
 
 func _on_jed_rocks_e(pos, direction):
 	var rock = rocks.instantiate() as RigidBody2D

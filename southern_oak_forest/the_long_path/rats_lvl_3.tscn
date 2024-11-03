@@ -1,0 +1,977 @@
+[gd_scene load_steps=5 format=3 uid="uid://djq4vi6cwam3o"]
+
+[ext_resource type="Script" path="res://levels/southern_oak_forest/the_long_path/rats_lvl_3.gd" id="1_3emn8"]
+[ext_resource type="PackedScene" uid="uid://xo2x82n4ct8u" path="res://enemies/basic_rat/rat.tscn" id="2_vqe2m"]
+[ext_resource type="PackedScene" uid="uid://du1ube02j6yg4" path="res://enemies/lil_rat_1/lil_rat.tscn" id="3_jc2na"]
+[ext_resource type="PackedScene" uid="uid://cghwauui2p3te" path="res://enemies/Wiz_rats/Wiz_rat_1/wiz_rat_scene.tscn" id="7_ajmxm"]
+
+[node name="rats_lvl_3" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_3emn8")
+
+[node name="lil\' rat" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(955, -447)
+
+[node name="lil\' rat2" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(955, -390)
+
+[node name="lil\' rat3" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(918, -414)
+
+[node name="lil\' rat4" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(908, -454)
+
+[node name="lil\' rat5" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(891, -370)
+
+[node name="lil\' rat6" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(874, -421)
+
+[node name="lil\' rat7" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(599, -649)
+
+[node name="lil\' rat8" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(599, -592)
+
+[node name="lil\' rat9" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(562, -616)
+
+[node name="lil\' rat10" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(614, -852)
+
+[node name="lil\' rat11" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(597, -768)
+
+[node name="lil\' rat12" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(580, -819)
+
+[node name="lil\' rat13" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(621, -687)
+
+[node name="lil\' rat14" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(621, -630)
+
+[node name="lil\' rat15" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(584, -654)
+
+[node name="lil\' rat16" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(574, -694)
+
+[node name="lil\' rat17" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(557, -610)
+
+[node name="lil\' rat18" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(540, -661)
+
+[node name="lil\' rat19" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(766, -266)
+
+[node name="lil\' rat20" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(704, -13)
+
+[node name="lil\' rat21" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(667, -37)
+
+[node name="lil\' rat22" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(657, -77)
+
+[node name="lil\' rat23" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(640, 6.99997)
+
+[node name="lil\' rat24" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(623, -44)
+
+[node name="lil\' rat25" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(361, -130)
+
+[node name="lil\' rat26" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(361, -73)
+
+[node name="lil\' rat27" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(324, -97)
+
+[node name="lil\' rat28" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(314, -137)
+
+[node name="lil\' rat29" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(297, -53)
+
+[node name="lil\' rat30" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(280, -104)
+
+[node name="lil\' rat31" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(92.9999, -629)
+
+[node name="lil\' rat32" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(93, -572)
+
+[node name="lil\' rat33" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(56, -596)
+
+[node name="lil\' rat34" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(46, -636)
+
+[node name="lil\' rat35" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(29, -552)
+
+[node name="lil\' rat36" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(12, -603)
+
+[node name="lil\' rat127" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-110, -454)
+
+[node name="lil\' rat128" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-110, -397)
+
+[node name="lil\' rat129" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-147, -421)
+
+[node name="lil\' rat130" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-157, -461)
+
+[node name="lil\' rat131" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-174, -377)
+
+[node name="lil\' rat132" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-191, -428)
+
+[node name="lil\' rat133" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-690, 341)
+
+[node name="lil\' rat134" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-690, 398)
+
+[node name="lil\' rat135" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-727, 374)
+
+[node name="lil\' rat136" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-737, 334)
+
+[node name="lil\' rat137" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-754, 418)
+
+[node name="lil\' rat138" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-771, 367)
+
+[node name="lil\' rat37" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(388, -836)
+
+[node name="lil\' rat38" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(388, -779)
+
+[node name="lil\' rat39" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(351, -803)
+
+[node name="lil\' rat40" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(341, -843)
+
+[node name="lil\' rat41" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(324, -759)
+
+[node name="lil\' rat42" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(307, -810)
+
+[node name="lil\' rat43" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-117, -974)
+
+[node name="lil\' rat44" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-117, -917)
+
+[node name="lil\' rat45" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-154, -941)
+
+[node name="lil\' rat46" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-164, -981)
+
+[node name="lil\' rat47" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-181, -897)
+
+[node name="lil\' rat48" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-198, -948)
+
+[node name="lil\' rat49" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-346, -712)
+
+[node name="lil\' rat50" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-346, -655)
+
+[node name="lil\' rat51" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-383, -679)
+
+[node name="lil\' rat52" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-393, -719)
+
+[node name="lil\' rat53" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-410, -635)
+
+[node name="lil\' rat54" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-427, -686)
+
+[node name="lil\' rat55" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-208, -682)
+
+[node name="lil\' rat56" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-208, -625)
+
+[node name="lil\' rat57" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-245, -649)
+
+[node name="lil\' rat58" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-255, -689)
+
+[node name="lil\' rat59" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-272, -605)
+
+[node name="lil\' rat60" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-289, -656)
+
+[node name="lil\' rat61" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-679, -648)
+
+[node name="lil\' rat62" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-679, -591)
+
+[node name="lil\' rat63" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-716, -615)
+
+[node name="lil\' rat64" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-726, -655)
+
+[node name="lil\' rat65" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-743, -571)
+
+[node name="lil\' rat66" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-760, -622)
+
+[node name="lil\' rat67" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-629, -924)
+
+[node name="lil\' rat68" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-629, -867)
+
+[node name="lil\' rat69" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-666, -891)
+
+[node name="lil\' rat70" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-676, -931)
+
+[node name="lil\' rat71" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-693, -847)
+
+[node name="lil\' rat72" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-710, -898)
+
+[node name="lil\' rat73" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-471, -957)
+
+[node name="lil\' rat74" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-471, -900)
+
+[node name="lil\' rat75" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-508, -924)
+
+[node name="lil\' rat76" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-518, -964)
+
+[node name="lil\' rat77" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-535, -880)
+
+[node name="lil\' rat78" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-552, -931)
+
+[node name="lil\' rat79" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-336, -947)
+
+[node name="lil\' rat80" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-336, -890)
+
+[node name="lil\' rat81" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-373, -914)
+
+[node name="lil\' rat82" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-383, -954)
+
+[node name="lil\' rat83" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-400, -870)
+
+[node name="lil\' rat84" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-417, -921)
+
+[node name="lil\' rat85" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-259, -499)
+
+[node name="lil\' rat86" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-259, -442)
+
+[node name="lil\' rat87" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-296, -466)
+
+[node name="lil\' rat88" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-306, -506)
+
+[node name="lil\' rat89" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-323, -422)
+
+[node name="lil\' rat90" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-340, -473)
+
+[node name="lil\' rat91" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-817, -331)
+
+[node name="lil\' rat92" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-817, -274)
+
+[node name="lil\' rat93" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-854, -298)
+
+[node name="lil\' rat94" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-864, -338)
+
+[node name="lil\' rat95" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-899, -279)
+
+[node name="lil\' rat96" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-898, -305)
+
+[node name="lil\' rat97" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-810, -15)
+
+[node name="lil\' rat98" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-810, 42)
+
+[node name="lil\' rat99" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-847, 18)
+
+[node name="lil\' rat100" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-857, -22)
+
+[node name="lil\' rat101" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-874, 62)
+
+[node name="lil\' rat102" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-891, 11)
+
+[node name="lil\' rat103" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-675, 214)
+
+[node name="lil\' rat104" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-675, 271)
+
+[node name="lil\' rat105" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-712, 247)
+
+[node name="lil\' rat106" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-722, 207)
+
+[node name="lil\' rat107" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-739, 291)
+
+[node name="lil\' rat108" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-756, 240)
+
+[node name="lil\' rat109" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-534, -0.999985)
+
+[node name="lil\' rat110" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-534, 56)
+
+[node name="lil\' rat111" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-571, 32)
+
+[node name="lil\' rat112" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-581, -7.99998)
+
+[node name="lil\' rat113" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-598, 76)
+
+[node name="lil\' rat114" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-615, 25)
+
+[node name="lil\' rat115" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(542, 252)
+
+[node name="lil\' rat116" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(542, 309)
+
+[node name="lil\' rat117" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(505, 285)
+
+[node name="lil\' rat118" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(495, 245)
+
+[node name="lil\' rat119" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(478, 329)
+
+[node name="lil\' rat120" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(461, 278)
+
+[node name="lil\' rat121" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(468, -188)
+
+[node name="lil\' rat122" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(468, -131)
+
+[node name="lil\' rat123" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(431, -155)
+
+[node name="lil\' rat124" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(421, -195)
+
+[node name="lil\' rat125" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(404, -111)
+
+[node name="lil\' rat126" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(387, -162)
+
+[node name="lil\' rat_three" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-245.999, -710)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three2" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-212, -789)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three3" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-348, -782)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three4" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-46, -764)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three5" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(74, -689)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three6" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(182, -744)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three7" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(359, -696)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three8" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(524, -518)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three9" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-615, -778)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three10" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-565, -756)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three11" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-501, 10.9999)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three12" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-661, 78)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three13" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-264, 659)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three14" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-194, 605)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three15" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-116, 699)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three16" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-226, 733)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three17" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-402, 742)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three18" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-427, 633)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three19" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-368, 680)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three20" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-327, 586)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three21" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-302, 714)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three22" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-327, 612)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three23" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-379, 640)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three24" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-452, 697)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three25" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-322, 764)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three26" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-251, 637)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three27" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-230, 577)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three28" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-191, 670)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three29" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-50, 597)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three30" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-55, 691)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three31" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-507, 837)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three32" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-600, 783)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three33" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-538, 813)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three34" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-499, 722)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three35" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-103, 635)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three36" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-147, 561)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three37" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(56, 679)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three38" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(72, 593)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three39" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(106, 669)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three40" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-448, 565)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three41" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-603, 597)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three42" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-747, 542)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three43" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-825, 644)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three44" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-874, 578)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three45" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-826, 667)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three46" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-826, 667)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three47" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(155, 272)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three48" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(187, 257)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three49" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(212, 221)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three50" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(228, 282)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three51" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(248, 154)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three52" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(225, 116)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three53" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(234, 87)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three54" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(261, 91)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three55" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(187, 57)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three56" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(228, 35)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three57" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(161, 22)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three58" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(17, 15)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three59" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(60, 29)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three60" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(105, 1.90735e-06)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three61" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(149, -51)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three63" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(158, -13)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three64" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(207, -17)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three65" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(35, -85)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three66" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(27, -30)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three67" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-39, -55)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three68" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-66, -12)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three69" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-146, -63)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three70" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-138, -8)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three71" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-123, -61)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three72" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-212, 7)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three73" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-197, 37)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three74" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-299, 1)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three75" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-246, 71)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three76" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-309, 92)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three77" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-309, 141)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three78" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-279, 194)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three79" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-360, 226)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three80" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-366, 162)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three81" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-313, 277)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three82" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-264, 262)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three83" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-232, 305)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three84" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-183, 267)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three85" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-196, 346)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three86" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-215, 240)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three87" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-251, 202)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three88" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-312, 206)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three89" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-240, 149)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three90" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-138, 293)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three91" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-110, 314)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three92" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-165, 155)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three93" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-146, 91)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three94" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-80, 55)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three95" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(-88, 46)
+scale = Vector2(0.9, 0.9)
+
+[node name="lil\' rat_three62" parent="." instance=ExtResource("3_jc2na")]
+position = Vector2(92, 41)
+scale = Vector2(0.9, 0.9)
+
+[node name="rat2" parent="." instance=ExtResource("2_vqe2m")]
+position = Vector2(197, -117)
+collision_layer = 2
+
+[node name="rat3" parent="." instance=ExtResource("2_vqe2m")]
+position = Vector2(203, -58)
+collision_layer = 2
+
+[node name="rat4" parent="." instance=ExtResource("2_vqe2m")]
+position = Vector2(130, 35)
+collision_layer = 2
+
+[node name="rat7" parent="." instance=ExtResource("2_vqe2m")]
+position = Vector2(123, -410)
+collision_layer = 2
+
+[node name="mage" parent="." instance=ExtResource("7_ajmxm")]
+position = Vector2(623, 274)
+
+[node name="mage2" parent="." instance=ExtResource("7_ajmxm")]
+position = Vector2(-61, 156)
+
+[node name="mage3" parent="." instance=ExtResource("7_ajmxm")]
+position = Vector2(91, 138)
+
+[connection signal="count" from="lil\' rat" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat2" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat3" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat4" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat5" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat6" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat7" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat8" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat9" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat10" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat11" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat12" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat13" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat14" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat15" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat16" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat17" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat18" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat19" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat20" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat21" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat22" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat23" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat24" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat25" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat26" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat27" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat28" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat29" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat30" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat31" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat32" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat33" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat34" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat35" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat36" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat127" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat128" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat129" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat130" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat131" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat132" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat133" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat134" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat135" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat136" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat137" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat138" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat37" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat38" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat39" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat40" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat41" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat42" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat43" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat44" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat45" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat46" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat47" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat48" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat49" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat50" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat51" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat52" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat53" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat54" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat55" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat56" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat57" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat58" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat59" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat60" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat61" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat62" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat63" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat64" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat65" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat66" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat67" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat68" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat69" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat70" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat71" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat72" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat73" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat74" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat75" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat76" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat77" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat78" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat79" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat80" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat81" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat82" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat83" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat84" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat85" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat86" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat87" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat88" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat89" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat90" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat91" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat92" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat93" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat94" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat95" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat96" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat97" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat98" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat99" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat100" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat101" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat102" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat103" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat104" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat105" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat106" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat107" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat108" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat109" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat110" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat111" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat112" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat113" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat114" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat115" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat116" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat117" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat118" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat119" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat120" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat121" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat122" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat123" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat124" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat125" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat126" to="." method="_on_lil_rat_count"]
+[connection signal="counter" from="mage" to="." method="_on_mage_counter"]
+[connection signal="skull" from="mage" to="." method="_on_mage_skull"]
+[connection signal="spell" from="mage" to="." method="_on_mage_spell"]
+[connection signal="counter" from="mage2" to="." method="_on_mage_2_counter"]
+[connection signal="skull" from="mage2" to="." method="_on_mage_2_skull"]
+[connection signal="spell" from="mage2" to="." method="_on_mage_2_spell"]
+[connection signal="counter" from="mage3" to="." method="_on_mage_3_counter"]
+[connection signal="skull" from="mage3" to="." method="_on_mage_3_skull"]
+[connection signal="spell" from="mage3" to="." method="_on_mage_3_spell"]

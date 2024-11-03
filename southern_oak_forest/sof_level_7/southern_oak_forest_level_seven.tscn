@@ -7,10 +7,10 @@
 [ext_resource type="Script" path="res://levels/southern_oak_forest/sof_level_7/path_follow_2d_raccon_in_bush_lvl_7.gd" id="3_8e6kw"]
 [ext_resource type="PackedScene" uid="uid://dk36j2m4w8f7k" path="res://levels/test/flora/ferns/fern_collection_two.tscn" id="3_bwe3g"]
 [ext_resource type="PackedScene" uid="uid://dk7g834rkrfwy" path="res://jed_main/Jed.tscn" id="3_xwls6"]
-[ext_resource type="PackedScene" uid="uid://xxibel38wjai" path="res://ghost_babies_and_blue_flowers/blue_flowers/blue_flowers.tscn" id="4_4f2x1"]
 [ext_resource type="PackedScene" uid="uid://41q3hstobyis" path="res://enemies/raccoons/raccon_in_bush/greedy_hands_one.tscn" id="4_ci1g6"]
 [ext_resource type="Texture2D" uid="uid://bwpi8qgki4ync" path="res://earth/small_earth_plot.png" id="4_ocgr1"]
 [ext_resource type="Texture2D" uid="uid://dpjgmdy30uefe" path="res://earth/earth_7.png" id="5_djpvg"]
+[ext_resource type="Texture2D" uid="uid://djbtvdgx18381" path="res://earth/littl_rat_prints.png" id="6_o8xxx"]
 [ext_resource type="PackedScene" uid="uid://cx7hltn13m4xn" path="res://trees/birch_trees/small_birch_in_darkness.tscn" id="11_wt7w7"]
 [ext_resource type="Texture2D" uid="uid://ekpmlqin3tw7" path="res://trees/oaks/thicket_trees/tiny_thicket_trees.png" id="12_jt6wt"]
 [ext_resource type="PackedScene" uid="uid://bl2p3j8ekcctv" path="res://trees/oaks/brush_trees_one.tscn" id="13_fc2iu"]
@@ -20,9 +20,9 @@
 [ext_resource type="PackedScene" uid="uid://7qiu8l2nl068" path="res://drops/grub/grub.tscn" id="18_d47f1"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ou50p"]
-vertices = PackedVector2Array(-218.961, -224.969, -224.297, -121.477, -236.82, -183.5, -239.25, -222.313, -260.438, -144.531, 466.5, -716.906, 388.93, -608.898, 248.75, -417.289, 49.1016, -669.094, 44.5469, -699.797, 502.797, -936.656, -216.063, -399.688, -214.867, -442.617, -187.773, -464.867, -181, -427.117, -181, -396.18, -185.703, -376.438, 44.6094, -634.352, -16.9766, -435.906, 25.8438, -606.82, 202.891, -227.742, -18.0234, -385.852, -25.4297, -477.102, -45.5938, -521.68, -15.6484, -600.094, -39.5703, -597.43, -71.3828, -548.594, -28.6172, -336.023, -229.906, -369.461, -194.469, -346.219, -205.742, -316.523, -83.3203, -107.813, -61.3594, -287.406, 216.938, -74.1406, 206.508, 12.1172, 103.141, 106.883, -92.2969, 153.789, -101.156, -76.2266, -190.977, -101.742, -253.008, 125.539, -443.648, -12.2969, -295.844, -133.906, -349.289, -137.25, -504.148, -178.18, -379.453, -166.289, -404.117, -198.008, -520.906, -359.609, -388.547, -247.133, -233.25, -669.828, -72.3594, -671.172, -65.4297, -631.906, -239.172, -633.133, -261.641, -571.781, -196.391, -499.328, -246.313, -468.453, -263.859, -486, -298.258, -566.727, 477.367, -1044.27, 27.4531, -724.219, 421.367, -1221.8, -246.539, -599.469, -112.961, -563.898, -154.719, -566.156, -275.469, -259.633, -251.57, -364.047, -180.453, -549.438, -294.531, -486, -326.391, -366.203, -350.656, -274.992, -350.297, -382.563, -329.563, -579.25, -328.352, -475.43, -476.203, -617.992, -417.094, -1165.98, -510.344, -1300.47, -417.398, -1576.43, -220.906, -1563.97, -81.9063, -1531.44, 25.5078, -1475.26, 98.4609, -1428.66, -15.6719, -740.992, -314.359, -287.094, -278.133, -362.992, -355.773, -397.602, -360.219, -430.969, -348.023, -467.563, 175.578, -1407.34, 348.781, -1344.72, -346.609, -619.039, -430.156, -824.156, -354.406, -659.141, -341.18, -689.563, -310.57, -696.906, -394.273, -1062.24, -267.539, -700.297, -50.8438, -722.148)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 2, 1), PackedInt32Array(5, 6, 7, 8, 9, 10), PackedInt32Array(11, 12, 13, 14, 15, 16), PackedInt32Array(17, 8, 7), PackedInt32Array(18, 19, 17, 7, 20, 21), PackedInt32Array(19, 18, 22), PackedInt32Array(19, 22, 23, 24), PackedInt32Array(25, 24, 23, 26), PackedInt32Array(27, 21, 20), PackedInt32Array(28, 11, 16, 29, 30), PackedInt32Array(31, 32, 27, 20, 33, 34, 35, 36), PackedInt32Array(37, 31, 36), PackedInt32Array(38, 37, 36, 39, 40), PackedInt32Array(1, 38, 40), PackedInt32Array(4, 1, 40, 41), PackedInt32Array(42, 41, 40), PackedInt32Array(42, 40, 43, 44), PackedInt32Array(45, 44, 43), PackedInt32Array(45, 43, 46, 47), PackedInt32Array(48, 49, 50, 51), PackedInt32Array(52, 53, 13, 12, 54, 55, 56), PackedInt32Array(57, 10, 9, 58, 59), PackedInt32Array(60, 51, 50, 25, 61, 62), PackedInt32Array(3, 63, 64, 28, 30, 0), PackedInt32Array(25, 26, 61), PackedInt32Array(60, 62, 65, 52), PackedInt32Array(52, 65, 53), PackedInt32Array(56, 55, 66), PackedInt32Array(67, 68, 47, 46, 69), PackedInt32Array(70, 56, 66, 71, 72), PackedInt32Array(73, 74, 75, 76, 77, 78, 79, 80), PackedInt32Array(64, 63, 81, 82), PackedInt32Array(67, 82, 81, 68), PackedInt32Array(69, 46, 72, 83), PackedInt32Array(84, 83, 72), PackedInt32Array(85, 84, 72), PackedInt32Array(86, 87, 59, 58, 80, 79), PackedInt32Array(71, 85, 72), PackedInt32Array(88, 70, 72), PackedInt32Array(88, 72, 89, 90), PackedInt32Array(91, 90, 89), PackedInt32Array(92, 91, 89), PackedInt32Array(93, 73, 80), PackedInt32Array(94, 92, 89, 93, 80, 95), PackedInt32Array(48, 94, 95, 49)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(108, 116, -92, 164, -257, 135, -452, -6, -514, -176, -531, -360, -486, -620, -440, -826, -404.429, -1061.9, -426.429, -1161.9, -521.429, -1298.9, -424.429, -1586.9, -219.429, -1573.9, -78.4287, -1540.9, 30.5713, -1483.9, 102.571, -1437.9, 178.571, -1416.9, 355.571, -1352.9, 430.571, -1225.9, 487, -1047, 513, -937, 476, -713, 397, -603, 258, -413, 213, -227, 227, -74, 216, 17), PackedVector2Array(-342, -389, -323, -376, -278, -373, -253, -374, -237, -378, -226, -402, -225, -438, -253, -461, -268, -476, -293, -476, -325, -466, -340, -460, -350, -430, -346, -400), PackedVector2Array(-172, -543, -186, -499, -178, -467, -171, -428, -171, -395, -176, -374, -185, -343, -196, -314, -209, -224, -214, -127, -187, -111, -106, -88, -93, -111, -71, -291, -38, -340, -28, -387, -27, -435, -35, -474, -54, -516, -77, -540, -115, -554, -152, -556), PackedVector2Array(-316, -276, -346, -266, -380, -241, -393, -200, -372, -173, -345, -147, -297, -144, -267, -153, -247, -186, -249, -218, -282, -252), PackedVector2Array(-309, -687, -334, -681, -344, -658, -337, -622, -322, -587, -297, -577, -268, -581, -256, -603, -249, -635, -244, -666, -271, -690), PackedVector2Array(-15, -730, -43, -715, -62, -670, -56, -636, -35, -608, -17, -610, 20, -616, 35, -638, 39, -669, 35, -696, 21, -716)])
+vertices = PackedVector2Array(-218.961, -224.969, -224.297, -121.477, -236.82, -183.5, -239.25, -222.313, -260.438, -144.531, 502.797, -936.656, 466.5, -716.906, 388.93, -608.898, 248.75, -417.289, 49.1016, -669.094, 44.5469, -699.797, 234.258, -1013.83, 479.258, -1036.24, -216.063, -399.688, -214.867, -442.617, -187.773, -464.867, -181, -427.117, -181, -396.18, -185.703, -376.438, 44.6094, -634.352, -16.9766, -435.906, 25.8438, -606.82, 202.891, -227.742, -18.0234, -385.852, -25.4297, -477.102, -45.5938, -521.68, -15.6484, -600.094, -39.5703, -597.43, -71.3828, -548.594, 98.4609, -1428.66, 162.609, -1410.93, 20.75, -1197.17, -28.6172, -336.023, -229.906, -369.461, -194.469, -346.219, -205.742, -316.523, 27.4531, -724.219, 217.023, -1016.48, -83.3203, -107.813, -61.3594, -287.406, 216.938, -74.1406, 206.508, 12.1172, 103.141, 106.883, -92.2969, 153.789, -101.156, -76.2266, -190.977, -101.742, -253.008, 125.539, -443.648, -12.2969, -295.844, -133.906, -349.289, -137.25, -504.148, -178.18, -379.453, -166.289, -404.117, -198.008, -520.906, -359.609, -388.547, -247.133, -233.25, -669.828, -72.3594, -671.172, -65.4297, -631.906, -239.172, -633.133, 198.172, -1033.98, -15.6719, -740.992, 27.2266, -1186.35, -261.641, -571.781, -196.391, -499.328, -246.313, -468.453, -263.859, -486, -298.258, -566.727, -246.539, -599.469, -112.961, -563.898, -154.719, -566.156, -275.469, -259.633, -251.57, -364.047, -180.453, -549.438, -294.531, -486, -326.391, -366.203, -350.656, -274.992, -350.297, -382.563, -81.9063, -1531.44, 25.5078, -1475.26, -394.273, -1062.24, -417.094, -1165.98, -220.906, -1563.97, -329.563, -579.25, -328.352, -475.43, -476.203, -617.992, -510.344, -1300.47, -417.398, -1576.43, -310.57, -696.906, -430.156, -824.156, -267.539, -700.297, -314.359, -287.094, -278.133, -362.992, -355.773, -397.602, -360.219, -430.969, -348.023, -467.563, -346.609, -619.039, -354.406, -659.141, -341.18, -689.563, -50.8438, -722.148, 195.289, -1054.13, 87.7734, -1192.06, 203.773, -1075.33, 115.461, -1202.03, 233.477, -1088.94, 174.469, -1248.03, 210.523, -1260.97, 270.719, -1263.75, 310.789, -1236.75, 319.688, -1201.17, 323.367, -1162.53, 284.148, -1087.95, 298.422, -1104.95, 292.039, -1092.2)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 2, 1), PackedInt32Array(5, 6, 7, 8, 9, 10, 11, 12), PackedInt32Array(13, 14, 15, 16, 17, 18), PackedInt32Array(19, 9, 8), PackedInt32Array(20, 21, 19, 8, 22, 23), PackedInt32Array(21, 20, 24), PackedInt32Array(21, 24, 25, 26), PackedInt32Array(27, 26, 25, 28), PackedInt32Array(29, 30, 31), PackedInt32Array(32, 23, 22), PackedInt32Array(33, 13, 18, 34, 35), PackedInt32Array(11, 10, 36, 37), PackedInt32Array(38, 39, 32, 22, 40, 41, 42, 43), PackedInt32Array(44, 38, 43), PackedInt32Array(45, 44, 43, 46, 47), PackedInt32Array(1, 45, 47), PackedInt32Array(4, 1, 47, 48), PackedInt32Array(49, 48, 47), PackedInt32Array(49, 47, 50, 51), PackedInt32Array(52, 51, 50), PackedInt32Array(52, 50, 53, 54), PackedInt32Array(55, 56, 57, 58), PackedInt32Array(59, 37, 36, 60, 61), PackedInt32Array(62, 63, 15, 14, 64, 65, 66), PackedInt32Array(67, 58, 57, 27, 68, 69), PackedInt32Array(3, 70, 71, 33, 35, 0), PackedInt32Array(27, 28, 68), PackedInt32Array(67, 69, 72, 62), PackedInt32Array(62, 72, 63), PackedInt32Array(66, 65, 73), PackedInt32Array(74, 75, 54, 53, 76), PackedInt32Array(77, 78, 29, 31, 79, 80, 81), PackedInt32Array(82, 66, 73, 83, 84), PackedInt32Array(85, 86, 81, 80), PackedInt32Array(87, 88, 79, 31, 61, 89), PackedInt32Array(71, 70, 90, 91), PackedInt32Array(74, 91, 90, 75), PackedInt32Array(76, 53, 84, 92), PackedInt32Array(93, 92, 84), PackedInt32Array(94, 93, 84), PackedInt32Array(83, 94, 84), PackedInt32Array(95, 82, 84), PackedInt32Array(95, 84, 88, 96), PackedInt32Array(97, 96, 88), PackedInt32Array(87, 97, 88), PackedInt32Array(61, 98, 56, 55, 89), PackedInt32Array(60, 98, 61), PackedInt32Array(99, 59, 61, 100), PackedInt32Array(101, 99, 100, 102), PackedInt32Array(103, 101, 102, 104, 105, 106, 107, 108, 109), PackedInt32Array(110, 103, 109, 111, 112)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(108, 116, -92, 164, -257, 135, -452, -6, -514, -176, -531, -360, -486, -620, -440, -826, -404.429, -1061.9, -426.429, -1161.9, -521.429, -1298.9, -424.429, -1586.9, -219.429, -1573.9, -78.4287, -1540.9, 30.5713, -1483.9, 102.571, -1437.9, 178.571, -1416.9, 32.571, -1196.9, 85.571, -1201.9, 110.571, -1210.9, 169.571, -1256.9, 208.571, -1270.9, 273.571, -1273.9, 319.571, -1242.9, 329.571, -1202.9, 333.571, -1160.9, 307.571, -1100.9, 299.571, -1084.9, 286.571, -1077.9, 235.571, -1078.9, 211.571, -1067.9, 205.571, -1052.9, 207.571, -1038.9, 221.571, -1025.9, 234.571, -1023.9, 487, -1047, 513, -937, 476, -713, 397, -603, 258, -413, 213, -227, 227, -74, 216, 17), PackedVector2Array(-342, -389, -323, -376, -278, -373, -253, -374, -237, -378, -226, -402, -225, -438, -253, -461, -268, -476, -293, -476, -325, -466, -340, -460, -350, -430, -346, -400), PackedVector2Array(-172, -543, -186, -499, -178, -467, -171, -428, -171, -395, -176, -374, -185, -343, -196, -314, -209, -224, -214, -127, -187, -111, -106, -88, -93, -111, -71, -291, -38, -340, -28, -387, -27, -435, -35, -474, -54, -516, -77, -540, -115, -554, -152, -556), PackedVector2Array(-316, -276, -346, -266, -380, -241, -393, -200, -372, -173, -345, -147, -297, -144, -267, -153, -247, -186, -249, -218, -282, -252), PackedVector2Array(-309, -687, -334, -681, -344, -658, -337, -622, -322, -587, -297, -577, -268, -581, -256, -603, -249, -635, -244, -666, -271, -690), PackedVector2Array(-15, -730, -43, -715, -62, -670, -56, -636, -35, -608, -17, -610, 20, -616, 35, -638, 39, -669, 35, -696, 21, -716)])
 
 [sub_resource type="Animation" id="Animation_hkyub"]
 length = 0.001
@@ -382,7 +382,6 @@ position = Vector2(82, -53)
 scale = Vector2(1.1, 1.1)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
-visible = false
 position = Vector2(243.429, 1330.9)
 navigation_polygon = SubResource("NavigationPolygon_ou50p")
 
@@ -512,7 +511,7 @@ position = Vector2(-4.15572, 249)
 color = Color(0.666667, 0.662745, 0.478431, 1)
 
 [node name="exit" type="Area2D" parent="."]
-position = Vector2(469.429, 162.9)
+position = Vector2(545, 136)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="exit"]
 shape = SubResource("CircleShape2D_vbh83")
@@ -950,6 +949,500 @@ texture = ExtResource("4_ocgr1")
 position = Vector2(-178.429, 136.1)
 texture = ExtResource("4_ocgr1")
 
+[node name="LittlRatPrints" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(307.571, 1104.1)
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints2" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(205.571, 1084.1)
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints3" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(251.571, 1086.1)
+rotation = -0.346239
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints4" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(263.571, 1105.1)
+rotation = -0.346239
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints5" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(178.571, 1073.1)
+rotation = -0.346239
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints6" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(150.571, 1049.1)
+rotation = -0.346239
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints7" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(114.571, 1041.1)
+rotation = -0.346239
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints8" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(94.5713, 1023.1)
+rotation = -0.346239
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints9" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(84.5713, 1003.1)
+rotation = 0.42041
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints10" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(59.5713, 1025.1)
+rotation = 0.42041
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints11" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(57.5713, 992.1)
+rotation = 0.42041
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints12" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(31.5713, 978.1)
+rotation = 0.42041
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints13" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(31.5713, 942.1)
+rotation = 0.42041
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints14" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(4.5713, 926.1)
+rotation = 0.42041
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints15" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(-8.4287, 865.1)
+rotation = 0.42041
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints16" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(-14.4287, 827.1)
+rotation = 0.42041
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints17" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(-15.4287, 797.1)
+rotation = 0.42041
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints18" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(-15.4287, 772.1)
+rotation = 0.42041
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints19" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(-2.42871, 747.1)
+rotation = 0.42041
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints20" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(0.571289, 721.1)
+rotation = 0.892713
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints21" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(-13.4287, 695.1)
+rotation = 1.632
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints22" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(18.5713, 671.1)
+rotation = 1.632
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints23" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(48.5713, 661.1)
+rotation = 1.632
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints24" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(32.5713, 638.1)
+rotation = 1.632
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints25" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(61.5713, 618.1)
+rotation = 1.632
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints26" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(94.5713, 588.1)
+rotation = 1.632
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints27" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(122.571, 570.1)
+rotation = 1.632
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints28" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(64.5713, 533.1)
+rotation = 0.00650251
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints29" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(36.5713, 527.1)
+rotation = 0.00650251
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints30" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(8.57128, 499.1)
+rotation = 0.00650251
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints31" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(-10.4287, 504.1)
+rotation = 0.00650251
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints32" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(16.5713, 481.1)
+rotation = 0.00650251
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints33" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(-0.428715, 457.1)
+rotation = 0.00650251
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints34" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(16.5713, 430.1)
+rotation = 0.00650251
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints35" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(51.5713, 427.1)
+rotation = 1.31376
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints36" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(68.5713, 388.1)
+rotation = 1.31376
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints37" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(102.571, 375.1)
+rotation = 1.31376
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints38" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(125.571, 368.1)
+rotation = 1.31376
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints39" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(109.571, 343.1)
+rotation = 1.31376
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints40" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(163.571, 325.1)
+rotation = 1.31376
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints41" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(191.571, 277.1)
+rotation = 1.31376
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints42" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(261.571, 208.1)
+rotation = 1.31376
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints43" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(249.571, 120.1)
+rotation = 1.31376
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints44" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(211.571, 86.1)
+rotation = -0.677832
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints45" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(175.571, 57.1)
+rotation = -0.677832
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints46" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(175.571, 57.1)
+rotation = -0.677832
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints47" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(164.571, 20.1)
+rotation = -0.677832
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints48" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(146.571, 41.1)
+rotation = -0.677832
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints49" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(197.571, 9.10001)
+rotation = -0.677832
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints50" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(161.571, -34.9)
+rotation = -0.677832
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints51" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(238.571, -69.9)
+rotation = -0.677832
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints52" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(200.571, -85.9)
+rotation = -0.677832
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints53" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(300.571, -68.9)
+rotation = -0.677832
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints54" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(330.571, -32.9)
+rotation = -0.677832
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints55" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(394.571, -47.9)
+rotation = -0.677832
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints56" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(451.571, -78.9)
+rotation = -0.677832
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints57" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(506.571, -105.9)
+rotation = -0.677832
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints58" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(419.571, -77.9)
+rotation = -0.677832
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints59" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(363.571, -59.9)
+rotation = -0.677832
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints60" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(189.571, -50.9)
+rotation = -0.677832
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints61" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(171.571, -55.9)
+rotation = -0.677832
+texture = ExtResource("6_o8xxx")
+
+[node name="LittlRatPrints62" type="Sprite2D" parent="earth"]
+modulate = Color(11.891, 0.38, 12.433, 0.07)
+z_index = -1
+z_as_relative = false
+position = Vector2(171.571, -55.9)
+rotation = -0.677832
+texture = ExtResource("6_o8xxx")
+
 [node name="flora" type="Node2D" parent="."]
 z_as_relative = false
 y_sort_enabled = true
@@ -1339,9 +1832,6 @@ position = Vector2(412.429, 177.9)
 
 [node name="Jed" parent="." instance=ExtResource("3_xwls6")]
 
-[node name="Blue_flowers" parent="." instance=ExtResource("4_4f2x1")]
-position = Vector2(240.429, 202.9)
-
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 position = Vector2(-4.57129, 273.9)
 color = Color(0.188235, 0.184314, 0.631373, 1)
@@ -1352,7 +1842,7 @@ collision_layer = 8
 collision_mask = 8
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-147, 853, -190, 843, -203, 819, -169, 795, -159, 768, -171, 734, -150, 691, -126, 641, -85, 640, -79, 556, -130, 477, -171, 452, -156, 413, -126, 405, -101, 364, -98, 340, -72, 328, -57, 295, -65, 268, -46, 246, -53, 208, -29, 170, 7, 166, 29, 157, 28, 125, 7, 57, -50, -12, -82, -36, -75.4287, -54.9, -78.4287, -68.9, -91.4287, -99.9, -141.429, -153.9, -161.429, -155.9, -173.429, -172.9, -161.429, -210.9, -173.429, -328.9, -201.967, -333.351, -225.429, -382.9, -192.429, -436.9, -177.429, -445.9, -185.429, -469.9, -165.429, -500.9, -112.429, -482.9, 23.5713, -445.9, 104.571, -458.9, 163.571, -400.9, 193.571, -401.9, 228.571, -361.9, 263.571, -339.9, 276.571, -309.9, 297.571, -301.9, 333.571, -291.9, 334.571, -264.9, 333.571, -219.9, 293.571, -178.9, 273.571, -151.9, 285.571, -131.9, 320.571, -141.9, 355.571, -152.9, 384.571, -173.9, 415.571, -202.9, 454.571, -214.9, 501.571, -216.9, 518.571, -220.9, 541.571, -204.9, 565.571, -185.9, 576.571, -145.9, 587.571, -125.9, 579.571, -107.9, 569.571, -70.9, 519.571, -38.9, 479, -45, 428, -24, 396, 44, 391, 98, 350, 139, 376, 179, 343, 205, 343, 246, 255.571, 199.1, 332, 330, 295, 351, 274, 396, 287, 432, 232, 449, 212, 485, 213, 541, 168, 597, 183, 665, 155, 684, 134, 752, 140, 803, 102, 840, 96, 888, 125, 922, 174, 926, 187, 981, 248, 990, 320, 992, 357, 1001, 386, 1007, 384, 1023, 393, 1037, 409, 1062, 387, 1071, 379, 1085, 359, 1146, 352, 1163, 345, 1177, 363, 1172, 477, 1106, 752, 39, 797, -182, 453, -500, -315.429, -541.9, -207, 15, -243, 905, -237, 1004, -168, 1205, 192, 1256, 357, 1238, 343, 1178, 302, 1187, 254, 1181, 220, 1152, 165, 1163, 131, 1193, 82, 1143, 10, 1164, -29, 1205, -54, 1123, -91, 1070, -152, 1013, -136, 956, -140, 881)
+polygon = PackedVector2Array(-147, 853, -190, 843, -203, 819, -169, 795, -159, 768, -171, 734, -150, 691, -126, 641, -85, 640, -79, 556, -130, 477, -171, 452, -156, 413, -126, 405, -101, 364, -98, 340, -72, 328, -57, 295, -65, 268, -46, 246, -53, 208, -29, 170, 7, 166, 29, 157, 28, 125, 7, 57, -50, -12, -82, -36, -75.4287, -54.9, -78.4287, -68.9, -91.4287, -99.9, -141.429, -153.9, -161.429, -155.9, -173.429, -172.9, -161.429, -210.9, -173.429, -328.9, -201.967, -333.351, -225.429, -382.9, -192.429, -436.9, -177.429, -445.9, -185.429, -469.9, -165.429, -500.9, -112.429, -482.9, 23.5713, -445.9, 104.571, -458.9, 163.571, -400.9, 193.571, -401.9, 228.571, -361.9, 263.571, -339.9, 276.571, -309.9, 297.571, -301.9, 333.571, -291.9, 334.571, -264.9, 333.571, -219.9, 293.571, -178.9, 273.571, -151.9, 285.571, -131.9, 320.571, -141.9, 355.571, -152.9, 384.571, -173.9, 415.571, -202.9, 454.571, -214.9, 501.571, -216.9, 518.571, -220.9, 541.571, -204.9, 565.571, -185.9, 576.571, -145.9, 587.571, -125.9, 579.571, -107.9, 569.571, -70.9, 519.571, -38.9, 479, -45, 428, -24, 396, 44, 392.571, 70.1, 375.571, 86.1, 351.571, 101.1, 356.571, 131.1, 372.571, 148.1, 379.571, 165.1, 376, 179, 350.571, 183.1, 343, 205, 356.571, 226.1, 353.571, 240.1, 340.571, 235.1, 301.571, 188.1, 283.571, 176.1, 261.571, 176.1, 223.571, 240.1, 272.571, 264.1, 325.571, 285.1, 321.571, 294.1, 313.571, 301.1, 332, 330, 295, 351, 274, 396, 287, 432, 232, 449, 212, 485, 213, 541, 168, 597, 183, 665, 155, 684, 134, 752, 140, 803, 102, 840, 96, 888, 125, 922, 174, 926, 187, 981, 248, 990, 320, 992, 357, 1001, 386, 1007, 384, 1023, 393, 1037, 409, 1062, 387, 1071, 379, 1085, 359, 1146, 352, 1163, 345, 1177, 363, 1172, 477, 1106, 752, 39, 797, -182, 453, -500, -315.429, -541.9, -207, 15, -243, 905, -237, 1004, -168, 1205, 192, 1256, 357, 1238, 343, 1178, 302, 1187, 254, 1181, 220, 1152, 165, 1163, 131, 1193, 82, 1143, 10, 1164, -29, 1205, -54, 1123, -91, 1070, -152, 1013, -136, 956, -140, 881)
 
 [node name="trees" type="Node2D" parent="."]
 z_as_relative = false
@@ -1732,10 +2222,8 @@ position = Vector2(-10, 1326)
 [connection signal="died" from="Jed" to="." method="_on_jed_died"]
 [connection signal="flame" from="Jed" to="." method="_on_jed_flame"]
 [connection signal="ghosted" from="Jed" to="." method="_on_jed_ghosted"]
-[connection signal="ghosting" from="Jed" to="." method="_on_jed_ghosting"]
 [connection signal="orchid_poison" from="Jed" to="." method="_on_jed_orchid_poison"]
 [connection signal="rocks_E" from="Jed" to="." method="_on_jed_rocks_e"]
 [connection signal="special_attack" from="Jed" to="." method="_on_jed_special_attack"]
 [connection signal="step" from="Jed" to="." method="_on_jed_step"]
 [connection signal="stomp" from="Jed" to="." method="_on_jed_stomp"]
-[connection signal="chick" from="Blue_flowers" to="." method="_on_blue_flowers_chick"]

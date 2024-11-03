@@ -1,16 +1,16 @@
 extends Node2D
 #@onready var level_anim = $level_animations
 @onready var Jed = $Jed
-@onready var blue_flower_anim = $Blue_flowers/AnimationPlayer
+#@onready var blue_flower_anim = $Blue_flowers/AnimationPlayer
 var ground_flame: PackedScene = preload('res://jed_main/rocks/ground_flame.tscn')
 # groups of enemies that sare instantiated according to how many chicks jed has with her
 
 #pink orb's "legs"
-@onready var right_front_leg: PackedScene = preload("res://enemies/entity/rightish_leg_front.tscn")
-@onready var left_front_leg: PackedScene = preload("res://enemies/entity/leftish_leg_front.tscn")
-@onready var right_back_leg: PackedScene = preload("res://enemies/entity/rightish_leg_back.tscn")
-@onready var left_back_leg: PackedScene = preload("res://enemies/entity/leftish_leg_back.tscn")
-@onready var Splatter = $pink_orb/splat
+#@onready var right_front_leg: PackedScene = preload("res://enemies/entity/rightish_leg_front.tscn")
+#@onready var left_front_leg: PackedScene = preload("res://enemies/entity/leftish_leg_front.tscn")
+#@onready var right_back_leg: PackedScene = preload("res://enemies/entity/rightish_leg_back.tscn")
+#@onready var left_back_leg: PackedScene = preload("res://enemies/entity/leftish_leg_back.tscn")
+#@onready var Splatter = $pink_orb/splat
 #group_one
 var enemies_plus_six_one: PackedScene = preload('res://enemies/groupings/group_one/enemies_plus_six_one.tscn')
 var enemies_plus_four_one: PackedScene = preload('res://enemies/groupings/group_one/enemies_plus_four_one.tscn')
@@ -19,7 +19,7 @@ var enemies_below_two_one: PackedScene = preload('res://enemies/groupings/group_
 #group_two
 var enemies_plus_four_two: PackedScene = preload('res://enemies/groupings/group_two/enemies_plus_four_two.tscn')
 var enemies_below_two_two: PackedScene = preload('res://enemies/groupings/group_two/enemies_below_two_two.tscn')
-var enemies_plux_six_two: PackedScene = preload('res://enemies/groupings/group_two/enemies_plus_six_two.tscn')
+var enemies_plus_six_two: PackedScene = preload('res://enemies/groupings/group_two/enemies_plus_six_two.tscn')
 #Jed's ability logic
 var rocks: PackedScene = preload("res://jed_main/rocks/throwing_rock.tscn")
 var pickup_rocks: PackedScene = preload("res://jed_main/rocks/rocks.tscn")
@@ -35,12 +35,14 @@ var ghost_jimmy_2 = preload("res://spirit_jimmys/ghost_jimmy_ver_two.tscn")
 var bullets = preload("res://spirit_jimmys/ghost_bullets.tscn")
 
 func _ready() -> void:
+	print(Levels.escape,'= levels escape')
+	Levels.escape = false
 	if Global.chick_counter <=6:
 		if AudioPlayer.oak_forest_chill_vibes == false:
 			AudioPlayer.oak_forest_chill_vibes = true
 			AudioPlayer.play_song()
-	if BlueFlowerCount.blue_flower_2:
-		blue_flower_anim.play("no_heal")
+	#if BlueFlowerCount.blue_flower_2:
+		#blue_flower_anim.play("no_heal")
 	PlayerData.death_in_sof_2 = false
 	Jed.position = Vector2(0,553)
 	enemies_two()
@@ -117,16 +119,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			Levels.in_sof = true
 			Levels._ready()
 
-func _on_blue_flowers_chick() -> void:
-	if BlueFlowerCount.blue_flower_2 == false:
-		Global.chick_counter = Global.chick_counter + 1
-		print(Global.chick_counter, "= Global chick counter")
-		BlueFlowerCount.blue_flower_2 = true
-	if Global.chick_counter <= 5:
-		var chicky = chick.instantiate()
-		chicky.global_position = $Blue_flowers.position
-		add_child(chicky)
-
 func enemies_one():
 	if Global.chick_counter <= 3:
 			var enemies = enemies_below_two_one.instantiate()
@@ -159,29 +151,29 @@ func enemies_two():
 			if AudioPlayer.deep_and_dark_it_is == false:
 				AudioPlayer.deep_and_dark_it_is = true
 				AudioPlayer.deep_and_dark_time.play('deep_and_dark')
-			var enemies = enemies_plux_six_two.instantiate()
+			var enemies = enemies_plus_six_two.instantiate()
 			enemies.position = $".".position
 			call_deferred('add_child', enemies)
 			
 
-func _on_pink_orb_left_back() -> void:
-	var left_backish = left_back_leg.instantiate()
-	left_backish.position = Splatter.global_position
-	call_deferred("add_child",left_backish)
+#func _on_pink_orb_left_back() -> void:
+	#var left_backish = left_back_leg.instantiate()
+	#left_backish.position = Splatter.global_position
+	#call_deferred("add_child",left_backish)
 
 
-func _on_pink_orb_left_front() -> void:
-	var left_frontish = left_front_leg.instantiate()
-	left_frontish.position = Splatter.global_position
-	call_deferred('add_child', left_frontish)
-	
-
-func _on_pink_orb_right_back() -> void:
-	var right_backish = right_back_leg.instantiate()
-	right_backish.position = Splatter.global_position
-	call_deferred('add_child',right_backish)
-	
-func _on_pink_orb_right_front() -> void:
-	var right_frontish = right_front_leg.instantiate()
-	right_frontish.position = Splatter.global_position
-	call_deferred('add_child',right_frontish)
+#func _on_pink_orb_left_front() -> void:
+	#var left_frontish = left_front_leg.instantiate()
+	#left_frontish.position = Splatter.global_position
+	#call_deferred('add_child', left_frontish)
+	#
+#
+#func _on_pink_orb_right_back() -> void:
+	#var right_backish = right_back_leg.instantiate()
+	#right_backish.position = Splatter.global_position
+	#call_deferred('add_child',right_backish)
+	#
+#func _on_pink_orb_right_front() -> void:
+	#var right_frontish = right_front_leg.instantiate()
+	#right_frontish.position = Splatter.global_position
+	#call_deferred('add_child',right_frontish)
