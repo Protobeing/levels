@@ -87,21 +87,15 @@ func _on_jed_flame():
 	add_child(flames)
 
 func _on_blue_flowers_chick():
-	if BlueFlowerCount.blue_flower_7 == false:
+	if BlueFlowerCount.southern_oak_forest:
+		BlueFlowerCount.southern_oak_forest = false
 		Global.chick_counter = Global.chick_counter + 1
 		if Global.chick_counter <= 5:
 			var chicky = chick.instantiate()
 			chicky.global_position = $blue_flowers/Blue_flowers.position
 			add_child(chicky)
-		BlueFlowerCount.blue_flower_7 = true
-func _on_blue_flowers_2_chick():
-	if BlueFlowerCount.blue_flower_8 == false:
-		Global.chick_counter = Global.chick_counter + 1
-		if Global.chick_counter <= 5:
-			var chicky = chick.instantiate()
-			chicky.global_position = $blue_flowers/Blue_flowers2.position
-			add_child(chicky)
-		BlueFlowerCount.blue_flower_8 = true
+		#BlueFlowerCount.blue_flower_7 = true
+
 
 
 

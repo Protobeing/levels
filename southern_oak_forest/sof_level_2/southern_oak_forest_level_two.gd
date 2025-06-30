@@ -34,17 +34,32 @@ var ghost_jimmy = preload("res://spirit_jimmys/ghost_jimmy.tscn")
 var ghost_jimmy_2 = preload("res://spirit_jimmys/ghost_jimmy_ver_two.tscn")
 var bullets = preload("res://spirit_jimmys/ghost_bullets.tscn")
 
+var boss_1: PackedScene = preload('res://enemies/groupings/boss_one/boss_one.tscn')
+var boss_2: PackedScene = preload('res://enemies/groupings/boss_two/boss_two.tscn')
+var boss_3: PackedScene = preload('res://enemies/groupings/boss_three/boss_three.tscn')
+var boss_4: PackedScene = preload('res://enemies/groupings/boss_four/boss_four.tscn')
+var boss_5: PackedScene = preload("res://enemies/groupings/boss_five/boss_five.tscn")
+
 func _ready() -> void:
-	print(Levels.escape,'= levels escape')
-	Levels.escape = false
-	if Global.chick_counter <=6:
+	if Levels.time_to_hunt == false:
 		if AudioPlayer.oak_forest_chill_vibes == false:
 			AudioPlayer.oak_forest_chill_vibes = true
 			AudioPlayer.play_song()
+	if Levels.time_to_hunt:
+		random_bosses()
+		if AudioPlayer.deep_and_dark_it_is == false:
+			AudioPlayer.deep_and_dark_it_is = true
+			AudioPlayer.deep_and_darker()
+	print(Levels.escaping,'= levels escape')
+	Levels.escaping = false
+	#if Global.chick_counter <=6:
+		#if AudioPlayer.oak_forest_chill_vibes == false:
+			#AudioPlayer.oak_forest_chill_vibes = true
+			#AudioPlayer.play_song()
 	#if BlueFlowerCount.blue_flower_2:
 		#blue_flower_anim.play("no_heal")
 	PlayerData.death_in_sof_2 = false
-	Jed.position = Vector2(0,553)
+	Jed.position = Vector2(30,572)
 	enemies_two()
 	Global.blue_flower_heal = true
 	if Global.chick_counter >= 1:
@@ -119,61 +134,67 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			Levels.in_sof = true
 			Levels._ready()
 
-func enemies_one():
-	if Global.chick_counter <= 3:
-			var enemies = enemies_below_two_one.instantiate()
-			enemies.position = $".".position
-			call_deferred('add_child', enemies)
-		
-	elif Global.chick_counter <= 6:
-		if Global.chick_counter > 3:
-			var enemies = enemies_plus_four_one.instantiate()
-			enemies.position = $".".position
-			call_deferred('add_child', enemies)
-		
-	elif Global.chick_counter <= 8:
-		if Global.chick_counter > 6:
-			var enemies = enemies_plus_six_one.instantiate()
-			enemies.position = $".".position
-			call_deferred('add_child', enemies)
 func enemies_two():
 	if Global.chick_counter <= 3:
 			var enemies = enemies_below_two_two.instantiate()
 			enemies.position = $".".position
 			call_deferred('add_child', enemies)
-	elif Global.chick_counter <= 6:
+	elif Global.chick_counter <= 7:
 		if Global.chick_counter > 3:
 			var enemies = enemies_plus_four_two.instantiate()
 			enemies.position = $".".position
 			call_deferred("add_child",enemies)
 	
-	elif Global.chick_counter >= 7:
-			if AudioPlayer.deep_and_dark_it_is == false:
-				AudioPlayer.deep_and_dark_it_is = true
-				AudioPlayer.deep_and_dark_time.play('deep_and_dark')
+	elif Global.chick_counter >= 8:
 			var enemies = enemies_plus_six_two.instantiate()
 			enemies.position = $".".position
 			call_deferred('add_child', enemies)
 			
 
-#func _on_pink_orb_left_back() -> void:
-	#var left_backish = left_back_leg.instantiate()
-	#left_backish.position = Splatter.global_position
-	#call_deferred("add_child",left_backish)
+func random_bosses():
+		randomize()
+		var rand_value = randi() % 5 # Generate a random number between 0 and 4
+		match rand_value:
+			0:
+				boss_four()
 
+			1:
+				boss_three()
+		
 
-#func _on_pink_orb_left_front() -> void:
-	#var left_frontish = left_front_leg.instantiate()
-	#left_frontish.position = Splatter.global_position
-	#call_deferred('add_child', left_frontish)
-	#
+			2:
+				boss_five()
+
+			3:
+				boss_one()
+			4:
+				boss_two()
+			#5:
 #
-#func _on_pink_orb_right_back() -> void:
-	#var right_backish = right_back_leg.instantiate()
-	#right_backish.position = Splatter.global_position
-	#call_deferred('add_child',right_backish)
-	#
-#func _on_pink_orb_right_front() -> void:
-	#var right_frontish = right_front_leg.instantiate()
-	#right_frontish.position = Splatter.global_position
-	#call_deferred('add_child',right_frontish)
+			#6:
+#
+			#7:
+#
+			#8:
+#
+			#9:
+func boss_one():
+	var boss = boss_1.instantiate()
+	boss.position = $boss_marker.global_position
+	call_deferred('add_child',boss)
+func boss_two():
+	var boss = boss_2.instantiate()
+	boss.position = $boss_marker.global_position
+	call_deferred('add_child',boss)
+func boss_three():
+	var boss = boss_3.instantiate()
+	boss.position = $boss_marker.global_position
+	call_deferred('add_child',boss)
+func boss_four():
+	var boss = boss_4.instantiate()
+	boss.position = $boss_marker.global_position
+	call_deferred('add_child',boss)
+func boss_five():
+	var boss = boss_5.instantiate()
+	boss.position = $boss_marker.global_position
+	call_deferred('add_child',boss)

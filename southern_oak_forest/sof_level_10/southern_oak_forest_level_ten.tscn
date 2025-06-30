@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dv4kodqkny5ay"]
+[gd_scene load_steps=28 format=3 uid="uid://dv4kodqkny5ay"]
 
 [ext_resource type="Script" path="res://levels/southern_oak_forest/sof_level_10/southern_oak_forest_level_ten.gd" id="1_157hd"]
 [ext_resource type="Texture2D" uid="uid://cpv1khm8fjn0y" path="res://earth/earth_4.png" id="2_5ndbo"]
@@ -18,11 +18,10 @@
 [ext_resource type="Texture2D" uid="uid://r4tfro6r1u6a" path="res://grass_5.png" id="12_0j34y"]
 [ext_resource type="AudioStream" uid="uid://cyk3f4hlbpuc6" path="res://level_music/forest_sounds.mp3" id="12_fmbjp"]
 [ext_resource type="PackedScene" uid="uid://bc5yoiyioi3cr" path="res://earth/purple_night_grass.tscn" id="13_y0d3i"]
-[ext_resource type="Texture2D" uid="uid://bqqkuf376qauv" path="res://sky/cloud_2.png" id="20_2v10n"]
-[ext_resource type="Texture2D" uid="uid://k1tqe0b7w057" path="res://sky/cloud_1.png" id="21_vlctq"]
 [ext_resource type="PackedScene" uid="uid://dgjv1dn81bnaf" path="res://enemies/zombie_rat/zombie_rat.tscn" id="22_qo123"]
 [ext_resource type="PackedScene" uid="uid://bl2p3j8ekcctv" path="res://trees/oaks/brush_trees_one.tscn" id="23_y4qa8"]
 [ext_resource type="PackedScene" uid="uid://dvlb3f38eus4v" path="res://jed_main/rocks/rocks.tscn" id="24_tve15"]
+[ext_resource type="PackedScene" uid="uid://c1nrp2h7xsv6q" path="res://enemies/entity/escape_path.tscn" id="25_16hq4"]
 [ext_resource type="PackedScene" uid="uid://7qiu8l2nl068" path="res://drops/grub/grub.tscn" id="25_ilci1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2h3v4"]
@@ -44,44 +43,6 @@ _data = {
 "points": PackedVector2Array(-39.7299, 3.70812, 39.7299, -3.70812, 115, -105, 0, 0, 0, 0, 271, -187, 132.963, -33.3731, -132.963, 33.3731, 188, -185, -9.53517, -21.1893, 9.53517, 21.1893, 23, -110, 0, 0, 0, 0, 115, -105)
 }
 point_count = 5
-
-[sub_resource type="Animation" id="Animation_i2ke4"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:follow_viewport_scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.0]
-}
-
-[sub_resource type="Animation" id="Animation_s5jj7"]
-resource_name = "fog_undulates"
-length = 20.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:follow_viewport_scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 12.1667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [1.0, 1.1]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_yq2mg"]
-_data = {
-"RESET": SubResource("Animation_i2ke4"),
-"fog_undulates": SubResource("Animation_s5jj7")
-}
 
 [node name="southern_oak_forest_level_ten" type="Node2D"]
 z_as_relative = false
@@ -909,6 +870,130 @@ texture = ExtResource("4_mig3r")
 position = Vector2(-537, -90)
 texture = ExtResource("4_mig3r")
 
+[node name="SmallEarthPlot22" type="Sprite2D" parent="earth"]
+position = Vector2(-734, -69)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot23" type="Sprite2D" parent="earth"]
+position = Vector2(-838, -82)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot24" type="Sprite2D" parent="earth"]
+position = Vector2(-917, -121)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot25" type="Sprite2D" parent="earth"]
+position = Vector2(-1058, 45)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot26" type="Sprite2D" parent="earth"]
+position = Vector2(-733, 62)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot27" type="Sprite2D" parent="earth"]
+position = Vector2(-1217, 22)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot28" type="Sprite2D" parent="earth"]
+position = Vector2(-1391, 7)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot29" type="Sprite2D" parent="earth"]
+position = Vector2(-1477, -40)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot30" type="Sprite2D" parent="earth"]
+position = Vector2(-1529, -99)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot31" type="Sprite2D" parent="earth"]
+position = Vector2(-1532, -177)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot32" type="Sprite2D" parent="earth"]
+position = Vector2(-1484, -281)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot33" type="Sprite2D" parent="earth"]
+position = Vector2(159, -435)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot34" type="Sprite2D" parent="earth"]
+position = Vector2(362, -349)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot35" type="Sprite2D" parent="earth"]
+position = Vector2(320, -256)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot36" type="Sprite2D" parent="earth"]
+position = Vector2(364, -159)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot37" type="Sprite2D" parent="earth"]
+position = Vector2(380, -52)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot38" type="Sprite2D" parent="earth"]
+position = Vector2(343, 23)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot39" type="Sprite2D" parent="earth"]
+position = Vector2(348, 124)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot40" type="Sprite2D" parent="earth"]
+position = Vector2(330, 236)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot41" type="Sprite2D" parent="earth"]
+position = Vector2(302, 338)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot42" type="Sprite2D" parent="earth"]
+position = Vector2(278, 419)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot43" type="Sprite2D" parent="earth"]
+position = Vector2(190, 525)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot44" type="Sprite2D" parent="earth"]
+position = Vector2(16, 546)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot45" type="Sprite2D" parent="earth"]
+position = Vector2(-141, 565)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot46" type="Sprite2D" parent="earth"]
+position = Vector2(-235, 616)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot47" type="Sprite2D" parent="earth"]
+position = Vector2(-296, 553)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot48" type="Sprite2D" parent="earth"]
+position = Vector2(-362, 556)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot49" type="Sprite2D" parent="earth"]
+position = Vector2(-356, 191)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot50" type="Sprite2D" parent="earth"]
+position = Vector2(-368, 88)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot51" type="Sprite2D" parent="earth"]
+position = Vector2(-458, 70)
+texture = ExtResource("4_mig3r")
+
+[node name="SmallEarthPlot52" type="Sprite2D" parent="earth"]
+position = Vector2(-458, 70)
+texture = ExtResource("4_mig3r")
+
 [node name="flora" type="Node2D" parent="."]
 z_as_relative = false
 y_sort_enabled = true
@@ -966,6 +1051,36 @@ position = Vector2(-271, 129)
 
 [node name="brush_trees_one18" parent="flora" instance=ExtResource("3_3os2u")]
 position = Vector2(-271, 129)
+
+[node name="brush_trees_one19" parent="flora" instance=ExtResource("3_3os2u")]
+position = Vector2(324, -149)
+
+[node name="brush_trees_one20" parent="flora" instance=ExtResource("3_3os2u")]
+position = Vector2(263, -259)
+
+[node name="brush_trees_one21" parent="flora" instance=ExtResource("3_3os2u")]
+position = Vector2(85, -358)
+
+[node name="brush_trees_one22" parent="flora" instance=ExtResource("3_3os2u")]
+position = Vector2(15, -434)
+
+[node name="brush_trees_one23" parent="flora" instance=ExtResource("3_3os2u")]
+position = Vector2(375, -19)
+
+[node name="brush_trees_one24" parent="flora" instance=ExtResource("3_3os2u")]
+position = Vector2(318, 193)
+
+[node name="brush_trees_one25" parent="flora" instance=ExtResource("3_3os2u")]
+position = Vector2(369, 328)
+
+[node name="brush_trees_one26" parent="flora" instance=ExtResource("3_3os2u")]
+position = Vector2(267, 392)
+
+[node name="brush_trees_one27" parent="flora" instance=ExtResource("3_3os2u")]
+position = Vector2(335, 214)
+
+[node name="brush_trees_one28" parent="flora" instance=ExtResource("3_3os2u")]
+position = Vector2(335, 214)
 
 [node name="fern_collection_two" parent="flora" instance=ExtResource("4_tpk08")]
 position = Vector2(-296, 25)
@@ -1304,216 +1419,6 @@ stream = ExtResource("12_fmbjp")
 volume_db = 8.083
 autoplay = true
 
-[node name="sky" type="CanvasLayer" parent="."]
-layer = 2
-follow_viewport_enabled = true
-follow_viewport_scale = 1.1
-
-[node name="Cloud2" type="Sprite2D" parent="sky"]
-position = Vector2(-1428, 402)
-texture = ExtResource("20_2v10n")
-
-[node name="Cloud25" type="Sprite2D" parent="sky"]
-position = Vector2(-1744, -352)
-texture = ExtResource("20_2v10n")
-
-[node name="Cloud26" type="Sprite2D" parent="sky"]
-position = Vector2(-1036, -553)
-texture = ExtResource("20_2v10n")
-
-[node name="Cloud1" type="Sprite2D" parent="sky"]
-position = Vector2(-1746, 191)
-texture = ExtResource("21_vlctq")
-
-[node name="Cloud3" type="Sprite2D" parent="sky"]
-position = Vector2(-2008, 55)
-texture = ExtResource("21_vlctq")
-
-[node name="Cloud4" type="Sprite2D" parent="sky"]
-position = Vector2(-1960, -124)
-texture = ExtResource("21_vlctq")
-
-[node name="Cloud5" type="Sprite2D" parent="sky"]
-position = Vector2(-1840, 76)
-texture = ExtResource("21_vlctq")
-
-[node name="Cloud6" type="Sprite2D" parent="sky"]
-position = Vector2(-1098, 212)
-texture = ExtResource("21_vlctq")
-
-[node name="Cloud7" type="Sprite2D" parent="sky"]
-position = Vector2(-911, 196)
-texture = ExtResource("21_vlctq")
-
-[node name="Cloud8" type="Sprite2D" parent="sky"]
-position = Vector2(-655, 140)
-texture = ExtResource("21_vlctq")
-
-[node name="Cloud9" type="Sprite2D" parent="sky"]
-position = Vector2(-823, 306)
-texture = ExtResource("21_vlctq")
-
-[node name="Cloud10" type="Sprite2D" parent="sky"]
-position = Vector2(-1202, -439)
-texture = ExtResource("21_vlctq")
-
-[node name="Cloud11" type="Sprite2D" parent="sky"]
-position = Vector2(-673, -617)
-texture = ExtResource("21_vlctq")
-
-[node name="Cloud12" type="Sprite2D" parent="sky"]
-position = Vector2(-812, -484)
-texture = ExtResource("21_vlctq")
-
-[node name="Cloud13" type="Sprite2D" parent="sky"]
-position = Vector2(-38, -695)
-texture = ExtResource("21_vlctq")
-
-[node name="Cloud14" type="Sprite2D" parent="sky"]
-position = Vector2(219, -557)
-texture = ExtResource("21_vlctq")
-
-[node name="Cloud15" type="Sprite2D" parent="sky"]
-position = Vector2(371, -432)
-texture = ExtResource("21_vlctq")
-
-[node name="Cloud16" type="Sprite2D" parent="sky"]
-position = Vector2(570, -266)
-texture = ExtResource("21_vlctq")
-
-[node name="Cloud17" type="Sprite2D" parent="sky"]
-position = Vector2(570, -266)
-texture = ExtResource("21_vlctq")
-
-[node name="Cloud18" type="Sprite2D" parent="sky"]
-position = Vector2(598, 113)
-texture = ExtResource("20_2v10n")
-
-[node name="Cloud19" type="Sprite2D" parent="sky"]
-position = Vector2(443, 543)
-texture = ExtResource("20_2v10n")
-
-[node name="Cloud20" type="Sprite2D" parent="sky"]
-position = Vector2(75, 802)
-texture = ExtResource("20_2v10n")
-
-[node name="Cloud21" type="Sprite2D" parent="sky"]
-position = Vector2(-328, 818)
-texture = ExtResource("20_2v10n")
-
-[node name="Cloud22" type="Sprite2D" parent="sky"]
-position = Vector2(-699, 671)
-texture = ExtResource("20_2v10n")
-
-[node name="Cloud23" type="Sprite2D" parent="sky"]
-position = Vector2(-867, -380)
-texture = ExtResource("20_2v10n")
-
-[node name="Cloud24" type="Sprite2D" parent="sky"]
-position = Vector2(-699, -389)
-texture = ExtResource("20_2v10n")
-
-[node name="CanvasModulate" type="CanvasModulate" parent="sky"]
-color = Color(0.666667, 0.662745, 0.478431, 1)
-
-[node name="fog" type="CanvasLayer" parent="."]
-follow_viewport_enabled = true
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="fog"]
-libraries = {
-"": SubResource("AnimationLibrary_yq2mg")
-}
-autoplay = "fog_undulates"
-
-[node name="Cloud2" type="Sprite2D" parent="fog"]
-position = Vector2(517, 226)
-texture = ExtResource("20_2v10n")
-
-[node name="Cloud3" type="Sprite2D" parent="fog"]
-position = Vector2(475, -323)
-rotation = -0.712548
-texture = ExtResource("20_2v10n")
-
-[node name="Cloud4" type="Sprite2D" parent="fog"]
-position = Vector2(173, -625)
-rotation = -1.18654
-texture = ExtResource("20_2v10n")
-
-[node name="Cloud5" type="Sprite2D" parent="fog"]
-position = Vector2(-429, -814)
-rotation = -1.18654
-texture = ExtResource("20_2v10n")
-
-[node name="Cloud6" type="Sprite2D" parent="fog"]
-position = Vector2(-664, -405)
-rotation = -1.63015
-texture = ExtResource("20_2v10n")
-
-[node name="Cloud7" type="Sprite2D" parent="fog"]
-position = Vector2(-833, -389)
-rotation = -1.63015
-texture = ExtResource("20_2v10n")
-
-[node name="Cloud8" type="Sprite2D" parent="fog"]
-position = Vector2(-1323, -593)
-rotation = 1.19415
-texture = ExtResource("20_2v10n")
-
-[node name="Cloud9" type="Sprite2D" parent="fog"]
-position = Vector2(-1843, -315)
-rotation = 1.19415
-texture = ExtResource("20_2v10n")
-
-[node name="Cloud10" type="Sprite2D" parent="fog"]
-position = Vector2(-1829, -43)
-rotation = 1.19415
-texture = ExtResource("20_2v10n")
-
-[node name="Cloud11" type="Sprite2D" parent="fog"]
-position = Vector2(-1358, 287)
-rotation = 1.19415
-texture = ExtResource("20_2v10n")
-
-[node name="Cloud12" type="Sprite2D" parent="fog"]
-position = Vector2(-957, 292)
-rotation = 1.19415
-texture = ExtResource("20_2v10n")
-
-[node name="Cloud1" type="Sprite2D" parent="fog"]
-position = Vector2(-691, 118)
-rotation = 2.92524
-texture = ExtResource("21_vlctq")
-
-[node name="Cloud13" type="Sprite2D" parent="fog"]
-position = Vector2(-535, 142)
-rotation = 2.84042
-texture = ExtResource("21_vlctq")
-
-[node name="Cloud14" type="Sprite2D" parent="fog"]
-position = Vector2(-701, 296)
-rotation = 2.84042
-texture = ExtResource("21_vlctq")
-
-[node name="Cloud15" type="Sprite2D" parent="fog"]
-position = Vector2(-759, 494)
-rotation = 2.84042
-texture = ExtResource("21_vlctq")
-
-[node name="Cloud16" type="Sprite2D" parent="fog"]
-position = Vector2(-432, 787)
-texture = ExtResource("20_2v10n")
-
-[node name="Cloud17" type="Sprite2D" parent="fog"]
-position = Vector2(8, 773)
-texture = ExtResource("20_2v10n")
-
-[node name="Cloud18" type="Sprite2D" parent="fog"]
-position = Vector2(382, 605)
-texture = ExtResource("20_2v10n")
-
-[node name="CanvasModulate" type="CanvasModulate" parent="fog"]
-color = Color(0.772549, 1, 1, 0.172549)
-
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
@@ -1585,6 +1490,13 @@ position = Vector2(-1316, -149)
 
 [node name="grub8" parent="." instance=ExtResource("25_ilci1")]
 position = Vector2(-1393, -112)
+
+[node name="boss_marker" type="Marker2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+
+[node name="escape_path" parent="." instance=ExtResource("25_16hq4")]
+position = Vector2(-304, -688)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="died" from="Jed" to="." method="_on_jed_died"]

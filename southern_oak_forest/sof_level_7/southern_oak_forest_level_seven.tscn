@@ -1,9 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://dki8t78tyxm84"]
+[gd_scene load_steps=23 format=3 uid="uid://dki8t78tyxm84"]
 
 [ext_resource type="Script" path="res://levels/southern_oak_forest/sof_level_7/southern_oak_forest_level_seven.gd" id="1_ou71u"]
 [ext_resource type="PackedScene" uid="uid://bqx7ywwfn6evp" path="res://gateways/small_opening_east.tscn" id="2_7bhrn"]
 [ext_resource type="PackedScene" uid="uid://b3yigva0cskfh" path="res://obstacles/rocks/big_rock.tscn" id="2_tpija"]
-[ext_resource type="Texture2D" uid="uid://bqqkuf376qauv" path="res://sky/cloud_2.png" id="2_wmqvq"]
 [ext_resource type="Script" path="res://levels/southern_oak_forest/sof_level_7/path_follow_2d_raccon_in_bush_lvl_7.gd" id="3_8e6kw"]
 [ext_resource type="PackedScene" uid="uid://dk36j2m4w8f7k" path="res://levels/test/flora/ferns/fern_collection_two.tscn" id="3_bwe3g"]
 [ext_resource type="PackedScene" uid="uid://dk7g834rkrfwy" path="res://jed_main/Jed.tscn" id="3_xwls6"]
@@ -18,49 +17,12 @@
 [ext_resource type="PackedScene" uid="uid://dgjv1dn81bnaf" path="res://enemies/zombie_rat/zombie_rat.tscn" id="16_a2igh"]
 [ext_resource type="PackedScene" uid="uid://dvlb3f38eus4v" path="res://jed_main/rocks/rocks.tscn" id="17_yeth5"]
 [ext_resource type="PackedScene" uid="uid://7qiu8l2nl068" path="res://drops/grub/grub.tscn" id="18_d47f1"]
+[ext_resource type="PackedScene" uid="uid://c1nrp2h7xsv6q" path="res://enemies/entity/escape_path.tscn" id="19_ubjsu"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ou50p"]
 vertices = PackedVector2Array(-218.961, -224.969, -224.297, -121.477, -236.82, -183.5, -239.25, -222.313, -260.438, -144.531, 502.797, -936.656, 466.5, -716.906, 388.93, -608.898, 248.75, -417.289, 49.1016, -669.094, 44.5469, -699.797, 234.258, -1013.83, 479.258, -1036.24, -216.063, -399.688, -214.867, -442.617, -187.773, -464.867, -181, -427.117, -181, -396.18, -185.703, -376.438, 44.6094, -634.352, -16.9766, -435.906, 25.8438, -606.82, 202.891, -227.742, -18.0234, -385.852, -25.4297, -477.102, -45.5938, -521.68, -15.6484, -600.094, -39.5703, -597.43, -71.3828, -548.594, 98.4609, -1428.66, 162.609, -1410.93, 20.75, -1197.17, -28.6172, -336.023, -229.906, -369.461, -194.469, -346.219, -205.742, -316.523, 27.4531, -724.219, 217.023, -1016.48, -83.3203, -107.813, -61.3594, -287.406, 216.938, -74.1406, 206.508, 12.1172, 103.141, 106.883, -92.2969, 153.789, -101.156, -76.2266, -190.977, -101.742, -253.008, 125.539, -443.648, -12.2969, -295.844, -133.906, -349.289, -137.25, -504.148, -178.18, -379.453, -166.289, -404.117, -198.008, -520.906, -359.609, -388.547, -247.133, -233.25, -669.828, -72.3594, -671.172, -65.4297, -631.906, -239.172, -633.133, 198.172, -1033.98, -15.6719, -740.992, 27.2266, -1186.35, -261.641, -571.781, -196.391, -499.328, -246.313, -468.453, -263.859, -486, -298.258, -566.727, -246.539, -599.469, -112.961, -563.898, -154.719, -566.156, -275.469, -259.633, -251.57, -364.047, -180.453, -549.438, -294.531, -486, -326.391, -366.203, -350.656, -274.992, -350.297, -382.563, -81.9063, -1531.44, 25.5078, -1475.26, -394.273, -1062.24, -417.094, -1165.98, -220.906, -1563.97, -329.563, -579.25, -328.352, -475.43, -476.203, -617.992, -510.344, -1300.47, -417.398, -1576.43, -310.57, -696.906, -430.156, -824.156, -267.539, -700.297, -314.359, -287.094, -278.133, -362.992, -355.773, -397.602, -360.219, -430.969, -348.023, -467.563, -346.609, -619.039, -354.406, -659.141, -341.18, -689.563, -50.8438, -722.148, 195.289, -1054.13, 87.7734, -1192.06, 203.773, -1075.33, 115.461, -1202.03, 233.477, -1088.94, 174.469, -1248.03, 210.523, -1260.97, 270.719, -1263.75, 310.789, -1236.75, 319.688, -1201.17, 323.367, -1162.53, 284.148, -1087.95, 298.422, -1104.95, 292.039, -1092.2)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 2, 1), PackedInt32Array(5, 6, 7, 8, 9, 10, 11, 12), PackedInt32Array(13, 14, 15, 16, 17, 18), PackedInt32Array(19, 9, 8), PackedInt32Array(20, 21, 19, 8, 22, 23), PackedInt32Array(21, 20, 24), PackedInt32Array(21, 24, 25, 26), PackedInt32Array(27, 26, 25, 28), PackedInt32Array(29, 30, 31), PackedInt32Array(32, 23, 22), PackedInt32Array(33, 13, 18, 34, 35), PackedInt32Array(11, 10, 36, 37), PackedInt32Array(38, 39, 32, 22, 40, 41, 42, 43), PackedInt32Array(44, 38, 43), PackedInt32Array(45, 44, 43, 46, 47), PackedInt32Array(1, 45, 47), PackedInt32Array(4, 1, 47, 48), PackedInt32Array(49, 48, 47), PackedInt32Array(49, 47, 50, 51), PackedInt32Array(52, 51, 50), PackedInt32Array(52, 50, 53, 54), PackedInt32Array(55, 56, 57, 58), PackedInt32Array(59, 37, 36, 60, 61), PackedInt32Array(62, 63, 15, 14, 64, 65, 66), PackedInt32Array(67, 58, 57, 27, 68, 69), PackedInt32Array(3, 70, 71, 33, 35, 0), PackedInt32Array(27, 28, 68), PackedInt32Array(67, 69, 72, 62), PackedInt32Array(62, 72, 63), PackedInt32Array(66, 65, 73), PackedInt32Array(74, 75, 54, 53, 76), PackedInt32Array(77, 78, 29, 31, 79, 80, 81), PackedInt32Array(82, 66, 73, 83, 84), PackedInt32Array(85, 86, 81, 80), PackedInt32Array(87, 88, 79, 31, 61, 89), PackedInt32Array(71, 70, 90, 91), PackedInt32Array(74, 91, 90, 75), PackedInt32Array(76, 53, 84, 92), PackedInt32Array(93, 92, 84), PackedInt32Array(94, 93, 84), PackedInt32Array(83, 94, 84), PackedInt32Array(95, 82, 84), PackedInt32Array(95, 84, 88, 96), PackedInt32Array(97, 96, 88), PackedInt32Array(87, 97, 88), PackedInt32Array(61, 98, 56, 55, 89), PackedInt32Array(60, 98, 61), PackedInt32Array(99, 59, 61, 100), PackedInt32Array(101, 99, 100, 102), PackedInt32Array(103, 101, 102, 104, 105, 106, 107, 108, 109), PackedInt32Array(110, 103, 109, 111, 112)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(108, 116, -92, 164, -257, 135, -452, -6, -514, -176, -531, -360, -486, -620, -440, -826, -404.429, -1061.9, -426.429, -1161.9, -521.429, -1298.9, -424.429, -1586.9, -219.429, -1573.9, -78.4287, -1540.9, 30.5713, -1483.9, 102.571, -1437.9, 178.571, -1416.9, 32.571, -1196.9, 85.571, -1201.9, 110.571, -1210.9, 169.571, -1256.9, 208.571, -1270.9, 273.571, -1273.9, 319.571, -1242.9, 329.571, -1202.9, 333.571, -1160.9, 307.571, -1100.9, 299.571, -1084.9, 286.571, -1077.9, 235.571, -1078.9, 211.571, -1067.9, 205.571, -1052.9, 207.571, -1038.9, 221.571, -1025.9, 234.571, -1023.9, 487, -1047, 513, -937, 476, -713, 397, -603, 258, -413, 213, -227, 227, -74, 216, 17), PackedVector2Array(-342, -389, -323, -376, -278, -373, -253, -374, -237, -378, -226, -402, -225, -438, -253, -461, -268, -476, -293, -476, -325, -466, -340, -460, -350, -430, -346, -400), PackedVector2Array(-172, -543, -186, -499, -178, -467, -171, -428, -171, -395, -176, -374, -185, -343, -196, -314, -209, -224, -214, -127, -187, -111, -106, -88, -93, -111, -71, -291, -38, -340, -28, -387, -27, -435, -35, -474, -54, -516, -77, -540, -115, -554, -152, -556), PackedVector2Array(-316, -276, -346, -266, -380, -241, -393, -200, -372, -173, -345, -147, -297, -144, -267, -153, -247, -186, -249, -218, -282, -252), PackedVector2Array(-309, -687, -334, -681, -344, -658, -337, -622, -322, -587, -297, -577, -268, -581, -256, -603, -249, -635, -244, -666, -271, -690), PackedVector2Array(-15, -730, -43, -715, -62, -670, -56, -636, -35, -608, -17, -610, 20, -616, 35, -638, 39, -669, 35, -696, 21, -716)])
-
-[sub_resource type="Animation" id="Animation_hkyub"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:transform")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Transform2D(1, 0, 0, 1, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_qqleg"]
-resource_name = "undulating_fog"
-length = 20.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:transform")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 10.7884),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1.1, 0, 0, 1.1, 0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_orrjt"]
-_data = {
-"RESET": SubResource("Animation_hkyub"),
-"undulating_fog": SubResource("Animation_qqleg")
-}
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vbh83"]
 radius = 102.591
@@ -385,131 +347,6 @@ scale = Vector2(1.1, 1.1)
 position = Vector2(243.429, 1330.9)
 navigation_polygon = SubResource("NavigationPolygon_ou50p")
 
-[node name="fog" type="CanvasLayer" parent="."]
-follow_viewport_enabled = true
-
-[node name="Cloud2" type="Sprite2D" parent="fog"]
-position = Vector2(-275.571, 564.9)
-texture = ExtResource("2_wmqvq")
-
-[node name="Cloud3" type="Sprite2D" parent="fog"]
-position = Vector2(-339, 249)
-texture = ExtResource("2_wmqvq")
-
-[node name="Cloud4" type="Sprite2D" parent="fog"]
-position = Vector2(70, -351)
-texture = ExtResource("2_wmqvq")
-
-[node name="Cloud5" type="Sprite2D" parent="fog"]
-position = Vector2(617, -144)
-texture = ExtResource("2_wmqvq")
-
-[node name="Cloud6" type="Sprite2D" parent="fog"]
-position = Vector2(940.429, 62.9)
-texture = ExtResource("2_wmqvq")
-
-[node name="Cloud7" type="Sprite2D" parent="fog"]
-position = Vector2(501, 557)
-texture = ExtResource("2_wmqvq")
-
-[node name="Cloud8" type="Sprite2D" parent="fog"]
-position = Vector2(392, 950)
-rotation = 1.26321
-texture = ExtResource("2_wmqvq")
-
-[node name="Cloud9" type="Sprite2D" parent="fog"]
-position = Vector2(556, 1111)
-rotation = 3.82495
-texture = ExtResource("2_wmqvq")
-
-[node name="Cloud10" type="Sprite2D" parent="fog"]
-position = Vector2(-116, 1602)
-rotation = 3.82495
-texture = ExtResource("2_wmqvq")
-
-[node name="Cloud11" type="Sprite2D" parent="fog"]
-position = Vector2(-432, 968)
-rotation = 3.82495
-texture = ExtResource("2_wmqvq")
-
-[node name="CanvasModulate" type="CanvasModulate" parent="fog"]
-position = Vector2(-4.57129, 273.9)
-color = Color(0.772549, 1, 1, 0.172549)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="fog"]
-libraries = {
-"": SubResource("AnimationLibrary_orrjt")
-}
-autoplay = "undulating_fog"
-
-[node name="sky" type="CanvasLayer" parent="."]
-follow_viewport_enabled = true
-follow_viewport_scale = 1.1
-
-[node name="Cloud2" type="Sprite2D" parent="sky"]
-position = Vector2(431.844, 1000)
-texture = ExtResource("2_wmqvq")
-
-[node name="Cloud3" type="Sprite2D" parent="sky"]
-position = Vector2(657.844, 1397)
-texture = ExtResource("2_wmqvq")
-
-[node name="Cloud4" type="Sprite2D" parent="sky"]
-position = Vector2(-383.156, 1434)
-texture = ExtResource("2_wmqvq")
-
-[node name="Cloud5" type="Sprite2D" parent="sky"]
-position = Vector2(50.8443, 1768)
-texture = ExtResource("2_wmqvq")
-
-[node name="Cloud6" type="Sprite2D" parent="sky"]
-position = Vector2(480.844, 1749)
-texture = ExtResource("2_wmqvq")
-
-[node name="Cloud7" type="Sprite2D" parent="sky"]
-position = Vector2(-413.156, 860)
-texture = ExtResource("2_wmqvq")
-
-[node name="Cloud8" type="Sprite2D" parent="sky"]
-position = Vector2(622.844, 524)
-texture = ExtResource("2_wmqvq")
-
-[node name="Cloud9" type="Sprite2D" parent="sky"]
-position = Vector2(380.909, -368.182)
-texture = ExtResource("2_wmqvq")
-
-[node name="Cloud10" type="Sprite2D" parent="sky"]
-position = Vector2(-409.091, 260)
-texture = ExtResource("2_wmqvq")
-
-[node name="Cloud15" type="Sprite2D" parent="sky"]
-position = Vector2(-428.182, -322.727)
-texture = ExtResource("2_wmqvq")
-
-[node name="Cloud16" type="Sprite2D" parent="sky"]
-position = Vector2(594.935, -206.455)
-texture = ExtResource("2_wmqvq")
-
-[node name="Cloud11" type="Sprite2D" parent="sky"]
-position = Vector2(1082.84, -54)
-texture = ExtResource("2_wmqvq")
-
-[node name="Cloud12" type="Sprite2D" parent="sky"]
-position = Vector2(1048.84, 414)
-texture = ExtResource("2_wmqvq")
-
-[node name="Cloud13" type="Sprite2D" parent="sky"]
-position = Vector2(871.844, -490)
-texture = ExtResource("2_wmqvq")
-
-[node name="Cloud14" type="Sprite2D" parent="sky"]
-position = Vector2(120.909, -412.727)
-texture = ExtResource("2_wmqvq")
-
-[node name="CanvasModulate" type="CanvasModulate" parent="sky"]
-position = Vector2(-4.15572, 249)
-color = Color(0.666667, 0.662745, 0.478431, 1)
-
 [node name="exit" type="Area2D" parent="."]
 position = Vector2(545, 136)
 
@@ -517,7 +354,7 @@ position = Vector2(545, 136)
 shape = SubResource("CircleShape2D_vbh83")
 
 [node name="earth" type="Node2D" parent="."]
-z_index = -1
+z_index = -2
 position = Vector2(-4.57129, 273.9)
 
 [node name="Earth7" type="Sprite2D" parent="earth"]
@@ -2217,6 +2054,17 @@ position = Vector2(65, 953)
 
 [node name="grub4" parent="." instance=ExtResource("18_d47f1")]
 position = Vector2(-10, 1326)
+
+[node name="boss_marker" type="Marker2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+
+[node name="escape_path" parent="." instance=ExtResource("19_ubjsu")]
+position = Vector2(854, 74)
+
+[node name="small_opening_east2" parent="." instance=ExtResource("2_7bhrn")]
+position = Vector2(203, 1373)
+rotation = 0.397537
 
 [connection signal="body_entered" from="exit" to="." method="_on_exit_body_entered"]
 [connection signal="died" from="Jed" to="." method="_on_jed_died"]

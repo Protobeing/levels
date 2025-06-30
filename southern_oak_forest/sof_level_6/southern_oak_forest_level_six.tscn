@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://yrquolbxk4eb"]
+[gd_scene load_steps=27 format=3 uid="uid://yrquolbxk4eb"]
 
 [ext_resource type="Script" path="res://levels/southern_oak_forest/sof_level_6/southern_oak_forest_level_six.gd" id="1_oh438"]
 [ext_resource type="Texture2D" uid="uid://dwoqqdqex5u36" path="res://earth/home_plot.png" id="2_vdb0a"]
@@ -13,12 +13,11 @@
 [ext_resource type="PackedScene" uid="uid://dk36j2m4w8f7k" path="res://levels/test/flora/ferns/fern_collection_two.tscn" id="8_4e7m6"]
 [ext_resource type="PackedScene" uid="uid://cm3ar316ghbib" path="res://flora/flowers/dandy.tscn" id="9_d1wly"]
 [ext_resource type="PackedScene" uid="uid://bvkfk6gofkaim" path="res://flora/flowers/golden_rod_one.tscn" id="10_oo5yc"]
-[ext_resource type="Texture2D" uid="uid://bqqkuf376qauv" path="res://sky/cloud_2.png" id="14_2appi"]
-[ext_resource type="Texture2D" uid="uid://k1tqe0b7w057" path="res://sky/cloud_1.png" id="15_x0078"]
 [ext_resource type="PackedScene" uid="uid://dgjv1dn81bnaf" path="res://enemies/zombie_rat/zombie_rat.tscn" id="17_skvjk"]
 [ext_resource type="PackedScene" uid="uid://7qiu8l2nl068" path="res://drops/grub/grub.tscn" id="18_dotg1"]
 [ext_resource type="PackedScene" uid="uid://bqx7ywwfn6evp" path="res://gateways/small_opening_east.tscn" id="19_sbujt"]
 [ext_resource type="PackedScene" uid="uid://bqsjlb6eag65c" path="res://gateways/young_oak.tscn" id="20_kkflu"]
+[ext_resource type="PackedScene" uid="uid://c1nrp2h7xsv6q" path="res://enemies/entity/escape_path.tscn" id="20_steqw"]
 
 [sub_resource type="Animation" id="Animation_oish5"]
 length = 0.001
@@ -246,44 +245,6 @@ tracks/0/keys = {
 _data = {
 "RESET": SubResource("Animation_v5t0j"),
 "flowing": SubResource("Animation_f311t")
-}
-
-[sub_resource type="Animation" id="Animation_2tvfs"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:transform")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Transform2D(1, 0, 0, 1, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_qr4i7"]
-resource_name = "undulating_fog"
-length = 30.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:transform")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 15),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1.1, 0, 0, 1.1, 0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_kv8t0"]
-_data = {
-"RESET": SubResource("Animation_2tvfs"),
-"undulating_fog": SubResource("Animation_qr4i7")
 }
 
 [node name="southern_oak_forest_level_six" type="Node2D"]
@@ -532,7 +493,6 @@ position = Vector2(243.9, 164)
 position = Vector2(-528.1, 12.0002)
 
 [node name="Jed" parent="." instance=ExtResource("4_qgo2w")]
-modulate = Color(1, 1, 1, 1)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 position = Vector2(243.9, 164)
@@ -576,101 +536,6 @@ libraries = {
 }
 autoplay = "flowing"
 
-[node name="sky" type="CanvasLayer" parent="."]
-layer = 2
-follow_viewport_enabled = true
-follow_viewport_scale = 1.1
-
-[node name="CanvasModulate" type="CanvasModulate" parent="sky"]
-position = Vector2(221.727, 149.091)
-color = Color(0.666667, 0.662745, 0.478431, 1)
-
-[node name="Cloud4" type="Sprite2D" parent="sky"]
-position = Vector2(-152.818, 600)
-texture = ExtResource("14_2appi")
-
-[node name="Cloud16" type="Sprite2D" parent="sky"]
-position = Vector2(606.272, 387.273)
-texture = ExtResource("14_2appi")
-
-[node name="Cloud17" type="Sprite2D" parent="sky"]
-position = Vector2(776.272, -93.6359)
-rotation = -0.457917
-texture = ExtResource("14_2appi")
-
-[node name="Cloud5" type="Sprite2D" parent="sky"]
-position = Vector2(313.545, 530)
-texture = ExtResource("14_2appi")
-
-[node name="Cloud6" type="Sprite2D" parent="sky"]
-position = Vector2(-413.728, -358.182)
-texture = ExtResource("14_2appi")
-
-[node name="Cloud7" type="Sprite2D" parent="sky"]
-position = Vector2(-833.723, -167.273)
-texture = ExtResource("14_2appi")
-
-[node name="Cloud8" type="Sprite2D" parent="sky"]
-position = Vector2(601.727, -444.909)
-texture = ExtResource("14_2appi")
-
-[node name="Cloud1" type="Sprite2D" parent="sky"]
-position = Vector2(417.727, -472.909)
-texture = ExtResource("15_x0078")
-
-[node name="Cloud9" type="Sprite2D" parent="sky"]
-position = Vector2(219.727, -598.909)
-texture = ExtResource("15_x0078")
-
-[node name="Cloud10" type="Sprite2D" parent="sky"]
-position = Vector2(249.909, -402.727)
-texture = ExtResource("15_x0078")
-
-[node name="Cloud11" type="Sprite2D" parent="sky"]
-position = Vector2(-348.273, -345.454)
-texture = ExtResource("15_x0078")
-
-[node name="Cloud12" type="Sprite2D" parent="sky"]
-position = Vector2(-24.6367, -559.091)
-texture = ExtResource("14_2appi")
-
-[node name="Cloud13" type="Sprite2D" parent="sky"]
-position = Vector2(-1027.27, 34.0911)
-texture = ExtResource("14_2appi")
-
-[node name="Cloud14" type="Sprite2D" parent="sky"]
-position = Vector2(-757.364, 416.364)
-texture = ExtResource("14_2appi")
-
-[node name="Cloud15" type="Sprite2D" parent="sky"]
-position = Vector2(-485.546, 500.909)
-texture = ExtResource("14_2appi")
-
-[node name="fog" type="CanvasLayer" parent="."]
-follow_viewport_enabled = true
-
-[node name="CanvasModulate" type="CanvasModulate" parent="fog"]
-position = Vector2(243.9, 164)
-color = Color(0.772549, 1, 1, 0.172549)
-
-[node name="Cloud1" type="Sprite2D" parent="fog"]
-position = Vector2(527.9, -189)
-texture = ExtResource("15_x0078")
-
-[node name="Cloud2" type="Sprite2D" parent="fog"]
-position = Vector2(-248.1, -257)
-texture = ExtResource("14_2appi")
-
-[node name="Cloud3" type="Sprite2D" parent="fog"]
-position = Vector2(7.90002, 255)
-texture = ExtResource("15_x0078")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="fog"]
-libraries = {
-"": SubResource("AnimationLibrary_kv8t0")
-}
-autoplay = "undulating_fog"
-
 [node name="zombie_rat" parent="." instance=ExtResource("17_skvjk")]
 position = Vector2(-456, 173)
 
@@ -712,6 +577,13 @@ position = Vector2(232, -145)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Border"]
 polygon = PackedVector2Array(-353, 146, -325, 140, -307, 164, -285, 168, -269, 172, -267, 212, -245, 262, -201, 274, -165, 244, -111, 254, -89, 284, -51, 266, -15, 248, 17, 262, 29, 278, 81, 268, 125, 234, 169, 240, 201, 264, 255, 252, 243, 224, 273, 198, 315, 176, 349, 178, 393, 192, 401, 130, 419, 88, 449, 78, 475, 82, 535, 94, 515, 52, 507, 16, 519, -22, 525, -64, 505, -86, 499, -96, 489, -130, 487, -192, 487, -212, 433, -226, 387, -226, 357, -242, 345, -252, 311, -294, 261, -312, 235, -360, 213, -342, 163, -312, 131, -304, 109, -278, 85, -268, 59, -286, 31, -278, -21, -258, -49, -220, -73, -196, -97, -182, -111, -186, -143, -210, -175, -178, -203, -162, -217, -130, -237, -88, -255, -68, -281, -54, -303, -52, -319, -62, -331, -82, -383, -72, -405, -74, -427, -102, -443, -132, -477, -116, -507, -108, -533, -106, -605, -112, -609, -52, -603, -10, -611, 38, -619, 56, -529, 108, -499, 136, -455, 162, -411, 166, -371, 154, -341, 328, -479, 382, -855, 150, -877, -90, -639, -280, -435, -362, 187, -514, 529, -468, 683, -334, 799, -170, 813, 46, 723, 250, 593, 378, 303, 476, 25, 516, -173, 480, -299, 368, -335, 329, -365, 151)
+
+[node name="boss_marker" type="Marker2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+
+[node name="escape_path" parent="." instance=ExtResource("20_steqw")]
+position = Vector2(-770, 18)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="died" from="Jed" to="." method="_on_jed_died"]

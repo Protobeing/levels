@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cwasrk4p0qia7"]
+[gd_scene load_steps=26 format=3 uid="uid://cwasrk4p0qia7"]
 
 [ext_resource type="Texture2D" uid="uid://bwpi8qgki4ync" path="res://earth/small_earth_plot.png" id="1_r8k1o"]
 [ext_resource type="Script" path="res://levels/southern_oak_forest/sof_level_8/southern_oak_forest_level_eight.gd" id="1_suyu2"]
@@ -18,10 +18,8 @@
 [ext_resource type="PackedScene" uid="uid://b5sal165esulc" path="res://trees/oaks/thicket_trees/thicket.tscn" id="14_rfjvu"]
 [ext_resource type="PackedScene" uid="uid://toqsdxc1ookg" path="res://trees/oaks/baby_oak_collection_1.tscn" id="15_yt3fv"]
 [ext_resource type="PackedScene" uid="uid://bvkfk6gofkaim" path="res://flora/flowers/golden_rod_one.tscn" id="16_o1rsb"]
-[ext_resource type="Texture2D" uid="uid://bqqkuf376qauv" path="res://sky/cloud_2.png" id="17_ssc8f"]
 [ext_resource type="PackedScene" uid="uid://cx7hltn13m4xn" path="res://trees/birch_trees/small_birch_in_darkness.tscn" id="17_yqish"]
 [ext_resource type="PackedScene" uid="uid://bl2p3j8ekcctv" path="res://trees/oaks/brush_trees_one.tscn" id="18_00gie"]
-[ext_resource type="Texture2D" uid="uid://k1tqe0b7w057" path="res://sky/cloud_1.png" id="18_7crou"]
 [ext_resource type="PackedScene" uid="uid://dgjv1dn81bnaf" path="res://enemies/zombie_rat/zombie_rat.tscn" id="19_fu5ra"]
 [ext_resource type="PackedScene" uid="uid://b3yigva0cskfh" path="res://obstacles/rocks/big_rock.tscn" id="25_feqsc"]
 [ext_resource type="PackedScene" uid="uid://c1nrp2h7xsv6q" path="res://enemies/entity/escape_path.tscn" id="26_uw0dh"]
@@ -33,44 +31,6 @@ radius = 58.0086
 vertices = PackedVector2Array(-454.547, 714.961, -593.461, 694.578, -550.82, 436.742, -66.4375, 693.063, -732.844, 263.953, -906.703, 278.203, -913.781, 173.75, -843.953, 70.9375, -784.328, -9.82813, -644.422, -33.9531, -584.75, 280.883, -486.68, -25.9688, -387.406, -37.3516, 402.094, 578.422, 246.422, 620.328, -313.711, -87.5938, 568.211, 520.383, -88.7422, -607.617, 252.289, -522.359, 585.211, -414.711, 842.109, -288.242, 1059.11, 45.1406, 1066.87, 248.742, 946.648, 403.859, 807.859, 464.461, -334.977, -179.367, -310.578, -540.281, -438.523, -270.961, -449.75, -365.477, -397.32, -485.859, -363.367, -529.906)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7, 8, 9), PackedInt32Array(10, 4, 9, 11), PackedInt32Array(10, 11, 12, 3, 2), PackedInt32Array(13, 14, 3, 12, 15, 16), PackedInt32Array(17, 18, 19, 20, 21, 22, 23, 24, 16, 15, 25, 26), PackedInt32Array(26, 25, 27, 28, 29, 30)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-924, 171, -852, 65, -790, -19, -645, -44, -487, -36, -391, -47, -325, -92, -344, -174, -448, -266, -460, -367, -406, -491, -369, -539, -313, -550, -89, -618, 255, -532, 589, -424, 849, -296, 1069, 42, 1077, 252, 953, 412, 811, 474, 571, 530, 405, 588, 249, 630, -65, 703, -455, 725, -605, 703, -561, 437, -593, 290, -733, 274, -916, 289)])
-
-[sub_resource type="Animation" id="Animation_41ltm"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:transform")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Transform2D(1, 0, 0, 1, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_2bpdb"]
-resource_name = "undulating_fog"
-length = 30.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:transform")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 15.0333),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1.1, 0, 0, 1.1, 0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_4t4wm"]
-_data = {
-"RESET": SubResource("Animation_41ltm"),
-"undulating_fog": SubResource("Animation_2bpdb")
-}
 
 [node name="southern_oak_forest_level_eight" type="Node2D"]
 z_as_relative = false
@@ -603,104 +563,6 @@ stream = ExtResource("14_p5pkk")
 volume_db = 15.0
 autoplay = true
 
-[node name="sky" type="CanvasLayer" parent="."]
-layer = 2
-follow_viewport_enabled = true
-follow_viewport_scale = 1.1
-
-[node name="CanvasModulate" type="CanvasModulate" parent="sky"]
-color = Color(0.666667, 0.662745, 0.478431, 1)
-
-[node name="Cloud2" type="Sprite2D" parent="sky"]
-position = Vector2(-483, -268)
-texture = ExtResource("17_ssc8f")
-
-[node name="Cloud3" type="Sprite2D" parent="sky"]
-position = Vector2(-962, 347)
-texture = ExtResource("17_ssc8f")
-
-[node name="Cloud4" type="Sprite2D" parent="sky"]
-position = Vector2(-643, -208)
-texture = ExtResource("17_ssc8f")
-
-[node name="Cloud1" type="Sprite2D" parent="sky"]
-position = Vector2(-955, -28)
-texture = ExtResource("18_7crou")
-
-[node name="Cloud5" type="Sprite2D" parent="sky"]
-position = Vector2(-282, -331)
-texture = ExtResource("17_ssc8f")
-
-[node name="Cloud6" type="Sprite2D" parent="sky"]
-position = Vector2(1079.09, 136.364)
-rotation = -0.273502
-texture = ExtResource("17_ssc8f")
-
-[node name="Cloud7" type="Sprite2D" parent="sky"]
-position = Vector2(1050, -228)
-texture = ExtResource("17_ssc8f")
-
-[node name="Cloud8" type="Sprite2D" parent="sky"]
-position = Vector2(690, -344)
-texture = ExtResource("17_ssc8f")
-
-[node name="Cloud9" type="Sprite2D" parent="sky"]
-position = Vector2(229, -469)
-texture = ExtResource("17_ssc8f")
-
-[node name="Cloud10" type="Sprite2D" parent="sky"]
-position = Vector2(932, 700)
-texture = ExtResource("17_ssc8f")
-
-[node name="Cloud11" type="Sprite2D" parent="sky"]
-position = Vector2(531.818, 744.545)
-rotation = 1.1616
-texture = ExtResource("17_ssc8f")
-
-[node name="Cloud12" type="Sprite2D" parent="sky"]
-position = Vector2(58, 803)
-texture = ExtResource("17_ssc8f")
-
-[node name="Cloud13" type="Sprite2D" parent="sky"]
-position = Vector2(-330, 972)
-texture = ExtResource("17_ssc8f")
-
-[node name="Cloud14" type="Sprite2D" parent="sky"]
-position = Vector2(-801, 624)
-texture = ExtResource("18_7crou")
-
-[node name="Cloud15" type="Sprite2D" parent="sky"]
-position = Vector2(-771, 430)
-texture = ExtResource("18_7crou")
-
-[node name="Cloud16" type="Sprite2D" parent="sky"]
-position = Vector2(-733, 291)
-texture = ExtResource("18_7crou")
-
-[node name="fog" type="CanvasLayer" parent="."]
-follow_viewport_enabled = true
-
-[node name="CanvasModulate" type="CanvasModulate" parent="fog"]
-color = Color(0.772549, 1, 1, 0.172549)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="fog"]
-libraries = {
-"": SubResource("AnimationLibrary_4t4wm")
-}
-autoplay = "undulating_fog"
-
-[node name="Cloud2" type="Sprite2D" parent="fog"]
-position = Vector2(-222, -212)
-texture = ExtResource("17_ssc8f")
-
-[node name="Cloud1" type="Sprite2D" parent="fog"]
-position = Vector2(804, -45)
-texture = ExtResource("18_7crou")
-
-[node name="Cloud3" type="Sprite2D" parent="fog"]
-position = Vector2(251, 477)
-texture = ExtResource("18_7crou")
-
 [node name="zombie_rat" parent="." instance=ExtResource("19_fu5ra")]
 position = Vector2(59, 525)
 
@@ -738,7 +600,11 @@ position = Vector2(-269, 246)
 position = Vector2(255, 250)
 
 [node name="escape_path" parent="." instance=ExtResource("26_uw0dh")]
-position = Vector2(-782, 100)
+position = Vector2(-831, 96)
+
+[node name="boss_marker" type="Marker2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="died" from="Jed" to="." method="_on_jed_died"]

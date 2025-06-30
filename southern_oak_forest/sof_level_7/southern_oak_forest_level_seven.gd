@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var Jed = $Jed
-@onready var blue_flower_anim = $Blue_flowers/AnimationPlayer
+#@onready var blue_flower_anim = $Blue_flowers/AnimationPlayer
 var ground_flame: PackedScene = preload('res://jed_main/rocks/ground_flame.tscn')
 #group_seven
 var enemies_plus_six_seven: PackedScene = preload('res://enemies/groupings/group_seven/enemies_plus_six_seven.tscn')
@@ -22,13 +22,29 @@ var ghost_jimmy = preload("res://spirit_jimmys/ghost_jimmy.tscn")
 var ghost_jimmy_2 = preload("res://spirit_jimmys/ghost_jimmy_ver_two.tscn")
 var bullets = preload("res://spirit_jimmys/ghost_bullets.tscn")
 
+var boss_1: PackedScene = preload('res://enemies/groupings/boss_one/boss_one.tscn')
+var boss_2: PackedScene = preload('res://enemies/groupings/boss_two/boss_two.tscn')
+var boss_3: PackedScene = preload('res://enemies/groupings/boss_three/boss_three.tscn')
+var boss_4: PackedScene = preload('res://enemies/groupings/boss_four/boss_four.tscn')
+var boss_5: PackedScene = preload("res://enemies/groupings/boss_five/boss_five.tscn")
 func _ready():
-	print(Levels.escape,'= levels escape')
-	Levels.escape = false
-	if Global.chick_counter <=6:
+	if Levels.time_to_hunt == false:
 		if AudioPlayer.oak_forest_chill_vibes == false:
 			AudioPlayer.oak_forest_chill_vibes = true
 			AudioPlayer.play_song()
+			print('playing chill vibes')
+	if Levels.time_to_hunt:
+		random_bosses()
+		if AudioPlayer.deep_and_dark_it_is == false:
+			AudioPlayer.deep_and_dark_it_is = true
+			AudioPlayer.deep_and_darker()
+			print('playing deep and darker')
+	print(Levels.escaping,'= levels escape')
+	Levels.escaping = false
+	#if Global.chick_counter <=6:
+		#if AudioPlayer.oak_forest_chill_vibes == false:
+			#AudioPlayer.oak_forest_chill_vibes = true
+			#AudioPlayer.play_song()
 	PlayerData.death_in_sof_7 = false
 	enemies_seven()
 	Global.blue_flower_heal = true
@@ -113,16 +129,61 @@ func enemies_seven():
 			enemies.position = $".".position
 			call_deferred('add_child', enemies)
 		
-	elif Global.chick_counter <= 6:
+	elif Global.chick_counter <= 7:
 		if Global.chick_counter > 3:
 			var enemies = enemies_plus_four_seven.instantiate()
 			enemies.position = $".".position
 			call_deferred('add_child', enemies)
 		
-	if Global.chick_counter >= 7:
-			if AudioPlayer.deep_and_dark_it_is == false:
-				AudioPlayer.deep_and_dark_it_is = true
-				AudioPlayer.deep_and_dark_time.play('deep_and_dark')
+	elif Global.chick_counter >= 8:
 			var enemies = enemies_plus_six_seven.instantiate()
 			enemies.position = $".".position
 			call_deferred('add_child', enemies)
+
+func random_bosses():
+		randomize()
+		var rand_value = randi() % 5 # Generate a random number between 0 and 4
+		match rand_value:
+			0:
+				boss_four()
+
+			1:
+				boss_three()
+		
+
+			2:
+				boss_five()
+
+			3:
+				boss_one()
+			4:
+				boss_two()
+			#5:
+#
+			#6:
+#
+			#7:
+#
+			#8:
+#
+			#9:
+func boss_one():
+	var boss = boss_1.instantiate()
+	boss.position = $boss_marker.global_position
+	call_deferred('add_child',boss)
+func boss_two():
+	var boss = boss_2.instantiate()
+	boss.position = $boss_marker.global_position
+	call_deferred('add_child',boss)
+func boss_three():
+	var boss = boss_3.instantiate()
+	boss.position = $boss_marker.global_position
+	call_deferred('add_child',boss)
+func boss_four():
+	var boss = boss_4.instantiate()
+	boss.position = $boss_marker.global_position
+	call_deferred('add_child',boss)
+func boss_five():
+	var boss = boss_5.instantiate()
+	boss.position = $boss_marker.global_position
+	call_deferred('add_child',boss)

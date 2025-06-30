@@ -1,6 +1,6 @@
 extends PathFollow2D
 
-var speed = .01
+var speed = .05
 
 
 

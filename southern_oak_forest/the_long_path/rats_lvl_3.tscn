@@ -1,971 +1,929 @@
-[gd_scene load_steps=5 format=3 uid="uid://djq4vi6cwam3o"]
+[gd_scene load_steps=37 format=3 uid="uid://djq4vi6cwam3o"]
 
 [ext_resource type="Script" path="res://levels/southern_oak_forest/the_long_path/rats_lvl_3.gd" id="1_3emn8"]
-[ext_resource type="PackedScene" uid="uid://xo2x82n4ct8u" path="res://enemies/basic_rat/rat.tscn" id="2_vqe2m"]
-[ext_resource type="PackedScene" uid="uid://du1ube02j6yg4" path="res://enemies/lil_rat_1/lil_rat.tscn" id="3_jc2na"]
+[ext_resource type="PackedScene" uid="uid://bj4rrkpe35clf" path="res://enemies/Rolly_boy/rolly_boy.tscn" id="2_om747"]
+[ext_resource type="PackedScene" uid="uid://du1ube02j6yg4" path="res://enemies/lil_rat_1/lil_rat.tscn" id="3_2hoep"]
+[ext_resource type="PackedScene" uid="uid://das1dyysf6j65" path="res://enemies/basic_rat/path_follow.tscn" id="4_wqhgn"]
+[ext_resource type="Script" path="res://gateways/gate_block_north.gd" id="6_eyrbx"]
+[ext_resource type="PackedScene" uid="uid://bl2p3j8ekcctv" path="res://trees/oaks/brush_trees_one.tscn" id="7_1uhqk"]
 [ext_resource type="PackedScene" uid="uid://cghwauui2p3te" path="res://enemies/Wiz_rats/Wiz_rat_1/wiz_rat_scene.tscn" id="7_ajmxm"]
+[ext_resource type="Script" path="res://gateways/gate_block_west.gd" id="8_8s15y"]
+[ext_resource type="PackedScene" uid="uid://cml5xnunmu047" path="res://flora/flowers/night_orchids/night_orchid.tscn" id="9_5bip2"]
+[ext_resource type="PackedScene" uid="uid://c8vq0oo7t2awb" path="res://flora/flowers/night_orchids/night_orchid_2.tscn" id="10_k1u05"]
+[ext_resource type="AudioStream" uid="uid://br63d6xi354vp" path="res://level_music/help_arrives_one.mp3" id="11_5lkct"]
+[ext_resource type="AudioStream" uid="uid://sfj68sqeh201" path="res://level_music/help_arrives_two.mp3" id="12_l470w"]
+[ext_resource type="AudioStream" uid="uid://keoyyuj1epf5" path="res://level_music/help_arrives_three.mp3" id="13_q6lcp"]
+[ext_resource type="Texture2D" uid="uid://u17x304i4fx3" path="res://menus_and_events/the_truth/feather-Sheet.png" id="14_mpmfm"]
+[ext_resource type="PackedScene" uid="uid://xxibel38wjai" path="res://ghost_babies_and_blue_flowers/blue_flowers/blue_flowers.tscn" id="15_0eid0"]
+[ext_resource type="Texture2D" uid="uid://b26e4l3866usi" path="res://light/hole_light.png" id="16_w5hfq"]
+[ext_resource type="PackedScene" uid="uid://b3t6hjt54am8p" path="res://earth/blood_on_the_ground.tscn" id="17_ld1jf"]
+
+[sub_resource type="Curve2D" id="Curve2D_q08qi"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(9.46072, 12.5577, -9.46072, -12.5577, 1014.44, 201.045, 0, 0, 0, 0, 1028.62, 106.969, 0, 0, 0, 0, 1072.99, 68.9896, 0, 0, 0, 0, 1200.84, 84.5403, -4.11336, -67.9047, 4.11336, 67.9047, 1315.51, 76.3066, 0, 0, 0, 0, 1347.55, 217.77, 0, 0, 0, 0, 1296.94, 346.656, 0, 0, 0, 0, 1183.92, 367.596, 37.0202, -12.5577, -37.0202, 12.5577, 1130.61, 369.338, 53.885, -10.6974, -53.885, 10.6974, 1040.02, 300.697, 9.04938, 42.3242, -9.04938, -42.3242, 1014.44, 201.045)
+}
+point_count = 11
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u2xy6"]
+resource_local_to_scene = true
+radius = 137.0
+height = 274.0
+
+[sub_resource type="Animation" id="Animation_qh1qp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_fcdke"]
+resource_name = "escaped"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.2, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(24.325, 1, 7.027, 1), Color(24.325, 1, 7.027, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.93333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Escaped"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_g4aqq"]
+resource_name = "pulsing"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.13333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(5.405, 1, 3.243, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pvdu1"]
+_data = {
+"RESET": SubResource("Animation_qh1qp"),
+"escaped": SubResource("Animation_fcdke"),
+"pulsing": SubResource("Animation_g4aqq")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xg4xv"]
+radius = 167.003
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vbaqp"]
+resource_local_to_scene = true
+radius = 49.8573
+height = 192.576
+
+[sub_resource type="Animation" id="Animation_wrlbx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("flora:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1.5, 1, 1.5, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_pb2r8"]
+resource_name = "player_wins"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("flora:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.6, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1.5, 1, 1.5, 1), Color(35.135, 0, 23.784, 1), Color(6.486, 1, 3.244, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_delete"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_3da46"]
+resource_name = "pulsing"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("flora:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.16667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1.5, 1, 1.5, 1), Color(3.784, 1, 3.243, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6nefw"]
+_data = {
+"RESET": SubResource("Animation_wrlbx"),
+"player_wins": SubResource("Animation_pb2r8"),
+"pulsing": SubResource("Animation_3da46")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4a6xr"]
+radius = 124.803
+height = 303.635
+
+[sub_resource type="Animation" id="Animation_v6l5t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/feather:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/feather:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/feather:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/feather:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-11, -238)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Blue_flowers:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Blue_flowers:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("HoleLight:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("HoleLight:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.541, 1.622, 2.703, 0.151)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AudioStreamPlayer2D:volume_db")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("blood_on_the_ground:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("blood_on_the_ground:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_jdme6"]
+streams_count = 3
+stream_0/stream = ExtResource("11_5lkct")
+stream_1/stream = ExtResource("12_l470w")
+stream_2/stream = ExtResource("13_q6lcp")
+
+[sub_resource type="Animation" id="Animation_3ubus"]
+resource_name = "feather_drop"
+length = 6.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/feather:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.21764),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/feather:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.607111, 2.3, 2.9, 5.7375),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0, 4.324, 4.324, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/feather:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.20163, 1.26829, 1.36829, 1.46829, 1.56829, 1.66829, 1.76829, 1.86829, 1.96829, 2.06829, 2.16829, 2.26829, 2.36829),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/feather:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.6, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -40), Vector2(-2, -15)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Blue_flowers:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Blue_flowers:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.3, 2.3, 2.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 4.324, 4.324, 0), Color(0, 4.324, 4.324, 0), Color(0, 4.324, 4.324, 1), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("HoleLight:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("HoleLight:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.3, 0.7, 2.9, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.541, 1.622, 2.703, 0), Color(0.541, 1.622, 2.703, 0.151), Color(0.541, 1.622, 2.703, 0.151), Color(0.541, 1.622, 2.703, 0)]
+}
+tracks/8/type = "audio"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AudioStreamPlayer2D")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": SubResource("AudioStreamRandomizer_jdme6")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/8/use_blend = true
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AudioStreamPlayer2D:volume_db")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 4, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, -50.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("blood_on_the_ground:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 1.3, 2.3, 2.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 81.081, 95.676, 1), Color(0, 81.081, 95.676, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("blood_on_the_ground:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 5.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_544he"]
+_data = {
+"RESET": SubResource("Animation_v6l5t"),
+"feather_drop": SubResource("Animation_3ubus")
+}
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_p0o1n"]
+blend_mode = 1
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r3q16"]
+resource_local_to_scene = true
+radius = 72.0
+height = 224.0
 
 [node name="rats_lvl_3" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_3emn8")
 
-[node name="lil\' rat" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(955, -447)
+[node name="lil\' rat64" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(25, -799)
 
-[node name="lil\' rat2" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(955, -390)
+[node name="rolly_boy" parent="." instance=ExtResource("2_om747")]
+position = Vector2(-5, -845)
 
-[node name="lil\' rat3" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(918, -414)
-
-[node name="lil\' rat4" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(908, -454)
-
-[node name="lil\' rat5" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(891, -370)
-
-[node name="lil\' rat6" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(874, -421)
-
-[node name="lil\' rat7" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(599, -649)
-
-[node name="lil\' rat8" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(599, -592)
-
-[node name="lil\' rat9" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(562, -616)
-
-[node name="lil\' rat10" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(614, -852)
-
-[node name="lil\' rat11" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(597, -768)
-
-[node name="lil\' rat12" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(580, -819)
-
-[node name="lil\' rat13" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(621, -687)
-
-[node name="lil\' rat14" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(621, -630)
-
-[node name="lil\' rat15" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(584, -654)
-
-[node name="lil\' rat16" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(574, -694)
-
-[node name="lil\' rat17" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(557, -610)
-
-[node name="lil\' rat18" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(540, -661)
-
-[node name="lil\' rat19" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(766, -266)
-
-[node name="lil\' rat20" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(704, -13)
-
-[node name="lil\' rat21" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(667, -37)
-
-[node name="lil\' rat22" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(657, -77)
-
-[node name="lil\' rat23" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(640, 6.99997)
-
-[node name="lil\' rat24" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(623, -44)
-
-[node name="lil\' rat25" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(361, -130)
-
-[node name="lil\' rat26" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(361, -73)
-
-[node name="lil\' rat27" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(324, -97)
-
-[node name="lil\' rat28" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(314, -137)
-
-[node name="lil\' rat29" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(297, -53)
-
-[node name="lil\' rat30" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(280, -104)
-
-[node name="lil\' rat31" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(92.9999, -629)
-
-[node name="lil\' rat32" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(93, -572)
-
-[node name="lil\' rat33" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(56, -596)
-
-[node name="lil\' rat34" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(46, -636)
-
-[node name="lil\' rat35" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(29, -552)
-
-[node name="lil\' rat36" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(12, -603)
-
-[node name="lil\' rat127" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-110, -454)
-
-[node name="lil\' rat128" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-110, -397)
-
-[node name="lil\' rat129" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-147, -421)
-
-[node name="lil\' rat130" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-157, -461)
-
-[node name="lil\' rat131" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-174, -377)
-
-[node name="lil\' rat132" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-191, -428)
-
-[node name="lil\' rat133" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-690, 341)
-
-[node name="lil\' rat134" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-690, 398)
-
-[node name="lil\' rat135" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-727, 374)
-
-[node name="lil\' rat136" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-737, 334)
-
-[node name="lil\' rat137" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-754, 418)
-
-[node name="lil\' rat138" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-771, 367)
-
-[node name="lil\' rat37" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(388, -836)
-
-[node name="lil\' rat38" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(388, -779)
-
-[node name="lil\' rat39" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(351, -803)
-
-[node name="lil\' rat40" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(341, -843)
-
-[node name="lil\' rat41" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(324, -759)
-
-[node name="lil\' rat42" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(307, -810)
-
-[node name="lil\' rat43" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-117, -974)
-
-[node name="lil\' rat44" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-117, -917)
-
-[node name="lil\' rat45" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-154, -941)
-
-[node name="lil\' rat46" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-164, -981)
-
-[node name="lil\' rat47" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-181, -897)
-
-[node name="lil\' rat48" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-198, -948)
-
-[node name="lil\' rat49" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-346, -712)
-
-[node name="lil\' rat50" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-346, -655)
-
-[node name="lil\' rat51" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-383, -679)
-
-[node name="lil\' rat52" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-393, -719)
-
-[node name="lil\' rat53" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-410, -635)
-
-[node name="lil\' rat54" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-427, -686)
-
-[node name="lil\' rat55" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-208, -682)
-
-[node name="lil\' rat56" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-208, -625)
-
-[node name="lil\' rat57" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-245, -649)
-
-[node name="lil\' rat58" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-255, -689)
-
-[node name="lil\' rat59" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-272, -605)
-
-[node name="lil\' rat60" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-289, -656)
-
-[node name="lil\' rat61" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-679, -648)
-
-[node name="lil\' rat62" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-679, -591)
-
-[node name="lil\' rat63" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-716, -615)
-
-[node name="lil\' rat64" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-726, -655)
-
-[node name="lil\' rat65" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-743, -571)
-
-[node name="lil\' rat66" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-760, -622)
-
-[node name="lil\' rat67" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-629, -924)
-
-[node name="lil\' rat68" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-629, -867)
-
-[node name="lil\' rat69" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-666, -891)
-
-[node name="lil\' rat70" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-676, -931)
-
-[node name="lil\' rat71" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-693, -847)
-
-[node name="lil\' rat72" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-710, -898)
-
-[node name="lil\' rat73" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-471, -957)
-
-[node name="lil\' rat74" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-471, -900)
-
-[node name="lil\' rat75" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-508, -924)
-
-[node name="lil\' rat76" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-518, -964)
-
-[node name="lil\' rat77" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-535, -880)
-
-[node name="lil\' rat78" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-552, -931)
-
-[node name="lil\' rat79" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-336, -947)
-
-[node name="lil\' rat80" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-336, -890)
-
-[node name="lil\' rat81" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-373, -914)
-
-[node name="lil\' rat82" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-383, -954)
-
-[node name="lil\' rat83" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-400, -870)
-
-[node name="lil\' rat84" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-417, -921)
-
-[node name="lil\' rat85" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-259, -499)
-
-[node name="lil\' rat86" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-259, -442)
-
-[node name="lil\' rat87" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-296, -466)
-
-[node name="lil\' rat88" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-306, -506)
-
-[node name="lil\' rat89" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-323, -422)
-
-[node name="lil\' rat90" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-340, -473)
-
-[node name="lil\' rat91" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-817, -331)
-
-[node name="lil\' rat92" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-817, -274)
-
-[node name="lil\' rat93" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-854, -298)
-
-[node name="lil\' rat94" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-864, -338)
-
-[node name="lil\' rat95" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-899, -279)
-
-[node name="lil\' rat96" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-898, -305)
-
-[node name="lil\' rat97" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-810, -15)
-
-[node name="lil\' rat98" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-810, 42)
-
-[node name="lil\' rat99" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-847, 18)
-
-[node name="lil\' rat100" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-857, -22)
-
-[node name="lil\' rat101" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-874, 62)
-
-[node name="lil\' rat102" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-891, 11)
-
-[node name="lil\' rat103" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-675, 214)
-
-[node name="lil\' rat104" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-675, 271)
-
-[node name="lil\' rat105" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-712, 247)
-
-[node name="lil\' rat106" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-722, 207)
-
-[node name="lil\' rat107" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-739, 291)
-
-[node name="lil\' rat108" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-756, 240)
-
-[node name="lil\' rat109" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-534, -0.999985)
-
-[node name="lil\' rat110" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-534, 56)
-
-[node name="lil\' rat111" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-571, 32)
-
-[node name="lil\' rat112" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-581, -7.99998)
-
-[node name="lil\' rat113" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-598, 76)
-
-[node name="lil\' rat114" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-615, 25)
-
-[node name="lil\' rat115" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(542, 252)
-
-[node name="lil\' rat116" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(542, 309)
-
-[node name="lil\' rat117" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(505, 285)
-
-[node name="lil\' rat118" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(495, 245)
-
-[node name="lil\' rat119" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(478, 329)
-
-[node name="lil\' rat120" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(461, 278)
-
-[node name="lil\' rat121" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(468, -188)
-
-[node name="lil\' rat122" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(468, -131)
-
-[node name="lil\' rat123" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(431, -155)
-
-[node name="lil\' rat124" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(421, -195)
-
-[node name="lil\' rat125" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(404, -111)
-
-[node name="lil\' rat126" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(387, -162)
-
-[node name="lil\' rat_three" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-245.999, -710)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three2" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-212, -789)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three3" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-348, -782)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three4" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-46, -764)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three5" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(74, -689)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three6" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(182, -744)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three7" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(359, -696)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three8" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(524, -518)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three9" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-615, -778)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three10" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-565, -756)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three11" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-501, 10.9999)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three12" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-661, 78)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three13" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-264, 659)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three14" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-194, 605)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three15" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-116, 699)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three16" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-226, 733)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three17" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-402, 742)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three18" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-427, 633)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three19" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-368, 680)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three20" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-327, 586)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three21" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-302, 714)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three22" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-327, 612)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three23" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-379, 640)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three24" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-452, 697)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three25" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-322, 764)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three26" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-251, 637)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three27" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-230, 577)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three28" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-191, 670)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three29" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-50, 597)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three30" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-55, 691)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three31" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-507, 837)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three32" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-600, 783)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three33" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-538, 813)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three34" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-499, 722)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three35" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-103, 635)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three36" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-147, 561)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three37" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(56, 679)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three38" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(72, 593)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three39" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(106, 669)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three40" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-448, 565)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three41" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-603, 597)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three42" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-747, 542)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three43" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-825, 644)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three44" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-874, 578)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three45" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-826, 667)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three46" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-826, 667)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three47" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(155, 272)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three48" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(187, 257)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three49" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(212, 221)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three50" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(228, 282)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three51" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(248, 154)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three52" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(225, 116)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three53" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(234, 87)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three54" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(261, 91)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three55" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(187, 57)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three56" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(228, 35)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three57" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(161, 22)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three58" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(17, 15)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three59" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(60, 29)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three60" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(105, 1.90735e-06)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three61" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(149, -51)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three63" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(158, -13)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three64" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(207, -17)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three65" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(35, -85)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three66" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(27, -30)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three67" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-39, -55)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three68" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-66, -12)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three69" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-146, -63)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three70" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-138, -8)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three71" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-123, -61)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three72" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-212, 7)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three73" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-197, 37)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three74" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-299, 1)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three75" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-246, 71)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three76" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-309, 92)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three77" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-309, 141)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three78" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-279, 194)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three79" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-360, 226)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three80" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-366, 162)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three81" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-313, 277)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three82" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-264, 262)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three83" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-232, 305)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three84" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-183, 267)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three85" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-196, 346)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three86" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-215, 240)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three87" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-251, 202)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three88" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-312, 206)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three89" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-240, 149)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three90" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-138, 293)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three91" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-110, 314)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three92" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-165, 155)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three93" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-146, 91)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three94" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-80, 55)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three95" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(-88, 46)
-scale = Vector2(0.9, 0.9)
-
-[node name="lil\' rat_three62" parent="." instance=ExtResource("3_jc2na")]
-position = Vector2(92, 41)
-scale = Vector2(0.9, 0.9)
-
-[node name="rat2" parent="." instance=ExtResource("2_vqe2m")]
-position = Vector2(197, -117)
-collision_layer = 2
-
-[node name="rat3" parent="." instance=ExtResource("2_vqe2m")]
-position = Vector2(203, -58)
-collision_layer = 2
-
-[node name="rat4" parent="." instance=ExtResource("2_vqe2m")]
-position = Vector2(130, 35)
-collision_layer = 2
-
-[node name="rat7" parent="." instance=ExtResource("2_vqe2m")]
-position = Vector2(123, -410)
-collision_layer = 2
+[node name="rolly_boy7" parent="." instance=ExtResource("2_om747")]
+position = Vector2(-262, 682)
 
 [node name="mage" parent="." instance=ExtResource("7_ajmxm")]
-position = Vector2(623, 274)
+position = Vector2(-672, -380)
 
 [node name="mage2" parent="." instance=ExtResource("7_ajmxm")]
-position = Vector2(-61, 156)
+position = Vector2(774, -382)
 
 [node name="mage3" parent="." instance=ExtResource("7_ajmxm")]
 position = Vector2(91, 138)
 
-[connection signal="count" from="lil\' rat" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat2" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat3" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat4" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat5" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat6" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat7" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat8" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat9" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat10" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat11" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat12" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat13" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat14" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat15" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat16" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat17" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat18" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat19" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat20" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat21" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat22" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat23" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat24" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat25" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat26" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat27" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat28" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat29" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat30" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat31" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat32" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat33" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat34" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat35" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat36" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat127" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat128" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat129" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat130" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat131" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat132" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat133" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat134" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat135" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat136" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat137" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat138" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat37" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat38" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat39" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat40" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat41" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat42" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat43" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat44" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat45" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat46" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat47" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat48" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat49" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat50" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat51" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat52" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat53" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat54" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat55" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat56" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat57" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat58" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat59" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat60" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat61" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat62" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat63" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat64" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat65" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat66" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat67" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat68" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat69" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat70" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat71" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat72" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat73" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat74" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat75" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat76" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat77" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat78" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat79" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat80" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat81" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat82" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat83" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat84" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat85" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat86" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat87" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat88" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat89" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat90" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat91" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat92" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat93" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat94" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat95" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat96" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat97" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat98" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat99" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat100" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat101" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat102" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat103" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat104" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat105" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat106" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat107" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat108" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat109" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat110" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat111" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat112" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat113" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat114" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat115" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat116" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat117" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat118" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat119" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat120" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat121" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat122" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat123" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat124" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat125" to="." method="_on_lil_rat_count"]
-[connection signal="count" from="lil\' rat126" to="." method="_on_lil_rat_count"]
+[node name="lil\' rat" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(410, 586)
+
+[node name="lil\' rat2" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(508, 513)
+
+[node name="lil\' rat3" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(546, 634)
+
+[node name="lil\' rat4" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(606, 374)
+
+[node name="lil\' rat5" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(785, 228)
+pathfinding = true
+sitting = false
+
+[node name="lil\' rat6" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(631, 147)
+
+[node name="lil\' rat7" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(792, 89)
+pathfinding = true
+sitting = false
+
+[node name="lil\' rat8" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(507, -19)
+
+[node name="lil\' rat9" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(628, -221)
+
+[node name="lil\' rat10" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(779, -249)
+
+[node name="lil\' rat11" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(446, -322)
+
+[node name="lil\' rat12" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(532, -440)
+pathfinding = true
+sitting = false
+
+[node name="lil\' rat13" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(577, -558)
+pathfinding = true
+sitting = false
+
+[node name="lil\' rat14" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(587, -644)
+
+[node name="lil\' rat15" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(259, -561)
+
+[node name="lil\' rat16" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(128, -591)
+
+[node name="lil\' rat17" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-74, -601)
+
+[node name="lil\' rat18" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-253, -654)
+
+[node name="lil\' rat19" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-210, -898)
+pathfinding = true
+sitting = false
+
+[node name="lil\' rat20" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-399, -878)
+
+[node name="lil\' rat21" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-656, -616)
+
+[node name="lil\' rat22" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-623, -578)
+
+[node name="lil\' rat23" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-636, -873)
+
+[node name="lil\' rat24" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-684, -823)
+pathfinding = true
+sitting = false
+
+[node name="lil\' rat25" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-326, -448)
+
+[node name="lil\' rat26" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-235, -566)
+
+[node name="lil\' rat31" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-863, -357)
+pathfinding = true
+sitting = false
+
+[node name="lil\' rat32" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-629, -176)
+
+[node name="lil\' rat33" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-642, -85)
+
+[node name="lil\' rat34" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-607, -25)
+
+[node name="lil\' rat35" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-546, 78)
+
+[node name="lil\' rat36" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-644, 197)
+
+[node name="lil\' rat37" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-687, 333)
+
+[node name="lil\' rat38" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-752, 255)
+
+[node name="lil\' rat39" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-692, 366)
+
+[node name="lil\' rat40" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-750, 399)
+
+[node name="lil\' rat41" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-707, 462)
+
+[node name="lil\' rat42" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-609, 606)
+
+[node name="lil\' rat43" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-360, 500)
+
+[node name="lil\' rat44" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-272, 545)
+
+[node name="lil\' rat45" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-201, 467)
+pathfinding = true
+sitting = false
+
+[node name="lil\' rat46" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-83, 550)
+
+[node name="lil\' rat47" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-55, 908)
+
+[node name="lil\' rat48" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-267, 853)
+pathfinding = true
+sitting = false
+
+[node name="lil\' rat49" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-267, 727)
+
+[node name="lil\' rat50" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(-146, 707)
+
+[node name="lil\' rat51" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(298, 694)
+
+[node name="lil\' rat52" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(258, 581)
+pathfinding = true
+sitting = false
+
+[node name="lil\' rat53" parent="." instance=ExtResource("3_2hoep")]
+position = Vector2(288, 462)
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(-5245.56, -1013.72)
+scale = Vector2(4.48484, 4.21951)
+curve = SubResource("Curve2D_q08qi")
+
+[node name="PathFollow2D" parent="Path2D" instance=ExtResource("4_wqhgn")]
+position = Vector2(1014.44, 201.045)
+
+[node name="follow_me2" type="Node2D" parent="Path2D/PathFollow2D"]
+unique_name_in_owner = true
+position = Vector2(-0.834481, 0.696864)
+
+[node name="gate_block_north" type="Node2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(721, -633)
+script = ExtResource("6_eyrbx")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="gate_block_north"]
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gate_block_north/StaticBody2D"]
+shape = SubResource("CapsuleShape2D_u2xy6")
+
+[node name="brush_trees_one" parent="gate_block_north" instance=ExtResource("7_1uhqk")]
+position = Vector2(-20, 79)
+
+[node name="brush_trees_one2" parent="gate_block_north" instance=ExtResource("7_1uhqk")]
+position = Vector2(37, 77)
+
+[node name="brush_trees_one3" parent="gate_block_north" instance=ExtResource("7_1uhqk")]
+position = Vector2(-42, 85)
+
+[node name="brush_trees_one4" parent="gate_block_north" instance=ExtResource("7_1uhqk")]
+position = Vector2(0, 89)
+
+[node name="brush_trees_one5" parent="gate_block_north" instance=ExtResource("7_1uhqk")]
+position = Vector2(64, 108)
+
+[node name="brush_trees_one6" parent="gate_block_north" instance=ExtResource("7_1uhqk")]
+position = Vector2(-45, 150)
+
+[node name="brush_trees_one7" parent="gate_block_north" instance=ExtResource("7_1uhqk")]
+position = Vector2(35, 115)
+
+[node name="brush_trees_one8" parent="gate_block_north" instance=ExtResource("7_1uhqk")]
+position = Vector2(35, 130)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="gate_block_north"]
+libraries = {
+"": SubResource("AnimationLibrary_pvdu1")
+}
+autoplay = "pulsing"
+
+[node name="Area2D" type="Area2D" parent="gate_block_north"]
+collision_layer = 32768
+collision_mask = 32768
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gate_block_north/Area2D"]
+z_index = 2
+position = Vector2(2, -107)
+shape = SubResource("CircleShape2D_xg4xv")
+debug_color = Color(0.699903, 0.492273, 0, 0.42)
+
+[node name="gate_block_west" type="Node2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-385, -806)
+script = ExtResource("8_8s15y")
+
+[node name="blocked_gate" type="StaticBody2D" parent="gate_block_west"]
+position = Vector2(-43, 2)
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gate_block_west/blocked_gate"]
+position = Vector2(95, 19)
+rotation = 0.279485
+shape = SubResource("CapsuleShape2D_vbaqp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="gate_block_west"]
+libraries = {
+"": SubResource("AnimationLibrary_6nefw")
+}
+autoplay = "pulsing"
+
+[node name="flora" type="Node2D" parent="gate_block_west"]
+modulate = Color(1.5, 1, 1.5, 1)
+z_as_relative = false
+y_sort_enabled = true
+
+[node name="brush_trees_one" parent="gate_block_west/flora" instance=ExtResource("7_1uhqk")]
+position = Vector2(-51, 83)
+
+[node name="brush_trees_one6" parent="gate_block_west/flora" instance=ExtResource("7_1uhqk")]
+position = Vector2(42, 52)
+rotation = -0.169708
+
+[node name="brush_trees_one7" parent="gate_block_west/flora" instance=ExtResource("7_1uhqk")]
+position = Vector2(63, 7)
+rotation = -0.169708
+
+[node name="brush_trees_one8" parent="gate_block_west/flora" instance=ExtResource("7_1uhqk")]
+position = Vector2(32, 3)
+rotation = -0.0711513
+
+[node name="brush_trees_one9" parent="gate_block_west/flora" instance=ExtResource("7_1uhqk")]
+position = Vector2(36, 96)
+rotation = -0.00277808
+
+[node name="brush_trees_one10" parent="gate_block_west/flora" instance=ExtResource("7_1uhqk")]
+position = Vector2(85, 63)
+rotation = -0.00277808
+
+[node name="brush_trees_one11" parent="gate_block_west/flora" instance=ExtResource("7_1uhqk")]
+position = Vector2(-27, 120)
+rotation = -0.00277808
+
+[node name="brush_trees_one2" parent="gate_block_west/flora" instance=ExtResource("7_1uhqk")]
+position = Vector2(-38, 38)
+
+[node name="brush_trees_one3" parent="gate_block_west/flora" instance=ExtResource("7_1uhqk")]
+position = Vector2(-28, -18)
+
+[node name="brush_trees_one4" parent="gate_block_west/flora" instance=ExtResource("7_1uhqk")]
+position = Vector2(15, -46)
+
+[node name="brush_trees_one5" parent="gate_block_west/flora" instance=ExtResource("7_1uhqk")]
+position = Vector2(90, -28)
+
+[node name="night_orchid" parent="gate_block_west/flora" instance=ExtResource("9_5bip2")]
+position = Vector2(131, -43)
+
+[node name="night_orchid_2" parent="gate_block_west/flora" instance=ExtResource("10_k1u05")]
+position = Vector2(79, 28)
+
+[node name="night_orchid2" parent="gate_block_west/flora" instance=ExtResource("9_5bip2")]
+position = Vector2(118, -6)
+
+[node name="trigger" type="Area2D" parent="gate_block_west"]
+position = Vector2(-182, -40)
+rotation = 0.521042
+collision_layer = 32768
+collision_mask = 32768
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gate_block_west/trigger"]
+z_index = 1
+shape = SubResource("CapsuleShape2D_4a6xr")
+debug_color = Color(0.70992, 0.485457, 0.0568966, 0.42)
+
+[node name="chicks" type="Node2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-17, -806)
+
+[node name="feather_drop" type="AnimationPlayer" parent="chicks"]
+libraries = {
+"": SubResource("AnimationLibrary_544he")
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="chicks"]
+follow_viewport_enabled = true
+
+[node name="feather" type="Sprite2D" parent="chicks/CanvasLayer"]
+visible = false
+position = Vector2(-11, -238)
+texture = ExtResource("14_mpmfm")
+hframes = 13
+
+[node name="Sprite2D" type="Sprite2D" parent="chicks"]
+
+[node name="Blue_flowers" parent="chicks" instance=ExtResource("15_0eid0")]
+visible = false
+
+[node name="HoleLight" type="Sprite2D" parent="chicks"]
+visible = false
+modulate = Color(0.541, 1.622, 2.703, 0.151)
+material = SubResource("CanvasItemMaterial_p0o1n")
+position = Vector2(2, -110)
+scale = Vector2(1, 1.52)
+texture = ExtResource("16_w5hfq")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="chicks"]
+
+[node name="blood_on_the_ground" parent="chicks" instance=ExtResource("17_ld1jf")]
+z_as_relative = false
+position = Vector2(11, 5)
+
+[node name="gate_block_north2" type="Node2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-708, -88)
+script = ExtResource("6_eyrbx")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="gate_block_north2"]
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gate_block_north2/StaticBody2D"]
+shape = SubResource("CapsuleShape2D_r3q16")
+
+[node name="brush_trees_one" parent="gate_block_north2" instance=ExtResource("7_1uhqk")]
+position = Vector2(-20, 79)
+
+[node name="brush_trees_one2" parent="gate_block_north2" instance=ExtResource("7_1uhqk")]
+position = Vector2(37, 77)
+
+[node name="brush_trees_one3" parent="gate_block_north2" instance=ExtResource("7_1uhqk")]
+position = Vector2(-42, 85)
+
+[node name="brush_trees_one4" parent="gate_block_north2" instance=ExtResource("7_1uhqk")]
+position = Vector2(0, 89)
+
+[node name="brush_trees_one5" parent="gate_block_north2" instance=ExtResource("7_1uhqk")]
+position = Vector2(64, 108)
+
+[node name="brush_trees_one6" parent="gate_block_north2" instance=ExtResource("7_1uhqk")]
+position = Vector2(-45, 150)
+
+[node name="brush_trees_one7" parent="gate_block_north2" instance=ExtResource("7_1uhqk")]
+position = Vector2(35, 115)
+
+[node name="brush_trees_one8" parent="gate_block_north2" instance=ExtResource("7_1uhqk")]
+position = Vector2(35, 130)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="gate_block_north2"]
+libraries = {
+"": SubResource("AnimationLibrary_pvdu1")
+}
+autoplay = "pulsing"
+
+[node name="Area2D" type="Area2D" parent="gate_block_north2"]
+collision_layer = 32768
+collision_mask = 32768
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gate_block_north2/Area2D"]
+z_index = 2
+position = Vector2(2, -107)
+shape = SubResource("CircleShape2D_xg4xv")
+debug_color = Color(0.699903, 0.492273, 0, 0.42)
+
+[connection signal="count" from="rolly_boy" to="." method="_on_rolly_boy_count"]
+[connection signal="fart" from="rolly_boy" to="." method="_on_rolly_boy_fart"]
+[connection signal="puddle" from="rolly_boy" to="." method="_on_rolly_boy_puddle"]
+[connection signal="count" from="rolly_boy7" to="." method="_on_rolly_boy_7_count"]
+[connection signal="fart" from="rolly_boy7" to="." method="_on_rolly_boy_7_fart"]
+[connection signal="puddle" from="rolly_boy7" to="." method="_on_rolly_boy_7_puddle"]
 [connection signal="counter" from="mage" to="." method="_on_mage_counter"]
 [connection signal="skull" from="mage" to="." method="_on_mage_skull"]
 [connection signal="spell" from="mage" to="." method="_on_mage_spell"]
@@ -975,3 +933,7 @@ position = Vector2(91, 138)
 [connection signal="counter" from="mage3" to="." method="_on_mage_3_counter"]
 [connection signal="skull" from="mage3" to="." method="_on_mage_3_skull"]
 [connection signal="spell" from="mage3" to="." method="_on_mage_3_spell"]
+[connection signal="body_entered" from="gate_block_north/Area2D" to="gate_block_north" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="gate_block_west/trigger" to="gate_block_west" method="_on_trigger_body_entered"]
+[connection signal="chick" from="chicks/Blue_flowers" to="." method="_on_blue_flowers_chick"]
+[connection signal="body_entered" from="gate_block_north2/Area2D" to="gate_block_north2" method="_on_area_2d_body_entered"]
