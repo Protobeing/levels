@@ -1,0 +1,188 @@
+[gd_scene load_steps=6 format=3 uid="uid://dwh7dtoypn1q6"]
+
+[ext_resource type="Texture2D" uid="uid://d0fqt5pt0btfe" path="res://earth/large_dirt_plot.png" id="1_km0qn"]
+[ext_resource type="Script" path="res://levels/where_the_bugs_gather/where_the__bugs_gather.gd" id="1_vvmiu"]
+[ext_resource type="PackedScene" uid="uid://du1ube02j6yg4" path="res://enemies/lil_rat_1/lil_rat.tscn" id="2_xgpd0"]
+[ext_resource type="PackedScene" uid="uid://dk7g834rkrfwy" path="res://jed_main/Jed.tscn" id="3_1hlps"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_bg4wy"]
+vertices = PackedVector2Array(2.59375, -46.6406, 60.1094, -112.641, 177.367, -129.938, 326.391, -119.094, 394.172, -102.141, 477.328, 6.82031, 494.109, 172.617, 419.977, 456.008, 275.297, 456.992, 128.961, 446.117, 61.9609, 424.094, 0.65625, 233.383, -29.9063, 92.3125, -24.1484, 16.4063, 533.531, 346.078, 501.383, 422.328)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), PackedInt32Array(14, 15, 7, 6)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-6, -52, 55, -122, 177, -140, 328, -129, 400, -111, 487, 3, 504, 171, 544, 347, 509, 430, 422, 466, 275, 467, 127, 456, 54, 432, -9, 236, -40, 93, -34, 14)])
+
+[node name="where_the _bugs_gather" type="Node2D"]
+script = ExtResource("1_vvmiu")
+
+[node name="LargeDirtPlot" type="Sprite2D" parent="."]
+position = Vector2(259, 163)
+texture = ExtResource("1_km0qn")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.436148, 0.430948, 0.771161, 1)
+
+[node name="lil\' rat" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(149, 63)
+
+[node name="lil\' rat2" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(193, 36)
+
+[node name="lil\' rat3" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(138, 26)
+
+[node name="lil\' rat4" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(190, 9)
+
+[node name="lil\' rat5" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(222, 18)
+
+[node name="lil\' rat6" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(248, 32)
+
+[node name="lil\' rat7" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(286, 8)
+
+[node name="lil\' rat8" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(293, 37)
+
+[node name="lil\' rat9" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(293, 37)
+
+[node name="lil\' rat10" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(113, 5)
+
+[node name="lil\' rat11" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(157, -22)
+
+[node name="lil\' rat12" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(102, -32)
+
+[node name="lil\' rat13" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(154, -49)
+
+[node name="lil\' rat14" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(186, -40)
+
+[node name="lil\' rat15" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(212, -26)
+
+[node name="lil\' rat16" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(250, -50)
+
+[node name="lil\' rat17" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(257, -21)
+
+[node name="lil\' rat18" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(257, -21)
+
+[node name="lil\' rat19" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(216, -59)
+
+[node name="lil\' rat20" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(260, -86)
+
+[node name="lil\' rat21" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(205, -96)
+
+[node name="lil\' rat22" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(257, -113)
+
+[node name="lil\' rat23" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(289, -104)
+
+[node name="lil\' rat24" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(315, -90)
+
+[node name="lil\' rat25" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(353, -114)
+
+[node name="lil\' rat26" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(360, -85)
+
+[node name="lil\' rat27" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(360, -85)
+
+[node name="lil\' rat28" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(293, -20)
+
+[node name="lil\' rat29" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(337, -47)
+
+[node name="lil\' rat30" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(282, -57)
+
+[node name="lil\' rat31" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(334, -74)
+
+[node name="lil\' rat32" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(366, -65)
+
+[node name="lil\' rat33" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(392, -51)
+
+[node name="lil\' rat34" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(430, -75)
+
+[node name="lil\' rat35" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(437, -46)
+
+[node name="lil\' rat36" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(437, -46)
+
+[node name="lil\' rat37" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(278, 36)
+
+[node name="lil\' rat38" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(322, 9)
+
+[node name="lil\' rat39" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(267, -1)
+
+[node name="lil\' rat40" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(319, -18)
+
+[node name="lil\' rat41" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(351, -9)
+
+[node name="lil\' rat42" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(377, 5)
+
+[node name="lil\' rat43" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(415, -19)
+
+[node name="lil\' rat44" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(422, 10)
+
+[node name="lil\' rat45" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(422, 10)
+
+[node name="lil\' rat46" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(310, 100)
+
+[node name="lil\' rat47" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(354, 73)
+
+[node name="lil\' rat48" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(299, 63)
+
+[node name="lil\' rat49" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(351, 46)
+
+[node name="lil\' rat50" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(383, 55)
+
+[node name="lil\' rat51" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(409, 69)
+
+[node name="lil\' rat52" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(447, 45)
+
+[node name="lil\' rat53" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(454, 74)
+
+[node name="lil\' rat54" parent="." instance=ExtResource("2_xgpd0")]
+position = Vector2(454, 74)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_bg4wy")
+
+[node name="Jed" parent="." instance=ExtResource("3_1hlps")]
