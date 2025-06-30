@@ -1,0 +1,133 @@
+[gd_scene load_steps=3 format=3 uid="uid://ck6pxou1tro63"]
+
+[ext_resource type="PackedScene" uid="uid://b6xq7ifwvwsic" path="res://levels/Oak_forest/Flora_vegetation/ferns/fern.tscn" id="1_x455t"]
+[ext_resource type="PackedScene" uid="uid://dp62b8mntsq0e" path="res://levels/Oak_forest/Flora_vegetation/ferns/fern_2.tscn" id="2_12spq"]
+
+[node name="fern_bunch" type="Node2D"]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(34, -10)
+
+[node name="fern" parent="." instance=ExtResource("1_x455t")]
+z_as_relative = false
+position = Vector2(8.00006, -1.99997)
+
+[node name="fern2" parent="." instance=ExtResource("1_x455t")]
+z_as_relative = false
+position = Vector2(22.0001, 22)
+
+[node name="fern3" parent="." instance=ExtResource("1_x455t")]
+z_as_relative = false
+position = Vector2(48.0001, -9.99997)
+
+[node name="fern4" parent="." instance=ExtResource("1_x455t")]
+z_as_relative = false
+position = Vector2(47.0001, 11)
+
+[node name="fern5" parent="." instance=ExtResource("1_x455t")]
+z_as_relative = false
+position = Vector2(-17.9999, 27)
+
+[node name="fern6" parent="." instance=ExtResource("1_x455t")]
+z_as_relative = false
+position = Vector2(-23.9999, -5.99997)
+
+[node name="fern7" parent="." instance=ExtResource("1_x455t")]
+z_as_relative = false
+position = Vector2(8.00006, -32)
+
+[node name="fern8" parent="." instance=ExtResource("1_x455t")]
+z_as_relative = false
+position = Vector2(30.0001, -15)
+
+[node name="fern9" parent="." instance=ExtResource("1_x455t")]
+z_as_relative = false
+position = Vector2(-25.9999, -31)
+
+[node name="fern10" parent="." instance=ExtResource("1_x455t")]
+z_as_relative = false
+position = Vector2(-60, 16)
+
+[node name="fern11" parent="." instance=ExtResource("1_x455t")]
+z_as_relative = false
+position = Vector2(-60, -12)
+
+[node name="fern_2" parent="." instance=ExtResource("2_12spq")]
+z_as_relative = false
+position = Vector2(-63, -38)
+
+[node name="fern_3" parent="." instance=ExtResource("2_12spq")]
+z_as_relative = false
+position = Vector2(-41, -4.99997)
+
+[node name="fern_4" parent="." instance=ExtResource("2_12spq")]
+z_as_relative = false
+position = Vector2(-8.99994, -27)
+
+[node name="fern_5" parent="." instance=ExtResource("2_12spq")]
+z_as_relative = false
+position = Vector2(-47, 16)
+
+[node name="fern_6" parent="." instance=ExtResource("2_12spq")]
+z_as_relative = false
+position = Vector2(-71, -5.99997)
+
+[node name="fern_7" parent="." instance=ExtResource("2_12spq")]
+z_as_relative = false
+position = Vector2(-10.9999, 5.00003)
+
+[node name="fern_8" parent="." instance=ExtResource("2_12spq")]
+z_as_relative = false
+position = Vector2(22.0001, -1.99997)
+
+[node name="fern_9" parent="." instance=ExtResource("2_12spq")]
+z_as_relative = false
+position = Vector2(20.0001, -38)
+
+[node name="fern_10" parent="." instance=ExtResource("2_12spq")]
+z_as_relative = false
+position = Vector2(5.00006, -18)
+
+[node name="fern_11" parent="." instance=ExtResource("2_12spq")]
+z_as_relative = false
+position = Vector2(-3.99994, 27)
+
+[node name="fern_12" parent="." instance=ExtResource("2_12spq")]
+z_as_relative = false
+position = Vector2(20.0001, 27)
+
+[node name="fern_13" parent="." instance=ExtResource("2_12spq")]
+z_as_relative = false
+position = Vector2(37.0001, 21)
+
+[node name="fern_14" parent="." instance=ExtResource("2_12spq")]
+z_as_relative = false
+position = Vector2(-44, 40)
+
+[node name="fern_15" parent="." instance=ExtResource("2_12spq")]
+z_as_relative = false
+position = Vector2(26.0001, 44)
+
+[node name="fern_16" parent="." instance=ExtResource("2_12spq")]
+z_as_relative = false
+position = Vector2(62.0001, 3.05176e-05)
+
+[node name="fern_17" parent="." instance=ExtResource("2_12spq")]
+z_as_relative = false
+position = Vector2(50.0001, -28)
+
+[node name="fern_18" parent="." instance=ExtResource("2_12spq")]
+z_as_relative = false
+position = Vector2(-97, -29)
+
+[node name="fern_19" parent="." instance=ExtResource("2_12spq")]
+z_as_relative = false
+position = Vector2(-91, 12)
+
+[node name="fern_20" parent="." instance=ExtResource("2_12spq")]
+z_as_relative = false
+position = Vector2(-77, 38)
+
+[node name="fern12" parent="." instance=ExtResource("1_x455t")]
+z_as_relative = false
+position = Vector2(-60, -12)

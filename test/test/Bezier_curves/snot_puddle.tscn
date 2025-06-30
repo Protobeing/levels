@@ -1,0 +1,74 @@
+[gd_scene load_steps=7 format=3 uid="uid://dbhn1nckprbh7"]
+
+[ext_resource type="Script" path="res://enemies/Rat_Puddle_Factory/snot_puddle.gd" id="1_3psys"]
+[ext_resource type="Texture2D" uid="uid://ca4ty7n3kl1u0" path="res://enemies/Rat_Puddle_Factory/pngs/Sprite-0002.png" id="2_mxsu8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ao0ge"]
+radius = 56.0089
+
+[sub_resource type="Animation" id="Animation_ectjk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_5qn3v"]
+resource_name = "blow_up"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(4, 4)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.466667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"gone"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5gh5t"]
+_data = {
+"RESET": SubResource("Animation_ectjk"),
+"blow_up": SubResource("Animation_5qn3v")
+}
+
+[node name="snot_puddle" type="Node2D"]
+script = ExtResource("1_3psys")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_mxsu8")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ao0ge")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5gh5t")
+}

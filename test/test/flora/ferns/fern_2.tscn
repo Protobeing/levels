@@ -1,0 +1,130 @@
+[gd_scene load_steps=8 format=3 uid="uid://dp62b8mntsq0e"]
+
+[ext_resource type="Texture2D" uid="uid://i6gt4f3popp4" path="res://levels/test/flora/ferns/fern.png" id="1_2crwg"]
+[ext_resource type="Script" path="res://levels/test/flora/ferns/fern_2.gd" id="1_45jgq"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_fsyu6"]
+polygon = PackedVector2Array(-6, 11, -6, 3, -6, 1, -13, -5, -6, 0, -4, 2, -4, -1, -4, -4, -1, -7, -3, -3, -3, 2, 0, -1, 2, -3, 6, -5, 3, -3, 1, -1, -2, 2, -4, 3, -5, 4)
+
+[sub_resource type="Animation" id="Animation_witp2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_2crwg")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.146608]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.04532, 1.18999)]
+}
+
+[sub_resource type="Animation" id="Animation_jrvr1"]
+resource_name = "new_animation"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_2crwg")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0973582, 0.219056, 0.3202, 0.409445, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0, -0.146608, 0.0, 0.0872665, -0.146608, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.0968173, 0.219597, 0.41269, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(1, 1), Vector2(0.980405, 0.880073), Vector2(1.04532, 1.18999), Vector2(0.966117, 0.941112), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1kjwk"]
+_data = {
+"RESET": SubResource("Animation_witp2"),
+"new_animation": SubResource("Animation_jrvr1")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w3otm"]
+radius = 5.0
+height = 18.0
+
+[node name="fern_2" type="Area2D"]
+monitorable = false
+script = ExtResource("1_45jgq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.603922, 0.968627, 0.733333, 1)
+y_sort_enabled = true
+position = Vector2(0, 6)
+rotation = -0.146608
+scale = Vector2(1.04532, 1.18999)
+texture = ExtResource("1_2crwg")
+offset = Vector2(4, -10)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Sprite2D"]
+position = Vector2(4, -9)
+occluder = SubResource("OccluderPolygon2D_fsyu6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+deterministic = true
+libraries = {
+"": SubResource("AnimationLibrary_1kjwk")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = -2
+shape = SubResource("CapsuleShape2D_w3otm")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+z_index = -2
+position = Vector2(1.5, -6)
+scale = Vector2(1.85, 1.7)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
