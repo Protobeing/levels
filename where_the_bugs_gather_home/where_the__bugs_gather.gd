@@ -1,13 +1,16 @@
 extends Node2D
+
 @export var guidance: Vector2 = Vector2()
 @export var weight:float = 0
 @onready var level_anim = $level_animations
 @onready var Jed = $Jed
-@onready var blue_flower_anim = $blue_flowers/Blue_flowers/AnimationPlayer
+@onready var zoom = $zoom_effects
+@onready var button = $lola/press_buttons
 signal stop
 signal start
 signal fire_time
 signal stop_global_counter
+
 #@onready var flames = $Jed/torchlight/flame/fire/Marker2D
 var rocks: PackedScene = preload("res://jed_main/rocks/throwing_rock.tscn")
 var pickup_rocks: PackedScene = preload("res://jed_main/rocks/rocks.tscn")
@@ -27,13 +30,25 @@ var fire_sound = preload('res://jed_main/flame_dash/fire_trail_sound.tscn')
 #@onready var intro = $INTRO
 
 func _ready() -> void:
+	AudioPlayer.stop_all()
+
+	#if Levels.time_to_hunt == false:
+		#if AudioPlayer.oak_forest_chill_vibes == false:
+			#AudioPlayer.oak_forest_chill_vibes = false
+			#AudioPlayer.stop_all()
+	#if Levels.time_to_hunt:
+		#if AudioPlayer.deep_and_dark_it_is == false:
+			#AudioPlayer.deep_and_dark_it_is = true
+			##$level_music.stop()
+			#AudioPlayer.deep_and_darker()
+	if Global.the_truth_has_played:
+		$Blue_flowers.visible = true
 	stop_global_counter.emit()
 	level_anim.play("fade_in")
-	AudioPlayer.stop_all()
-	if Global.chick_counter >= 7:
-		AudioPlayer.deep_and_dark_it_is = false
-	if Global.chick_counter <= 6:
-		AudioPlayer.oak_forest_chill_vibes = false
+	#if Global.chick_counter >= 7:
+		#AudioPlayer.deep_and_dark_it_is = false
+	#if Global.chick_counter <= 6:
+		#AudioPlayer.oak_forest_chill_vibes = false
 	#AudioPlayer.oak_forest_chill_vibes = false
 	#if BlueFlowerCount.blue_flower:
 		#blue_flower_anim.play("no_heal")
@@ -64,7 +79,7 @@ func _ready() -> void:
 	if PlayerData.in_tunnel:
 		PlayerData.from_coop = false
 		PlayerData.in_tunnel = false
-		Jed.position = Vector2(1582,129)
+		Jed.position = Vector2(1584,112)
 		if Global.chick_counter >= 1:
 				var chick_1 = chick.instantiate()
 				chick_1.position = $chick_spawns_tunnel/chick_spawn_tunnel_1.global_position
@@ -194,12 +209,12 @@ func _on_ghost_jimmy_ver_two_shooting() -> void:
 	add_child(ghosty_bullets)
 
 func _on_blue_flowers_chick()-> void:
-	if BlueFlowerCount.blue_flower == false:
-		Global.chick_counter = Global.chick_counter + 1
-		print(Global.chick_counter, "= Global chick counter")
-		BlueFlowerCount.blue_flower = true
-	if BlueFlowerCount.blue_flower:
-		blue_flower_anim.play("no_heal")
+	#if BlueFlowerCount.blue_flower == false:
+	Global.chick_counter = Global.chick_counter + 1
+	print(Global.chick_counter, "= Global chick counter")
+		#BlueFlowerCount.blue_flower = true
+	#if BlueFlowerCount.blue_flower:
+		#blue_flower_anim.play("no_heal")
 		
 	if Global.chick_counter <= 5:
 			var chicky = chick.instantiate()
@@ -233,4 +248,27 @@ func _on_tunnel_one_entrance_body_entered(body: Node2D) -> void:
 	if body is Player:
 		Levels.from_boss_entrance = false
 		Levels.from_where_the_bugs_are = true
-		get_tree().change_scene_to_file('res://tunnels/tunnel_one.tscn')
+		get_tree().call_deferred('change_scene_to_file','res://tunnels/tunnel_one.tscn')
+func level_music():
+	$level_music.play()
+
+
+func _on_jed_zoomed() -> void:
+	zoom.play("zoom_in")
+
+
+func _on_jed_not_zoomed() -> void:
+	zoom.play("zoom_out")
+
+
+func _on_jed_orchid_poison() -> void:
+	pass # Replace with function body.
+
+
+func _on_press_lb_body_entered(body: Node2D) -> void:
+	if body is Player:
+		button.play("waiting")
+
+
+func _on_lola_triggered() -> void:
+	button.play('triggered')
