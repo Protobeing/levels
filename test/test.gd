@@ -1,15 +1,21 @@
 extends Node2D
 #@onready var level_anim = $level_animations
 @onready var Jed = $Jed
-@onready var blue_flower_anim = $Blue_flowers/AnimationPlayer
-# groups of enemies that sare instantiated according to how many chicks jed has with her
-
+#@onready var blue_flower_anim = $Blue_flowers/AnimationPlayer
+# groups of enemies that are instantiated according to how many chicks jed has with her
+#hovering head
+@onready var the_head = $rat_puddle_head
+@onready var orb: PackedScene = preload('res://enemies/entity/pink_orb.tscn')
+@onready var lil_rat: PackedScene = preload('res://enemies/lil_rat_1/lil_rat.tscn')
+@onready var tail: PackedScene = preload('res://enemies/Rat_Puddle_Factory/big_rat_tail.tscn')
+@onready var head_puddle: PackedScene = preload('res://enemies/entity/puddle_of_pink_ooze.tscn')
+@onready var wizard: PackedScene = preload('res://enemies/Wiz_rats/Wiz_rat_1/wiz_rat_scene.tscn')
 #pink orb's "legs"
 @onready var right_front_leg: PackedScene = preload("res://enemies/entity/rightish_leg_front.tscn")
 @onready var left_front_leg: PackedScene = preload("res://enemies/entity/leftish_leg_front.tscn")
 @onready var right_back_leg: PackedScene = preload("res://enemies/entity/rightish_leg_back.tscn")
 @onready var left_back_leg: PackedScene = preload("res://enemies/entity/leftish_leg_back.tscn")
-@onready var Splatter = $pink_orb/splat
+#@onready var Splatter = $pink_orb/splat
 #group_one
 var enemies_plus_six_one: PackedScene = preload('res://enemies/groupings/group_one/enemies_plus_six_one.tscn')
 var enemies_plus_four_one: PackedScene = preload('res://enemies/groupings/group_one/enemies_plus_four_one.tscn')
@@ -20,6 +26,7 @@ var enemies_plus_four_two: PackedScene = preload('res://enemies/groupings/group_
 var enemies_below_two_two: PackedScene = preload('res://enemies/groupings/group_two/enemies_below_two_two.tscn')
 var enemies_plux_six_two: PackedScene = preload('res://enemies/groupings/group_two/enemies_plus_six_two.tscn')
 #Jed's ability logic
+var blue_healing: PackedScene = preload("res://numbers/blue_fire/blue_heal.tscn")
 var rocks: PackedScene = preload("res://jed_main/rocks/throwing_rock.tscn")
 var pickup_rocks: PackedScene = preload("res://jed_main/rocks/rocks.tscn")
 var chick: PackedScene = preload("res://ghost_babies_and_blue_flowers/ghost_babies.tscn")
@@ -36,12 +43,13 @@ var bullets = preload("res://spirit_jimmys/ghost_bullets.tscn")
 #rolly boys
 var fart: PackedScene = preload('res://enemies/Rolly_boy/fart_ring.tscn')
 var puddle: PackedScene = preload('res://enemies/Rolly_boy/puddle_of_pink_ooze.tscn')
-
+# Rat_puddle_factory
+@onready var snot_puddle = preload("res://levels/test/Bezier_curves/snot_puddle.tscn")
 
 func _ready():
 	PlayerData.test = false
 	intro.play('fade_in')
-	$Jed.position = Vector2(179,209)
+	#$Jed.position = Vector2(179,209)
 func _on_jed_rocks_e(pos, direction):
 	var rock = rocks.instantiate() as RigidBody2D
 	rock.position = pos
@@ -134,27 +142,27 @@ func enemies_two():
 			call_deferred('add_child', enemies)
 			
 
-func _on_pink_orb_left_back() -> void:
-	var left_backish = left_back_leg.instantiate()
-	left_backish.position = Splatter.global_position
-	call_deferred("add_child",left_backish)
-
-
-func _on_pink_orb_left_front() -> void:
-	var left_frontish = left_front_leg.instantiate()
-	left_frontish.position = Splatter.global_position
-	call_deferred('add_child', left_frontish)
-	
-
-func _on_pink_orb_right_back() -> void:
-	var right_backish = right_back_leg.instantiate()
-	right_backish.position = Splatter.global_position
-	call_deferred('add_child',right_backish)
-	
-func _on_pink_orb_right_front() -> void:
-	var right_frontish = right_front_leg.instantiate()
-	right_frontish.position = Splatter.global_position
-	call_deferred('add_child',right_frontish)
+#func _on_pink_orb_left_back() -> void:
+	#var left_backish = left_back_leg.instantiate()
+	#left_backish.position = Splatter.global_position
+	#call_deferred("add_child",left_backish)
+#
+#
+#func _on_pink_orb_left_front() -> void:
+	#var left_frontish = left_front_leg.instantiate()
+	#left_frontish.position = Splatter.global_position
+	#call_deferred('add_child', left_frontish)
+	#
+#
+#func _on_pink_orb_right_back() -> void:
+	#var right_backish = right_back_leg.instantiate()
+	#right_backish.position = Splatter.global_position
+	#call_deferred('add_child',right_backish)
+	#
+#func _on_pink_orb_right_front() -> void:
+	#var right_frontish = right_front_leg.instantiate()
+	#right_frontish.position = Splatter.global_position
+	#call_deferred('add_child',right_frontish)
 
 
 func _on_jed_died() -> void:
@@ -181,3 +189,66 @@ func _on_mage_skull() -> void:
 	var skulls = skull.instantiate()
 	skulls.global_position = $mage.position
 	call_deferred('add_child', skulls)
+
+
+func _on_rat_puddle_factory_snot_e(pos) -> void:
+	var snot_e = snot_puddle.instantiate()
+	snot_e.global_position = pos.position
+	add_child(snot_e)
+	print('puddle')
+
+
+func _on_mage_counter() -> void:
+	pass # Replace with function body.
+
+
+func _on_jed_blue_healed() -> void:
+			var blue_heals = blue_healing.instantiate() 
+			blue_heals.global_position  = $Jed.global_position
+			add_child(blue_heals)
+
+
+func _on_rat_puddle_head_lil_rat() -> void:
+	var lil = lil_rat.instantiate()
+	lil.position = the_head.position
+	add_child(lil)
+
+
+func _on_rat_puddle_head_orb() -> void:
+	var orbs = orb.instantiate()
+	orbs.position = the_head.position
+	add_child(orbs)
+
+
+func _on_rat_puddle_head_puddle() -> void:
+	var pud = head_puddle.instantiate()
+	pud.position = the_head.position
+	add_child(pud)
+
+
+func _on_rat_puddle_head_tail() -> void:
+	var tails = tail.instantiate()
+	tails.position = the_head.position
+	add_child(tails)
+
+
+func _on_rat_puddle_head_wiz_rat() -> void:
+	var wiz = wizard.instantiate()
+	wiz.position = the_head.position
+	add_child(wiz)
+
+
+func _on_rat_puddle_factory_dead() -> void:
+	pass # Replace with function body.
+
+
+func _on_jed_not_zoomed() -> void:
+	pass # Replace with function body.
+
+
+func _on_jed_zoomed() -> void:
+	pass # Replace with function body.
+
+
+func _on_lil_rat_count() -> void:
+	pass # Replace with function body.

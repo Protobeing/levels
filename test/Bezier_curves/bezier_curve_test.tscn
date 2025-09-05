@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnhxdak8jfbk7"]
+
+[ext_resource type="Script" path="res://levels/test/Bezier_curves/Bezier_curve_test.gd" id="1_oph1n"]
+[ext_resource type="Texture2D" uid="uid://gncujwhnemy6" path="res://jed_main/sweet_pea_charge_attack/down.png" id="2_pqb84"]
+
+[node name="Bezier_curve_test" type="Node2D"]
+position = Vector2(585, 318)
+script = ExtResource("1_oph1n")
+
+[node name="p0" type="Node2D" parent="."]
+position = Vector2(-256, -4)
+
+[node name="p1" type="Node2D" parent="."]
+position = Vector2(-38, -163)
+
+[node name="p2" type="Node2D" parent="."]
+position = Vector2(178, -27)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-256, -4)
+texture = ExtResource("2_pqb84")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="HSlider" type="HSlider" parent="."]
+offset_left = -273.0
+offset_top = 197.0
+offset_right = 302.0
+offset_bottom = 213.0

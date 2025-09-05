@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://di18gy6s3vxta"]
+
+[ext_resource type="Script" path="res://enemies/Rat_Puddle_Factory/snot_rocket/snot_rocket_east.gd" id="1_dqmx4"]
+[ext_resource type="Texture2D" uid="uid://c42q7xlnejrx" path="res://enemies/Rat_Puddle_Factory/pngs/Sprite-0001.png" id="2_41lbo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wg1g2"]
+radius = 643.602
+
+[node name="snot_rocket_east" type="Node2D"]
+script = ExtResource("1_dqmx4")
+
+[node name="p0" type="Node2D" parent="."]
+position = Vector2(1, -1)
+
+[node name="p1" type="Node2D" parent="."]
+position = Vector2(219, -160)
+
+[node name="p2" type="Node2D" parent="."]
+position = Vector2(435, -24)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -1)
+texture = ExtResource("2_41lbo")
+
+[node name="detection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detection"]
+shape = SubResource("CircleShape2D_wg1g2")
+
+[connection signal="body_entered" from="detection" to="." method="_on_detection_body_entered"]
+[connection signal="body_exited" from="detection" to="." method="_on_detection_body_exited"]

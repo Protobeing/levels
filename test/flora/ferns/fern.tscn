@@ -134,6 +134,7 @@ height = 12.8945
 [node name="fern" type="Area2D"]
 y_sort_enabled = true
 position = Vector2(-2, 0)
+collision_layer = 0
 monitorable = false
 script = ExtResource("1_aa3hq")
 

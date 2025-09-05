@@ -15,42 +15,30 @@
 [ext_resource type="PackedScene" uid="uid://xxibel38wjai" path="res://ghost_babies_and_blue_flowers/blue_flowers/blue_flowers.tscn" id="13_yp5xa"]
 [ext_resource type="AudioStream" uid="uid://b8dpq7ft1sky1" path="res://level_music/oak_forest_ver_7.mp3" id="14_em75n"]
 [ext_resource type="Texture2D" uid="uid://dvv35o0glfneu" path="res://levels/test/lights/light_3.png" id="15_2hvl3"]
-[ext_resource type="PackedScene" uid="uid://41q3hstobyis" path="res://enemies/raccoons/raccon_in_bush/greedy_hands_one.tscn" id="16_bxv21"]
-[ext_resource type="PackedScene" uid="uid://cjin6p4nk5r0s" path="res://enemies/entity/pink_orb.tscn" id="17_4ixj0"]
+[ext_resource type="PackedScene" uid="uid://du1ube02j6yg4" path="res://enemies/lil_rat_1/lil_rat.tscn" id="16_nxjxu"]
+[ext_resource type="PackedScene" uid="uid://gpylabwiy8mm" path="res://enemies/Rat_Puddle_Factory/big_rat_tail.tscn" id="17_bue1k"]
 
 [sub_resource type="Animation" id="Animation_8flu2"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasModulate:color")
+tracks/0/path = NodePath("Jed:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0.301628, 0.332806, 0.723515, 1)]
+"update": 1,
+"values": [false]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Jed:visible")
+tracks/1/path = NodePath("CanvasLayer/CanvasModulate:color")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("CanvasLayer/CanvasModulate:color")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -63,34 +51,22 @@ length = 3.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasModulate:color")
+tracks/0/path = NodePath("Jed:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.16667, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0.301628, 0.332806, 0.723515, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Jed:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0, 1.16667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("CanvasLayer/CanvasModulate:color")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/CanvasModulate:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0, 1.13333, 3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
@@ -229,8 +205,8 @@ z_as_relative = false
 y_sort_enabled = true
 script = ExtResource("1_hmc6u")
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.301628, 0.332806, 0.723515, 1)
+[node name="CanvasModulate2" type="CanvasModulate" parent="."]
+color = Color(0.0676581, 0.15406, 0.400615, 1)
 
 [node name="INTRO" type="AnimationPlayer" parent="."]
 libraries = {
@@ -279,7 +255,7 @@ autoplay = "buggy_whirlwind"
 [node name="Hole" type="Sprite2D" parent="."]
 z_index = -1
 z_as_relative = false
-position = Vector2(39, -26)
+position = Vector2(118, 88)
 texture = ExtResource("3_3blbn")
 
 [node name="LargeDirtPlot" type="Sprite2D" parent="."]
@@ -296,9 +272,10 @@ z_as_relative = false
 y_sort_enabled = true
 
 [node name="Blue_flowers" parent="Ghost_flowers" instance=ExtResource("13_yp5xa")]
-position = Vector2(32, -73)
+position = Vector2(116, 4)
 
 [node name="flora" type="Node2D" parent="."]
+visible = false
 z_as_relative = false
 y_sort_enabled = true
 
@@ -465,6 +442,7 @@ z_as_relative = false
 y_sort_enabled = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 follow_viewport_enabled = true
 follow_viewport_scale = 1.05
 
@@ -503,20 +481,30 @@ color = Color(0.721569, 0.780392, 0.67451, 1)
 stream = ExtResource("14_em75n")
 autoplay = true
 
-[node name="greedy_hands_one" parent="." instance=ExtResource("16_bxv21")]
-position = Vector2(-84, -78)
-jumping = false
+[node name="lil\' rat" parent="." instance=ExtResource("16_nxjxu")]
+position = Vector2(28, -102)
 
-[node name="pink_orb" parent="." instance=ExtResource("17_4ixj0")]
-position = Vector2(95, -61)
+[node name="lil\' rat2" parent="." instance=ExtResource("16_nxjxu")]
+position = Vector2(162, -108)
 
-[node name="splat" type="Marker2D" parent="pink_orb"]
-position = Vector2(-2, -74)
+[node name="lil\' rat3" parent="." instance=ExtResource("16_nxjxu")]
+position = Vector2(103, -126)
 
+[node name="big_rat_tail" parent="." instance=ExtResource("17_bue1k")]
+position = Vector2(-241, 94)
+
+[connection signal="Blue_healed" from="Jed" to="." method="_on_jed_blue_healed"]
 [connection signal="died" from="Jed" to="." method="_on_jed_died"]
+[connection signal="flame" from="Jed" to="." method="_on_jed_flame"]
+[connection signal="ghosted" from="Jed" to="." method="_on_jed_ghosted"]
+[connection signal="not_zoomed" from="Jed" to="." method="_on_jed_not_zoomed"]
+[connection signal="orchid_poison" from="Jed" to="." method="_on_jed_orchid_poison"]
 [connection signal="rocks_E" from="Jed" to="." method="_on_jed_rocks_e"]
+[connection signal="special_attack" from="Jed" to="." method="_on_jed_special_attack"]
+[connection signal="step" from="Jed" to="." method="_on_jed_step"]
+[connection signal="stomp" from="Jed" to="." method="_on_jed_stomp"]
+[connection signal="zoomed" from="Jed" to="." method="_on_jed_zoomed"]
 [connection signal="chick" from="Ghost_flowers/Blue_flowers" to="." method="_on_blue_flowers_chick"]
-[connection signal="left_back" from="pink_orb" to="." method="_on_pink_orb_left_back"]
-[connection signal="left_front" from="pink_orb" to="." method="_on_pink_orb_left_front"]
-[connection signal="right_back" from="pink_orb" to="." method="_on_pink_orb_right_back"]
-[connection signal="right_front" from="pink_orb" to="." method="_on_pink_orb_right_front"]
+[connection signal="count" from="lil\' rat" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat2" to="." method="_on_lil_rat_count"]
+[connection signal="count" from="lil\' rat3" to="." method="_on_lil_rat_count"]

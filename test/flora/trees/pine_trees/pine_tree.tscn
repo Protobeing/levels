@@ -179,6 +179,7 @@ polygon = PackedVector2Array(7, 13, 9, 12, 13, 12, 16, 12, 18, 13, 18, 15, 16, 1
 [node name="pine_tree" type="StaticBody2D"]
 z_as_relative = false
 y_sort_enabled = true
+collision_mask = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true
