@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://62bk1lo3ftbj"]
+[gd_scene load_steps=17 format=3 uid="uid://62bk1lo3ftbj"]
 
 [ext_resource type="Script" path="res://levels/southern_oak_forest/sof_level_2/southern_oak_forest_level_two.gd" id="1_oln3l"]
 [ext_resource type="PackedScene" uid="uid://dk7g834rkrfwy" path="res://jed_main/Jed.tscn" id="1_p5d4j"]
@@ -8,9 +8,49 @@
 [ext_resource type="PackedScene" uid="uid://4sl0kd2plpfc" path="res://gateways/small_opening_south.tscn" id="6_axhdb"]
 [ext_resource type="PackedScene" uid="uid://bbfw3ryqga2fe" path="res://earth/small_earth_plot_one.tscn" id="7_3f4xm"]
 [ext_resource type="PackedScene" uid="uid://c1nrp2h7xsv6q" path="res://enemies/entity/escape_path.tscn" id="8_euhyp"]
+[ext_resource type="PackedScene" uid="uid://bf6pcoptplvph" path="res://earth/large_rock_two.tscn" id="9_gvjgb"]
+[ext_resource type="PackedScene" uid="uid://c2achx8h1db3l" path="res://earth/large_rock_pile.tscn" id="10_46vo8"]
+[ext_resource type="PackedScene" uid="uid://dtg3tnv6lokm" path="res://earth/large_rock.tscn" id="11_audaq"]
+[ext_resource type="PackedScene" uid="uid://dqaot0v3n8bhx" path="res://earth/small_hill.tscn" id="12_pslnj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4qd3"]
 radius = 49.4975
+
+[sub_resource type="Animation" id="Animation_hxiic"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_vv20k"]
+resource_name = "poison"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.114396, 0.194208, 0.313925, 0.478869, 0.649133, 0.827378, 0.994982),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.111701, -0.125664, 0.111701, -0.125664, 0.111701, -0.125664, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yryc4"]
+_data = {
+"RESET": SubResource("Animation_hxiic"),
+"poison": SubResource("Animation_vv20k")
+}
 
 [node name="southern_oak_forest_level_two" type="Node2D"]
 z_as_relative = false
@@ -54,7 +94,7 @@ position = Vector2(-167, -469)
 shape = SubResource("CircleShape2D_g4qd3")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.188235, 0.184314, 0.631373, 1)
+color = Color(0.0676581, 0.15406, 0.400615, 1)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
@@ -90,6 +130,47 @@ y_sort_enabled = true
 [node name="escape_path" parent="." instance=ExtResource("8_euhyp")]
 position = Vector2(-188, -651)
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_yryc4")
+}
+
+[node name="large_rock_two" parent="." instance=ExtResource("9_gvjgb")]
+position = Vector2(-57, -335)
+
+[node name="large_rock_pile" parent="." instance=ExtResource("10_46vo8")]
+position = Vector2(-188, -341)
+
+[node name="large_rock" parent="." instance=ExtResource("11_audaq")]
+position = Vector2(-197, -475)
+
+[node name="large_rock_two2" parent="." instance=ExtResource("9_gvjgb")]
+position = Vector2(-87, -455)
+
+[node name="large_rock_two3" parent="." instance=ExtResource("9_gvjgb")]
+position = Vector2(31, 713)
+
+[node name="large_rock_two4" parent="." instance=ExtResource("9_gvjgb")]
+position = Vector2(116, 679)
+
+[node name="large_rock_two5" parent="." instance=ExtResource("9_gvjgb")]
+position = Vector2(-74, 642)
+
+[node name="large_rock_pile2" parent="." instance=ExtResource("10_46vo8")]
+position = Vector2(-29, 688)
+
+[node name="large_rock_pile3" parent="." instance=ExtResource("10_46vo8")]
+position = Vector2(151, 662)
+
+[node name="large_rock2" parent="." instance=ExtResource("11_audaq")]
+position = Vector2(-103, 549)
+
+[node name="small_hill" parent="." instance=ExtResource("12_pslnj")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(32, 316)
+
+[connection signal="Blue_healed" from="Jed" to="." method="_on_jed_blue_healed"]
 [connection signal="died" from="Jed" to="." method="_on_jed_died"]
 [connection signal="flame" from="Jed" to="." method="_on_jed_flame"]
 [connection signal="ghosted" from="Jed" to="." method="_on_jed_ghosted"]

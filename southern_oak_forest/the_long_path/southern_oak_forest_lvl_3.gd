@@ -7,11 +7,13 @@ var not_cured: bool = true
 @onready var JED = $Board/Jed
 var leaving = false
 #@onready var Open_up = $Board/Dummy/Open
+var blue_healing: PackedScene = preload("res://numbers/blue_fire/blue_heal.tscn")
 var chick: PackedScene = preload("res://ghost_babies_and_blue_flowers/ghost_babies.tscn")
 var wiz_rat_counter_lvl_3: int = 0
 @onready var altar = $center_of_worship
 @onready var bye_bye = $bye
 func _ready():
+	Global.blue_flower_heal == true
 	if Levels.rats_of_level_three_are_wiped == false:
 		var rat = rats.instantiate()
 		rat.global_position = $Board.position
@@ -79,6 +81,10 @@ func _ready():
 func _process(_delta):
 	if count >= 3:
 		Levels.rats_of_level_three_are_wiped = true
+		if Levels.rats_of_level_three_are_wiped:
+			if Global.gate_six == false:
+				Global.gate_counter += 1
+				Global.gate_six = true
 		if not_cured:
 			not_cured = false
 			bye_bye.play("new_animation")
@@ -125,3 +131,7 @@ func _on_escape_path_body_entered(body: Node2D) -> void:
 
 func _on_blue_flowers_chick() -> void:
 	pass # Replace with function body.
+func _on_jed_blue_healed() -> void:
+			var blue_heals = blue_healing.instantiate() 
+			blue_heals.global_position  = JED.global_position
+			add_child(blue_heals)

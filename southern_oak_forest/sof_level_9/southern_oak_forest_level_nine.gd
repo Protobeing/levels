@@ -5,10 +5,11 @@ var ground_flame: PackedScene = preload('res://jed_main/rocks/ground_flame.tscn'
 
 
 #group_nine
+
 var enemies_plus_six_nine: PackedScene = preload('res://enemies/groupings/group_nine/enemies_plus_six_nine.tscn')
 var enemies_plus_four_nine: PackedScene = preload('res://enemies/groupings/group_nine/enemies_plus_four_nine.tscn')
 var enemies_below_three_nine: PackedScene = preload('res://enemies/groupings/group_nine/enemies_below_three_nine.tscn')
-
+var blue_healing: PackedScene = preload("res://numbers/blue_fire/blue_heal.tscn")
 var rocks: PackedScene = preload("res://jed_main/rocks/throwing_rock.tscn")
 var pickup_rocks: PackedScene = preload("res://jed_main/rocks/rocks.tscn")
 var chick: PackedScene = preload("res://ghost_babies_and_blue_flowers/ghost_babies.tscn")
@@ -119,6 +120,10 @@ func _on_jed_ghosted() -> void:
 	add_child(spirit_jimmy)
 func _on_jed_orchid_poison() -> void:
 	anim.play('poison')
+func _on_jed_blue_healed() -> void:
+			var blue_heals = blue_healing.instantiate() 
+			blue_heals.global_position  = $Jed.global_position
+			add_child(blue_heals)
 
 
 func enemies_nine():

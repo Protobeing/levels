@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://djq4vi6cwam3o"]
+[gd_scene load_steps=28 format=3 uid="uid://djq4vi6cwam3o"]
 
 [ext_resource type="Script" path="res://levels/southern_oak_forest/the_long_path/rats_lvl_3.gd" id="1_3emn8"]
 [ext_resource type="PackedScene" uid="uid://bj4rrkpe35clf" path="res://enemies/Rolly_boy/rolly_boy.tscn" id="2_om747"]
@@ -10,13 +10,9 @@
 [ext_resource type="Script" path="res://gateways/gate_block_west.gd" id="8_8s15y"]
 [ext_resource type="PackedScene" uid="uid://cml5xnunmu047" path="res://flora/flowers/night_orchids/night_orchid.tscn" id="9_5bip2"]
 [ext_resource type="PackedScene" uid="uid://c8vq0oo7t2awb" path="res://flora/flowers/night_orchids/night_orchid_2.tscn" id="10_k1u05"]
-[ext_resource type="AudioStream" uid="uid://br63d6xi354vp" path="res://level_music/help_arrives_one.mp3" id="11_5lkct"]
-[ext_resource type="AudioStream" uid="uid://sfj68sqeh201" path="res://level_music/help_arrives_two.mp3" id="12_l470w"]
-[ext_resource type="AudioStream" uid="uid://keoyyuj1epf5" path="res://level_music/help_arrives_three.mp3" id="13_q6lcp"]
-[ext_resource type="Texture2D" uid="uid://u17x304i4fx3" path="res://menus_and_events/the_truth/feather-Sheet.png" id="14_mpmfm"]
-[ext_resource type="PackedScene" uid="uid://xxibel38wjai" path="res://ghost_babies_and_blue_flowers/blue_flowers/blue_flowers.tscn" id="15_0eid0"]
-[ext_resource type="Texture2D" uid="uid://b26e4l3866usi" path="res://light/hole_light.png" id="16_w5hfq"]
-[ext_resource type="PackedScene" uid="uid://b3t6hjt54am8p" path="res://earth/blood_on_the_ground.tscn" id="17_ld1jf"]
+[ext_resource type="PackedScene" uid="uid://cjin6p4nk5r0s" path="res://enemies/entity/pink_orb.tscn" id="14_cqo1b"]
+[ext_resource type="PackedScene" uid="uid://xo2x82n4ct8u" path="res://enemies/basic_rat/rat.tscn" id="18_cbvjy"]
+[ext_resource type="PackedScene" uid="uid://cjyrr6fca5o1p" path="res://enemies/basic_rat/rat_2.tscn" id="19_fnxec"]
 
 [sub_resource type="Curve2D" id="Curve2D_q08qi"]
 resource_local_to_scene = true
@@ -180,308 +176,6 @@ _data = {
 radius = 124.803
 height = 303.635
 
-[sub_resource type="Animation" id="Animation_v6l5t"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/feather:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/feather:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("CanvasLayer/feather:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("CanvasLayer/feather:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-11, -238)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Blue_flowers:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Blue_flowers:modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("HoleLight:visible")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("HoleLight:modulate")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0.541, 1.622, 2.703, 0.151)]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("AudioStreamPlayer2D:volume_db")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("blood_on_the_ground:modulate")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("blood_on_the_ground:visible")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_jdme6"]
-streams_count = 3
-stream_0/stream = ExtResource("11_5lkct")
-stream_1/stream = ExtResource("12_l470w")
-stream_2/stream = ExtResource("13_q6lcp")
-
-[sub_resource type="Animation" id="Animation_3ubus"]
-resource_name = "feather_drop"
-length = 6.0
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/feather:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.21764),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/feather:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.607111, 2.3, 2.9, 5.7375),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(0, 4.324, 4.324, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("CanvasLayer/feather:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(1.20163, 1.26829, 1.36829, 1.46829, 1.56829, 1.66829, 1.76829, 1.86829, 1.96829, 2.06829, 2.16829, 2.26829, 2.36829),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("CanvasLayer/feather:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0.6, 3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, -40), Vector2(-2, -15)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Blue_flowers:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.6),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Blue_flowers:modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 1.3, 2.3, 2.9),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(0, 4.324, 4.324, 0), Color(0, 4.324, 4.324, 0), Color(0, 4.324, 4.324, 1), Color(1, 1, 1, 1)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("HoleLight:visible")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("HoleLight:modulate")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0.3, 0.7, 2.9, 6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(0.541, 1.622, 2.703, 0), Color(0.541, 1.622, 2.703, 0.151), Color(0.541, 1.622, 2.703, 0.151), Color(0.541, 1.622, 2.703, 0)]
-}
-tracks/8/type = "audio"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("AudioStreamPlayer2D")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": SubResource("AudioStreamRandomizer_jdme6")
-}],
-"times": PackedFloat32Array(0)
-}
-tracks/8/use_blend = true
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("AudioStreamPlayer2D:volume_db")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0, 4, 6),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, 0.0, -50.0]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("blood_on_the_ground:modulate")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0, 1.3, 2.3, 2.9),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 81.081, 95.676, 1), Color(0, 81.081, 95.676, 0)]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("blood_on_the_ground:visible")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0, 5.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_544he"]
-_data = {
-"RESET": SubResource("Animation_v6l5t"),
-"feather_drop": SubResource("Animation_3ubus")
-}
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_p0o1n"]
-blend_mode = 1
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r3q16"]
 resource_local_to_scene = true
 radius = 72.0
@@ -498,7 +192,10 @@ position = Vector2(25, -799)
 position = Vector2(-5, -845)
 
 [node name="rolly_boy7" parent="." instance=ExtResource("2_om747")]
-position = Vector2(-262, 682)
+position = Vector2(164, 95)
+
+[node name="rolly_boy8" parent="." instance=ExtResource("2_om747")]
+position = Vector2(27, 79)
 
 [node name="mage" parent="." instance=ExtResource("7_ajmxm")]
 position = Vector2(-672, -380)
@@ -827,44 +524,6 @@ z_index = 1
 shape = SubResource("CapsuleShape2D_4a6xr")
 debug_color = Color(0.70992, 0.485457, 0.0568966, 0.42)
 
-[node name="chicks" type="Node2D" parent="."]
-z_as_relative = false
-y_sort_enabled = true
-position = Vector2(-17, -806)
-
-[node name="feather_drop" type="AnimationPlayer" parent="chicks"]
-libraries = {
-"": SubResource("AnimationLibrary_544he")
-}
-
-[node name="CanvasLayer" type="CanvasLayer" parent="chicks"]
-follow_viewport_enabled = true
-
-[node name="feather" type="Sprite2D" parent="chicks/CanvasLayer"]
-visible = false
-position = Vector2(-11, -238)
-texture = ExtResource("14_mpmfm")
-hframes = 13
-
-[node name="Sprite2D" type="Sprite2D" parent="chicks"]
-
-[node name="Blue_flowers" parent="chicks" instance=ExtResource("15_0eid0")]
-visible = false
-
-[node name="HoleLight" type="Sprite2D" parent="chicks"]
-visible = false
-modulate = Color(0.541, 1.622, 2.703, 0.151)
-material = SubResource("CanvasItemMaterial_p0o1n")
-position = Vector2(2, -110)
-scale = Vector2(1, 1.52)
-texture = ExtResource("16_w5hfq")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="chicks"]
-
-[node name="blood_on_the_ground" parent="chicks" instance=ExtResource("17_ld1jf")]
-z_as_relative = false
-position = Vector2(11, 5)
-
 [node name="gate_block_north2" type="Node2D" parent="."]
 z_as_relative = false
 y_sort_enabled = true
@@ -918,12 +577,64 @@ position = Vector2(2, -107)
 shape = SubResource("CircleShape2D_xg4xv")
 debug_color = Color(0.699903, 0.492273, 0, 0.42)
 
+[node name="rat" parent="." instance=ExtResource("18_cbvjy")]
+position = Vector2(-42, 231)
+
+[node name="rat2" parent="." instance=ExtResource("18_cbvjy")]
+position = Vector2(24, 267)
+
+[node name="rat3" parent="." instance=ExtResource("18_cbvjy")]
+position = Vector2(210, 239)
+
+[node name="rat4" parent="." instance=ExtResource("18_cbvjy")]
+position = Vector2(365, 183)
+
+[node name="rat5" parent="." instance=ExtResource("18_cbvjy")]
+position = Vector2(315, 29)
+
+[node name="rat6" parent="." instance=ExtResource("18_cbvjy")]
+position = Vector2(288, 88)
+
+[node name="rat_two" parent="." instance=ExtResource("19_fnxec")]
+position = Vector2(-116, 127)
+
+[node name="rat_two2" parent="." instance=ExtResource("19_fnxec")]
+position = Vector2(-160, 237)
+
+[node name="rat_two3" parent="." instance=ExtResource("19_fnxec")]
+position = Vector2(-62, 68)
+
+[node name="rat_two4" parent="." instance=ExtResource("19_fnxec")]
+position = Vector2(-13, 90)
+
+[node name="pink_orb" parent="." instance=ExtResource("14_cqo1b")]
+position = Vector2(3, 150)
+
+[node name="pink_orb_one_rat_drop" type="Marker2D" parent="pink_orb"]
+position = Vector2(0, 76)
+
+[node name="pink_orb_one_timer" type="Timer" parent="pink_orb"]
+wait_time = 0.3
+one_shot = true
+
+[node name="pink_orb2" parent="." instance=ExtResource("14_cqo1b")]
+position = Vector2(217, 10)
+
+[node name="pink_orb_two_rat_drop" type="Marker2D" parent="pink_orb2"]
+position = Vector2(0, 76)
+
+[node name="pink_orb_two_timer" type="Timer" parent="pink_orb2"]
+wait_time = 0.3
+one_shot = true
+
 [connection signal="count" from="rolly_boy" to="." method="_on_rolly_boy_count"]
 [connection signal="fart" from="rolly_boy" to="." method="_on_rolly_boy_fart"]
 [connection signal="puddle" from="rolly_boy" to="." method="_on_rolly_boy_puddle"]
-[connection signal="count" from="rolly_boy7" to="." method="_on_rolly_boy_7_count"]
 [connection signal="fart" from="rolly_boy7" to="." method="_on_rolly_boy_7_fart"]
 [connection signal="puddle" from="rolly_boy7" to="." method="_on_rolly_boy_7_puddle"]
+[connection signal="count" from="rolly_boy8" to="." method="_on_rolly_boy_8_count"]
+[connection signal="fart" from="rolly_boy8" to="." method="_on_rolly_boy_8_fart"]
+[connection signal="puddle" from="rolly_boy8" to="." method="_on_rolly_boy_8_puddle"]
 [connection signal="counter" from="mage" to="." method="_on_mage_counter"]
 [connection signal="skull" from="mage" to="." method="_on_mage_skull"]
 [connection signal="spell" from="mage" to="." method="_on_mage_spell"]
@@ -935,5 +646,16 @@ debug_color = Color(0.699903, 0.492273, 0, 0.42)
 [connection signal="spell" from="mage3" to="." method="_on_mage_3_spell"]
 [connection signal="body_entered" from="gate_block_north/Area2D" to="gate_block_north" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="gate_block_west/trigger" to="gate_block_west" method="_on_trigger_body_entered"]
-[connection signal="chick" from="chicks/Blue_flowers" to="." method="_on_blue_flowers_chick"]
 [connection signal="body_entered" from="gate_block_north2/Area2D" to="gate_block_north2" method="_on_area_2d_body_entered"]
+[connection signal="death" from="pink_orb" to="." method="_on_pink_orb_death"]
+[connection signal="drop_rat" from="pink_orb" to="." method="_on_pink_orb_drop_rat"]
+[connection signal="left_back" from="pink_orb" to="." method="_on_pink_orb_left_back"]
+[connection signal="left_front" from="pink_orb" to="." method="_on_pink_orb_left_front"]
+[connection signal="right_back" from="pink_orb" to="." method="_on_pink_orb_right_back"]
+[connection signal="right_front" from="pink_orb" to="." method="_on_pink_orb_right_front"]
+[connection signal="death" from="pink_orb2" to="." method="_on_pink_orb_2_death"]
+[connection signal="drop_rat" from="pink_orb2" to="." method="_on_pink_orb_2_drop_rat"]
+[connection signal="left_back" from="pink_orb2" to="." method="_on_pink_orb_2_left_back"]
+[connection signal="left_front" from="pink_orb2" to="." method="_on_pink_orb_2_left_front"]
+[connection signal="right_back" from="pink_orb2" to="." method="_on_pink_orb_2_right_back"]
+[connection signal="right_front" from="pink_orb2" to="." method="_on_pink_orb_2_right_front"]

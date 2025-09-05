@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://ca5id8hq83q10"]
+[gd_scene load_steps=44 format=3 uid="uid://ca5id8hq83q10"]
 
 [ext_resource type="Script" path="res://levels/southern_oak_forest/the_long_path/southern_oak_forest_lvl_3.gd" id="1_cshod"]
 [ext_resource type="Texture2D" uid="uid://dk6egvaadf1wk" path="res://levels/southern_oak_forest/the_long_path/SOF_lvl_3_board.png" id="1_yvlg6"]
@@ -11,7 +11,6 @@
 [ext_resource type="Script" path="res://levels/southern_oak_forest/the_long_path/Area2D.gd" id="5_7poq0"]
 [ext_resource type="PackedScene" uid="uid://d2kgdn0bn2jia" path="res://gateways/candle_one.tscn" id="5_8w5wc"]
 [ext_resource type="PackedScene" uid="uid://c1nrp2h7xsv6q" path="res://enemies/entity/escape_path.tscn" id="7_oohbq"]
-[ext_resource type="PackedScene" uid="uid://xxibel38wjai" path="res://ghost_babies_and_blue_flowers/blue_flowers/blue_flowers.tscn" id="7_qugc7"]
 [ext_resource type="PackedScene" uid="uid://bl2p3j8ekcctv" path="res://trees/oaks/brush_trees_one.tscn" id="8_n3wts"]
 [ext_resource type="Texture2D" uid="uid://co6lkt2cv3dbf" path="res://levels/southern_oak_forest/the_long_path/fog.png" id="8_qvtty"]
 [ext_resource type="Texture2D" uid="uid://duxf27u2ncm8l" path="res://levels/southern_oak_forest/the_long_path/earth_4.png" id="8_ukbg2"]
@@ -21,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://dvlb3f38eus4v" path="res://jed_main/rocks/rocks.tscn" id="12_grpb1"]
 [ext_resource type="Texture2D" uid="uid://bsqsrbcjcj3ya" path="res://earth/earth_5.png" id="14_leda0"]
 [ext_resource type="PackedScene" uid="uid://cx7hltn13m4xn" path="res://trees/birch_trees/small_birch_in_darkness.tscn" id="16_hgtmr"]
+[ext_resource type="Texture2D" uid="uid://ou384jd1lkdr" path="res://light/light_3.png" id="17_k0mnb"]
 [ext_resource type="PackedScene" uid="uid://cyipuafi782qf" path="res://levels/test/flora/trees/pine_trees/pine_tree.tscn" id="18_n52af"]
 [ext_resource type="AudioStream" uid="uid://cyk3f4hlbpuc6" path="res://level_music/forest_sounds.mp3" id="23_msr1f"]
 [ext_resource type="AudioStream" uid="uid://b78vmcagbb718" path="res://level_music/sof_lvl_3.mp3" id="25_83cv5"]
@@ -28,8 +28,8 @@
 [ext_resource type="PackedScene" uid="uid://ck6pxou1tro63" path="res://levels/test/flora/ferns/fern_bunch.tscn" id="28_u74x6"]
 [ext_resource type="PackedScene" uid="uid://cysi1iovi84ac" path="res://gateways/gate_way_south_east.tscn" id="29_kqfa0"]
 [ext_resource type="PackedScene" uid="uid://lm0g77f7wysn" path="res://trees/oaks/Great_oak/great_oak_two.tscn" id="30_1i21d"]
+[ext_resource type="PackedScene" uid="uid://7qiu8l2nl068" path="res://drops/grub/grub.tscn" id="30_po1cn"]
 [ext_resource type="PackedScene" uid="uid://de3dsa0hbtxmx" path="res://flora/oaks/baby_oak_collection_1.tscn" id="30_q2jjl"]
-[ext_resource type="PackedScene" uid="uid://chvhj32h1ayp6" path="res://enemies/Rat_Puddle_Factory/rat_puddle_factory.tscn" id="32_k7jkc"]
 [ext_resource type="PackedScene" uid="uid://cgcodq241exb7" path="res://enemies/pink_smoke/pink_fog.tscn" id="33_ki4qa"]
 
 [sub_resource type="Animation" id="Animation_87hwx"]
@@ -85,11 +85,50 @@ _data = {
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_06jph"]
 blend_mode = 1
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5jox8"]
+size = Vector2(62.5739, 76.7247)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_fw0mu"]
 radius = 87.9318
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_suuug"]
 radius = 54.1295
+
+[sub_resource type="Animation" id="Animation_hxiic"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_vv20k"]
+resource_name = "poison"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.114396, 0.194208, 0.313925, 0.478869, 0.649133, 0.827378, 0.994982),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.111701, -0.125664, 0.111701, -0.125664, 0.111701, -0.125664, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yryc4"]
+_data = {
+"RESET": SubResource("Animation_hxiic"),
+"poison": SubResource("Animation_vv20k")
+}
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yhm2d"]
 radius = 108.116
@@ -125,65 +164,15 @@ position = Vector2(-30, 17)
 rotation = -0.200929
 skew = 0.179769
 
+[node name="StaticBody2D" type="StaticBody2D" parent="center_of_worship/flames"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="center_of_worship/flames/StaticBody2D"]
+position = Vector2(1.02551, -40.2063)
+scale = Vector2(0.999999, 1)
+shape = SubResource("RectangleShape2D_5jox8")
+
 [node name="young_oak" parent="center_of_worship" instance=ExtResource("9_0xxfv")]
 position = Vector2(36, -44)
-
-[node name="candle_one" parent="center_of_worship" instance=ExtResource("5_8w5wc")]
-position = Vector2(-70, 31)
-
-[node name="candle_one2" parent="center_of_worship" instance=ExtResource("5_8w5wc")]
-position = Vector2(-126, 8)
-
-[node name="candle_one3" parent="center_of_worship" instance=ExtResource("5_8w5wc")]
-position = Vector2(-112, 7)
-
-[node name="candle_one4" parent="center_of_worship" instance=ExtResource("5_8w5wc")]
-position = Vector2(37, -11)
-
-[node name="candle_one5" parent="center_of_worship" instance=ExtResource("5_8w5wc")]
-position = Vector2(4, -49)
-
-[node name="candle_one6" parent="center_of_worship" instance=ExtResource("5_8w5wc")]
-position = Vector2(-132, -44)
-
-[node name="candle_one7" parent="center_of_worship" instance=ExtResource("5_8w5wc")]
-position = Vector2(-94, 16)
-
-[node name="candle_one8" parent="center_of_worship" instance=ExtResource("5_8w5wc")]
-position = Vector2(108, -24)
-
-[node name="candle_one9" parent="center_of_worship" instance=ExtResource("5_8w5wc")]
-position = Vector2(-116, 11)
-
-[node name="candle_one10" parent="center_of_worship" instance=ExtResource("5_8w5wc")]
-position = Vector2(-132, 57)
-
-[node name="candle_one11" parent="center_of_worship" instance=ExtResource("5_8w5wc")]
-position = Vector2(-168, -33)
-
-[node name="candle_one12" parent="center_of_worship" instance=ExtResource("5_8w5wc")]
-position = Vector2(-160, -13)
-scale = Vector2(0.6, 0.6)
-
-[node name="candle_one13" parent="center_of_worship" instance=ExtResource("5_8w5wc")]
-position = Vector2(-113, -29)
-scale = Vector2(0.6, 0.6)
-
-[node name="candle_one14" parent="center_of_worship" instance=ExtResource("5_8w5wc")]
-position = Vector2(31, 1)
-scale = Vector2(0.6, 0.6)
-
-[node name="candle_one15" parent="center_of_worship" instance=ExtResource("5_8w5wc")]
-position = Vector2(59, 6)
-scale = Vector2(0.6, 0.6)
-
-[node name="candle_one16" parent="center_of_worship" instance=ExtResource("5_8w5wc")]
-position = Vector2(73, -30)
-scale = Vector2(0.6, 0.6)
-
-[node name="candle_one17" parent="center_of_worship" instance=ExtResource("5_8w5wc")]
-position = Vector2(-97, 38)
-scale = Vector2(0.6, 0.6)
 
 [node name="brush_trees_one" parent="center_of_worship" instance=ExtResource("8_n3wts")]
 position = Vector2(-104, -4)
@@ -276,13 +265,6 @@ shape = SubResource("CircleShape2D_suuug")
 
 [node name="Jed" parent="Board" instance=ExtResource("2_7pnvt")]
 
-[node name="blue_flowers" type="Node2D" parent="Board"]
-z_as_relative = false
-y_sort_enabled = true
-
-[node name="Blue_flowers" parent="Board/blue_flowers" instance=ExtResource("7_qugc7")]
-position = Vector2(454, 537)
-
 [node name="rocks" type="Node2D" parent="Board"]
 z_as_relative = false
 y_sort_enabled = true
@@ -304,6 +286,11 @@ position = Vector2(-248, 211)
 
 [node name="rocks7" parent="Board/rocks" instance=ExtResource("12_grpb1")]
 position = Vector2(-242, 219)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Board"]
+libraries = {
+"": SubResource("AnimationLibrary_yryc4")
+}
 
 [node name="earth" type="Sprite2D" parent="."]
 z_index = -3
@@ -1105,6 +1092,13 @@ script = ExtResource("5_7poq0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_yhm2d")
+
+[node name="PointLight2D" type="PointLight2D" parent="Area2D"]
+position = Vector2(177, 12)
+color = Color(1, 0.192157, 1, 1)
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("17_k0mnb")
 
 [node name="borders" type="StaticBody2D" parent="."]
 z_as_relative = false
@@ -2174,21 +2168,259 @@ autoplay = true
 position = Vector2(943, 749)
 
 [node name="CanvasModulate2" type="CanvasModulate" parent="."]
-color = Color(0.188235, 0.184314, 0.631373, 1)
+color = Color(0.0374562, 0.102639, 0.288786, 1)
 
 [node name="pink_fog" parent="." instance=ExtResource("33_ki4qa")]
 
-[node name="Rat_Puddle_Factory" parent="." instance=ExtResource("32_k7jkc")]
-position = Vector2(143, 136)
+[node name="candle_one" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(-70, 31)
+
+[node name="candle_one18" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(572, 560)
+
+[node name="candle_one23" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(603, 396)
+
+[node name="candle_one24" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(700, 196)
+
+[node name="candle_one25" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(521, -23)
+
+[node name="candle_one26" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(651, -153)
+
+[node name="candle_one27" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(656, -433)
+
+[node name="candle_one28" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(759, -601)
+
+[node name="candle_one29" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(636, -721)
+
+[node name="candle_one30" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(349, -715)
+
+[node name="candle_one31" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(68, -839)
+
+[node name="candle_one32" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(-165, -759)
+
+[node name="candle_one33" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(-509, -793)
+
+[node name="candle_one34" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(-471, -503)
+
+[node name="candle_one35" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(-765, -325)
+
+[node name="candle_one36" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(-684, 103)
+
+[node name="candle_one37" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(-795, 336)
+
+[node name="candle_one38" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(-666, 534)
+
+[node name="candle_one39" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(-459, 564)
+
+[node name="candle_one40" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(-290, 666)
+
+[node name="candle_one41" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(-20, 820)
+
+[node name="candle_one42" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(-41, 671)
+
+[node name="candle_one43" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(143, 646)
+
+[node name="candle_one44" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(206, 525)
+
+[node name="candle_one45" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(-40, 384)
+
+[node name="candle_one46" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(-220, 225)
+
+[node name="candle_one47" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(166, 54)
+
+[node name="candle_one48" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(310, 141)
+
+[node name="candle_one49" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(265, 356)
+
+[node name="candle_one19" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(497, 422)
+
+[node name="candle_one20" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(382, 691)
+
+[node name="candle_one21" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(656, 685)
+
+[node name="candle_one22" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(657, 341)
+
+[node name="candle_one2" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(-126, 8)
+
+[node name="candle_one3" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(-112, 7)
+
+[node name="candle_one4" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(37, -11)
+
+[node name="candle_one5" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(4, -49)
+
+[node name="candle_one6" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(-132, -44)
+
+[node name="candle_one7" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(-94, 16)
+
+[node name="candle_one8" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(108, -24)
+
+[node name="candle_one9" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(-116, 11)
+
+[node name="candle_one10" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(-132, 57)
+
+[node name="candle_one11" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(-168, -33)
+
+[node name="candle_one12" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(-160, -13)
+scale = Vector2(0.6, 0.6)
+
+[node name="candle_one13" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(-113, -29)
+scale = Vector2(0.6, 0.6)
+
+[node name="candle_one14" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(31, 1)
+scale = Vector2(0.6, 0.6)
+
+[node name="candle_one15" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(59, 6)
+scale = Vector2(0.6, 0.6)
+
+[node name="candle_one16" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(73, -30)
+scale = Vector2(0.6, 0.6)
+
+[node name="candle_one17" parent="." instance=ExtResource("5_8w5wc")]
+position = Vector2(-97, 38)
+scale = Vector2(0.6, 0.6)
+
+[node name="grub" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(564, 645)
+
+[node name="grub2" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(559, 634)
+
+[node name="grub3" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(569, 634)
+
+[node name="grub4" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(533, 630)
+
+[node name="grub5" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(557, 576)
+
+[node name="grub6" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(677, 548)
+
+[node name="grub7" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(574, 383)
+
+[node name="grub8" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(678, 214)
+
+[node name="grub9" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(-78, 138)
+
+[node name="grub10" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(-113, 275)
+
+[node name="grub11" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(248, 311)
+
+[node name="grub12" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(82, 113)
+
+[node name="grub13" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(35, 225)
+
+[node name="grub14" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(-546, -793)
+
+[node name="grub15" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(-543, -789)
+
+[node name="grub16" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(-550, -783)
+
+[node name="grub17" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(-553, -790)
+
+[node name="grub18" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(-547, -786)
+
+[node name="grub19" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(-560, -783)
+
+[node name="grub20" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(-651, -815)
+
+[node name="grub21" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(-186, 679)
+
+[node name="grub22" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(-178, 687)
+
+[node name="grub23" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(-212, 697)
+
+[node name="grub24" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(-82, 726)
+
+[node name="grub25" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(-78, 805)
+
+[node name="grub26" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(-73, 646)
+
+[node name="grub27" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(103, 717)
+
+[node name="grub28" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(195, 700)
+
+[node name="grub29" parent="." instance=ExtResource("30_po1cn")]
+position = Vector2(39, 323)
 
 [connection signal="body_entered" from="center_of_worship/escape_path" to="." method="_on_escape_path_body_entered"]
 [connection signal="body_entered" from="Board/to_lvl_2" to="." method="_on_to_lvl_2_body_entered"]
+[connection signal="Blue_healed" from="Board/Jed" to="." method="_on_jed_blue_healed"]
 [connection signal="died" from="Board/Jed" to="Board" method="_on_jed_died"]
 [connection signal="flame" from="Board/Jed" to="Board" method="_on_jed_flame"]
 [connection signal="ghosted" from="Board/Jed" to="Board" method="_on_jed_ghosted"]
+[connection signal="orchid_poison" from="Board/Jed" to="Board" method="_on_jed_orchid_poison"]
 [connection signal="rocks_E" from="Board/Jed" to="Board" method="_on_jed_rocks_e"]
 [connection signal="step" from="Board/Jed" to="Board" method="_on_jed_step"]
 [connection signal="stomp" from="Board/Jed" to="Board" method="_on_jed_stomp"]
-[connection signal="chick" from="Board/blue_flowers/Blue_flowers" to="Board" method="_on_blue_flowers_chick"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="change" from="trees/great_oak_two" to="." method="_on_great_oak_two_change"]

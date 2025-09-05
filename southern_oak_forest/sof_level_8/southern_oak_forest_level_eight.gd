@@ -1,5 +1,5 @@
 extends Node2D
-
+@onready var anim = $AnimationPlayer
 @onready var Jed = $Jed
 #@onready var blue_flower_anim = $Blue_flowers/AnimationPlayer
 var ground_flame: PackedScene = preload('res://jed_main/rocks/ground_flame.tscn')
@@ -8,7 +8,7 @@ var enemies_plus_six_eight: PackedScene = preload('res://enemies/groupings/group
 var enemies_plus_four_eight: PackedScene = preload('res://enemies/groupings/group_eight/enemies_plus_four_eight.tscn')
 var enemies_below_three_eight: PackedScene = preload('res://enemies/groupings/group_eight/enemies_below_three_eight.tscn')
 
-
+var blue_healing: PackedScene = preload("res://numbers/blue_fire/blue_heal.tscn")
 var rocks: PackedScene = preload("res://jed_main/rocks/throwing_rock.tscn")
 var pickup_rocks: PackedScene = preload("res://jed_main/rocks/rocks.tscn")
 var chick: PackedScene = preload("res://ghost_babies_and_blue_flowers/ghost_babies.tscn")
@@ -46,7 +46,7 @@ func _ready():
 	PlayerData.death_in_sof_8 = false
 	enemies_eight()
 	Global.blue_flower_heal = true
-	$Jed.position = Vector2(-328,575)
+	$Jed.position = Vector2(-365,589)
 	if Global.chick_counter >= 1:
 			var chick_1 = chick.instantiate()
 			chick_1.position = $chick_spwns/chick_spawn_1.global_position
@@ -119,7 +119,7 @@ func _on_jed_ghosted() -> void:
 	spirit_jimmy.global_position = Jed.position
 	add_child(spirit_jimmy)
 func _on_jed_orchid_poison() -> void:
-	pass # Replace with function body.
+	anim.play('poison')
 
 
 func enemies_eight():
@@ -186,3 +186,7 @@ func boss_five():
 	var boss = boss_5.instantiate()
 	boss.position = $boss_marker.global_position
 	call_deferred('add_child',boss)
+func _on_jed_blue_healed() -> void:
+			var blue_heals = blue_healing.instantiate() 
+			blue_heals.global_position  = $Jed.global_position
+			add_child(blue_heals)

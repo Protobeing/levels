@@ -1,18 +1,13 @@
-[gd_scene load_steps=19 format=3 uid="uid://dfp2boi4avkih"]
+[gd_scene load_steps=17 format=3 uid="uid://dfp2boi4avkih"]
 
 [ext_resource type="Script" path="res://levels/southern_oak_forest/sof_level_1/southern_oak_forest_level_one.gd" id="1_8i6vq"]
 [ext_resource type="PackedScene" uid="uid://0sxh0cfn4hg" path="res://gateways/small_opening_west.tscn" id="3_7q3vl"]
-[ext_resource type="Texture2D" uid="uid://bwpi8qgki4ync" path="res://earth/small_earth_plot.png" id="4_cpu13"]
 [ext_resource type="Script" path="res://levels/southern_oak_forest/sof_level_1/exit_sof.gd" id="4_p84aq"]
 [ext_resource type="PackedScene" uid="uid://dk7g834rkrfwy" path="res://jed_main/Jed.tscn" id="4_v06ky"]
-[ext_resource type="PackedScene" uid="uid://dk36j2m4w8f7k" path="res://levels/test/flora/ferns/fern_collection_two.tscn" id="6_ggptv"]
-[ext_resource type="PackedScene" uid="uid://crkc3ae77hf6h" path="res://trees/pine_trees/pine_tree.tscn" id="8_u4bmb"]
-[ext_resource type="PackedScene" uid="uid://toqsdxc1ookg" path="res://trees/oaks/baby_oak_collection_1.tscn" id="10_b53fy"]
-[ext_resource type="PackedScene" uid="uid://ck6pxou1tro63" path="res://levels/test/flora/ferns/fern_bunch.tscn" id="11_8vsga"]
-[ext_resource type="Texture2D" uid="uid://83702epwc5rx" path="res://gateways/light/light_3.png" id="13_mg0kn"]
+[ext_resource type="PackedScene" uid="uid://4sl0kd2plpfc" path="res://gateways/small_opening_south.tscn" id="6_hnr4k"]
+[ext_resource type="PackedScene" uid="uid://c7vwf2gkq7rwq" path="res://earth/entrance_brush.tscn" id="9_320ua"]
 [ext_resource type="PackedScene" uid="uid://c1nrp2h7xsv6q" path="res://enemies/entity/escape_path.tscn" id="14_lrxvo"]
-[ext_resource type="PackedScene" uid="uid://bl2p3j8ekcctv" path="res://trees/oaks/brush_trees_one.tscn" id="16_4rn44"]
-[ext_resource type="PackedScene" uid="uid://bvkfk6gofkaim" path="res://flora/flowers/golden_rod_one.tscn" id="16_kh4ao"]
+[ext_resource type="PackedScene" uid="uid://bf6pcoptplvph" path="res://earth/large_rock_two.tscn" id="16_spmg4"]
 [ext_resource type="AudioStream" uid="uid://cyk3f4hlbpuc6" path="res://level_music/forest_sounds.mp3" id="17_ro5ro"]
 
 [sub_resource type="Animation" id="Animation_dxjli"]
@@ -30,6 +25,42 @@ _data = {
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uxlgc"]
 radius = 53.8145
+
+[sub_resource type="Animation" id="Animation_hxiic"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_vv20k"]
+resource_name = "poison"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.114396, 0.194208, 0.313925, 0.478869, 0.649133, 0.827378, 0.994982),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.111701, -0.125664, 0.111701, -0.125664, 0.111701, -0.125664, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yryc4"]
+_data = {
+"RESET": SubResource("Animation_hxiic"),
+"poison": SubResource("Animation_vv20k")
+}
 
 [node name="southern_oak_forest_level_one" type="Node2D"]
 z_as_relative = false
@@ -80,128 +111,11 @@ shape = SubResource("CircleShape2D_uxlgc")
 z_as_relative = false
 y_sort_enabled = true
 
-[node name="small_opening_south" type="Node2D" parent="gateways"]
-z_as_relative = false
-y_sort_enabled = true
-position = Vector2(-15, 790)
-
-[node name="earth" type="Node2D" parent="gateways/small_opening_south"]
-z_index = -3
-z_as_relative = false
-
-[node name="SmallEarthPlot" type="Sprite2D" parent="gateways/small_opening_south/earth"]
-position = Vector2(10, 19)
-texture = ExtResource("4_cpu13")
-
-[node name="SmallEarthPlot2" type="Sprite2D" parent="gateways/small_opening_south/earth"]
-position = Vector2(-102, -80)
-texture = ExtResource("4_cpu13")
-
-[node name="SmallEarthPlot3" type="Sprite2D" parent="gateways/small_opening_south/earth"]
-position = Vector2(92, -83)
-texture = ExtResource("4_cpu13")
-
-[node name="SmallEarthPlot4" type="Sprite2D" parent="gateways/small_opening_south/earth"]
-position = Vector2(-124, 36)
-texture = ExtResource("4_cpu13")
-
-[node name="SmallEarthPlot5" type="Sprite2D" parent="gateways/small_opening_south/earth"]
-position = Vector2(186, 49)
-texture = ExtResource("4_cpu13")
-
-[node name="SmallEarthPlot6" type="Sprite2D" parent="gateways/small_opening_south/earth"]
-position = Vector2(186, 49)
-texture = ExtResource("4_cpu13")
-
-[node name="trees" type="Node2D" parent="gateways/small_opening_south"]
-z_as_relative = false
-y_sort_enabled = true
-
-[node name="pine_tree" parent="gateways/small_opening_south/trees" instance=ExtResource("8_u4bmb")]
-position = Vector2(172, -6)
-
-[node name="pine_tree2" parent="gateways/small_opening_south/trees" instance=ExtResource("8_u4bmb")]
-position = Vector2(-113, 75)
-
-[node name="pine_tree3" parent="gateways/small_opening_south/trees" instance=ExtResource("8_u4bmb")]
-position = Vector2(-163, -3)
-
-[node name="pine_tree4" parent="gateways/small_opening_south/trees" instance=ExtResource("8_u4bmb")]
-position = Vector2(129, 97)
-
-[node name="brush_trees_one" parent="gateways/small_opening_south/trees" instance=ExtResource("16_4rn44")]
-position = Vector2(-192, 80)
-
-[node name="brush_trees_one2" parent="gateways/small_opening_south/trees" instance=ExtResource("16_4rn44")]
-position = Vector2(-83, 106)
-
-[node name="brush_trees_one3" parent="gateways/small_opening_south/trees" instance=ExtResource("16_4rn44")]
-position = Vector2(189, 46)
-
-[node name="baby_oak_collection_1" parent="gateways/small_opening_south/trees" instance=ExtResource("10_b53fy")]
-position = Vector2(67, 41)
-
-[node name="ferns_etc" type="Node2D" parent="gateways/small_opening_south"]
-z_as_relative = false
-y_sort_enabled = true
-
-[node name="fern_collection_two" parent="gateways/small_opening_south/ferns_etc" instance=ExtResource("6_ggptv")]
-position = Vector2(-146, -44)
-
-[node name="fern_collection_two2" parent="gateways/small_opening_south/ferns_etc" instance=ExtResource("6_ggptv")]
-position = Vector2(150, -33)
-
-[node name="fern_collection_two3" parent="gateways/small_opening_south/ferns_etc" instance=ExtResource("6_ggptv")]
-position = Vector2(157, 11)
-
-[node name="fern_collection_two4" parent="gateways/small_opening_south/ferns_etc" instance=ExtResource("6_ggptv")]
-position = Vector2(207, 32)
-
-[node name="fern_collection_two5" parent="gateways/small_opening_south/ferns_etc" instance=ExtResource("6_ggptv")]
-position = Vector2(150, 75)
-
-[node name="fern_collection_two6" parent="gateways/small_opening_south/ferns_etc" instance=ExtResource("6_ggptv")]
-position = Vector2(-109, 44)
-
-[node name="fern_collection_two7" parent="gateways/small_opening_south/ferns_etc" instance=ExtResource("6_ggptv")]
-position = Vector2(-153, 2)
-
-[node name="fern_collection_two8" parent="gateways/small_opening_south/ferns_etc" instance=ExtResource("6_ggptv")]
-position = Vector2(-131, 4)
-
-[node name="fern_collection_two9" parent="gateways/small_opening_south/ferns_etc" instance=ExtResource("6_ggptv")]
-position = Vector2(180, -102)
-
-[node name="fern_collection_two10" parent="gateways/small_opening_south/ferns_etc" instance=ExtResource("6_ggptv")]
-position = Vector2(0, 50)
-
-[node name="fern_collection_two11" parent="gateways/small_opening_south/ferns_etc" instance=ExtResource("6_ggptv")]
-position = Vector2(61, 43)
-
-[node name="golden_rod_one" parent="gateways/small_opening_south/ferns_etc" instance=ExtResource("16_kh4ao")]
-position = Vector2(150, -47)
-
-[node name="PointLight2D" type="PointLight2D" parent="gateways/small_opening_south"]
-enabled = false
-color = Color(1, 0.203922, 1, 1)
-shadow_enabled = true
-texture = ExtResource("13_mg0kn")
-texture_scale = 2.49
-
-[node name="fern_bunch" parent="gateways/small_opening_south" instance=ExtResource("11_8vsga")]
-position = Vector2(141, -80)
-
-[node name="fern_bunch2" parent="gateways/small_opening_south" instance=ExtResource("11_8vsga")]
-position = Vector2(-49, -65)
-
-[node name="fern_bunch3" parent="gateways/small_opening_south" instance=ExtResource("11_8vsga")]
-position = Vector2(-482, -940)
-
-[node name="fern_bunch4" parent="gateways/small_opening_south" instance=ExtResource("11_8vsga")]
-position = Vector2(-498, -828)
-
 [node name="small_opening_west" parent="gateways" instance=ExtResource("3_7q3vl")]
 position = Vector2(-580, -64)
+
+[node name="small_opening_south2" parent="gateways" instance=ExtResource("6_hnr4k")]
+position = Vector2(8, 801)
 
 [node name="boss_marker" type="Marker2D" parent="."]
 z_as_relative = false
@@ -210,9 +124,36 @@ y_sort_enabled = true
 [node name="escape_path" parent="." instance=ExtResource("14_lrxvo")]
 position = Vector2(-893, -199)
 
-[node name="Node2D" type="Node2D" parent="."]
-position = Vector2(15, 751)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_yryc4")
+}
 
+[node name="large_rock_two" parent="." instance=ExtResource("16_spmg4")]
+position = Vector2(-625, -29)
+
+[node name="large_rock_two2" parent="." instance=ExtResource("16_spmg4")]
+position = Vector2(-547, 24)
+
+[node name="large_rock_two3" parent="." instance=ExtResource("16_spmg4")]
+position = Vector2(-584, -134)
+
+[node name="large_rock_two4" parent="." instance=ExtResource("16_spmg4")]
+position = Vector2(-67, 725)
+
+[node name="large_rock_two5" parent="." instance=ExtResource("16_spmg4")]
+position = Vector2(99, 834)
+
+[node name="large_rock_two6" parent="." instance=ExtResource("16_spmg4")]
+position = Vector2(131, 753)
+
+[node name="large_rock_two7" parent="." instance=ExtResource("16_spmg4")]
+position = Vector2(131, 753)
+
+[node name="entrance_brush" parent="." instance=ExtResource("9_320ua")]
+position = Vector2(-14, 824)
+
+[connection signal="Blue_healed" from="Jed" to="." method="_on_jed_blue_healed"]
 [connection signal="died" from="Jed" to="." method="_on_jed_died"]
 [connection signal="flame" from="Jed" to="." method="_on_jed_flame"]
 [connection signal="ghosted" from="Jed" to="." method="_on_jed_ghosted"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cqx4n6nnd6iu8"]
+[gd_scene load_steps=30 format=3 uid="uid://cqx4n6nnd6iu8"]
 
 [ext_resource type="Script" path="res://levels/southern_oak_forest/sof_level_3/southern_oak_forest_level_three.gd" id="1_fkepd"]
 [ext_resource type="PackedScene" uid="uid://bqx7ywwfn6evp" path="res://gateways/small_opening_east.tscn" id="2_4twle"]
@@ -12,11 +12,14 @@
 [ext_resource type="PackedScene" uid="uid://uqn003f1nucx" path="res://trees/oaks/young_oak.tscn" id="11_46xkm"]
 [ext_resource type="AudioStream" uid="uid://rsopmgb6xa4d" path="res://level_music/fighting.wav" id="11_vkumn"]
 [ext_resource type="PackedScene" uid="uid://dxq73m7npidcj" path="res://trees/pine_trees/large_pine_in_darkness.tscn" id="12_1snqj"]
+[ext_resource type="PackedScene" uid="uid://iyaeynq3gqvq" path="res://trees/oaks/smaller_great_oak/smaller_great_oak_1.tscn" id="12_6285j"]
 [ext_resource type="Script" path="res://addons/ovani_audio_linker/AudioMeasure.gd" id="12_yuaum"]
 [ext_resource type="PackedScene" uid="uid://toqsdxc1ookg" path="res://trees/oaks/baby_oak_collection_1.tscn" id="13_0tlh1"]
 [ext_resource type="Script" path="res://addons/ovani_audio_linker/AudioSignalReader.gd" id="13_c0me8"]
 [ext_resource type="AudioStream" uid="uid://cyk3f4hlbpuc6" path="res://level_music/forest_sounds.mp3" id="14_pteg2"]
 [ext_resource type="PackedScene" uid="uid://c1nrp2h7xsv6q" path="res://enemies/entity/escape_path.tscn" id="21_kg7am"]
+[ext_resource type="PackedScene" uid="uid://c2achx8h1db3l" path="res://earth/large_rock_pile.tscn" id="22_6ls0o"]
+[ext_resource type="PackedScene" uid="uid://bf6pcoptplvph" path="res://earth/large_rock_two.tscn" id="23_baioo"]
 [ext_resource type="PackedScene" uid="uid://bvkfk6gofkaim" path="res://flora/flowers/golden_rod_one.tscn" id="25_dj3li"]
 [ext_resource type="PackedScene" uid="uid://dgjv1dn81bnaf" path="res://enemies/zombie_rat/zombie_rat.tscn" id="29_ceqos"]
 [ext_resource type="PackedScene" uid="uid://dvlb3f38eus4v" path="res://jed_main/rocks/rocks.tscn" id="30_npl4x"]
@@ -29,6 +32,42 @@ radius = 67.2681
 vertices = PackedVector2Array(-128.633, 674.281, -159.461, 767.719, -237.859, 822.789, -447.891, 809.039, -559.344, 790.953, -571.273, 767.094, -588.102, 628.547, -43.8984, 302.43, -609.281, 504.492, -66.1563, 79.2031, -29.25, 138.453, -661.422, 355.094, -731.281, 99.5781, -476.578, -263.063, -348.18, -266.977, -222.938, -256.383, -140.93, -160.07, -535.102, -234.781, -659.188, -189.383, -759.883, -37.4609, -747.5, -146.953, -711.391, -177.781)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7), PackedInt32Array(7, 6, 8), PackedInt32Array(9, 10, 7, 8, 11, 12), PackedInt32Array(13, 14, 15, 16, 9, 12, 17), PackedInt32Array(18, 17, 12, 19, 20), PackedInt32Array(18, 20, 21)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-539, -244, -662, -199, -716, -187, -757, -152, -770, -37, -741, 102, -671, 358, -619, 507, -598, 630, -581, 770, -566, 800, -449, 819, -235, 833, -151, 774, -119, 677, -34, 304, -19, 136, -57, 75, -132, -165, -218, -266, -348, -277, -479, -273)])
+
+[sub_resource type="Animation" id="Animation_hxiic"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_vv20k"]
+resource_name = "poison"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.114396, 0.194208, 0.313925, 0.478869, 0.649133, 0.827378, 0.994982),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.111701, -0.125664, 0.111701, -0.125664, 0.111701, -0.125664, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yryc4"]
+_data = {
+"RESET": SubResource("Animation_hxiic"),
+"poison": SubResource("Animation_vv20k")
+}
 
 [node name="southern_oak_forest_level_three" type="Node2D"]
 z_as_relative = false
@@ -368,19 +407,23 @@ position = Vector2(-577, -89)
 [node name="baby_oak_collection_3" parent="trees" instance=ExtResource("13_0tlh1")]
 position = Vector2(-507, -169)
 
+[node name="Smaller_great_oak_1" parent="trees" instance=ExtResource("12_6285j")]
+position = Vector2(-1172, 65)
+
 [node name="fauna" type="Node2D" parent="."]
 position = Vector2(439, -47)
 
 [node name="Jed" parent="." instance=ExtResource("6_idmsw")]
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+visible = false
 z_as_relative = false
 position = Vector2(453, -26)
 navigation_polygon = SubResource("NavigationPolygon_v1bh6")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 position = Vector2(439, -47)
-color = Color(0.18688, 0.185262, 0.630912, 1)
+color = Color(0.0676581, 0.15406, 0.400615, 1)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 z_index = -1
@@ -574,7 +617,217 @@ y_sort_enabled = true
 [node name="escape_path" parent="." instance=ExtResource("21_kg7am")]
 position = Vector2(388, -566)
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_yryc4")
+}
+
+[node name="large_rock_pile" parent="." instance=ExtResource("22_6ls0o")]
+position = Vector2(274, 502)
+
+[node name="large_rock_pile8" parent="." instance=ExtResource("22_6ls0o")]
+position = Vector2(-182, -279)
+
+[node name="large_rock_pile2" parent="." instance=ExtResource("22_6ls0o")]
+position = Vector2(-202, 310)
+
+[node name="large_rock_pile3" parent="." instance=ExtResource("22_6ls0o")]
+position = Vector2(589, 364)
+
+[node name="large_rock_pile4" parent="." instance=ExtResource("22_6ls0o")]
+position = Vector2(1063, 526)
+
+[node name="large_rock_pile5" parent="." instance=ExtResource("22_6ls0o")]
+position = Vector2(1106, 326)
+
+[node name="large_rock_pile6" parent="." instance=ExtResource("22_6ls0o")]
+position = Vector2(81, 723)
+
+[node name="large_rock_pile7" parent="." instance=ExtResource("22_6ls0o")]
+position = Vector2(-71, 651)
+
+[node name="large_rock_two" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-221, 756)
+
+[node name="large_rock_two2" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-266, 667)
+
+[node name="large_rock_two51" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-470, 736)
+
+[node name="large_rock_two52" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-436, 795)
+
+[node name="large_rock_two53" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-399, 742)
+
+[node name="large_rock_two54" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-537, 738)
+
+[node name="large_rock_two55" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-525, 793)
+
+[node name="large_rock_two56" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-492, 865)
+
+[node name="large_rock_two57" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-476, 795)
+
+[node name="large_rock_two58" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-473, 760)
+
+[node name="large_rock_two59" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-392, 844)
+
+[node name="large_rock_two60" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-392, 844)
+
+[node name="large_rock_two3" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(525, 342)
+
+[node name="large_rock_two4" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(501, 389)
+
+[node name="large_rock_two5" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(457, 345)
+
+[node name="large_rock_two6" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(384, 358)
+
+[node name="large_rock_two7" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-665, 112)
+
+[node name="large_rock_two8" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(345, 502)
+
+[node name="large_rock_two9" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(707, 386)
+
+[node name="large_rock_two10" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(755, 417)
+
+[node name="large_rock_two11" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(803, 451)
+
+[node name="large_rock_two12" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(953, 575)
+
+[node name="large_rock_two13" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-589, 128)
+
+[node name="large_rock_two14" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-535, 119)
+
+[node name="large_rock_two23" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-341, 79)
+
+[node name="large_rock_two24" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-278, 109)
+
+[node name="large_rock_two25" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-180, 149)
+
+[node name="large_rock_two26" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-372, -28)
+
+[node name="large_rock_two27" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-773, -37)
+
+[node name="large_rock_two28" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-811, -8)
+
+[node name="large_rock_two29" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-828, 53)
+
+[node name="large_rock_two30" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-818, 106)
+
+[node name="large_rock_two31" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-789, 153)
+
+[node name="large_rock_two32" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-751, 177)
+
+[node name="large_rock_two33" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-750, -95)
+
+[node name="large_rock_two34" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-806, -5)
+
+[node name="large_rock_two35" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-895, 38)
+
+[node name="large_rock_two36" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-881, -26)
+
+[node name="large_rock_two37" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-842, -50)
+
+[node name="large_rock_two38" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-822, -79)
+
+[node name="large_rock_two39" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-705, -107)
+
+[node name="large_rock_two40" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-800, 208)
+
+[node name="large_rock_two41" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-742, 246)
+
+[node name="large_rock_two42" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-867, 80)
+
+[node name="large_rock_two43" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(140, -128)
+
+[node name="large_rock_two44" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(278, -179)
+
+[node name="large_rock_two46" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(140, -272)
+
+[node name="large_rock_two47" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(72, -290)
+
+[node name="large_rock_two48" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(17, -246)
+
+[node name="large_rock_two49" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-8, -287)
+
+[node name="large_rock_two50" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(-101, -291)
+
+[node name="large_rock_two45" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(210, -140)
+
+[node name="large_rock_two15" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(899, 566)
+
+[node name="large_rock_two16" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(882, 541)
+
+[node name="large_rock_two17" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(1107, 474)
+
+[node name="large_rock_two18" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(1107, 422)
+
+[node name="large_rock_two19" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(708, 264)
+
+[node name="large_rock_two20" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(607, 240)
+
+[node name="large_rock_two21" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(648, 264)
+
+[node name="large_rock_two22" parent="." instance=ExtResource("23_baioo")]
+position = Vector2(648, 264)
+
 [connection signal="body_entered" from="small_opening_south_exit" to="." method="_on_small_opening_south_exit_body_entered"]
+[connection signal="Blue_healed" from="Jed" to="." method="_on_jed_blue_healed"]
 [connection signal="died" from="Jed" to="." method="_on_jed_died"]
 [connection signal="flame" from="Jed" to="." method="_on_jed_flame"]
 [connection signal="ghosted" from="Jed" to="." method="_on_jed_ghosted"]

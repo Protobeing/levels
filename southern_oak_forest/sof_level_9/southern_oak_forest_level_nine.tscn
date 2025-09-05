@@ -6643,7 +6643,7 @@ position = Vector2(-172, 337)
 [node name="Jed" parent="." instance=ExtResource("3_khqs5")]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.188235, 0.184314, 0.631373, 1)
+color = Color(0.0676581, 0.15406, 0.400615, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -6800,6 +6800,7 @@ y_sort_enabled = true
 position = Vector2(912, -517)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="Blue_healed" from="Jed" to="." method="_on_jed_blue_healed"]
 [connection signal="died" from="Jed" to="." method="_on_jed_died"]
 [connection signal="flame" from="Jed" to="." method="_on_jed_flame"]
 [connection signal="ghosted" from="Jed" to="." method="_on_jed_ghosted"]

@@ -1,6 +1,6 @@
 extends Node2D
 
-
+@onready var anim = $AnimationPlayer
 #group one
 #var enemies_plus_six_one: PackedScene = preload('res://enemies/groupings/group_one/enemies_plus_six_one.tscn')
 #var enemies_plus_four_one: PackedScene = preload('res://enemies/groupings/group_one/enemies_plus_four_one.tscn')
@@ -13,6 +13,7 @@ extends Node2D
 @onready var Jed = $Jed
 var ground_flame: PackedScene = preload('res://jed_main/rocks/ground_flame.tscn')
 #group ten
+var blue_healing: PackedScene = preload("res://numbers/blue_fire/blue_heal.tscn")
 var enemies_plus_four_ten: PackedScene = preload('res://enemies/groupings/group_ten/enemies_plus_four_ten.tscn')
 var enemies_below_two_ten: PackedScene = preload('res://enemies/groupings/group_ten/enemies_below_two_ten.tscn')
 var enemies_plus_six_ten: PackedScene = preload('res://enemies/groupings/group_ten/enemies_plus_six_ten.tscn')
@@ -34,6 +35,10 @@ var boss_2: PackedScene = preload('res://enemies/groupings/boss_two/boss_two.tsc
 var boss_3: PackedScene = preload('res://enemies/groupings/boss_three/boss_three.tscn')
 var boss_4: PackedScene = preload('res://enemies/groupings/boss_four/boss_four.tscn')
 var boss_5: PackedScene = preload("res://enemies/groupings/boss_five/boss_five.tscn")
+
+var bone = preload("res://drops/bone/bone.tscn")
+var grubs: PackedScene = preload('res://drops/grub/grub.tscn')
+
 func _ready():
 	if Levels.time_to_hunt == false:
 		if AudioPlayer.oak_forest_chill_vibes == false:
@@ -53,7 +58,7 @@ func _ready():
 	PlayerData.death_in_sof_10 = false
 	enemies_ten()
 	Global.blue_flower_heal = true
-	$Jed.position = Vector2(-335,362)
+	$Jed.position = Vector2(-350,351)
 	if Global.chick_counter >= 1:
 			var chick_1 = chick.instantiate()
 			chick_1.position = $chick_spwns/chick_spawn_1.global_position
@@ -125,7 +130,7 @@ func _on_jed_ghosted() -> void:
 	spirit_jimmy.global_position = Jed.position
 	add_child(spirit_jimmy)
 func _on_jed_orchid_poison() -> void:
-	pass # Replace with function body.
+	anim.play('poison')
 
 
 func enemies_ten():
@@ -192,3 +197,74 @@ func boss_five():
 	var boss = boss_5.instantiate()
 	boss.position = $boss_marker.global_position
 	call_deferred('add_child',boss)
+
+
+func _on_zombie_rat_bones() -> void:
+				var bone_times = bone.instantiate()
+				bone_times.global_position = $zombie_rat.position
+				add_child(bone_times)
+				print('dropped bones')
+
+
+func _on_zombie_rat_2_bones() -> void:
+				var bone_times = bone.instantiate()
+				bone_times.global_position = $zombie_rat2.position
+				add_child(bone_times)
+				print('dropped bones')
+
+
+func _on_zombie_rat_3_bones() -> void:
+				var bone_times = bone.instantiate()
+				bone_times.global_position = $zombie_rat3.position
+				add_child(bone_times)
+				print('dropped bones')
+
+
+func _on_zombie_rat_4_bones() -> void:
+				var bone_times = bone.instantiate()
+				bone_times.global_position = $zombie_rat4.position
+				add_child(bone_times)
+				print('dropped bones')
+
+
+func _on_zombie_rat_5_bones() -> void:
+				var bone_times = bone.instantiate()
+				bone_times.global_position = $zombie_rat5.position
+				add_child(bone_times)
+				print('dropped bones')
+
+
+func _on_zombie_rat_grub() -> void:
+	var grub_time = grubs.instantiate()
+	grub_time.global_position =$zombie_rat.position
+	add_child(grub_time)
+
+
+func _on_zombie_rat_2_grub() -> void:
+	var grub_time = grubs.instantiate()
+	grub_time.global_position = $zombie_rat2.position
+	add_child(grub_time)
+
+
+func _on_zombie_rat_3_grub() -> void:
+	var grub_time = grubs.instantiate()
+	grub_time.global_position = $zombie_rat3.position
+	add_child(grub_time)
+
+
+func _on_zombie_rat_4_grub() -> void:
+	var grub_time = grubs.instantiate()
+	grub_time.global_position = $zombie_rat4.position
+	add_child(grub_time)
+
+
+func _on_zombie_rat_5_grub() -> void:
+	var grub_time = grubs.instantiate()
+	grub_time.global_position = $zombie_rat5.position
+	add_child(grub_time)
+
+
+func _on_jed_blue_healed() -> void:
+			var blue_heals = blue_healing.instantiate() 
+			blue_heals.global_position  = $Jed.global_position
+			add_child(blue_heals)

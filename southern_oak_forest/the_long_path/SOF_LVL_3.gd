@@ -1,7 +1,7 @@
 extends Node2D
 var died = false
 var player: PackedScene = preload("res://jed_main/Jed.tscn")
-
+@onready var anim = $AnimationPlayer
 #var rat_lvl_3: PackedScene = preload('the_long')
 #var level_3: PackedScene = preload("res://levels/Oak_forest/southern_oak_forest_lvl_3.tscn")
 #var rat_lvl_2: PackedScene = preload("res://levels/Oak_forest/Enemies/rats_SOF_lvl_2.tscn")
@@ -86,18 +86,15 @@ func _on_jed_flame():
 	flames.global_position = JED.position
 	add_child(flames)
 
-func _on_blue_flowers_chick():
-	if BlueFlowerCount.southern_oak_forest:
-		BlueFlowerCount.southern_oak_forest = false
-		Global.chick_counter = Global.chick_counter + 1
-		if Global.chick_counter <= 5:
-			var chicky = chick.instantiate()
-			chicky.global_position = $blue_flowers/Blue_flowers.position
-			add_child(chicky)
-		#BlueFlowerCount.blue_flower_7 = true
-
-
-
+#func _on_blue_flowers_chick():
+	##if BlueFlowerCount.southern_oak_forest:
+		##BlueFlowerCount.southern_oak_forest = false
+		#Global.chick_counter = Global.chick_counter + 1
+		#if Global.chick_counter <= 10:
+			#var chicky = chick.instantiate()
+			#chicky.global_position = $blue_flowers/Blue_flowers.position
+			#add_child(chicky)
+		##BlueFlowerCount.blue_flower_7 = true
 
 
 
@@ -239,3 +236,7 @@ func _on_jed_died():
 #func _on_sof_lvl_3_save_point_body_exited(body):
 	#if body is Player:
 		#PlayerData.at_level_3_save = false
+
+
+func _on_jed_orchid_poison() -> void:
+	anim.play('poison')

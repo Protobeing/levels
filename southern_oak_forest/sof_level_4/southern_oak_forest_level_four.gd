@@ -1,5 +1,5 @@
 extends Node2D
-
+@onready var anim = $AnimationPlayer
 @onready var zoom = $zoom_effects
 #group_four
 var enemies_plus_six_four: PackedScene = preload('res://enemies/groupings/group_four/enemies_plus_six_four.tscn')
@@ -8,7 +8,7 @@ var enemies_below_three_four: PackedScene = preload('res://enemies/groupings/gro
 
 @onready var Jed = $Jed
 var ground_flame: PackedScene = preload('res://jed_main/rocks/ground_flame.tscn')
-
+var blue_healing: PackedScene = preload("res://numbers/blue_fire/blue_heal.tscn")
 var rocks: PackedScene = preload("res://jed_main/rocks/throwing_rock.tscn")
 var pickup_rocks: PackedScene = preload("res://jed_main/rocks/rocks.tscn")
 var chick: PackedScene = preload("res://ghost_babies_and_blue_flowers/ghost_babies.tscn")
@@ -116,7 +116,7 @@ func _on_jed_ghosted() -> void:
 	spirit_jimmy.global_position = Jed.position
 	add_child(spirit_jimmy)
 func _on_jed_orchid_poison() -> void:
-	pass # Replace with function body.
+	anim.play('poison')
 
 
 
@@ -192,3 +192,7 @@ func _on_jed_zoomed() -> void:
 
 func _on_jed_not_zoomed() -> void:
 	zoom.play("zoom_out")
+func _on_jed_blue_healed() -> void:
+			var blue_heals = blue_healing.instantiate() 
+			blue_heals.global_position  = $Jed.global_position
+			add_child(blue_heals)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dv4kodqkny5ay"]
+[gd_scene load_steps=34 format=3 uid="uid://dv4kodqkny5ay"]
 
 [ext_resource type="Script" path="res://levels/southern_oak_forest/sof_level_10/southern_oak_forest_level_ten.gd" id="1_157hd"]
 [ext_resource type="Texture2D" uid="uid://cpv1khm8fjn0y" path="res://earth/earth_4.png" id="2_5ndbo"]
@@ -17,12 +17,15 @@
 [ext_resource type="Texture2D" uid="uid://b04p1bamthdrq" path="res://earth/grass_plot.png" id="11_70gy4"]
 [ext_resource type="Texture2D" uid="uid://r4tfro6r1u6a" path="res://grass_5.png" id="12_0j34y"]
 [ext_resource type="AudioStream" uid="uid://cyk3f4hlbpuc6" path="res://level_music/forest_sounds.mp3" id="12_fmbjp"]
+[ext_resource type="PackedScene" uid="uid://bf6pcoptplvph" path="res://earth/large_rock_two.tscn" id="13_bysq6"]
 [ext_resource type="PackedScene" uid="uid://bc5yoiyioi3cr" path="res://earth/purple_night_grass.tscn" id="13_y0d3i"]
 [ext_resource type="PackedScene" uid="uid://dgjv1dn81bnaf" path="res://enemies/zombie_rat/zombie_rat.tscn" id="22_qo123"]
 [ext_resource type="PackedScene" uid="uid://bl2p3j8ekcctv" path="res://trees/oaks/brush_trees_one.tscn" id="23_y4qa8"]
 [ext_resource type="PackedScene" uid="uid://dvlb3f38eus4v" path="res://jed_main/rocks/rocks.tscn" id="24_tve15"]
 [ext_resource type="PackedScene" uid="uid://c1nrp2h7xsv6q" path="res://enemies/entity/escape_path.tscn" id="25_16hq4"]
 [ext_resource type="PackedScene" uid="uid://7qiu8l2nl068" path="res://drops/grub/grub.tscn" id="25_ilci1"]
+[ext_resource type="PackedScene" uid="uid://c2achx8h1db3l" path="res://earth/large_rock_pile.tscn" id="25_on41o"]
+[ext_resource type="PackedScene" uid="uid://dtg3tnv6lokm" path="res://earth/large_rock.tscn" id="26_8pa3f"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2h3v4"]
 radius = 51.2445
@@ -43,6 +46,42 @@ _data = {
 "points": PackedVector2Array(-39.7299, 3.70812, 39.7299, -3.70812, 115, -105, 0, 0, 0, 0, 271, -187, 132.963, -33.3731, -132.963, 33.3731, 188, -185, -9.53517, -21.1893, 9.53517, 21.1893, 23, -110, 0, 0, 0, 0, 115, -105)
 }
 point_count = 5
+
+[sub_resource type="Animation" id="Animation_hxiic"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_vv20k"]
+resource_name = "poison"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.114396, 0.194208, 0.313925, 0.478869, 0.649133, 0.827378, 0.994982),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.111701, -0.125664, 0.111701, -0.125664, 0.111701, -0.125664, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yryc4"]
+_data = {
+"RESET": SubResource("Animation_hxiic"),
+"poison": SubResource("Animation_vv20k")
+}
 
 [node name="southern_oak_forest_level_ten" type="Node2D"]
 z_as_relative = false
@@ -770,7 +809,7 @@ z_as_relative = true
 position = Vector2(284, -90)
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(-295, -402)
+position = Vector2(-295, -459)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_2h3v4")
@@ -1343,6 +1382,183 @@ position = Vector2(-969, -139)
 [node name="fern_bunch14" parent="flora" instance=ExtResource("9_t18he")]
 position = Vector2(-969, -139)
 
+[node name="large_rock_two" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-334, 298)
+
+[node name="large_rock_two2" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-450, 423)
+
+[node name="large_rock_two3" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-317, 535)
+
+[node name="large_rock_two4" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-216, 528)
+
+[node name="large_rock_two5" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-261, 562)
+
+[node name="large_rock_two6" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(23, 511)
+
+[node name="large_rock_two8" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(248, 352)
+
+[node name="large_rock_two9" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(283, 220)
+
+[node name="large_rock_two10" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(273, 231)
+
+[node name="large_rock_two11" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-313, 174)
+
+[node name="large_rock_two12" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-502, 198)
+
+[node name="large_rock_two13" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-550, 144)
+
+[node name="large_rock_two14" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-481, 117)
+
+[node name="large_rock_two15" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-455, 63)
+
+[node name="large_rock_two16" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-611, 44)
+
+[node name="large_rock_two17" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-701, 84)
+
+[node name="large_rock_two18" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-806, 44)
+
+[node name="large_rock_two19" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-917, 23)
+
+[node name="large_rock_two20" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-1009, 37)
+
+[node name="large_rock_two21" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-1012, 94)
+
+[node name="large_rock_two22" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-945, 59)
+
+[node name="large_rock_two41" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-1333, 86)
+
+[node name="large_rock_two42" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-1276, 73)
+
+[node name="large_rock_two43" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-1541, 26)
+
+[node name="large_rock_two44" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-1509, -87)
+
+[node name="large_rock_two45" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-1464, -270)
+
+[node name="large_rock_two46" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-1289, -300)
+
+[node name="large_rock_two47" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-1171, -262)
+
+[node name="large_rock_two48" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-1136, -191)
+
+[node name="large_rock_two49" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-1237, 27)
+
+[node name="large_rock_two23" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-618, 91)
+
+[node name="large_rock_two24" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-672, -74)
+
+[node name="large_rock_two25" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-566, -95)
+
+[node name="large_rock_two26" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-499, -133)
+
+[node name="large_rock_two27" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-874, -103)
+
+[node name="large_rock_two28" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-1036, -140)
+
+[node name="large_rock_two29" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-951, -118)
+
+[node name="large_rock_two30" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-1000, -96)
+
+[node name="large_rock_two31" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-356, -459)
+
+[node name="large_rock_two32" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-391, -405)
+
+[node name="large_rock_two33" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-391, -324)
+
+[node name="large_rock_two34" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-281, -462)
+
+[node name="large_rock_two35" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-206, -405)
+
+[node name="large_rock_two36" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-184, -343)
+
+[node name="large_rock_two37" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-240, -336)
+
+[node name="large_rock_two38" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-392, 446)
+
+[node name="large_rock_two39" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-382, 313)
+
+[node name="large_rock_two40" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-233, -367)
+
+[node name="large_rock_two7" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-66, 540)
+
+[node name="large_rock_two50" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-1377, -297)
+
+[node name="large_rock_two51" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-1537, -170)
+
+[node name="large_rock_two52" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-1438, -29)
+
+[node name="large_rock_two53" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-759, -67)
+
+[node name="large_rock_two54" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-327, -204)
+
+[node name="large_rock_two55" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-1517, 93)
+
+[node name="large_rock_two56" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-1397, 133)
+
+[node name="large_rock_two57" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(-1466, 123)
+
+[node name="large_rock_two58" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(320, 175)
+
+[node name="large_rock_two59" parent="flora" instance=ExtResource("13_bysq6")]
+position = Vector2(320, 102)
+
 [node name="fauna" type="Node2D" parent="."]
 
 [node name="small_opening_north" parent="." instance=ExtResource("3_hui3q")]
@@ -1351,7 +1567,7 @@ position = Vector2(-316, -364)
 [node name="Jed" parent="." instance=ExtResource("4_s2sdk")]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.188235, 0.184314, 0.631373, 1)
+color = Color(0.0961951, 0.202263, 0.504421, 1)
 
 [node name="chick_spwns" type="Node2D" parent="."]
 position = Vector2(-264, 357)
@@ -1477,10 +1693,10 @@ position = Vector2(-150, 4)
 position = Vector2(-143, -278)
 
 [node name="grub4" parent="." instance=ExtResource("25_ilci1")]
-position = Vector2(-996, -104)
+position = Vector2(-1288, -149)
 
 [node name="grub5" parent="." instance=ExtResource("25_ilci1")]
-position = Vector2(-982, -102)
+position = Vector2(-1274, -147)
 
 [node name="grub6" parent="." instance=ExtResource("25_ilci1")]
 position = Vector2(-1290, -124)
@@ -1498,7 +1714,28 @@ y_sort_enabled = true
 [node name="escape_path" parent="." instance=ExtResource("25_16hq4")]
 position = Vector2(-304, -688)
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_yryc4")
+}
+
+[node name="large_rock_pile" parent="." instance=ExtResource("25_on41o")]
+position = Vector2(-9, -373)
+
+[node name="large_rock_pile2" parent="." instance=ExtResource("25_on41o")]
+position = Vector2(-249, -457)
+
+[node name="large_rock_pile3" parent="." instance=ExtResource("25_on41o")]
+position = Vector2(-317, 440)
+
+[node name="large_rock_pile4" parent="." instance=ExtResource("25_on41o")]
+position = Vector2(-1309, 2)
+
+[node name="large_rock" parent="." instance=ExtResource("26_8pa3f")]
+position = Vector2(-1357, -202)
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="Blue_healed" from="Jed" to="." method="_on_jed_blue_healed"]
 [connection signal="died" from="Jed" to="." method="_on_jed_died"]
 [connection signal="flame" from="Jed" to="." method="_on_jed_flame"]
 [connection signal="ghosted" from="Jed" to="." method="_on_jed_ghosted"]
@@ -1507,3 +1744,13 @@ position = Vector2(-304, -688)
 [connection signal="special_attack" from="Jed" to="." method="_on_jed_special_attack"]
 [connection signal="step" from="Jed" to="." method="_on_jed_step"]
 [connection signal="stomp" from="Jed" to="." method="_on_jed_stomp"]
+[connection signal="bones" from="zombie_rat" to="." method="_on_zombie_rat_bones"]
+[connection signal="grub" from="zombie_rat" to="." method="_on_zombie_rat_grub"]
+[connection signal="bones" from="zombie_rat2" to="." method="_on_zombie_rat_2_bones"]
+[connection signal="grub" from="zombie_rat2" to="." method="_on_zombie_rat_2_grub"]
+[connection signal="bones" from="zombie_rat3" to="." method="_on_zombie_rat_3_bones"]
+[connection signal="grub" from="zombie_rat3" to="." method="_on_zombie_rat_3_grub"]
+[connection signal="bones" from="zombie_rat4" to="." method="_on_zombie_rat_4_bones"]
+[connection signal="grub" from="zombie_rat4" to="." method="_on_zombie_rat_4_grub"]
+[connection signal="bones" from="zombie_rat5" to="." method="_on_zombie_rat_5_bones"]
+[connection signal="grub" from="zombie_rat5" to="." method="_on_zombie_rat_5_grub"]
