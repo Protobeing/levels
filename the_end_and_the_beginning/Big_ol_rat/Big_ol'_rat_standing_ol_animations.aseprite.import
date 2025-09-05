@@ -1,0 +1,25 @@
+[remap]
+
+importer="Aseprite AnimatedSprite2D Import"
+type="PackedScene"
+uid="uid://bejbmyow6hulb"
+path="res://.godot/imported/Big_ol'_rat_standing_ol_animations.aseprite-a5f06918e67070ddacf7f0e325e41326.scn"
+
+[deps]
+
+source_file="res://levels/Oak_forest/Enemies/Big_ol_rat/Big_ol'_rat_standing_ol_animations.aseprite"
+dest_files=["res://.godot/imported/Big_ol'_rat_standing_ol_animations.aseprite-a5f06918e67070ddacf7f0e325e41326.scn"]
+
+[params]
+
+spritesheet/layout=0
+spritesheet/fixed_rows_count=1
+spritesheet/fixed_columns_count=1
+spritesheet/border_type=0
+spritesheet/trim=false
+spritesheet/ignore_empty=false
+spritesheet/merge_duplicates=false
+animation/default/name="default"
+animation/default/direction=0
+animation/default/repeat_count=0
+animation/autoplay=""

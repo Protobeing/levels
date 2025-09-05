@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://xni3c4a330je"]
+
+[ext_resource type="Script" path="res://levels/the_end_and_the_beginning/Big_ol_rat/hidden_rats/rats_in_a_basket_one.gd" id="1_kf8ao"]
+[ext_resource type="PackedScene" uid="uid://du1ube02j6yg4" path="res://enemies/lil_rat_1/lil_rat.tscn" id="2_ywupl"]
+
+[node name="rats_in_a_basket_one" type="Node2D"]
+script = ExtResource("1_kf8ao")
+
+[node name="lil\' rat" parent="." instance=ExtResource("2_ywupl")]
+position = Vector2(46, 29)
+
+[node name="lil\' rat2" parent="." instance=ExtResource("2_ywupl")]
+position = Vector2(-53, 71)
+
+[node name="lil\' rat3" parent="." instance=ExtResource("2_ywupl")]
+position = Vector2(-76, 2.00002)
+
+[node name="lil\' rat4" parent="." instance=ExtResource("2_ywupl")]
+position = Vector2(-54, -59)
+
+[node name="lil\' rat5" parent="." instance=ExtResource("2_ywupl")]
+position = Vector2(56, -41)
+
+[node name="lil\' rat6" parent="." instance=ExtResource("2_ywupl")]
+position = Vector2(3.8147e-06, -52)
+
+[node name="lil\' rat7" parent="." instance=ExtResource("2_ywupl")]
+position = Vector2(2.27374e-13, 70)
+
+[node name="lil\' rat8" parent="." instance=ExtResource("2_ywupl")]
+position = Vector2(-54, 8.00001)
+
+[node name="lil\' rat9" parent="." instance=ExtResource("2_ywupl")]
+position = Vector2(-14, 23)
+
+[node name="lil\' rat10" parent="." instance=ExtResource("2_ywupl")]
+position = Vector2(-30, -9)
+
+[node name="lil\' rat11" parent="." instance=ExtResource("2_ywupl")]
+position = Vector2(44, -25)
+
+[node name="lil\' rat12" parent="." instance=ExtResource("2_ywupl")]
+position = Vector2(102, 21)
+
+[node name="lil\' rat13" parent="." instance=ExtResource("2_ywupl")]
+position = Vector2(46, 91)
+
+[node name="lil\' rat14" parent="." instance=ExtResource("2_ywupl")]
+position = Vector2(-70, 30)
+
+[node name="lil\' rat15" parent="." instance=ExtResource("2_ywupl")]
+position = Vector2(-117, 33)
